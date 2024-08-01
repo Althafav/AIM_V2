@@ -22,6 +22,6 @@ export default class Globals {
 
     static BASE_URL: string =
         process.env.NODE_ENV === "production"
-            ? "https://creation-house.ae/"
+            ? "https://aim-revamp-demo.vercel.app/"
             : "http://localhost:4000/";
 }

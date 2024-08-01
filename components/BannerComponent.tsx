@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import { motion } from "framer-motion";
+import { MdLocationPin } from 'react-icons/md';
+import { SlCalender } from 'react-icons/sl';
 
 export default function BannerComponent() {
 
@@ -16,13 +18,15 @@ export default function BannerComponent() {
 
             <div className="text-container container">
                 <h1 className='banner-heading'>
-
-                    Your gateway to meet global investment and economic leaders and connect with key decision makers
-
-
+                    The World’s Leading Investment Platform
                 </h1>
+                <div className='d-flex text-white mt-3 align-items-center gap-3'>
+                    <p className='d-flex align-items-center gap-3'><SlCalender size={20} className='text-primary'/> <span>07 - 09, April 2025</span></p>
+                    <p className='d-flex align-items-center gap-2'><MdLocationPin size={20} className='text-primary'/><span>Abu Dhabi, United Arab Emirates</span></p>
 
-               
+                </div>
+
+
 
 
 
