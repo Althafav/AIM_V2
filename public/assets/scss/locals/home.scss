@@ -1,0 +1,70 @@
+.about-us-section-wrapper {
+    .left-container {
+        max-width: 630px;
+       
+
+        .section-heading {
+            font-size: 48px;
+            line-height: 1.2;
+            color: white;
+
+            @media screen and (max-width: 800px) {
+                font-size: 32px;
+            }
+        }
+
+        
+
+       
+    }
+
+    
+
+    .masonry-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: 10px;
+        gap: 10px;
+    }
+
+    .masonry-item {
+        display: grid;
+
+        img {
+            object-fit: cover;
+            border-radius: 16px;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .large-item {
+        grid-row-end: span 20;
+        
+    }
+
+    .medium-item {
+        grid-row-end: span 20;
+        
+    }
+
+    .small-item {
+        grid-row-end: span 10;
+        
+    }
+
+    .masonry-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    
+      
+
+
+}

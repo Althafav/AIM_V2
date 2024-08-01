@@ -1,0 +1,50 @@
+.inner-banner-wrapper {
+    width: 100%;
+    margin-top: $margin-top-below-menu;
+
+    .container-bg {
+        width: 100%;
+        position: relative;
+
+        .bg-pattern {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+
+            @media screen and (max-width: 800px) {
+                height: 150px;
+            }
+        }
+
+
+
+        .inner-banner-content {
+            position: absolute;
+
+            bottom: 10px;
+            left: 40px;
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+
+            @media screen and (max-width: 800px) {
+                gap: 40px;
+            }
+
+
+            .page-heading {
+                color: white;
+                font-size: 48px;
+                font-weight: 600;
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

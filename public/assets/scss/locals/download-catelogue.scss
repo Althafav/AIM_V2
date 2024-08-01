@@ -1,0 +1,34 @@
+.download-catelogue-wrapper {
+    
+    .left-container {
+        max-width: 500px;
+        margin: auto;
+
+
+    }
+
+    .right-container {
+        // max-width: 400px;
+        margin: auto;
+
+        .section-heading {
+            max-width: 400px;
+
+            @media screen and (max-width: 800px) {
+                max-width: 300px;
+            }
+        }
+        .desc {
+            color: $light-text;
+            font-size: 18px;
+        }
+
+        .download-btn {
+            padding: 10px;
+            background-color: $primary-color-varient;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+    }
+
+}

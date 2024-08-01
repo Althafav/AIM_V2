@@ -1,0 +1,81 @@
+.previous-work-wrapper {
+
+    .desc {
+        color: $light-text;
+        font-size: 18px;
+    }
+    .previous-work-card {
+        width: 100%;
+        background-color: lightblue;
+        height: 450px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+       
+
+
+
+        .text-content-box {
+            position: absolute;
+            z-index: 3;
+            padding: 20px;
+            margin: 20px;
+            bottom: 0;
+            border: 2px solid white;
+            border-radius: 16px;
+
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.07);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+
+            .legend {
+                color: $primary-color;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            h3 {
+                color: $primary-color-varient;
+            }
+
+            .description {
+                color: white;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            inset: 0;
+            background: linear-gradient(to top, black, rgba(255, 255, 255, 0));
+        }
+
+
+    }
+
+
+    .embla__next {
+        background: transparent;
+    }
+}
+
+.glow-on-hover {
+    transition: filter 0.3s ease-in-out;
+}
+
+.glow-on-hover:hover .glow-svg {
+    filter: drop-shadow(0 0 2px #7bcfe05d)
+            drop-shadow(0 0 5px #8be2c675)
+            drop-shadow(0 0 10px #7bcfe025);
+}
+
+

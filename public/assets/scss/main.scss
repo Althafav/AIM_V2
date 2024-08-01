@@ -1,0 +1,133 @@
+@import "reset.scss";
+@import "_partials/_typography";
+@import "_partials/_variables";
+@import "_partials/_functions";
+@import "_partials/_mixin";
+@import "_partials/_animations";
+@import "bootstrap-5.2.3/bootstrap.scss";
+@import "_partials/_controls";
+
+
+
+body {
+    background: $jet-black;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: white;
+    line-height: 1.1;
+}
+
+p {
+    font-size: 18px;
+}
+
+section {
+    margin: 120px 0;
+
+    @media screen and (max-width: 800px) {
+        margin: 80px 0;
+    }
+}
+
+li {
+    list-style: none;
+}
+ 
+a{
+    cursor: pointer;
+}
+
+.select-control {
+    width: 100%;
+    min-height: 2.6875rem;
+    padding: 10px;
+    color: rgb(99, 99, 99);
+}
+
+.heading-wrapper {
+    .section-heading {
+        font-size: 48px;
+        color: white;
+        line-height: 1.1;
+
+        @media screen and (max-width: 800px) {
+            font-size: 32px;
+        }
+    }
+
+    .underline {
+        width: 100px;
+        height: 5px;
+        background-color: $primary-color-varient;
+    }
+}
+
+.description {
+    font-size: 18px;
+    color: $light-text;
+    max-width: 510px;
+    text-align: justify;
+
+    @media screen and (max-width: 800px) {
+        max-width: 400px;
+    }
+}
+
+
+hr {
+    color: white;
+    background: white
+}
+
+
+.read-more {
+    color: $metalic-gold;
+}
+
+._error-inner {
+    color: $metalic-gold;
+}
+
+._form-thank-you {
+    color: rgb(88, 255, 102);
+    font-size: 20px;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./locals/menu-component.scss";
+@import "./locals/banner-component.scss";
+@import "./locals/cta-btn.scss";
+@import "./locals/services-section.scss";
+@import "./locals/home.scss";
+@import "./locals/cta-banner-component.scss";
+@import "./locals/previous-works-component.scss";
+@import "./locals/embla.scss";
+@import "./locals/download-catelogue.scss";
+@import "./locals/contact-us.scss";
+@import "./locals/content-main-component.scss";
+@import "./locals/about-us.scss";
+
+
+
+@import "./locals/footer.scss";
