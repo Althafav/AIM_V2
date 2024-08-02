@@ -17,7 +17,7 @@ export default class Globals {
         typeResolvers: TypeResolver,
     });
 
-    static SITE_NAME = "Creation House";
+    static SITE_NAME = "AIM";
 
 
     static BASE_URL: string =
