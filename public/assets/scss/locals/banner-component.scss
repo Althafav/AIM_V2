@@ -28,7 +28,11 @@
             font-weight: bold;
             
             max-width: 800px;
-            font-size: 48px;
+            font-size: 42px;
+
+            @media screen and (max-width: 800px) {
+                
+            }
 
         }
 
