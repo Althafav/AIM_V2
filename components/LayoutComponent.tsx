@@ -1,13 +1,13 @@
-import React from 'react'
-import MenuComponent from './MenuComponent'
-import FooterComponent from './FooterComponent'
+import React from 'react';
+import MenuComponent from './MenuComponent';
+
 
 export default function LayoutComponent({ children }: any) {
     return (
         <React.Fragment>
-            <MenuComponent/>
+            <MenuComponent />
             {children}
-            {/* <FooterComponent/> */}
+       
         </React.Fragment>
     )
 }

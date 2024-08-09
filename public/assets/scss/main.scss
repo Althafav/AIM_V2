@@ -7,10 +7,12 @@
 @import "bootstrap-5.2.3/bootstrap.scss";
 @import "_partials/_controls";
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background: $jet-black;
+    background: white;
     overflow-x: hidden;
 }
 
@@ -38,8 +40,8 @@ section {
 li {
     list-style: none;
 }
- 
-a{
+
+a {
     cursor: pointer;
 }
 
@@ -118,16 +120,9 @@ hr {
 @import "./locals/menu-component.scss";
 @import "./locals/banner-component.scss";
 @import "./locals/cta-btn.scss";
-@import "./locals/services-section.scss";
+
 @import "./locals/home.scss";
 @import "./locals/cta-banner-component.scss";
-@import "./locals/previous-works-component.scss";
+
 @import "./locals/embla.scss";
-@import "./locals/download-catelogue.scss";
-@import "./locals/contact-us.scss";
-@import "./locals/content-main-component.scss";
-@import "./locals/about-us.scss";
-
-
-
-@import "./locals/footer.scss";
+@import "./locals/theme-section-component.scss";

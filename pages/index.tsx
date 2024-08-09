@@ -4,6 +4,7 @@ import Head from "next/head";
 import BannerComponent from "@/components/BannerComponent";
 
 import { motion } from "framer-motion"
+import ThemeSectionComponent from "@/components/Home/ThemeSectionComponent";
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
 
       <BannerComponent />
 
+      <ThemeSectionComponent/>
      
 
 

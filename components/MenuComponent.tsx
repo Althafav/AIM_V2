@@ -10,6 +10,8 @@ import { FaUser } from "react-icons/fa";
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleToggle = () => {
@@ -17,7 +19,19 @@ export default function MenuComponent() {
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+
+      setIsVisible(false);
+    } else {
+
+      setIsVisible(true);
+    }
+
+    setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
+
+    if (scrollTop > 300) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -26,18 +40,19 @@ export default function MenuComponent() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollTop]);
 
   return (
-    <nav className={`menu-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
         <div className="top-items d-flex justify-content-end align-items-center mb-1">
           <div className="d-flex gap-5 align-items-center">
-            <div className='text-white d-flex gap-2 align-items-center'><FaUser /><span>PORTAL LOGIN</span></div>
-            <div className='text-white d-flex gap-2 align-items-center'><CiGlobe size={20} /> <span>EN</span></div>
+            <div className='top-item'><FaUser /><span>PORTAL LOGIN</span></div>
+            <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div>
           </div>
 
 
@@ -55,7 +70,7 @@ export default function MenuComponent() {
               </Link>
             </li>
             <li className='menu-item'>
-              <Link href="/about-us">
+              <Link href="/about-us" className='aim-2025'>
                 AIM 2025
               </Link>
             </li>
@@ -94,7 +109,7 @@ export default function MenuComponent() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <IoMdClose size={32} color='white' cursor="pointer" />
+                <IoMdClose size={32} className='menu-icon' cursor="pointer" />
               </motion.div>
             ) : (
               <motion.div
@@ -103,7 +118,7 @@ export default function MenuComponent() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <HiOutlineMenuAlt2 size={32} color='white' cursor="pointer" />
+                <HiOutlineMenuAlt2 size={32} className='menu-icon' cursor="pointer" />
               </motion.div>
             )}
           </motion.div>

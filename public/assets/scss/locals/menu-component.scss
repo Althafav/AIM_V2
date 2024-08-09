@@ -10,15 +10,52 @@
     z-index: 20;
 
     &.scrolled {
-        background: $primary-color-varient;
+        background: white;
 
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(9px);
 
+        .top-items {
+            .top-item {
+                color: black;
+            }
+        }
+
+        .menu-items {
+            .menu-item {
+                a {
+                    color: black;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .menu-cta-btn::after {
+            background: white;
+        }
+
+        .menu-icon-wrapper {
+            .menu-icon {
+                color: rgb(0, 0, 0);
+            }
+        }
+
+
+
+
+
+
     }
 
-    .top-items{
+    .top-items {
+        .top-item {
+            color: white;
+            display: flex;
+            gap: 2px;
+            align-items: center;
+        }
+
         span {
             @media screen and (max-width: 800px) {
                 font-size: 14px;
@@ -33,8 +70,8 @@
             width: 120px;
 
         }
-        
-        
+
+
     }
 
     .menu-items {
@@ -67,12 +104,39 @@
                 height: 3px;
                 background: $primary-color;
             }
+
+            .aim-2025 {
+                position: relative;
+
+                &::after {
+                    content: "New";
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $linear-gradient-primary;
+                    width: 40px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: -25px;
+                    color: white;
+                }
+            }
         }
 
         @media screen and (max-width: 1000px) {
             display: none;
         }
     }
+
+    .menu-icon-wrapper {
+        .menu-icon {
+            color: rgb(255, 255, 255);
+        }
+    }
+
+    
+
 
     .mobile-menu-nav {
         position: absolute;
@@ -117,7 +181,7 @@
             }
         }
 
-        .menu-cta-wrapper {
+        .menu-cta-btn {
             display: block;
 
             .mobile-menu-cta-btn {
@@ -128,4 +192,8 @@
             }
         }
     }
+}
+
+.translate-y {
+    transform: translateY(-100%);
 }
