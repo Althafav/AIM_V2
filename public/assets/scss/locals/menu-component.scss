@@ -16,6 +16,22 @@
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(9px);
 
+
+        .black-logo {
+            display: block;
+
+            width: 140px;
+
+            @media screen and (max-width: 800px) {
+                width: 120px;
+
+            }
+        }
+
+        .white-logo {
+            display: none;
+        }
+
         .top-items {
             .top-item {
                 color: black;
@@ -40,6 +56,7 @@
                 color: rgb(0, 0, 0);
             }
         }
+
 
 
 
@@ -72,6 +89,10 @@
         }
 
 
+    }
+
+    .black-logo {
+        display: none;
     }
 
     .menu-items {
@@ -120,6 +141,7 @@
                     left: 0;
                     top: -25px;
                     color: white;
+                    font-size: 12px;
                 }
             }
         }
@@ -135,7 +157,7 @@
         }
     }
 
-    
+
 
 
     .mobile-menu-nav {

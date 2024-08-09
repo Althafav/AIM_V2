@@ -60,7 +60,11 @@ export default function MenuComponent() {
         <div className="d-flex align-items-center justify-content-between">
           <Link href="/" className="logo-wrapper">
             <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
-              loading="lazy" className='menu-logo' />
+              loading="lazy" className='menu-logo white-logo' />
+
+            <img src={`/assets/imgs/AIMlogo-black.png`} alt="Logo"
+              loading="lazy" className='menu-logo black-logo' />
+
           </Link>
 
           <ul className='menu-items'>
