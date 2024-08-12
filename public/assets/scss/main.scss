@@ -6,6 +6,7 @@
 @import "_partials/_animations";
 @import "bootstrap-5.2.3/bootstrap.scss";
 @import "_partials/_controls";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -14,6 +15,7 @@ html {
 body {
     background: white;
     overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 h1,
@@ -23,6 +25,7 @@ h4,
 h5 {
     color: white;
     line-height: 1.1;
+    margin-bottom: 5px;
 }
 
 p {
@@ -35,6 +38,10 @@ section {
     @media screen and (max-width: 800px) {
         margin: 80px 0;
     }
+}
+
+.section-wrapper {
+    min-height: 100vh;
 }
 
 li {
@@ -105,6 +112,17 @@ hr {
     border: 1px solid white;
 }
 
+.embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
 
 
 
@@ -118,11 +136,13 @@ hr {
 
 
 @import "./locals/menu-component.scss";
-@import "./locals/banner-component.scss";
+@import "./locals/home/banner-component.scss";
 @import "./locals/cta-btn.scss";
 
 @import "./locals/home.scss";
 @import "./locals/cta-banner-component.scss";
 
 @import "./locals/embla.scss";
-@import "./locals/theme-section-component.scss";
+@import "./locals/home/theme-section-component.scss";
+@import "./locals/home/audientsctacomponents.scss";
+@import "./locals/home/portfoli-cta-component.scss";

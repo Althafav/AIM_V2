@@ -1,0 +1,23 @@
+.theme-section-wrapper {
+    
+    .main-head {
+        font-size: 75px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        
+        line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        color: $primary-color-varient;
+        letter-spacing: -3px;
+        .small-head {
+            font-size: 48px;
+            letter-spacing: -2px;
+        }
+    }
+    .sub-head {
+        font-size: 24px;
+        color: $light-text;
+    }
+}

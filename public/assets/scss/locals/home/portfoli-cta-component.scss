@@ -1,0 +1,112 @@
+.portfolio-section-wrapper {
+   
+    .main-head {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        letter-spacing: 0.5;
+        text-transform: capitalize;
+        line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        color: $primary-color-varient;
+        letter-spacing: -3px;
+    }
+    .sub-head {
+        font-size: 24px;
+        color: $light-text;
+        letter-spacing: -2px;
+
+    }
+
+   
+
+    .cta-card-item {
+        width: 100%;
+        border-radius: 30px;
+        
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        position: relative;
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .text-container {
+            position: absolute;
+            width: 100%;
+            padding: 20px;
+            z-index: 1;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // background: linear-gradient(to bottom, $primary-color, $primary-color-varient);
+            height: 100%;
+            
+            .main-head--card {
+                color: white;
+                font-size: 32px;
+                line-height: 1.1;
+                font-weight: bold;
+                letter-spacing: -2px;
+                text-align: start;
+                
+            }
+            .sub-head--card {
+                font-size: 16px;
+                color: white;
+                font-weight: normal;
+            }
+
+            .know-more-btn {
+                color: white;
+                border-radius: 20px;
+                font-size: 16px;
+                padding: 8px 16px;
+                background: $fdi-primary;
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .fdi {
+                background: $fdi-primary;
+            }
+
+            .trade {
+                background: $trade-innovation-primary;
+            }
+
+            .advanced-mft {
+                background: $Advanced-manufacturing;
+            }
+
+            .future-cities {
+                background: $future-cities;
+            }
+        }
+    }
+
+}
+
+// .embla {
+//     overflow: hidden; /* Ensure no overflow is visible */
+//   }
+  
+//   .embla__container {
+//     display: flex;
+//      /* Optional: Adjust the space between slides */
+//   }
+  
+//   .embla__slide {
+//     flex: 0 0 25%; /* Each slide takes up 25% of the container width */
+//     box-sizing: border-box; /* Ensure padding is included within the width */
+//     padding-left: 1rem; /* Your existing padding */
+//   }
+  

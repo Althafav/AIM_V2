@@ -5,6 +5,8 @@ import BannerComponent from "@/components/BannerComponent";
 
 import { motion } from "framer-motion"
 import ThemeSectionComponent from "@/components/Home/ThemeSectionComponent";
+import AudientsCTAComponent from "@/components/Home/AudientsCTAComponent";
+import PortfolioCTAComponent from "@/components/Home/PortfolioCTAComponent";
 
 
 
@@ -26,6 +28,8 @@ export default function Home() {
       <BannerComponent />
 
       <ThemeSectionComponent/>
+      <AudientsCTAComponent/>
+      <PortfolioCTAComponent/>
      
 
 

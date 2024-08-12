@@ -6,24 +6,43 @@ const ThemeSectionComponent: React.FC = () => {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className='theme-section-wrapper'>
+        <section ref={ref} className='theme-section-wrapper section-wrapper'>
             <div className="container">
-                <motion.h1
-                    className='main-head'
-                    initial={{ x: -100, opacity: 0 }}
-                    animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
-                    transition={{ duration: 1, delay: 1 }}
-                >
-                    Mapping the Future of Global Investment
-                </motion.h1>
-                <motion.p
-                    className='sub-head'
-                    initial={{ y: 100, opacity: 0 }}
+                <div className="row">
+                    <div className="col-12 d-flex justify-content-center">
+
+                        <motion.div
+                            className='main-head'
+                            initial={{ x: -100, opacity: 0 }}
+                            animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                        >
+                            <span className='small-head'>Mapping the Future of</span><span>Global Investment</span>
+                        </motion.div>
+                    </div>
+                    <div className="col-12 d-flex justify-content-center">
+
+                        <motion.p
+                            className='sub-head'
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
+                            transition={{ duration: 1, delay: 0.5 }}
+                        >
+                            The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
+                        </motion.p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div className="row">
+                <motion.div className="col-12 mt-4" initial={{ y: 100, opacity: 0 }}
                     animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
-                    transition={{ duration: 1, delay: 1 }}
-                >
-                    The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
-                </motion.p>
+                    transition={{ duration: 1, delay: 1.1 }}>
+                    <img src="/assets/imgs/theme-bg.png" alt="" style={{width: "100%", objectFit: "cover"}}/>
+                </motion.div>
             </div>
 
         </section>
