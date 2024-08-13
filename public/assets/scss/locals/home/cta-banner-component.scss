@@ -1,0 +1,40 @@
+.youtube-section-component {
+    .mainHead {
+        font-size: 48px;
+        font-weight: bold;
+        color: $primary-color-varient;
+        margin-bottom: 5px;
+        line-height: 1.1;
+        letter-spacing: -3px;
+    }
+    .subHead {
+        font-size: 24px;
+        color: $light-text;
+        margin-bottom: 20px;
+    }
+}
+
+
+.cta-banner-component-wrapper {
+    .cta-banner-heading {
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -4px;
+        text-transform: uppercase;
+    }
+
+    .paragraph {
+        max-width: 700px;
+        text-align: start;
+    }
+    .registernow-cta {
+        text-transform: uppercase;
+        background: white;
+        border: 2px solid black;
+        border-radius: 50px;
+        width: 332px;
+        height: 72px;
+        font-size: 24px;
+    }
+}

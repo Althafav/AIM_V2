@@ -82,7 +82,6 @@ const PortfolioCTAComponent: React.FC = () => {
                                             <motion.div className="portfolio-card" 
                                                >
                                                 <div className="cta-card-item">
-
                                                     <img src={item.image} alt="" />
                                                     <div className="text-container">
                                                         <div className='d-flex flex-column'>

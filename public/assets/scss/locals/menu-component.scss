@@ -127,24 +127,24 @@
                 background: $primary-color;
             }
 
-            .aim-2025 {
-                position: relative;
+            // .aim-2025 {
+            //     position: relative;
 
-                &::after {
-                    content: "New";
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: $linear-gradient-primary;
-                    width: 30px;
-                    height: 20px;
-                    position: absolute;
-                    left: 0;
-                    top: -25px;
-                    color: white;
-                    font-size: 10px;
-                }
-            }
+            //     &::after {
+            //         content: "New";
+            //         display: flex;
+            //         align-items: center;
+            //         justify-content: center;
+            //         background: $linear-gradient-primary;
+            //         width: 30px;
+            //         height: 20px;
+            //         position: absolute;
+            //         left: 0;
+            //         top: -25px;
+            //         color: white;
+            //         font-size: 10px;
+            //     }
+            // }
         }
 
         @media screen and (max-width: 1000px) {

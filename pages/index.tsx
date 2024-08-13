@@ -7,11 +7,16 @@ import { motion } from "framer-motion"
 import ThemeSectionComponent from "@/components/Home/ThemeSectionComponent";
 import AudientsCTAComponent from "@/components/Home/AudientsCTAComponent";
 import PortfolioCTAComponent from "@/components/Home/PortfolioCTAComponent";
+import SustainbleSecComponent from "@/components/Home/SustainbleSecComponent";
+import TestimonialsComponent from "@/components/Home/TestimonialsComponent";
+import ArticlesComponent from "@/components/Home/ArticlesComponent";
+import CtaBannerComponent from "@/components/CTABannerComponent";
+import YoutubeSectionComponent from "@/components/Home/YoutubeSectionComponent";
 
 
 
 export default function Home() {
-  
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,11 +32,15 @@ export default function Home() {
 
       <BannerComponent />
 
-      <ThemeSectionComponent/>
-      <AudientsCTAComponent/>
-      <PortfolioCTAComponent/>
-     
+      <ThemeSectionComponent />
+      <AudientsCTAComponent />
+      <PortfolioCTAComponent />
+      <SustainbleSecComponent />
 
+      <TestimonialsComponent />
+      <ArticlesComponent />
+      <YoutubeSectionComponent/>
+      <CtaBannerComponent/>
 
 
     </motion.div>

@@ -1,4 +1,4 @@
-import { TypeResolver } from "./TypeResolvers";
+
 
 const KontentDelivery = require("@kentico/kontent-delivery");
 
@@ -14,7 +14,7 @@ export default class Globals {
             useSecuredMode: true, // Queries the Delivery API using secure access.
         },
         secureApiKey: Globals.SECURE_API_KEY,
-        typeResolvers: TypeResolver,
+     
     });
 
     static SITE_NAME = "AIM";

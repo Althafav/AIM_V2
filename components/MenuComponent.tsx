@@ -81,12 +81,12 @@ export default function MenuComponent() {
               </li>
               <li className='menu-item'>
                 <Link href="/#Our-Services">
-                  OTHER SERVICES
+                  RESOURCES
                 </Link>
               </li>
               <li className='menu-item'>
                 <Link href="/#Our-Services">
-                  BROUCHERS
+                  LOGISTICS
                 </Link>
               </li>
 

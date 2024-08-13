@@ -1,0 +1,46 @@
+.sustainable-section-wrapper {
+    position: relative;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sustainable-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        height: 100vh;
+    }
+
+
+    .left-section {
+        padding: 60px 0;
+        .section-heading--sustainable {
+            font-size: 64px;
+            color: $future-cities;
+            font-weight: bold;
+            letter-spacing: -3px;
+        }
+    }
+
+    .right-section {
+        padding: 60px 0;
+        max-width: 700px;
+        margin: auto;
+        .paragraph {
+            color: white;
+        }
+
+        .read-more-btn {
+            margin-top: 60px;
+            background: $primary-color;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import MenuComponent from './MenuComponent';
+import FooterComponent from './FooterComponent';
 
 
 export default function LayoutComponent({ children }: any) {
@@ -7,7 +8,7 @@ export default function LayoutComponent({ children }: any) {
         <React.Fragment>
             <MenuComponent />
             {children}
-       
+            <FooterComponent />
         </React.Fragment>
     )
 }

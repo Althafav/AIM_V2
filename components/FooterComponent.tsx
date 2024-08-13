@@ -8,66 +8,86 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 export default function FooterComponent() {
   return (
-    <div className='footer-wrapper'>
+    <div className='footer-component-wrapper'>
+      <img src="/assets/imgs/Gradient.png" alt="" className='footer-bg' />
+
       <div className="container">
-        <hr className='mb-5' />
+        <div className="row footer-content">
+          <div className="col-lg-4">
+            <div className=''>
+              <div className="logos">
+                <img src="/assets/imgs/facebook.png" alt="" />
+                <img src="/assets/imgs/whatsapp.png" alt="" />
+                <img src="/assets/imgs/linkedin.png" alt="" />
 
-        <div className="row align-items-center">
-          <div className="col-lg-3 mb-4 mb-lg-0">
-            <Image width={150} height={80} src={`/assets/icons/cch-logo.png`} alt="" className='company-logo'
-              loading="lazy" />
-          </div>
-          <div className="col-lg-3">
-            <ul className='d-flex flex-column gap-3 text-secondary'>
-              <li className='fs-6'>
-                <Link href="/about-us">
-                  WHO WE ARE
-                </Link>
-              </li>
-              <li className='fs-6'>
-                <Link href="/#Our-Services">
-                  OUR SERVICES
-                </Link>
-              </li>
-              <li className='fs-6'>
-                <Link href="/#Portfolio">
-                  PORTFOLIO
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-3">
-            <ul className='d-flex flex-column gap-3'>
-              <li className='fs-3 text-primary'>Contact Us</li>
-              <li className='d-flex gap-2 align-items-center text-secondary'>
-                <BsTelephone />
-                <span>+971564034046</span>
-              </li>
-              <li className='d-flex gap-2 align-items-center text-secondary'>
-                <CiMail />
-                <span>info@creation-house.ae</span>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-3">
-            <ul className='d-flex flex-column gap-3'>
-              <li className='fs-3 text-primary'>Follow Us</li>
-              <li className='d-flex gap-2 text-primary-varient fs-3'>
-                <Link href="https://www.instagram.com/creationhouse2014/">
-                  <FaInstagram />
-                </Link>
+                <img src="/assets/imgs/instagram.png" alt="" />
+                <img src="/assets/imgs/thread.png" alt="" />
+                <img src="/assets/imgs/youtube.png" alt="" />
+                <img src="/assets/imgs/twitterX.png" alt="" />
+                <img src="/assets/imgs/google.png" alt="" />
+                <img src="/assets/imgs/ticktok.png" alt="" />
 
-                <Link href="https://www.linkedin.com/company/creation-house-exhibition-stand-fitting-and-execution-llc/?originalSubdomain=ae">
-                  <FaLinkedin />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
+              </div>
 
-        <div className="w-50 mx-auto mt-5">
-          <hr />
-          <p className='text-white text-center'>© 2024 Creation House</p>
+              <div className='mt-5'>
+                <label htmlFor="newsletter" className='text-white mb-2'>Signup for Newsletter</label>
+                <form action="" className='d-flex align-items-center gap-3'>
+                  <input type="text" className='form-control w-50 rounded' placeholder='Enter email here' />
+                  <div>
+                    <button className='newslettercta-btn'>Join for free</button>
+                  </div>
+                </form>
+              </div>
+
+
+              <img src="/assets/imgs/aim-white-horizontal.png" alt="" className='aim-logo-white' />
+              <p className='copy-right'>© Copyright AIM Global Foundation</p>
+            </div>
+          </div>
+          <div className="col-lg-8">
+            <div className='row g-1'>
+              <div className="col-lg-3">
+                <p className='footer-nav-head'>About</p>
+                <div className='footer-nav'>
+                  <p>AIM Foundation</p>
+                  <p>AIM Congress</p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <p className='footer-nav-head'>Portfolios</p>
+                <div className='footer-nav'>
+                  <p>Foreign Direct Investment</p>
+                  <p>Trade Innovation</p>
+                  <p>Advanced Manufacturing</p>
+                  <p>Future Cities</p>
+                  <p>Digital Economy</p>
+                  <p>Future Finance</p>
+                  <p>Startups Unicorn</p>
+                  <p>Entrepreneurship</p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <p className='footer-nav-head'>Resources</p>
+                <div className="footer-nav">
+                  <p>Press</p>
+                  <p>Media</p>
+                  <p>Downloads</p>
+                  <p>Blogs</p>
+                  <p>Partnership Media</p>
+                  <p>Our Partners</p>
+                  <p>Career</p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <p className='footer-nav-head'>Get In Touch</p>
+                <div className="footer-nav">
+                  <p>+971 4 328 2000</p>
+                  <p>United Arab Emirates</p>
+                  <p>info@aimcongress.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
