@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
 import { useInView } from 'react-intersection-observer';
+import CtaBannerComponent from "@/components/CTABannerComponent";
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
 const AudientsCTAComponent = dynamic(() => import("@/components/Home/AudientsCTAComponent"));
@@ -58,7 +59,9 @@ export default function Home() {
       <div ref={youtubeRef}>
         {inViewYoutube && <YoutubeSectionComponent />}
       </div>
-     
+      <div ref={ctaBannerRef}>
+        {inViewCtaBanner && <CtaBannerComponent />}
+      </div>
     </motion.div>
   );
 }
