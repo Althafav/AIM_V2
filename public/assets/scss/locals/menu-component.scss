@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     z-index: 3;
-    transition: 0.3s;
+    transition: all 0.3s ease-out;
     z-index: 20;
 
     &.scrolled {
@@ -39,7 +39,7 @@
         }
 
         .menu-items {
-            
+
             .menu-item {
                 a {
                     color: black;
@@ -106,25 +106,25 @@
             position: relative;
             cursor: pointer;
 
+
             &::after {
                 content: "";
                 position: absolute;
                 bottom: -10px;
                 left: 0;
-                width: 0%;
+                width: 50%;
+                transform: translateX(0%);
                 height: 3px;
-                background: $primary-color;
-                transition: 0.2s ease-in;
+                background: linear-gradient(to right, $primary-color, black);
+                border-radius: 8px;
+                opacity: 0;
+                transition: transform 0.3s ease-in, opacity 0.15s ease-in-out;
             }
 
             &:hover:after {
-                content: "";
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                width: 41%;
-                height: 3px;
-                background: $primary-color;
+                animation: lightningEffect 0.3s ease-in-out;
+                transform: translateX(100%);
+
             }
 
             // .aim-2025 {
@@ -220,3 +220,5 @@
 .translate-y {
     transform: translateY(-100%);
 }
+
+

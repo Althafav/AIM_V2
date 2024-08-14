@@ -31,7 +31,7 @@ export default function MenuComponent() {
 
     setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
 
-    if (scrollTop > 300) {
+    if (scrollTop > 100) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -105,7 +105,8 @@ export default function MenuComponent() {
             </div>
 
             <Link href="/contact-us" className='menu-cta-wrapper'>
-              <button className='menu-cta-btn'><span>Secure Your Spot</span></button>
+              {/* <button className='menu-cta-btn'><span>Secure Your Spot</span></button> */}
+              <button className='register-interest-cta'>Register your interest</button>
             </Link>
           </div>
 

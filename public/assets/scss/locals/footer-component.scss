@@ -2,7 +2,7 @@
     width: 100%;
     height: 600px;
     position: relative;
-    
+
 
     .footer-bg {
         position: absolute;
@@ -14,10 +14,10 @@
 
     .footer-content {
         padding: 120px 0;
-        
+
         position: relative;
 
-        .newslettercta-btn{
+        .newslettercta-btn {
             background: $primary-color;
             color: white;
             border-radius: 20px;
@@ -59,9 +59,33 @@
                 font-size: 15px;
                 padding-bottom: 5px;
                 margin-bottom: 5px;
+                cursor: pointer;
+                position: relative;
+                width: fit-content;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 1px;
+                    left: 0;
+                    width: 50%;
+                    transform: translateX(0%);
+                    height: 2px;
+                    background: linear-gradient(to right, $primary-color, black);
+                    border-radius: 8px;
+                    opacity: 0;
+                    transition: transform 0.3s ease-in, opacity 0.15s ease-in-out;
+                }
+    
+                &:hover:after {
+                    animation: lightningEffect 0.3s ease-in-out;
+                    transform: translateX(100%);
+    
+                }
+
             }
         }
     }
 
-   
+
 }

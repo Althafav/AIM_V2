@@ -117,6 +117,15 @@ hr {
 }
 
 
+.register-interest-cta {
+    background: $primary-color;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+
 
 
 
@@ -135,7 +144,7 @@ hr {
 @import "./locals/cta-btn.scss";
 
 @import "./locals/home.scss";
-@import "./locals/cta-banner-component.scss";
+
 
 @import "./locals/embla.scss";
 @import "./locals/home/theme-section-component.scss";

@@ -17,7 +17,7 @@
     .text-container {
         position: absolute;
         z-index: 2;
-        top: 70%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 20px;
@@ -27,23 +27,42 @@
             text-transform: uppercase;
             font-weight: bold;
             position: relative;
-            max-width: 800px;
-            font-size: 42px;
+            max-width: 900px;
+            font-size: 72px;
+            letter-spacing: -3px;
 
-            @media screen and (max-width: 800px) {}
+            @media screen and (max-width: 800px) {
+                font-size: 42px;
+            }
 
-            // &::after {
-            //     content: " ";
-            //     position: absolute;
-            //     top: 0;
-            //     bottom: 0;
-            //     left: 0;    
-            //     width: 6px;
-            //     border-radius: 20px;
-            //     background-color: #099FFC;
-            //     background: linear-gradient(180deg, #099ffc 2.52%, #1a3966 98.11%), linear-gradient(90deg, #1a3966 .87%, #081a2e 42.23%, #1a3966 72.69%, #099ffc 100%);
-            // }
 
+
+        }
+
+        .banner-heading-2 {
+            color: white;
+            
+            font-weight: 500;
+            position: relative;
+            max-width: 900px;
+            font-size: 40px;
+            letter-spacing: -2px;
+        }
+
+        .register-interest-cta {
+            background: $primary-color;
+            color: white;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-size: 20px;
+        }
+
+        .date-venue {
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            letter-spacing: -1px;
         }
 
 

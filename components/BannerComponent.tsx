@@ -18,19 +18,24 @@ export default function BannerComponent() {
 
             <div className="text-container container">
                 <h1 className='banner-heading'>
-                    The World’s Leading Investment Platform
+                    Worlds Leading
+                    Investment Platform
                 </h1>
-                <div className='d-flex text-white  align-items-lg-center gap-lg-3 flex-lg-row flex-column'>
+                <h2 className='banner-heading-2'>Harnessing new potential around the world!</h2>
+                {/* <div className='d-flex text-white  align-items-lg-center gap-lg-3 flex-lg-row flex-column'>
                     <p className='d-flex align-items-center gap-3'><SlCalender size={20} className='text-primary' /> <span>07 - 09, April 2025</span></p>
                     <p className='d-flex align-items-center gap-2'><MdLocationPin size={20} className='text-primary' /><span>Abu Dhabi, United Arab Emirates</span></p>
 
+                </div> */}
+
+                <div className='mt-3 d-flex align-items-center gap-3'>
+                    <button className='register-interest-cta'>Register your interest</button>
+                    <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
                 </div>
 
 
 
-
-
-                <div className='menu-cta-wrapper d-flex gap-3 align-items-center  mt-2 flex-wrap'>
+                {/* <div className='menu-cta-wrapper d-flex gap-3 align-items-center  mt-2 flex-wrap'>
                     <Link href="/contact-us">
                         <button className='menu-cta-btn'><span>Secure Your Spot</span></button>
                     </Link>
@@ -38,11 +43,9 @@ export default function BannerComponent() {
                     <Link href="/contact-us">
                         <button className='menu-cta-btn-outline'><span>Register your interest</span></button>
                     </Link>
-                </div>
+                </div> */}
 
-                <div className='menu-cta-wrapper mt-2'>
-
-                </div>
+              
             </div>
         </div>
     )

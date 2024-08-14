@@ -38,3 +38,24 @@
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+
+
+@keyframes lightningEffect {
+    0% {
+        opacity: 0;
+        transform: translateX(0%);
+    }
+   
+    50% {
+        opacity: 1;
+        transform: translateX(50%);
+    }
+    75% {
+        opacity: 0.5;
+        transform: translateX(75%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
