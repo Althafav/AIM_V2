@@ -1,23 +1,18 @@
-// pages/index.js
 import Head from "next/head";
-
+import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
 
-import { motion } from "framer-motion"
-import ThemeSectionComponent from "@/components/Home/ThemeSectionComponent";
-import AudientsCTAComponent from "@/components/Home/AudientsCTAComponent";
-import PortfolioCTAComponent from "@/components/Home/PortfolioCTAComponent";
-import SustainbleSecComponent from "@/components/Home/SustainbleSecComponent";
-import TestimonialsComponent from "@/components/Home/TestimonialsComponent";
-import ArticlesComponent from "@/components/Home/ArticlesComponent";
-
-import YoutubeSectionComponent from "@/components/Home/YoutubeSectionComponent";
-import CtaBannerComponent from "@/components/CTABannerComponent";
-
-
+const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
+const AudientsCTAComponent = dynamic(() => import("@/components/Home/AudientsCTAComponent"));
+const PortfolioCTAComponent = dynamic(() => import("@/components/Home/PortfolioCTAComponent"));
+const SustainbleSecComponent = dynamic(() => import("@/components/Home/SustainbleSecComponent"));
+const TestimonialsComponent = dynamic(() => import("@/components/Home/TestimonialsComponent"));
+const ArticlesComponent = dynamic(() => import("@/components/Home/ArticlesComponent"));
+const YoutubeSectionComponent = dynamic(() => import("@/components/Home/YoutubeSectionComponent"));
+const CtaBannerComponent = dynamic(() => import("@/components/CTABannerComponent"));
 
 export default function Home() {
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,22 +23,17 @@ export default function Home() {
       <Head>
         <title>AIM Congress | 2025</title>
         <meta name="description" content="" />
-
       </Head>
 
       <BannerComponent />
-
       <ThemeSectionComponent />
       <AudientsCTAComponent />
       <PortfolioCTAComponent />
       <SustainbleSecComponent />
-
       <TestimonialsComponent />
       <ArticlesComponent />
-      <YoutubeSectionComponent/>
-      <CtaBannerComponent/>
-
-
+      <YoutubeSectionComponent />
+      <CtaBannerComponent />
     </motion.div>
   );
 }
