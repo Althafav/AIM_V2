@@ -35,7 +35,7 @@ export default function TestimonialsComponent() {
             <div className="container">
                 <div className="row">
                     {TestimonialCard.map((item: any, index: number) => (
-                        <div key={index} className="col-lg-3 mb-3">
+                        <div key={index} className="col-lg-3 col-6 mb-3">
                             <div className="testimonial-card"
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={() => handleMouseLeave(index)}>

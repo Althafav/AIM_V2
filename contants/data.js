@@ -39,6 +39,18 @@ export const PortfolioCards = [
         btnName: "advanced-mft",
     },
 
+    {
+        image: "/assets/imgs/FDI-card-bg.png",
+        mainHead: "Foreign Direct Investment",
+        btnName: "fdi",
+    },
+
+    {
+        image: "/assets/imgs/Trad-innovation-card-bg.png",
+        mainHead: "Trade Innovation",
+        btnName: "trade",
+    },
+
 
 
 

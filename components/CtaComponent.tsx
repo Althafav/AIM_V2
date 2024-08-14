@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CtaBannerComponent() {
+export default function CtaComponent() {
     return (
         <section className='cta-banner-component-wrapper'>
             <div className="container">
