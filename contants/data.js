@@ -60,7 +60,7 @@ export const TestimonialCard = [
         name : "Arshad Khan",
         company: "Arabian Bourse Ltd",
         profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt1.mp4"
+        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
 
     },
 
@@ -69,7 +69,7 @@ export const TestimonialCard = [
         name : "Arshad Khan",
         company: "Arabian Bourse Ltd",
         profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt1.mp4"
+        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
 
     },
 
@@ -78,7 +78,7 @@ export const TestimonialCard = [
         name : "Arshad Khan",
         company: "Arabian Bourse Ltd",
         profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt1.mp4"
+        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
 
     }
 ]

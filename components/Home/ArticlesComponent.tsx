@@ -16,7 +16,7 @@ export default function ArticlesComponent() {
                                 colClass = "col-lg-4";
                             }
                             return (
-                                <div className={colClass + " mb-3"} key={item.id}>
+                                <div className={colClass + " mb-3"} key={`article-card-${index}`}>
                                     <div className="article-card">
                                         <div className="article-badge">
                                             News Article
@@ -47,10 +47,10 @@ export default function ArticlesComponent() {
                         {UpcommingEvent.map((item: any, index: number) => {
 
                             return (
-                                <div className="col-lg-6" key={item.id}>
+                                <div className="col-lg-6" key={`trending-card-${index}`}>
                                     <div className="upcomming-card">
                                         <div className="upcomming-badge">
-                                            Upcomming Event
+                                            Trending
                                         </div>
                                         <hr className='text-dark' />
 
