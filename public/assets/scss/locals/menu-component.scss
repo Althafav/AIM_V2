@@ -10,7 +10,7 @@
     z-index: 20;
 
     &.scrolled {
-        background: white;
+        background: rgb(0, 0, 0);
 
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(9px);
@@ -28,13 +28,11 @@
             }
         }
 
-        .white-logo {
-            display: none;
-        }
+        
 
         .top-items {
             .top-item {
-                color: black;
+                color: rgb(255, 255, 255);
             }
         }
 
@@ -42,7 +40,7 @@
 
             .menu-item {
                 a {
-                    color: black;
+                    color: rgb(255, 255, 255);
                     font-weight: 500;
                 }
             }
