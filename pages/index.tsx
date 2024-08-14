@@ -10,8 +10,9 @@ import PortfolioCTAComponent from "@/components/Home/PortfolioCTAComponent";
 import SustainbleSecComponent from "@/components/Home/SustainbleSecComponent";
 import TestimonialsComponent from "@/components/Home/TestimonialsComponent";
 import ArticlesComponent from "@/components/Home/ArticlesComponent";
-import CtaBannerComponent from "@/components/CTABannerComponent";
+
 import YoutubeSectionComponent from "@/components/Home/YoutubeSectionComponent";
+import CtaBannerComponent from "@/components/CTABannerComponent";
 
 
 
