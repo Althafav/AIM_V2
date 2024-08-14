@@ -11,7 +11,7 @@ const SustainbleSecComponent = dynamic(() => import("@/components/Home/Sustainbl
 const TestimonialsComponent = dynamic(() => import("@/components/Home/TestimonialsComponent"));
 const ArticlesComponent = dynamic(() => import("@/components/Home/ArticlesComponent"));
 const YoutubeSectionComponent = dynamic(() => import("@/components/Home/YoutubeSectionComponent"));
-const CtaBannerComponent = dynamic(() => import("@/components/CTABannerComponent"));
+
 
 export default function Home() {
   const [themeRef, inViewTheme] = useInView({ triggerOnce: true });
@@ -58,9 +58,7 @@ export default function Home() {
       <div ref={youtubeRef}>
         {inViewYoutube && <YoutubeSectionComponent />}
       </div>
-      <div ref={ctaBannerRef}>
-        {inViewCtaBanner && <CtaBannerComponent />}
-      </div>
+     
     </motion.div>
   );
 }
