@@ -2,6 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
+import { useInView } from 'react-intersection-observer';
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
 const AudientsCTAComponent = dynamic(() => import("@/components/Home/AudientsCTAComponent"));
@@ -13,6 +14,15 @@ const YoutubeSectionComponent = dynamic(() => import("@/components/Home/YoutubeS
 const CtaBannerComponent = dynamic(() => import("@/components/CTABannerComponent"));
 
 export default function Home() {
+  const [themeRef, inViewTheme] = useInView({ triggerOnce: true });
+  const [audientsRef, inViewAudients] = useInView({ triggerOnce: true });
+  const [portfolioRef, inViewPortfolio] = useInView({ triggerOnce: true });
+  const [sustainbleRef, inViewSustainble] = useInView({ triggerOnce: true });
+  const [testimonialsRef, inViewTestimonials] = useInView({ triggerOnce: true });
+  const [articlesRef, inViewArticles] = useInView({ triggerOnce: true });
+  const [youtubeRef, inViewYoutube] = useInView({ triggerOnce: true });
+  const [ctaBannerRef, inViewCtaBanner] = useInView({ triggerOnce: true });
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,14 +36,31 @@ export default function Home() {
       </Head>
 
       <BannerComponent />
-      <ThemeSectionComponent />
-      <AudientsCTAComponent />
-      <PortfolioCTAComponent />
-      <SustainbleSecComponent />
-      <TestimonialsComponent />
-      <ArticlesComponent />
-      <YoutubeSectionComponent />
-      <CtaBannerComponent />
+
+      <div ref={themeRef}>
+        {inViewTheme && <ThemeSectionComponent />}
+      </div>
+      <div ref={audientsRef}>
+        {inViewAudients && <AudientsCTAComponent />}
+      </div>
+      <div ref={portfolioRef}>
+        {inViewPortfolio && <PortfolioCTAComponent />}
+      </div>
+      <div ref={sustainbleRef}>
+        {inViewSustainble && <SustainbleSecComponent />}
+      </div>
+      <div ref={testimonialsRef}>
+        {inViewTestimonials && <TestimonialsComponent />}
+      </div>
+      <div ref={articlesRef}>
+        {inViewArticles && <ArticlesComponent />}
+      </div>
+      <div ref={youtubeRef}>
+        {inViewYoutube && <YoutubeSectionComponent />}
+      </div>
+      <div ref={ctaBannerRef}>
+        {inViewCtaBanner && <CtaBannerComponent />}
+      </div>
     </motion.div>
   );
 }
