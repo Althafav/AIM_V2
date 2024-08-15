@@ -2,37 +2,98 @@ import React from 'react'
 import { motion } from "framer-motion";
 
 export default function About() {
+    const sentence1 = "AIM Congress is an initiative of the AIM Global Foundation, an independent international organization fully committed to empower the world’s economy by boosting effective promotion strategies and facilitating opportunities for economic productivity and expansion."
+    const sentence2 = "AIM Congress has established itself as a leading investment platform in the Middle East, which aspires to ignite positive transformation by creating investment opportunities, upholding solidarity and developing economic relations among nations, as well as addressing the global ordeals that made a profound impact on economic growth."
+    const sentence3 = "AIM Congress continues to gather corporate leaders, policy-makers, businessmen, regional and international investors, entrepreneurs, leading academics, and experts showcasing up-to-date information, strategies and knowledge on attracting investments. Which brings together visitors from both the public and private sectors in Abu Dhabi and from all around of the world."
+        
     return (
-        <div className="portfolio-banner-wrapper">
+
+        <>
+            <div className="about-banner-wrapper">
 
 
-            <motion.img
-                src="/assets/imgs/fdi-banner-bg.png"
-                alt=""
-                className="banner-bg"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 2 }}
-            />
+                <motion.img
+                    src="/assets/imgs/Gradient.png"
+                    alt=""
+                    className="banner-bg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                />
 
-            <div className="text-container container">
-                <h1 className='banner-heading'>
-                    Navigating the
-                    Future of FDI
-                </h1>
-                <h2 className='banner-heading-2'>Overcoming Challenges, Seizing New Global Opportunities</h2>
+                <div className="text-container container">
+                    <h1 className='banner-heading'>
+                        Empowering
+                        Tomorrow,
+                        Today!
+                    </h1>
+                    <h2 className='banner-heading-2'>Overcoming Challenges, Seizing New Global Opportunities</h2>
 
 
-                <div className='mt-3 d-flex align-items-center gap-3'>
-                    <button className='register-interest-cta'>Register your interest</button>
-                    <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
+
+
+
+
+
+
                 </div>
-
-
-
-
-
             </div>
-        </div>
+
+            <div className='about-us-section-wrapper'>
+                <img src="/assets/imgs/about-section-bg.png" alt="" className='about-us-bg' />
+
+                <div className="container text-content">
+                    <div className="row">
+
+                        <div className="col-lg-6"></div>
+                        <div className="col-lg-6">
+                            <p className='' > {sentence1}</p>
+                            <p className='' > {sentence2}</p>
+                            <p className='' > {sentence3}</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div className='column-section-1'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <p className='section-head'>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className='column-section-2'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 d-flex justify-content-end">
+                            <p className='section-head'>To establish a global community addressing challenges collaboratively and inclusively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='about-last-wrapper'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 ">
+                            <p className='text-center mainhead'>Evolving Since 2011</p>
+                            <p className='text-center subHead'>World’s Leading Investment Platform</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/imgs/about last image 1.png" alt="" className='about-last-img'/>
+            </div>
+
+        </>
+
+
     )
 }

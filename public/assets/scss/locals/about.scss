@@ -42,29 +42,113 @@
 
             font-weight: 500;
             position: relative;
-            
+
             font-size: 40px;
             letter-spacing: -2px;
         }
 
-        .register-interest-cta {
-            background: $fdi-primary;
-            color: white;
-            padding: 8px 24px;
-            border-radius: 30px;
-            font-size: 20px;
-        }
 
-        .date-venue {
-            color: white;
-            margin: 0;
-            padding: 0;
-            font-size: 24px;
-            letter-spacing: -1px;
-        }
     }
 
 
 
 
+}
+
+
+.about-us-section-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: black;
+
+    .about-us-bg {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .text-content {
+        color: white;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        p {
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+}
+
+.column-section-1 {
+    background: rgb(255, 255, 255);
+    height: 500px;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+
+    .section-head {
+        background: linear-gradient(to right, #099FFC, #202C4C);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        font-size: 48px;
+        letter-spacing: -3px;
+        line-height: 1.1;
+        max-width: 740px;
+    }
+}
+
+.column-section-2 {
+    background: black;
+    height: 500px;
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+
+    .section-head {
+        background: linear-gradient(to right, white, #099FFC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        font-size: 48px;
+        letter-spacing: -3px;
+        line-height: 1.1;
+        max-width: 640px;
+    }
+}
+
+
+
+.about-last-wrapper {
+    margin-top: 80px;
+    .about-last-img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .mainhead {
+        font-size: 40px;
+        line-height: 1.1;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .subHead {
+        font-size: 20px;
+        color: $light-text;
+    }
 }
