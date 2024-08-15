@@ -1,5 +1,6 @@
 // _document.tsx
 import HeaderComponent from "@/components/HeaderComponent";
+import ScriptsComponents from "@/components/ScriptsComponents";
 
 
 import { Html, Head, Main, NextScript } from "next/document";
@@ -17,11 +18,17 @@ export default function Document() {
           src={`/assets/js/bootstrap.bundle.min.js`}
           strategy="afterInteractive"
         />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
       </Head>
       <body>
         <Main />
         <NextScript />
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
       </body>
     </Html>

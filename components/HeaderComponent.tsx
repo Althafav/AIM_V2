@@ -6,12 +6,17 @@ export default function HeaderComponent() {
   return (
     <>
       <link
+        href={`${Globals.BASE_URL}assets/css/owl.carousel.min.css`}
+        rel="stylesheet"
+        media="all"
+      />
+      <link
         href={`${Globals.BASE_URL}assets/css/main.min.css`}
         rel="stylesheet"
         media="all"
       />
 
-    
+
     </>
   );
 }

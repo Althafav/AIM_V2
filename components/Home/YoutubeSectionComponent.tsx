@@ -11,7 +11,7 @@ export default function YoutubeSectionComponent() {
                     </div>
 
                     <div className="col-12 d-flex justify-content-center">
-                        <img src="/assets/imgs/yt-1.png" alt="" style={{width: "100%"}}/>
+                        <img src="/assets/imgs/yt-1.png" alt="" style={{width: "100%", maxWidth: "660px"}}/>
                     </div>
                 </div>
             </div>

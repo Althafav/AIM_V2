@@ -35,13 +35,13 @@ const AudientsCTAComponent: React.FC = () => {
 
                 </div>
 
-                <div className="row">
+                <div className="row g-5">
                     <motion.div className="col-lg-4 " initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}>
                         <div className="cta-card-item">
 
-                            <img src="/assets/imgs/Delegate Card 1.png" alt="" />
+                            <img src="/assets/imgs/Delegate Card 1.png" alt="" style={{width: "80%", objectFit: "contain"}}/>
                         </div>
                     </motion.div>
 

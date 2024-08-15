@@ -1,8 +1,9 @@
 import { TestimonialCard } from '@/contants/data';
+import Services from '@/modules/Services';
 import React, { useRef, useState } from 'react';
 
 export default function TestimonialsComponent() {
-    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]); 
+    const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
     const [isMuted, setIsMuted] = useState<boolean[]>(new Array(TestimonialCard.length).fill(true));
     const [isHovered, setIsHovered] = useState<boolean[]>(new Array(TestimonialCard.length).fill(false));
 
@@ -30,15 +31,33 @@ export default function TestimonialsComponent() {
         }
     };
 
+    try {
+        Services.loadFile(
+            `/assets/js/owl.carousel.min.js`,
+            () => {
+                Services.loadFile(
+                    `/assets/js/testimonialCarousel.js`
+                );
+            }
+        );
+    }
+    catch {
+
+    }
+
+
     return (
         <section className='testimonails-component-wrapper'>
             <div className="container">
                 <div className="row">
-                    {TestimonialCard.map((item: any, index: number) => (
-                        <div key={index} className="col-lg-3 col-6 mb-3">
+                    <div className="testimonialCarousel  owl-carousel">
+
+
+                        {TestimonialCard.map((item: any, index: number) => (
+
                             <div className="testimonial-card"
                                 onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={() => handleMouseLeave(index)}>
+                                onMouseLeave={() => handleMouseLeave(index)} key={`testimonial-card${index}`}>
                                 <div className='preview-items'>
                                     <svg width="58" height="34" viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M45.384 33.576H26.696L42.184 0.167969H57.672L45.384 33.576ZM20.68 33.576H0.455999L18.504 0.167969H33.992L20.68 33.576Z" fill="#0094FB" />
@@ -69,8 +88,11 @@ export default function TestimonialsComponent() {
                                     </button>
                                 )}
                             </div>
-                        </div>
-                    ))}
+
+                        ))}
+                    </div>
+
+                    
                 </div>
             </div>
         </section>
