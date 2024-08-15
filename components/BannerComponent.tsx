@@ -74,7 +74,7 @@ export default function BannerComponent() {
                     </li>
                 </ul> */}
 
-                <ul className='row'>
+                <ul className='row g-lg-5 g-0'>
                     <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
                         <div className='d-flex flex-column gap-0'>
 

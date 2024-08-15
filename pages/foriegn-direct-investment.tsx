@@ -3,7 +3,7 @@ import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
-export default function foriegnDirectInvestment() {
+export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleToggle = () => {
@@ -26,16 +26,11 @@ export default function foriegnDirectInvestment() {
                         <div className="col-12">
                             <h1 className='section-heading'>Mapping the Future of</h1>
                         </div>
-                        <input type="checkbox" id="toggle-paragraph" className="toggle-checkbox" />
                         <div className="col-12">
-                            <p className='paragraph'>
-                                Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.
-                           
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam adipisci dolorem quidem rerum nesciunt praesentium sunt dignissimos corporis beatae. Aliquid ab harum nesciunt velit, deleniti qui doloribus enim vel veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus optio numquam nihil accusamus? Exercitationem labore officiis consectetur sapiente provident voluptates sed. Tempore esse ipsa beatae? Aspernatur exercitationem rem dolorum itaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repellendus molestias adipisci deserunt ipsam. Dicta, recusandae doloribus nulla numquam commodi placeat vitae reprehenderit provident, harum, quidem architecto necessitatibus error libero.
-                            </p>
+                            <p className={`paragraph ${isExpanded ? 'expanded' : 'faded'}`}>{isExpanded ? text : `${limitedText}...`}</p>
                         </div>
-                        <div className="col-12 d-flex justify-content-center align-items-center mt-3">
-                            <label className='read-more-btn' htmlFor="toggle-paragraph">Read More</label>
+                        <div className="col-12 d-flex justify-content-center align-items-center mt-3" onClick={handleToggle}>
+                            <button className='read-more-btn'>{isExpanded ? 'Read Less' : 'Read More'}</button>
                         </div>
                     </div>
                 </div>
