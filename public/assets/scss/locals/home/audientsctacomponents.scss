@@ -1,21 +1,33 @@
 .audients-section-wrapper {
-    
+
     .main-head {
         font-size: 48px;
         font-weight: bold;
         text-align: center;
         color: black;
-        
+
         line-height: 1.1;
         display: flex;
         flex-direction: column;
         color: $primary-color-varient;
         letter-spacing: -3px;
+        @media screen and (max-width: 800px) {
+            font-size: 32px;
+
+        }
     }
+
     .sub-head {
         font-size: 24px;
         color: $light-text;
         letter-spacing: -2px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
     }
 
     .cta-card-item {

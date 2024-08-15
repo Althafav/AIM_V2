@@ -1,23 +1,46 @@
 .theme-section-wrapper {
-    
+
     .main-head {
         font-size: 75px;
         font-weight: bold;
         text-align: center;
         color: black;
-        
+
         line-height: 1.1;
         display: flex;
         flex-direction: column;
         color: $primary-color-varient;
         letter-spacing: -3px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 48px;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
         .small-head {
             font-size: 48px;
             letter-spacing: -2px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 24px;
+                letter-spacing: -2px;
+                line-height: 1.1;
+            }
+
+
         }
     }
+
     .sub-head {
         font-size: 24px;
         color: $light-text;
+
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: -1px;
+            margin-top: 10px;
+        }
     }
 }

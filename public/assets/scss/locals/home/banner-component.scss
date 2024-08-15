@@ -38,6 +38,7 @@
 
             @media screen and (max-width: 800px) {
                 font-size: 42px;
+                letter-spacing: -2px;
             }
 
 
@@ -52,6 +53,11 @@
             max-width: 900px;
             font-size: 40px;
             letter-spacing: -2px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 24px;
+                letter-spacing: -1px;
+            }
         }
 
         .register-interest-cta {
@@ -68,6 +74,11 @@
             padding: 0;
             font-size: 24px;
             letter-spacing: -1px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 18px;
+                letter-spacing: -1px;
+            }
         }
 
 
@@ -86,6 +97,45 @@
             width: 220px;
             height: 50px;
             border-radius: 50px;
+        }
+    }
+
+
+    .stats-content {
+        position: absolute;
+        right: 300px;
+        bottom: 140px;
+        z-index: 2;
+        color: white;
+
+        span {
+            text-transform: uppercase;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .count {
+            font-weight: 600;   
+            font-size: 32px;
+        }
+
+
+        @media screen and (max-width: 800px) {
+            left: 0;
+            
+            right: unset;
+            span {
+                
+                font-size: 16px;
+                
+            }
+    
+            .count {
+                
+                font-size: 20px;
+            }
         }
     }
 

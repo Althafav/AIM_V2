@@ -28,7 +28,7 @@ export default function BannerComponent() {
 
                 </div> */}
 
-                <div className='mt-3 d-flex align-items-center gap-3'>
+                <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column'>
                     <button className='register-interest-cta'>Register your interest</button>
                     <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
                 </div>
@@ -45,8 +45,73 @@ export default function BannerComponent() {
                     </Link>
                 </div> */}
 
-              
+
+
+
+
             </div>
+
+            <div className="stats-content ">
+                {/* <ul className='d-flex align-items-lg-center align-items-start gap-lg-5 gap-3 flex-lg-row flex-column'>
+                    <li className='d-flex flex-column gap-0'>
+                        <span className='count'>175</span>
+                        <span>Countries</span>
+                    </li>
+
+                    <li className='d-flex flex-column gap-0'>
+                        <span className='count'>12,000</span>
+                        <span>Participants</span>
+                    </li>
+
+                    <li className='d-flex flex-column gap-0'>
+                        <span className='count'>450</span>
+                        <span>Sessions</span>
+                    </li>
+
+                    <li className='d-flex flex-column gap-0'>
+                        <span className='count'>900</span>
+                        <span>Speakers</span>
+                    </li>
+                </ul> */}
+
+                <ul className='row'>
+                    <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
+                        <div className='d-flex flex-column gap-0'>
+
+                            <span className='count'>175</span>
+                            <span>Countries</span>
+                        </div>
+                    </li>
+
+                    <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
+                        <div className='d-flex flex-column gap-0'>
+
+                            <span className='count'>12,000</span>
+                            <span>Participants</span>
+                        </div>
+                    </li>
+
+                    <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
+                        <div className='d-flex flex-column gap-0'>
+
+                            <span className='count'>450</span>
+                            <span>Sessions</span>
+                        </div>
+                    </li>
+
+                    <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
+                        <div className='d-flex flex-column gap-0'>
+
+                            <span className='count'>900</span>
+                            <span>Speakers</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
         </div>
     )
 }

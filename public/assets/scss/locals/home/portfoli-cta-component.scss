@@ -12,11 +12,22 @@
         flex-direction: column;
         color: $primary-color-varient;
         letter-spacing: -3px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 32px;
+
+        }
     }
     .sub-head {
         font-size: 24px;
         color: $light-text;
         letter-spacing: -2px;
+
+        @media screen and (max-width: 800px) {
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
 
     }
 
@@ -55,6 +66,11 @@
                 font-weight: bold;
                 letter-spacing: -2px;
                 text-align: start;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 20px;
+                    letter-spacing: -1px;
+                }
                 
             }
             .sub-head--card {
@@ -73,6 +89,15 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 12px;
+                    padding: 8px;
+
+                    svg {
+                        width: 14px;
+                    }
+                }
             }
 
             .fdi {
