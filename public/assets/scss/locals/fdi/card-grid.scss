@@ -1,0 +1,98 @@
+.masonry-container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    
+}
+
+.masonry-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.benefit-card-bg {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 25px;
+    object-position: top;
+}
+
+.card {
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+.card-1 {
+    height: 270px;
+}
+
+.card-2 {
+    height: 440px;
+}
+
+.card-3 {
+    height: 232px;
+}
+
+.card-4 {
+    height: 232px;
+}
+
+.card-5 {
+    height: 232px;
+}
+
+.card-6 {
+    height: 440px;
+}
+
+.card-7 {
+    height: 270px;
+}
+
+.card-8 {
+    height: 270px;
+}
+
+.card-9 {
+    height: 440px;
+}
+
+
+@media (max-width: 768px) {
+    .masonry-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .masonry-column {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    .card {
+        margin-bottom: 8px;
+    }
+
+
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4,
+    .card-5,
+    .card-6,
+    .card-7,
+    .card-8,
+    .card-9 {
+        height: auto;
+    }
+
+    .benefit-card-bg {
+        border-radius: 15px;
+    }
+}

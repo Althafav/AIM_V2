@@ -1,0 +1,60 @@
+.about-portfolio-section-wrapper {
+
+    .about-content {
+        max-width: 80%;
+        margin: auto;
+
+        .section-heading {
+            font-size: 48px;
+            font-weight: bold;
+            color: $primary-color-varient;
+            letter-spacing: -3px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .paragraph {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to bottom, #ffffff10, white);;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .read-more-btn {
+            width: 200px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+    }
+
+}
+
+
+.key-benefits-section-wrapper{
+    .sub-heading {
+        color: $light-text;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.frequently-asked-questions-wrapper {
+    .main-heaiding {
+        font-size: 48px;
+        font-weight: 600;
+        color: $primary-color-varient;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+    }
+}

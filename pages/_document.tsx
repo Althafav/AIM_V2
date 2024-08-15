@@ -12,7 +12,12 @@ export default function Document() {
 
         <link rel="icon" href="/favicon.ico" />
         <HeaderComponent />
-        <link rel="preconnect" href="https://deliver.kontent.ai" crossOrigin="anonymous"/>
+        <link rel="preconnect" href="https://deliver.kontent.ai" crossOrigin="anonymous" />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossOrigin="anonymous"
+        ></Script>
       </Head>
       <body>
         <Main />

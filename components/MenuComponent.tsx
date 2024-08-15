@@ -53,7 +53,7 @@ export default function MenuComponent() {
         <div className="d-flex align-items-end justify-content-between">
           <Link href="/" className="logo-wrapper">
             <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
-               className='menu-logo white-logo' />
+              className='menu-logo white-logo' />
 
             {/* <img src={`/assets/imgs/Aim-black-logo.png`} alt="Logo"
               loading="lazy" className='menu-logo black-logo' /> */}

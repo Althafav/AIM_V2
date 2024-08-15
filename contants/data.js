@@ -3,6 +3,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/FDI-card-bg.png",
         mainHead: "Foreign Direct Investment",
         btnName: "fdi",
+        link: '/foriegn-direct-investment'
     },
 
     {

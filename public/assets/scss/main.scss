@@ -131,6 +131,21 @@ hr {
     }
 }
 
+.section-heading {
+    font-size: 48px;
+    font-weight: bold;
+    color: $primary-color-varient;
+    letter-spacing: -3px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -158,4 +173,11 @@ hr {
 @import "./locals/home/testimonials-component.scss";
 @import "./locals/home/articles-components.scss";
 @import "./locals/home/cta-banner-component.scss";
+
+@import "./locals/UI/accordion.scss";
+
+@import "./locals/fdi/banner.scss";
+@import "./locals/fdi/fdi-home.scss";
+@import "./locals/fdi/card-grid.scss";
+
 @import "./locals/footer-component.scss";
