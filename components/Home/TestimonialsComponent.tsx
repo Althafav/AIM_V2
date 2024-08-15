@@ -32,7 +32,7 @@ export default function TestimonialsComponent() {
 
     return (
         <section className='testimonails-component-wrapper'>
-            <div className="container">
+            <div className="section-container">
                 <div className="row">
                     
                     {TestimonialCard.map((item: any, index: number) => (

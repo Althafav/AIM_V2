@@ -36,7 +36,7 @@ const PortfolioCTAComponent: React.FC = () => {
 
     return (
         <section ref={ref} className='section-wrapper portfolio-section-wrapper' id='Portfolio'>
-            <div className="container">
+            <div className="section-container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
 

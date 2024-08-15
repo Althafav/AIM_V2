@@ -3,7 +3,7 @@ import React from 'react'
 export default function CtaComponent() {
     return (
         <section className='cta-banner-component-wrapper'>
-            <div className="container">
+            <div className="section-container">
                 <div className="row">
                     <div className="col-12">
                         <div className='banner-content' >

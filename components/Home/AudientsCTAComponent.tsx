@@ -7,7 +7,7 @@ const AudientsCTAComponent: React.FC = () => {
 
     return (
         <section ref={ref} className='audients-section-wrapper'>
-            <div className="container">
+            <div className="section-container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
 

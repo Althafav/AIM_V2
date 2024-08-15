@@ -5,7 +5,7 @@ export default function ArticlesComponent() {
     return (
         <>
             <section className='articles-component-wrapper'>
-                <div className="container">
+                <div className="section-container">
                     <div className="row">
                         {ArticlesCard.map((item: any, index: number) => {
                             let colClass = "col-lg-4"; //default
@@ -42,7 +42,7 @@ export default function ArticlesComponent() {
             </section>
 
             <section className='articles-component-wrapper'>
-                <div className="container">
+                <div className="section-container">
                     <div className="row">
                         {UpcommingEvent.map((item: any, index: number) => {
 

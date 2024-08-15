@@ -8,10 +8,10 @@ import { FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 export default function FooterComponent() {
   return (
-    <div className='footer-component-wrapper'>
+    <div className='footer-component-wrapper '>
       <img src="/assets/imgs/Gradient.png" alt="" className='footer-bg' />
 
-      <div className="container">
+      <div className="section-container">
         <div className="row footer-content">
           <div className="col-lg-4 mb-4 mb-lg-0">
             <div className=''>
