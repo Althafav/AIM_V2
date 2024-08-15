@@ -1,6 +1,8 @@
 .sustainable-section-wrapper {
     position: relative;
 
+    padding: 20px 0;
+
     img {
         width: 100%;
         object-fit: cover;
@@ -11,16 +13,33 @@
         inset: 0;
         z-index: -1;
         height: 100vh;
+
+        @media screen and (max-width: 800px) {
+            height: 100%;
+
+        }
     }
 
 
     .left-section {
         padding: 60px 0;
+
+        @media screen and (max-width: 800px) {
+            padding: 0;
+
+        }
+
         .section-heading--sustainable {
             font-size: 64px;
             color: $future-cities;
             font-weight: bold;
             letter-spacing: -3px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 32px;
+                text-align: center;
+
+            }
         }
     }
 
@@ -28,6 +47,12 @@
         padding: 60px 0;
         max-width: 700px;
         margin: auto;
+
+        @media screen and (max-width: 800px) {
+            padding: 0;
+
+        }
+
         .paragraph {
             color: white;
         }

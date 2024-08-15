@@ -13,7 +13,7 @@ export default function FooterComponent() {
 
       <div className="container">
         <div className="row footer-content">
-          <div className="col-lg-4">
+          <div className="col-lg-4 mb-4 mb-lg-0">
             <div className=''>
               <div className="logos">
                 <img src="/assets/imgs/facebook.png" alt="" />
@@ -29,7 +29,7 @@ export default function FooterComponent() {
 
               </div>
 
-              <div className='mt-5'>
+              <div className='mt-5 mb-4 mb-lg-0'>
                 <label htmlFor="newsletter" className='text-white mb-2'>Signup for Newsletter</label>
                 <form action="" className='d-flex align-items-center gap-3'>
                   <input type="text" className='form-control w-50 rounded' placeholder='Enter email here' />
@@ -40,11 +40,10 @@ export default function FooterComponent() {
               </div>
 
 
-              <img src="/assets/imgs/aim-white-horizontal.png" alt="" className='aim-logo-white' />
-              <p className='copy-right'>© Copyright AIM Global Foundation</p>
+
             </div>
           </div>
-          <div className="col-lg-8">
+          <div className="col-lg-8 mb-4 mb-lg-0">
             <div className='row g-1'>
               <div className="col-lg-3">
                 <p className='footer-nav-head'>About</p>
@@ -53,7 +52,7 @@ export default function FooterComponent() {
                   <p>AIM Congress</p>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Portfolios</p>
                 <div className='footer-nav'>
                   <p>Foreign Direct Investment</p>
@@ -66,7 +65,7 @@ export default function FooterComponent() {
                   <p>Entrepreneurship</p>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Resources</p>
                 <div className="footer-nav">
                   <p>Press</p>
@@ -78,7 +77,7 @@ export default function FooterComponent() {
                   <p>Career</p>
                 </div>
               </div>
-              <div className="col-lg-3">
+              <div className="col-lg-3 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Get In Touch</p>
                 <div className="footer-nav">
                   <p>+971 4 328 2000</p>
@@ -89,6 +88,19 @@ export default function FooterComponent() {
             </div>
           </div>
         </div>
+
+
+        <div className="row">
+          <div className="col-lg-6 mb-4 mb-lg-0">
+            <img src="/assets/imgs/aim-white-horizontal.png" alt="" className='aim-logo-white' />
+          </div>
+          <div className="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+            <p className='copy-right'>© Copyright AIM Global Foundation</p>
+          </div>
+
+
+        </div>
+
       </div>
     </div>
   )
