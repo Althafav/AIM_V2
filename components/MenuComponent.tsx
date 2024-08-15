@@ -75,12 +75,12 @@ export default function MenuComponent() {
 
             <ul className='menu-items'>
               <li className='menu-item'>
-                <Link href="/about-us">
+                <Link href="/about">
                   ABOUT AIM
                 </Link>
               </li>
               <li className='menu-item'>
-                <Link href="/about-us" className='aim-2025'>
+                <Link href="#" className='aim-2025'>
                   AIM 2025
                 </Link>
               </li>
