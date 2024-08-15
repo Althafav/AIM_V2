@@ -35,7 +35,7 @@ const PortfolioCTAComponent: React.FC = () => {
     }, [emblaApi])
 
     return (
-        <section ref={ref} className='section-wrapper portfolio-section-wrapper'>
+        <section ref={ref} className='section-wrapper portfolio-section-wrapper' id='Portfolio'>
             <div className="container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
