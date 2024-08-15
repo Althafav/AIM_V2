@@ -7,10 +7,7 @@ export default function ScriptsComponents() {
     <>
 
 
-      <Script
-        src={`/assets/js/bootstrap.bundle.min.js`}
-        strategy="afterInteractive"
-      />
+      
 
       
 

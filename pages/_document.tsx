@@ -1,6 +1,6 @@
 // _document.tsx
 import HeaderComponent from "@/components/HeaderComponent";
-import ScriptsComponents from "@/components/ScriptsComponents";
+
 
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
@@ -21,7 +21,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <ScriptsComponents />
+        
 
       </body>
     </Html>

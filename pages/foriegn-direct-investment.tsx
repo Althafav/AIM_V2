@@ -2,11 +2,16 @@ import Banner from '@/components/FDI/Banner'
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 import React from 'react'
-
+import { motion } from "framer-motion"
 export default function foriegnDirectInvestment() {
 
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             <Banner />
             <section className='about-portfolio-section-wrapper'>
                 <div className="container">
@@ -25,7 +30,7 @@ export default function foriegnDirectInvestment() {
             </section>
 
 
-           <CardGrid/>
+            <CardGrid />
 
 
             <section className='frequently-asked-questions-wrapper'>
@@ -39,6 +44,6 @@ export default function foriegnDirectInvestment() {
                     <AccordionComponent />
                 </div>
             </section>
-        </div>
+        </motion.div>
     )
 }
