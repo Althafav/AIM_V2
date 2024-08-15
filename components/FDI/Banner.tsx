@@ -1,22 +1,22 @@
 import Link from 'next/link'
 import React from 'react'
 import { motion } from "framer-motion";
-import { MdLocationPin } from 'react-icons/md';
-import { SlCalender } from 'react-icons/sl';
+
 
 export default function Banner() {
 
-    const customHeading = "Your gateway to meet global investment and economic leaders and connect with key decision makers".split(" ")
     return (
         <div className="portfolio-banner-wrapper">
-            {/* <div className="video-section">
 
-                <video width="100%" autoPlay loop muted controls={false} preload="auto">
-                    <source src="https://d2g6bqkf4g3jqe.cloudfront.net/videos/aim-bg.mp4" type="video/mp4" className='banner-video' width="100%" />
-                </video>
-            </div> */}
 
-            <img src="/assets/imgs/fdi-banner-bg.png" alt="" className='banner-bg'/>
+            <motion.img
+                src="/assets/imgs/fdi-banner-bg.png"
+                alt=""
+                className="banner-bg"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
+            />
 
             <div className="text-container container">
                 <h1 className='banner-heading'>

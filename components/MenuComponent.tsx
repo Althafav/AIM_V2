@@ -49,6 +49,16 @@ export default function MenuComponent() {
   return (
     <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
+        <div className="row">
+          <div className="col-12">
+            <div className="top-items d-flex justify-content-end align-items-center mb-1">
+              <div className="d-flex gap-5 align-items-center">
+                <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div>
+                <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="d-flex align-items-end justify-content-between">
           <Link href="/" className="logo-wrapper">
@@ -96,13 +106,8 @@ export default function MenuComponent() {
             </ul>
           </div>
 
-          <div className='d-flex flex-column justify-content-between gap-5 '>
-            <div className="top-items d-flex justify-content-end align-items-center mb-1">
-              <div className="d-flex gap-5 align-items-center">
-                <div className='top-item'><FaUser /><span>PORTAL LOGIN</span></div>
-                <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div>
-              </div>
-            </div>
+          <div className=' '>
+
 
             <Link href="/contact-us" className='menu-cta-wrapper'>
               {/* <button className='menu-cta-btn'><span>Secure Your Spot</span></button> */}
