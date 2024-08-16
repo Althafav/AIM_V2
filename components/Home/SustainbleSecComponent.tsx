@@ -5,7 +5,7 @@ export default function SustainbleSecComponent() {
         <section className='sustainable-section-wrapper '>
             <img src="/assets/imgs/sustainable-bg.png" alt="" className='sustainable-bg' />
             <div className="section-container">
-                <div className="row g-5">
+                <div className="row g-lg-5">
                     <div className="col-lg-4">
                         <div className="left-section">
                             <h1 className='section-heading--sustainable'>Strategic
