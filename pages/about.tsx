@@ -80,6 +80,42 @@ export default function About() {
                 </div>
             </div>
 
+            <section className="stats-container-wrapper section-container mt-5">
+                <div className="grid-container">
+                    <div className="item1">
+                        <img src="/assets/imgs/b2bmembers.png" alt="aim 2025 b2b members count" />
+                    </div>
+                    <div className="item2">
+                        <img src="/assets/imgs/speakers.png" alt="aim 2025 speakers count" />
+                    </div>
+                    <div className="item3">
+                        <img src="/assets/imgs/sessions.png" alt="aim 2025 sessions count" />
+                    </div>
+                    <div className="item4">
+                        <img src="/assets/imgs/exhibitors.png" alt="aim 2025 exhibitors count" />
+                    </div>
+                    <div className="item5">
+                        <img src="/assets/imgs/totalattendence.png" alt="aim 2025 attendence count" />
+                    </div>
+
+                    <div className="item6">
+                        <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />
+                    </div>
+                    <div className="item7">
+
+                        <img src="/assets/imgs/total-countries.png" alt="aim 2025" />
+                    </div>
+                    <div className="item8">
+                        <img src="/assets/imgs/highlevelRoundtables.png" alt="aim 2025" />
+                    </div>
+                    <div className="item9">
+                        <img src="/assets/imgs/startups.png" alt="aim 2025" />
+                    </div>
+
+                </div>
+
+            </section>
+
             <div className='about-last-wrapper'>
                 <div className="container">
                     <div className="row">
@@ -89,7 +125,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <img src="/assets/imgs/about last image 1.png" alt="" className='about-last-img'/>
+                <img src="/assets/imgs/about last image 1.png" alt="" className='about-last-img' />
             </div>
 
         </>

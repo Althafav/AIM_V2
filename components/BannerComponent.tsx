@@ -18,7 +18,7 @@ export default function BannerComponent() {
 
             <div className="text-container container">
                 <h1 className='banner-heading'>
-                    Worlds Leading
+                    World's Leading
                     Investment Platform
                 </h1>
                 <h2 className='banner-heading-2'>Harnessing new potential around the world!</h2>

@@ -45,7 +45,7 @@ section {
 
     @media screen and (max-width: 800px) {
         min-height: unset;
-        
+
     }
 }
 
@@ -164,7 +164,13 @@ ul {
 
 .section-container {
     max-width: 70% !important;
-    margin: auto
+    margin: auto;
+
+    @media screen and (max-width: 800px) {
+
+        max-width: 95% !important;
+        margin: auto;
+    }
 }
 
 
@@ -194,6 +200,7 @@ ul {
 @import "./locals/home/cta-banner-component.scss";
 
 @import "./locals/about.scss";
+@import "./locals/home/statsSection.scss";
 
 @import "./locals/UI/accordion.scss";
 

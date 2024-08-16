@@ -7,6 +7,7 @@
         line-height: 1.1;
         letter-spacing: -3px;
     }
+
     .subHead {
         font-size: 24px;
         color: $light-text;
@@ -25,6 +26,7 @@
 
         }
     }
+
     .cta-banner-heading {
         font-size: 64px;
         font-weight: 600;
@@ -42,6 +44,7 @@
         max-width: 800px;
         text-align: start;
     }
+
     .registernow-cta {
         text-transform: uppercase;
         background: white;
@@ -55,7 +58,16 @@
         &:hover {
             background-color: $primary-color;
             color: white;
-            border: none
+            border: none;
+
+        }
+
+        @media screen and (max-width: 800px) {
+            width: unset;
+            height: unset;
+            padding: 8px 12px;
+            font-size: 18px;
+            
         }
     }
 }
