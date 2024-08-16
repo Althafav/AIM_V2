@@ -37,7 +37,7 @@
 
             @media screen and (max-width: 800px) {
                 font-size: 32px;
-                text-align: center;
+                text-align: left;
 
             }
         }
@@ -55,6 +55,12 @@
 
         .paragraph {
             color: white;
+
+            @media screen and (max-width: 800px) {
+               
+                text-align: left;
+
+            }
         }
 
         .read-more-btn {
