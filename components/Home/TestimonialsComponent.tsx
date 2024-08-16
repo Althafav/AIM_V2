@@ -1,5 +1,7 @@
 import { TestimonialCard } from '@/contants/data';
-import React, { useRef, useState } from 'react';
+import Globals from '@/modules/Globals';
+import JsLoader from '@/modules/JsLoader';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function TestimonialsComponent() {
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -30,48 +32,70 @@ export default function TestimonialsComponent() {
         }
     };
 
+    try {
+        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/jquery-3.5.1.min.js`, () => {
+
+        });
+        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/owl.carousel.min.js`, () => {
+
+        });
+
+        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/testimonialCarousel.js`, () => {
+
+        });
+    } catch { }
+
+
     return (
         <section className='testimonails-component-wrapper'>
             <div className="section-container">
                 <div className="row">
-                    
-                    {TestimonialCard.map((item: any, index: number) => (
-                        <div key={index} className="col-lg-3 col-6 mb-3">
-                            <div className="testimonial-card"
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={() => handleMouseLeave(index)}>
-                                <div className='preview-items'>
-                                    <svg width="58" height="34" viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M45.384 33.576H26.696L42.184 0.167969H57.672L45.384 33.576ZM20.68 33.576H0.455999L18.504 0.167969H33.992L20.68 33.576Z" fill="#0094FB" />
-                                    </svg>
-                                    <p className='testimonial-words'>{item.quote}</p>
+                    <div className="col-12">
+                        <div className="testimonialCarousel owl-carousel">
 
-                                    <div className='profile'>
-                                        <span className='name'>{item.name}</span>
-                                        <span className='company'>{item.company}</span>
+                            {TestimonialCard.map((item: any, index: number) => (
+
+
+                                <div className="testimonial-card"
+                                    key={`testimonial-${index}`}
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onMouseLeave={() => handleMouseLeave(index)}>
+                                    <div className='preview-items'>
+                                        <svg width="58" height="34" viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M45.384 33.576H26.696L42.184 0.167969H57.672L45.384 33.576ZM20.68 33.576H0.455999L18.504 0.167969H33.992L20.68 33.576Z" fill="#0094FB" />
+                                        </svg>
+                                        <p className='testimonial-words'>{item.quote}</p>
+
+                                        <div className='profile'>
+                                            <span className='name'>{item.name}</span>
+                                            <span className='company'>{item.company}</span>
+                                        </div>
                                     </div>
+
+                                    <img src="/assets/imgs/person1.png" alt="" className='testimonial-img1' />
+                                    <video
+                                        ref={(el) => {
+                                            videoRefs.current[index] = el;
+                                        }}  // No return value
+                                        className="video"
+                                        muted={isMuted[index]}
+                                    >
+                                        <source src={item.testimonialVideoSrc} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+
+                                    {isHovered[index] && (
+                                        <button className="mute-button" onClick={() => toggleMute(index)}>
+                                            {isMuted[index] ? "Unmute" : "Mute"}
+                                        </button>
+                                    )}
                                 </div>
 
-                                <img src="/assets/imgs/person1.png" alt="" className='testimonial-img1' />
-                                <video
-                                    ref={(el) => {
-                                        videoRefs.current[index] = el;
-                                    }}  // No return value
-                                    className="video"
-                                    muted={isMuted[index]}
-                                >
-                                    <source src={item.testimonialVideoSrc} type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
 
-                                {isHovered[index] && (
-                                    <button className="mute-button" onClick={() => toggleMute(index)}>
-                                        {isMuted[index] ? "Unmute" : "Mute"}
-                                    </button>
-                                )}
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
                 </div>
             </div>
         </section>
