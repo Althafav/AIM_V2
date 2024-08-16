@@ -2,10 +2,15 @@ import React from 'react'
 
 export default function SustainbleSecComponent() {
     return (
-        <section className='sustainable-section-wrapper '>
-            <img src="/assets/imgs/sustainable-bg.png" alt="" className='sustainable-bg' />
+        <section className='sustainable-section-wrapper ' style={{
+            backgroundImage: "url('/assets/imgs/sustainable-bg.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+        }}>
+
             <div className="section-container">
-                <div className="row g-lg-5">
+                <div className="row g-3">
                     <div className="col-lg-4">
                         <div className="left-section">
                             <h1 className='section-heading--sustainable'>Strategic
@@ -14,7 +19,7 @@ export default function SustainbleSecComponent() {
                                 Goals</h1>
                         </div>
                     </div>
-                    <div className="col-lg-8">
+                    <div className="col-lg-8 ">
                         <div className="right-section">
                             <p className='paragraph'>From our company perspective, we prioritize sustainable goals: reducing carbon footprint, promoting ethical sourcing, achieving zero waste, fostering diversity, and supporting community initiatives. These efforts enhance our brands reputation and contribute to a sustainable future for all.</p>
                             <img src="/assets/imgs/solar.png" alt="" className='mt-3 mb-3 w-100 cover' />
