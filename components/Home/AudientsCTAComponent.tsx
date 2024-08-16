@@ -60,6 +60,7 @@ const AudientsCTAComponent: React.FC = () => {
                         <div className="cta-card-item">
 
                             <img src="/assets/imgs/Partner Card 1.png" alt="" />
+
                         </div>
                     </motion.div>
                 </div>
