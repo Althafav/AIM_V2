@@ -50,7 +50,7 @@ const AudientsCTAComponent: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.7 }}>
                         <div className="cta-card-item">
 
-                            <img src="/assets/imgs/Exhibitor Card.png" alt="" />
+                            <img src="/assets/imgs/Exhibitor Card.png" alt="" style={{width: "80%", objectFit: "contain"}}/>
                         </div>
                     </motion.div>
 
@@ -59,7 +59,7 @@ const AudientsCTAComponent: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.9 }}>
                         <div className="cta-card-item">
 
-                            <img src="/assets/imgs/Partner Card 1.png" alt="" />
+                            <img src="/assets/imgs/Partner Card 1.png" alt="" style={{width: "80%", objectFit: "contain"}}/>
                         </div>
                     </motion.div>
                 </div>

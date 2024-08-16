@@ -106,7 +106,7 @@ export default function MenuComponent() {
             </ul>
           </div>
 
-          <div className=' '>
+          <div className='d-lg-block d-none'>
 
 
             <Link href="/contact-us" className='menu-cta-wrapper'>
