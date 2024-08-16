@@ -10,7 +10,7 @@ export default function SustainbleSecComponent() {
         }}>
 
             <div className="section-container">
-                <div className="row g-3">
+                <div className="row g-">
                     <div className="col-lg-4">
                         <div className="left-section">
                             <h1 className='section-heading--sustainable'>Strategic

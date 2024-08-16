@@ -149,7 +149,7 @@ export default function MenuComponent() {
 
       </div>
 
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isToggle && (
           <motion.div
             className="mobile-menu-nav d-lg-none d-block"
@@ -194,7 +194,7 @@ export default function MenuComponent() {
             <div className="menu__overlay"></div>
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </nav>
   );
 }
