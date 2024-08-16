@@ -14,7 +14,7 @@ const CardGrid = () => {
     return (
         <section className='key-benefits-section-wrapper '>
 
-            <div className="container">
+            <div className="section-container">
                 <div className="row">
                     <div className="col-12">
                         <h1 className='section-heading'>Portfolio Strategically Designed for your Need </h1>
