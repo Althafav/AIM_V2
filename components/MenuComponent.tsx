@@ -65,9 +65,6 @@ export default function MenuComponent() {
             <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
               className='menu-logo white-logo' />
 
-            {/* <img src={`/assets/imgs/Aim-black-logo.png`} alt="Logo"
-              loading="lazy" className='menu-logo black-logo' /> */}
-
           </Link>
 
           <div className="d-flex flex-column gap-4">
@@ -90,12 +87,12 @@ export default function MenuComponent() {
                 </Link>
               </li>
               <li className='menu-item'>
-                <Link href="/#Our-Services">
+                <Link href="#">
                   RESOURCES
                 </Link>
               </li>
               <li className='menu-item'>
-                <Link href="/#Our-Services">
+                <Link href="#">
                   LOGISTICS
                 </Link>
               </li>
@@ -149,7 +146,7 @@ export default function MenuComponent() {
 
       </div>
 
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isToggle && (
           <motion.div
             className="mobile-menu-nav d-lg-none d-block"
@@ -159,13 +156,22 @@ export default function MenuComponent() {
             transition={{ duration: 0.3 }}
           >
             <ul className='mobile-menu-items'>
+              <div className='d-flex justify-content-between px-4 py-3'>
+                <Link href="/" className="logo-wrapper">
+                  <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
+                    className='menu-logo white-logo' />
+
+                </Link>
+                <IoMdClose size={32} className='menu-icon' cursor="pointer" />
+              </div>
+
               <li className='mobile-menu-item'>
-                <Link href="/about-us" onClick={handleToggle}>
+                <Link href="/about" onClick={handleToggle}>
                   ABOUT AIM
                 </Link>
               </li>
               <li className='mobile-menu-item'>
-                <Link href="/#Our-Services" onClick={handleToggle}>
+                <Link href="#" onClick={handleToggle}>
                   AIM 2025
                 </Link>
               </li>
@@ -176,25 +182,29 @@ export default function MenuComponent() {
               </li>
               <li className='mobile-menu-item'>
                 <Link href="/#Portfolio" onClick={handleToggle}>
-                  OTHER SERVICES
+                  RESOURCES
                 </Link>
               </li>
 
               <li className='mobile-menu-item'>
                 <Link href="/#Portfolio" onClick={handleToggle}>
-                  BROUCHERS
+                  LOGISTICS
                 </Link>
               </li>
-              <Link href="/contact-us" onClick={handleToggle}>
-                <div className='menu-cta-wrapper'>
-                  <button className='mobile-menu-cta-btn'><span>Secure Your Spot</span></button>
-                </div>
-              </Link>
+
+              <li className='mobile-menu-item'>
+
+                <Link href="/contact-us" onClick={handleToggle}>
+                  <div className='menu-cta-wrapper w-100'>
+                    <button className='register-interest-cta'>Register your interest</button>
+                  </div>
+                </Link>
+              </li>
             </ul>
             <div className="menu__overlay"></div>
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </nav>
   );
 }
