@@ -35,8 +35,8 @@ const AudientsCTAComponent: React.FC = () => {
 
                 </div>
 
-                <div className="row g-5">
-                    <motion.div className="col-lg-4 " initial={{ y: 100, opacity: 0 }}
+                <div className="row">
+                    <motion.div className="col-lg-4" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}>
                         <div className="cta-card-item">
@@ -45,7 +45,7 @@ const AudientsCTAComponent: React.FC = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div className="col-lg-4 " initial={{ y: 100, opacity: 0 }}
+                    <motion.div className="col-lg-4" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.7 }}>
                         <div className="cta-card-item">
@@ -54,7 +54,7 @@ const AudientsCTAComponent: React.FC = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div className="col-lg-4 " initial={{ y: 100, opacity: 0 }}
+                    <motion.div className="col-lg-4" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.9 }}>
                         <div className="cta-card-item">

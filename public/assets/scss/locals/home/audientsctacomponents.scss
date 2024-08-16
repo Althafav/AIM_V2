@@ -38,6 +38,11 @@
         align-items: end;
         justify-content: center;
         cursor: pointer;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
 }
