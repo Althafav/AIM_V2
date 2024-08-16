@@ -24,7 +24,7 @@ export default function BannerComponent() {
              
 
                 <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
-                    <button className='register-interest-cta'>Register your interest</button>
+                    <button className='register-interest-cta mb-4 mb-lg-0'>Register your interest</button>
                     <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
                 </div>
 
