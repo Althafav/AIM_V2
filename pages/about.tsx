@@ -114,7 +114,7 @@ export default function About() {
                     </div>
 
                 </div>
-                ?
+                
 
                 <div className="d-lg-none">
                     <Marquee gradient={false}>
