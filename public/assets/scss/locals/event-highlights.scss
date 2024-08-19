@@ -20,12 +20,24 @@
         color: black;
         width: 100%;
         padding: 20px;
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+
         .name {
             font-size: 18px;
             color: black;
             text-align: left;
             font-weight: bold;
-
         }
+
+        .description {
+            font-size: 16px;
+            text-align: left;
+        }
+        &:hover {
+           
+            transform: scale(1.05);
+        }
+
     }
+
 }
