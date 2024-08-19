@@ -14,7 +14,7 @@ export default function EventHighlights() {
             <div className="banner-section-wrapper">
 
                 <video width="100%" autoPlay loop muted controls={false} preload="auto">
-                    <source src="/assets/videos/AIM 2025 Bigger Video 1.mp4" type="video/mp4" className='banner-video' width="100%" />
+                    <source src="/assets/videos/AIM 2025 Bigger Video 1.mp4" type="video/mp4" className='banner-video-event-highlights' width="100%" />
                 </video>
             </div>
 
@@ -24,12 +24,12 @@ export default function EventHighlights() {
             <div className='column-section-1'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-lg-6">
                             <p className='section-head'>THEME OF THE YEAR 2025</p>
 
                         </div>
 
-                        <div className="col-6">
+                        <div className="col-lg-6">
                             <p className='theme-subHead'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
                             <p className='theme-mainHead'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
                         </div>
@@ -117,7 +117,7 @@ export default function EventHighlights() {
             <section>
                 <div className='container'>
                     <div className="row">
-                        <div className="col-12 d-flex justify-content-center flex-column gap-2 align-items-center">
+                        <div className="col-12 d-flex justify-content-lg-center flex-column gap-2 align-items-lg-center">
                             <p className='join-us-caption'>Join us at AIM Congress 2025</p>
                             <p className='join-us-caption-2'>Building a better tomorrow, today!</p>
                         </div>
