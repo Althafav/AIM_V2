@@ -52,12 +52,42 @@
 }
 
 
-.key-benefits-section-wrapper {
+.key-features-section-wrapper {
     .sub-heading {
         color: $light-text;
         font-size: 24px;
         text-align: center;
     }
+}
+
+.benefits-section-wrapper{
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .mainheading {
+        font-size: 64px;
+        line-height: 1;
+        font-weight: bold;
+
+        @media screen and (max-width: 800px) {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .benefit-name {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .benefit-desc {
+        color: $light-text;
+        font-size: 18px;
+    }
+
 }
 
 .frequently-asked-questions-wrapper {

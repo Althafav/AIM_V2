@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
+import { fdiBenefits } from '@/contants/data';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -22,13 +23,40 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Foreign Direct Investment"} portfolioColorName="fdi"/>
-            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text}/>
+            <PortfolioBanner Heading={"Foreign Direct Investment"} portfolioColorName="fdi" />
+            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
             <CardGrid />
+
+            <section className='benefits-section-wrapper'>
+                <div className="section-container">
+                    <div className="row">
+                        <div className="col-lg-4">
+                            <h1 className='mainheading text-fdi'>Benefits of Foriegn Direct Investment</h1>
+                        </div>
+                        <div className="col-lg-7 d-flex justify-content-center flex-column gap-3">
+                            <img src="/assets/imgs/benefits-fdi.png" alt="" />
+
+                            {fdiBenefits.map((item: any, index: number) => {
+                                return (
+                                    <>
+                                        <div>
+                                            <p className='benefit-name'>{item.name}</p>
+                                            <p className='benefit-desc'>{item.content}</p>
+
+                                        </div>
+
+                                    </>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+
+            </section>
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
+                <div className="section-container">
                     <div className="row">
                         <div className="col-12">
                             <h1 className='main-heaiding'>frequently asked questions (FAQ)</h1>

@@ -11,7 +11,7 @@ export default function FooterComponent() {
     <div className='footer-component-wrapper '>
       <img src="/assets/imgs/Gradient.png" alt="" className='footer-bg' />
 
-      <div className="section-container">
+      <div className="container">
         <div className="row footer-content">
           <div className="col-lg-4 mb-4 mb-lg-0">
             <div className=''>

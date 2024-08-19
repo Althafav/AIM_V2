@@ -67,29 +67,29 @@ export const PortfolioCards = [
 
 export const TestimonialCard = [
     {
-        quote : "Best Networking Conference",
-        name : "Mirna Arif",
+        quote: "Best Networking Conference",
+        name: "Mirna Arif",
         company: "GM Microsoft, Egypt",
         // profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
+        testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
 
     },
 
     {
-        quote : "Best forum for cultivating industry connections.",
-        name : "Dmriti Telegin",
+        quote: "Best forum for cultivating industry connections.",
+        name: "Dmriti Telegin",
         company: "Vice President of CCI in Volgoda, Russia",
         // profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Dmriti-Telegin.mov"
+        testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Dmriti-Telegin.mov"
 
     },
 
     {
-        quote : "Fostering Worldwide Connections",
-        name : "Tariq Ahmed Nizami",
+        quote: "Fostering Worldwide Connections",
+        name: "Tariq Ahmed Nizami",
         company: "Founder &CEO Clubs Network",
         // profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Tariq-Ahmed Nizami.mov"
+        testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Tariq-Ahmed Nizami.mov"
 
     },
 
@@ -139,12 +139,30 @@ export const ArticlesCard = [
 
 export const UpcommingEvent = [
     {
-        image : "/assets/imgs/upcomming-1.png",
-       
+        image: "/assets/imgs/upcomming-1.png",
+
     },
 
     {
-        image : "/assets/imgs/upcomming-2.png",
-         
+        image: "/assets/imgs/upcomming-2.png",
+
+    }
+]
+
+
+export const fdiBenefits = [
+    {
+        name: "Networking Opportunities",
+        content: "AIM Congress provides a platform to connect with key industry leaders, policymakers, investors, and entrepreneurs, fostering valuable relationships and partnerships.",
+    },
+
+    {
+        name: "Insight into Market Trends",
+        content: " Attendees gain access to the latest trends, market insights, and industry developments, which can inform investment strategies and decision-making.",
+
+    },
+    {
+        name: "Exposure to Investment Opportunities",
+        content: "AIM Congress showcases emerging and high-potential companies, offering participants early access to investment opportunities in innovative sectors."
     }
 ]

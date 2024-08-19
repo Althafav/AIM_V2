@@ -12,7 +12,7 @@ const CardGrid = () => {
         { title: "Digital Transformation", imageUrl: "assets/digital-transformation.png" },
     ];
     return (
-        <section className='key-benefits-section-wrapper '>
+        <section className='key-features-section-wrapper '>
 
             <div className="section-container">
                 <div className="row">
