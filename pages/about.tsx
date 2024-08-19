@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee';
 export default function About() {
     const sentence1 = "AIM Congress is an initiative of the AIM Global Foundation, an independent international organization fully committed to empower the world’s economy by boosting effective promotion strategies and facilitating opportunities for economic productivity and expansion."
     const sentence2 = "AIM Congress has established itself as a leading investment platform in the Middle East, which aspires to ignite positive transformation by creating investment opportunities, upholding solidarity and developing economic relations among nations, as well as addressing the global ordeals that made a profound impact on economic growth."
-    const sentence3 = "AIM Congress continues to gather corporate leaders, policy-makers, businessmen, regional and international investors, entrepreneurs, leading academics, and experts showcasing up-to-date information, strategies and knowledge on attracting investments. Which brings together visitors from both the public and private sectors in Abu Dhabi and from all around of the world."
+    const sentence3 = "AIM Congress continues to gather corporate leaders, policy-makers, businessmen, regional and international investors, entrepreneurs, leading academics, and experts showcasing up-to-date information, strategies and knowledge on attracting investments. Which brings together visitors from both the public and private sectors in the United Arab Emirates and worldwide."
 
     return (
 
