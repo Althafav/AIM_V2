@@ -127,7 +127,7 @@ export const BenefitsOfParticipatingInAim2025: Benefit[] = [
 
     {
         id: '4',
-        heading: 'For Entrepreneurs',
+        heading: 'For Startups',
         items: [
             {
                 id: '1',
