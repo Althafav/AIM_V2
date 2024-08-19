@@ -35,19 +35,27 @@ export default function ForiegnDirectInvestment() {
                         </div>
                         <div className="col-lg-7 d-flex justify-content-center flex-column gap-3">
                             <img src="/assets/imgs/benefits-fdi.png" alt="" />
+                            <div className={`benefit-items ${isExpanded ? 'expanded' : 'faded'}`}>
+                                {fdiBenefits.map((item: any, index: number) => {
+                                    return (
 
-                            {fdiBenefits.map((item: any, index: number) => {
-                                return (
-                                    <>
-                                        <div>
+                                        <div className='benefit-item' key={`benefit-item-${index}`}>
                                             <p className='benefit-name'>{item.name}</p>
                                             <p className='benefit-desc'>{item.content}</p>
 
                                         </div>
 
-                                    </>
-                                )
-                            })}
+
+                                    )
+                                })}
+
+
+                            </div>
+
+
+                            <div className="col-12 d-flex justify-content-left align-items-center mt-3" onClick={handleToggle}>
+                                <button className='read-more-btn '>{isExpanded ? 'Read Less' : 'Read More'}</button>
+                            </div>
                         </div>
                     </div>
                 </div>

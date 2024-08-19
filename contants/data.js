@@ -164,5 +164,43 @@ export const fdiBenefits = [
     {
         name: "Exposure to Investment Opportunities",
         content: "AIM Congress showcases emerging and high-potential companies, offering participants early access to investment opportunities in innovative sectors."
+    },
+
+    {
+        name: "Knowledge Sharing ",
+        content: "The event features expert speakers and panel discussions that offer in-depth knowledge on various aspects of foreign direct investment and emerging markets."
+
+    },
+
+    {
+        name: "Investment Advisory",
+        content: "Participants can receive strategic advice and guidance from experienced professionals and consultants, helping to refine their investment approach and portfolio management."
+    },
+
+    {
+        name: "FDI Framework Insights ",
+        content: "AIM Congress often covers updates on regulatory frameworks and policies affecting FDI, providing participants with crucial information to navigate and comply with new regulations. "
+    },
+
+    {
+        name: "Investment Visibility",
+        content: "Attendees can showcase their own ventures or investment projects to a targeted audience, increasing visibility and attracting potential investors or partners. "
+    },
+
+    {
+        name: "Collaboration Opportunities",
+        content: "The event fosters an environment conducive to collaboration, enabling participants to explore joint ventures, partnerships, and co-investment opportunities. "
+    },
+
+    {
+        name: "Innovation Insights ",
+        content: "By attending sessions on cutting-edge technologies and emerging sectors, participants gain insights into future trends and potential disruptive innovations. "
+    },
+
+    {
+        name: "Market Intelligence ",
+        content: "Access to comprehensive market research and intelligence from industry experts helps participants make informed investment decisions and identify high-growth opportunities."
     }
+
+
 ]

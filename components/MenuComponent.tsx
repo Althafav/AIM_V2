@@ -83,7 +83,7 @@ export default function MenuComponent() {
               </li>
               <li className='menu-item'>
                 <Link href="/#Portfolio">
-                  PORTFOLIO
+                  PORTFOLIOS
                 </Link>
               </li>
               <li className='menu-item'>
@@ -177,7 +177,7 @@ export default function MenuComponent() {
               </li>
               <li className='mobile-menu-item'>
                 <Link href="/#Portfolio" onClick={handleToggle}>
-                  PORTFOLIO
+                  PORTFOLIOS
                 </Link>
               </li>
               <li className='mobile-menu-item'>
