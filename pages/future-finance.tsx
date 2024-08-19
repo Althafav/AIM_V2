@@ -4,6 +4,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
+import { fdiFAQ } from '@/contants/data';
 const FutureFinance = () => {
     const text = `Digital disruption is revolutionizing our world, driven by mobile apps, home automation, and cashless transactions. Cloud-based ERP, automation, and cognitive technologies are streamlining processes, and blockchain is accelerating this transformation. These advancements free up time and resources, enabling a focus on strategic tasks. To thrive in this dynamic environment, leverage these innovations with AIM to stay competitive and unlock new growth opportunities. 
 
@@ -43,7 +44,7 @@ In conclusion, improved security, more accessibility, and a dedication to sustai
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

@@ -9,4 +9,23 @@
         color: $primary-color-varient;
         font-weight: bold;
     }
+
+    .benefit-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .benefits-card {
+        color: black;
+        width: 100%;
+        padding: 20px;
+        .name {
+            font-size: 18px;
+            color: black;
+            text-align: left;
+            font-weight: bold;
+
+        }
+    }
 }

@@ -4,6 +4,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
+import { fdiFAQ } from '@/contants/data';
 const StartUp = () => {
     const text = `AIM Startup, a pivotal aspect of AIM Congress, offers essential tools and funding to empower digital entrepreneurs and overcome resource limitations. With UAE's ambition to be a global tech hub by 2025, startups have emerged as key players, with investments surpassing $2.9 billion last year. These ventures are at the forefront of innovations in AI, blockchain, and renewable energy, driving industry transformation and drawing considerable investment. They also accelerate digital adoption in traditional businesses, contributing to a rapidly evolving technological landscape. With their emphasis on quick expansion and disruptive market dynamics, startups are the vanguard of innovation and entrepreneurship. These business endeavours usually start with an innovative concept or technology that solves a particular issue or market niche. Startups stand out for their desire to grow quickly; they frequently use novel technology or business strategies to achieve exponential growth without experiencing a linear rise in expenses. 
  
@@ -32,7 +33,7 @@ Startup cultures are frequently characterized by an entrepreneurial and collabor
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

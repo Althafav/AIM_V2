@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
-import { fdiBenefits } from '@/contants/data';
+import { fdiBenefits, fdiFAQ } from '@/contants/data';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -71,7 +71,7 @@ export default function ForiegnDirectInvestment() {
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

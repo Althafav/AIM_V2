@@ -4,6 +4,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
+import { fdiFAQ } from '@/contants/data';
 const FutureCities = () => {
     const text = `Future Cities are poised to be the cornerstone of sustainable and efficient urban development, a focal point of the AIM Congress 2025. These cities are set to redefine progress by integrating cutting-edge technologies, leading to a transformative era. Robotics-enabled automation and AI-enhanced systems are at the forefront, promising to revolutionize industries and daily life by significantly boosting productivity, reducing errors, and enhancing urban living standards. 
 
@@ -38,7 +39,7 @@ As we face global challenges such as social cohesion and environmental sustainab
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

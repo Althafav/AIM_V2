@@ -4,6 +4,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
+import { fdiFAQ } from '@/contants/data';
 
 const AdvancedManufacturing = () => {
     const text = `Advanced manufacturing integrates physical and digital technologies to enhance factory operations and supply chain management. The primary goals are to boost performance and adapt swiftly to market changes. Advanced factories leverage interconnected systems and real-time data to optimize production and pre-emptively maintain equipment. Unlike traditional factories that use robotics and automation, advanced factories feature fully integrated systems that merge physical and digital processes.  `;
@@ -27,7 +28,7 @@ const AdvancedManufacturing = () => {
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
+import { fdiFAQ } from '@/contants/data';
 
 export default function ForiegnDirectInvestment() {
   
@@ -38,7 +39,7 @@ To summarise, the growth of the world economy depends on entrepreneurs. A more c
                         </div>
                     </div>
 
-                    <AccordionComponent />
+                    <AccordionComponent data={fdiFAQ} />
                 </div>
             </section>
         </motion.div>
