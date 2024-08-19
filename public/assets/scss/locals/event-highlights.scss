@@ -2,18 +2,20 @@
 
     .banner-section-wrapper {
         height: 100vh;
+        position: relative;
 
-        @media screen and (max-width: 800px) {
-            height: 650px;
+        
 
-        }
+        video {
 
-        .banner-video-event-highlights {
-            height: 100%;
             object-fit: cover;
             width: 100%;
-
-
+            height: 100vh;
+    
+            @media screen and (max-width: 800px) {
+                height: 100vh;
+    
+            }
         }
     }
 
