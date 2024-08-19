@@ -10,7 +10,7 @@ const containerVariants = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.3, // Delay between animations of each child
+            staggerChildren: 0.3, 
         },
     },
 };

@@ -41,7 +41,7 @@ export default function About() {
                     backgroundPosition: "center",
                 }}
             >
-               
+
 
                 <div className="container text-content">
                     <div className="row">
@@ -83,38 +83,83 @@ export default function About() {
 
             <section className="stats-container-wrapper section-container mt-5">
                 <div className="grid-container d-none d-lg-grid">
-                    <div className="item1">
+                    <div className="item1 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>8130</p>
+                            <p className='name'>B2B Meetings</p>
+
+                        </div>
                         <img src="/assets/imgs/b2bmembers.png" alt="aim 2025 b2b members count" />
                     </div>
-                    <div className="item2">
+                    <div className="item2 stats-card-item">
+
+                        <div className="text-items">
+                            <p className='count'>8130</p>
+                            <p className='name'>Speakers</p>
+
+                        </div>
                         <img src="/assets/imgs/speakers.png" alt="aim 2025 speakers count" />
                     </div>
-                    <div className="item3">
+                    <div className="item3 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>412</p>
+                            <p className='name'>Sessions</p>
+
+                        </div>
                         <img src="/assets/imgs/sessions.png" alt="aim 2025 sessions count" />
                     </div>
-                    <div className="item4">
+                    <div className="item4 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>8130</p>
+                            <p className='name'>Exhibitors</p>
+
+                        </div>
                         <img src="/assets/imgs/exhibitors.png" alt="aim 2025 exhibitors count" />
                     </div>
-                    <div className="item5">
+                    <div className="item5 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>12427</p>
+                            <p className='name'>Total Attendence</p>
+
+                        </div>
                         <img src="/assets/imgs/totalattendence.png" alt="aim 2025 attendence count" />
                     </div>
 
-                    <div className="item6">
+                    <div className="item6 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>8130</p>
+                            <p className='name'>High-Level Dignitories</p>
+
+                        </div>
                         <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />
                     </div>
-                    <div className="item7">
+                    <div className="item7 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>179</p>
+                            <p className='name'>Countries</p>
 
+                        </div>
                         <img src="/assets/imgs/total-countries.png" alt="aim 2025" />
                     </div>
-                    <div className="item8">
+                    <div className="item8 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>03</p>
+                            <p className='name'>High Level Roundtables</p>
+
+                        </div>
                         <img src="/assets/imgs/highlevelRoundtables.png" alt="aim 2025" />
                     </div>
-                    <div className="item9">
+                    <div className="item9 stats-card-item">
+                        <div className="text-items">
+                            <p className='count'>136</p>
+                            <p className='name'>Participating Startups</p>
+
+                        </div>
                         <img src="/assets/imgs/startups.png" alt="aim 2025" />
                     </div>
 
                 </div>
-                
+
 
                 <div className="d-lg-none">
                     <Marquee gradient={false}>

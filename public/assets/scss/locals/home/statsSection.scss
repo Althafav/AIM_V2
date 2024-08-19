@@ -4,8 +4,26 @@
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 10px;
-        padding: 10px;
+        // padding: 10px;
         height: 600px; 
+
+        .stats-card-item{
+            position: relative;
+
+            .text-items {
+                position: absolute;
+                left: 20px;
+                bottom: -10px;
+                color: white;
+                .count {
+                    padding: 0;
+                    margin-bottom: 2px;
+                    line-height: 1.1;
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
     .grid-container > div {
