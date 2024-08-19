@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
-import { fdiFAQ } from '@/contants/data';
+import { fdiFAQ, tradeInnovationFAQ } from '@/contants/data';
 
 export default function TradeInnovation() {
 
@@ -44,7 +44,7 @@ These investments contribute to the development of industries, infrastructure, a
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ}/>
+                    <AccordionComponent data={tradeInnovationFAQ}/>
                 </div>
             </section>
         </motion.div>

@@ -35,7 +35,7 @@ To summarise, the growth of the world economy depends on entrepreneurs. A more c
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <h1 className='main-heaiding'>frequently asked questions (FAQ)</h1>
+                            <h1 className='main-heaiding'>frequently asked questions</h1>
                         </div>
                     </div>
 

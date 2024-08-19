@@ -162,7 +162,7 @@ export default function MenuComponent() {
                     className='menu-logo white-logo' />
 
                 </Link>
-                <IoMdClose size={32} className='menu-icon' cursor="pointer" />
+                <IoMdClose size={32} className='menu-icon' cursor="pointer" onClick={handleToggle}/>
               </div>
 
               <li className='mobile-menu-item'>
