@@ -4,8 +4,14 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
-const DigitalEconomy = () => {
-    const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
+const StartUp = () => {
+    const text = `AIM Startup, a pivotal aspect of AIM Congress, offers essential tools and funding to empower digital entrepreneurs and overcome resource limitations. With UAE's ambition to be a global tech hub by 2025, startups have emerged as key players, with investments surpassing $2.9 billion last year. These ventures are at the forefront of innovations in AI, blockchain, and renewable energy, driving industry transformation and drawing considerable investment. They also accelerate digital adoption in traditional businesses, contributing to a rapidly evolving technological landscape. With their emphasis on quick expansion and disruptive market dynamics, startups are the vanguard of innovation and entrepreneurship. These business endeavours usually start with an innovative concept or technology that solves a particular issue or market niche. Startups stand out for their desire to grow quickly; they frequently use novel technology or business strategies to achieve exponential growth without experiencing a linear rise in expenses. 
+ 
+A startup's lifecycle typically consists of three stages: the seed stage, where initial funding is used to develop a concept or prototype; the early stage, where funds are provided by venture capital or angel investors to refine the product and establish a market presence; and the growth stage, where the startup grows its customer base, expands operations, and looks for additional funding. 
+
+ 
+
+Startup cultures are frequently characterized by an entrepreneurial and collaborative atmosphere that fosters innovation and experimentation. Startup teams are often compact and vibrant, united by a single vision and a shared passion for their purpose. Startups consistently improve user experience and promote adoption by iterating on their offerings and keeping a customer-centric attitude. This creative climate creates a setting where traditional business methods are questioned, opening the door for ground-breaking ideas and novel approaches to the market. `;
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -13,7 +19,7 @@ const DigitalEconomy = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Startups & Unicorn"} portfolioColorName="startup" />
+            <PortfolioBanner Heading={"Startups & Unicorn"} subHeading={`From 4.0 to 5.0: - "Connecting Visionaries & Building Futures"`} portfolioColorName="startup" />
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
             <CardGrid />
 
@@ -33,4 +39,4 @@ const DigitalEconomy = () => {
     )
 }
 
-export default DigitalEconomy;
+export default StartUp;

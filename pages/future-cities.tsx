@@ -5,7 +5,19 @@ import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 const FutureCities = () => {
-    const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
+    const text = `Future Cities are poised to be the cornerstone of sustainable and efficient urban development, a focal point of the AIM Congress 2025. These cities are set to redefine progress by integrating cutting-edge technologies, leading to a transformative era. Robotics-enabled automation and AI-enhanced systems are at the forefront, promising to revolutionize industries and daily life by significantly boosting productivity, reducing errors, and enhancing urban living standards. 
+
+ 
+
+The AIM Congress underscores the crucial role of supply chain digitalization in shaping Future Cities. By harnessing artificial intelligence, cities can optimize resource allocation and employ predictive analytics, paving the way for smarter, more adaptive urban environments. The integration of digital platforms like cloud computing, IoT, blockchain, and additive manufacturing will build interconnected and efficient supply chains, driving urban innovation. 
+
+ 
+
+With urban populations on the rise, Future Cities are set to become vibrant hubs of innovation, sustainability, and inclusivity. Emphasizing green infrastructure, smart transportation, and mixed-use development, these cities will not only reduce their environmental footprint but also enhance livability. This holistic approach fosters economic growth, cultural exchange, and social progress, making cities epicenters of creativity and problem-solving. 
+
+ 
+
+As we face global challenges such as social cohesion and environmental sustainability, international cooperation will be key. Investing in sustainable infrastructure and promoting inclusive policies, while facilitating knowledge sharing and technology transfer, will help cities become beacons of global prosperity. By working together, cities will drive positive change and improve lives worldwide, shaping a brighter future for all. `;
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -13,8 +25,8 @@ const FutureCities = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Future Cities"} portfolioColorName="future-cities" />
-            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
+            <PortfolioBanner Heading={"Future Cities"} subHeading="Creating cities of tomorrow: A hub for global prosperity, social cohesion, and economic opportunity through megacities and international cooperation. " portfolioColorName="future-cities" />
+            <AboutComponent aboutHeading="Navigating the Future of Future Cities" aboutParagraph={text} />
             <CardGrid />
 
 

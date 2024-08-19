@@ -20,10 +20,10 @@ export default function PortfolioBanner(props: any) {
 
             <div className="text-container container">
                 <h1 className='banner-heading'>
-                    
+
                     {props.Heading}
                 </h1>
-                <h2 className='banner-heading-2'>Overcoming Challenges, Seizing New Global Opportunities</h2>
+                <h2 className='banner-heading-2'>{props.subHeading}</h2>
 
 
                 <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>

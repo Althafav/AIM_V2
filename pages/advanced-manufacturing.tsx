@@ -6,7 +6,7 @@ import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 
 const AdvancedManufacturing = () => {
-    const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
+    const text = `Advanced manufacturing integrates physical and digital technologies to enhance factory operations and supply chain management. The primary goals are to boost performance and adapt swiftly to market changes. Advanced factories leverage interconnected systems and real-time data to optimize production and pre-emptively maintain equipment. Unlike traditional factories that use robotics and automation, advanced factories feature fully integrated systems that merge physical and digital processes.  `;
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -14,8 +14,8 @@ const AdvancedManufacturing = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Advanced Manufacturing"} portfolioColorName={"advancedManufacturing"} />
-            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
+            <PortfolioBanner Heading={"Advanced Manufacturing"} subHeading="Leveraging Industry & Bringing Advanced Factories to Life" portfolioColorName={"advancedManufacturing"} />
+            <AboutComponent aboutHeading="Navigating the Future of Advanced Manufacturing" aboutParagraph={text} />
             <CardGrid />
 
 
