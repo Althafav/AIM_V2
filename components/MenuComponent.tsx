@@ -77,7 +77,7 @@ export default function MenuComponent() {
                 </Link>
               </li>
               <li className='menu-item'>
-                <Link href="#" className='aim-2025'>
+                <Link href="/event-highlights" className='aim-2025'>
                   AIM 2025
                 </Link>
               </li>
@@ -171,7 +171,7 @@ export default function MenuComponent() {
                 </Link>
               </li>
               <li className='mobile-menu-item'>
-                <Link href="#" onClick={handleToggle}>
+                <Link href="/event-highlights" onClick={handleToggle}>
                   AIM 2025
                 </Link>
               </li>
