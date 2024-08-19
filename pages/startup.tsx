@@ -20,7 +20,7 @@ Startup cultures are frequently characterized by an entrepreneurial and collabor
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Startups & Unicorn"} subHeading={`From 4.0 to 5.0: - "Connecting Visionaries & Building Futures"`} portfolioColorName="startup" />
+            <PortfolioBanner Heading={"Startups & Unicorn"} subHeading={`"Connecting Visionaries & Building Futures"`} portfolioColorName="startup" />
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
             <CardGrid />
 

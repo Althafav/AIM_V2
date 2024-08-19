@@ -109,7 +109,7 @@ export default function EventHighlights() {
             <section >
                 <Marquee>
 
-                    <p className='stay-tuned'>Stay tuned—our AGENDA is coming, packed with fresh perspectives and groundbreaking ideas! </p>
+                    <p className='stay-tuned'>Stay tuned—our AGENDA is coming, fresh perspectives and groundbreaking ideas! </p>
 
                 </Marquee>
             </section>
@@ -119,7 +119,7 @@ export default function EventHighlights() {
                     <div className="row">
                         <div className="col-12 d-flex justify-content-lg-center flex-column gap-2 align-items-lg-center">
                             <p className='join-us-caption'>Join us at AIM Congress 2025</p>
-                            <p className='join-us-caption-2'>Building a better tomorrow, today!</p>
+                            <p className='join-us-caption-2'>Empowering tomorrow, today!</p>
                         </div>
                     </div>
 
