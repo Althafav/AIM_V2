@@ -64,7 +64,8 @@ export default function About() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <p className='section-head'>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</p>
+                            <p className='section-head'>To establish a global community addressing challenges collaboratively and inclusively.</p>
+
                         </div>
                     </div>
                 </div>
@@ -75,7 +76,9 @@ export default function About() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 d-flex justify-content-end">
-                            <p className='section-head'>To establish a global community addressing challenges collaboratively and inclusively.</p>
+                            <p className='section-head'>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</p>
+
+                           
                         </div>
                     </div>
                 </div>

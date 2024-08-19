@@ -17,7 +17,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span>Main Head</span>
+                            <span className='' style={{textTransform: "uppercase"}}>Be a Part of AIM 2025</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -28,7 +28,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
+                            Join us in Shaping Tomorrow, Today
                         </motion.p>``
                     </div>
 
