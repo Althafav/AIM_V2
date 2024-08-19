@@ -72,7 +72,7 @@ export default function TestimonialsComponent() {
                                         </div>
                                     </div>
 
-                                    {/* <img src="/assets/imgs/person1.png" alt="" className='testimonial-img1' /> */}
+                                    <img src={item.profilePicSrc} alt="" className='testimonial-img1' />
                                     <video
                                         ref={(el) => {
                                             videoRefs.current[index] = el;

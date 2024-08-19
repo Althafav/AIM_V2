@@ -70,7 +70,7 @@ export const TestimonialCard = [
         quote: "Best Networking Conference",
         name: "Mirna Arif",
         company: "GM Microsoft, Egypt",
-        // profilePicSrc: "/assets/imgs/person1.png",
+        profilePicSrc: "/assets/imgs/Mirna Arif.jpg",
         testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
 
     },
@@ -79,7 +79,7 @@ export const TestimonialCard = [
         quote: "Best forum for cultivating industry connections.",
         name: "Dmriti Telegin",
         company: "Vice President of CCI in Volgoda, Russia",
-        // profilePicSrc: "/assets/imgs/person1.png",
+        profilePicSrc: "/assets/imgs/Dmriti Telegin.jpg",
         testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Dmriti-Telegin.mov"
 
     },
@@ -88,7 +88,7 @@ export const TestimonialCard = [
         quote: "Fostering Worldwide Connections",
         name: "Tariq Ahmed Nizami",
         company: "Founder &CEO Clubs Network",
-        // profilePicSrc: "/assets/imgs/person1.png",
+        profilePicSrc: "/assets/imgs/Tariq Ahmed Nizami.jpg",
         testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Tariq-Ahmed Nizami.mov"
 
     },
