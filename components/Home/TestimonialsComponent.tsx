@@ -50,7 +50,7 @@ export default function TestimonialsComponent() {
         <section className='testimonails-component-wrapper'>
             <div className="section-container">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-12 px-5">
                         <div className="testimonialCarousel owl-carousel">
 
                             {TestimonialCard.map((item: any, index: number) => (
@@ -72,7 +72,7 @@ export default function TestimonialsComponent() {
                                         </div>
                                     </div>
 
-                                    <img src="/assets/imgs/person1.png" alt="" className='testimonial-img1' />
+                                    {/* <img src="/assets/imgs/person1.png" alt="" className='testimonial-img1' /> */}
                                     <video
                                         ref={(el) => {
                                             videoRefs.current[index] = el;

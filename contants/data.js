@@ -67,40 +67,40 @@ export const PortfolioCards = [
 
 export const TestimonialCard = [
     {
-        quote : "Best-organized conferences",
-        name : "Arshad Khan",
-        company: "Arabian Bourse Ltd",
-        profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
+        quote : "Best Networking Conference",
+        name : "Mirna Arif",
+        company: "GM Microsoft, Egypt",
+        // profilePicSrc: "/assets/imgs/person1.png",
+        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
 
     },
 
     {
-        quote : "Best-organized conferences",
-        name : "Arshad Khan",
-        company: "Arabian Bourse Ltd",
-        profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
+        quote : "Best forum for cultivating industry connections.",
+        name : "Dmriti Telegin",
+        company: "Vice President of CCI in Volgoda, Russia",
+        // profilePicSrc: "/assets/imgs/person1.png",
+        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Dmriti-Telegin.mov"
 
     },
 
     {
-        quote : "Best-organized conferences",
-        name : "Arshad Khan",
-        company: "Arabian Bourse Ltd",
-        profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
+        quote : "Fostering Worldwide Connections",
+        name : "Tariq Ahmed Nizami",
+        company: "Founder &CEO Clubs Network",
+        // profilePicSrc: "/assets/imgs/person1.png",
+        testimonialVideoSrc : "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Tariq-Ahmed Nizami.mov"
 
     },
 
-    {
-        quote : "Best-organized conferences",
-        name : "Arshad Khan",
-        company: "Arabian Bourse Ltd",
-        profilePicSrc: "/assets/imgs/person1.png",
-        testimonialVideoSrc : "/assets/videos/testtt2.mp4"
+    // {
+    //     quote : "Best-organized conferences",
+    //     name : "Arshad Khan",
+    //     company: "Arabian Bourse Ltd",
+    //     profilePicSrc: "/assets/imgs/person1.png",
+    //     testimonialVideoSrc : "/assets/videos/testtt2.mp4"
 
-    }
+    // }
 ]
 
 
