@@ -1,20 +1,12 @@
-
-import AccordionComponent from '@/components/UI/AccordinComponent';
-import CardGrid from '@/components/UI/CardGrid';
-import React, { useState } from 'react'
-import { motion } from "framer-motion"
+import React from 'react'
+import { motion } from "framer-motion";
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
+import AccordionComponent from '@/components/UI/AccordinComponent';
+import CardGrid from '@/components/UI/CardGrid';
 
-export default function ForiegnDirectInvestment() {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const handleToggle = () => {
-        setIsExpanded(!isExpanded);
-    };
-
+const AdvancedManufacturing = () => {
     const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
-    const limitedText = text.substring(0, 450);
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -22,8 +14,8 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Foreign Direct Investment"} portfolioColorName="fdi"/>
-            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text}/>
+            <PortfolioBanner Heading={"Advanced Manufacturing"} portfolioColorName={"advancedManufacturing"} />
+            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
             <CardGrid />
 
 
@@ -41,3 +33,5 @@ export default function ForiegnDirectInvestment() {
         </motion.div>
     )
 }
+
+export default AdvancedManufacturing 

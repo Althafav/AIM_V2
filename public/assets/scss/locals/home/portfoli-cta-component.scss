@@ -62,6 +62,7 @@
             .main-head--card {
                 color: white;
                 font-size: 32px;
+                max-width: 200px;
                 line-height: 1.1;
                 font-weight: bold;
                 letter-spacing: -2px;
@@ -84,7 +85,7 @@
                 border-radius: 20px;
                 font-size: 16px;
                 padding: 8px 16px;
-                background: $fdi-primary;
+                
 
                 display: flex;
                 align-items: center;
@@ -100,38 +101,12 @@
                 }
             }
 
-            .fdi {
-                background: $fdi-primary;
-            }
-
-            .trade {
-                background: $trade-innovation-primary;
-            }
-
-            .advanced-mft {
-                background: $Advanced-manufacturing;
-            }
-
-            .future-cities {
-                background: $future-cities;
-            }
+           
+            
         }
     }
 
 }
 
-// .embla {
-//     overflow: hidden; /* Ensure no overflow is visible */
-//   }
-  
-//   .embla__container {
-//     display: flex;
-//      /* Optional: Adjust the space between slides */
-//   }
-  
-//   .embla__slide {
-//     flex: 0 0 25%; /* Each slide takes up 25% of the container width */
-//     box-sizing: border-box; /* Ensure padding is included within the width */
-//     padding-left: 1rem; /* Your existing padding */
-//   }
+
   

@@ -9,14 +9,16 @@ export const PortfolioCards = [
     {
         image: "/assets/imgs/Trad-innovation-card-bg.png",
         mainHead: "Trade Innovation",
-        btnName: "trade",
+        btnName: "trade-innovation",
+        link: '/trade-innovation',
     },
 
 
     {
         image: "/assets/imgs/Advanced-mft-card-bg.png",
         mainHead: "Advanced Manufacturing",
-        btnName: "advanced-mft",
+        btnName: "advancedManufacturing",
+        link: '/advanced-manufacturing',
     },
 
 
@@ -24,32 +26,37 @@ export const PortfolioCards = [
         image: "/assets/imgs/future-cities-card-bg.png",
         mainHead: "Future Cities",
         btnName: "future-cities",
+        link: '/future-cities',
     },
 
 
     {
-        image: "/assets/imgs/Advanced-mft-card-bg.png",
-        mainHead: "Advanced Manufacturing",
-        btnName: "advanced-mft",
+        image: "/assets/imgs/digital-economy.png",
+        mainHead: "Digital Economy",
+        btnName: "digital-economy",
+        link: '/digital-economy',
     },
 
 
     {
-        image: "/assets/imgs/future-cities-card-bg.png",
-        mainHead: "Future Cities",
-        btnName: "advanced-mft",
+        image: "/assets/imgs/future-finance.png",
+        mainHead: "Future Finance",
+        btnName: "future-finance",
+        link: "/future-finance",
     },
 
     {
-        image: "/assets/imgs/FDI-card-bg.png",
-        mainHead: "Foreign Direct Investment",
-        btnName: "fdi",
+        image: "/assets/imgs/startup-unicorn.png",
+        mainHead: "Startups Unicorn",
+        btnName: "startup",
+        link: "/startup",
     },
 
     {
-        image: "/assets/imgs/Trad-innovation-card-bg.png",
-        mainHead: "Trade Innovation",
-        btnName: "trade",
+        image: "/assets/imgs/entrepreneurs.png",
+        mainHead: "Entrepreneurs",
+        btnName: "entrepreneurs",
+        link: "entrepreneurs",
     },
 
 

@@ -6,15 +6,11 @@ import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 
-export default function ForiegnDirectInvestment() {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    const handleToggle = () => {
-        setIsExpanded(!isExpanded);
-    };
+export default function TradeInnovation() {
+    
 
     const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
-    const limitedText = text.substring(0, 450);
+    
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -22,8 +18,12 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Foreign Direct Investment"} portfolioColorName="fdi"/>
+            <PortfolioBanner Heading={`Trade Innovation`} portfolioColorName="trade-innovation" />
+
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text}/>
+
+
+
             <CardGrid />
 
 
