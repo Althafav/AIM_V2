@@ -2,14 +2,14 @@ import React from 'react'
 
 const CardGrid = () => {
     const cardData = [
-        { title: "Economic Growth",  imageUrl: "/assets/imgs/economic-growth.png" },
-        { title: "Sustainability Focus",  imageUrl: "/assets/imgs/sustainability-focus.png" },
-        { title: "Market Expansion",  imageUrl: "/assets/imgs/market-expansion.png" },
-        { title: "Resource Acquisition",  imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Geopolitical Influences",  imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Risk Diversification",  imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Technology & Innovation",  imageUrl: "/assets/imgs/technology-innovation.png" },
-        { title: "Digital Transformation",  imageUrl: "assets/digital-transformation.png" },
+        { title: "Economic Growth", imageUrl: "/assets/imgs/economic-growth.png" },
+        { title: "Sustainability Focus", imageUrl: "/assets/imgs/sustainability-focus.png" },
+        { title: "Market Expansion", imageUrl: "/assets/imgs/market-expansion.png" },
+        { title: "Resource Acquisition", imageUrl: "/assets/imgs/resource-acquisition.png" },
+        { title: "Geopolitical Influences", imageUrl: "/assets/imgs/resource-acquisition.png" },
+        { title: "Risk Diversification", imageUrl: "/assets/imgs/resource-acquisition.png" },
+        { title: "Technology & Innovation", imageUrl: "/assets/imgs/technology-innovation.png" },
+        { title: "Digital Transformation", imageUrl: "assets/digital-transformation.png" },
     ];
     return (
         <section className='key-benefits-section-wrapper '>
@@ -17,10 +17,11 @@ const CardGrid = () => {
             <div className="section-container">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className='section-heading'>Portfolio Strategically Designed for your Need </h1>
+                        <h1 className='section-heading'>FEATURES AND ACTIVITIES
+                        </h1>
                     </div>
                     <div className="col-12">
-                        <p className='sub-heading'>Kicker Line will be here ssdff asffsfsa asdasffasf sad</p>
+                        <p className='sub-heading'>Overcoming Challenges, Seizing New Global Opportunities</p>
                     </div>
                 </div>
 

@@ -24,7 +24,7 @@ export default function ForiegnDirectInvestment() {
                 <div className="container">
                     <div className="row about-content">
                         <div className="col-12">
-                            <h1 className='section-heading'>Mapping the Future of</h1>
+                            <h1 className='section-heading'>Navigating the Future of FDI </h1>
                         </div>
                         <div className="col-12">
                             <p className={`paragraph ${isExpanded ? 'expanded' : 'faded'}`}>{isExpanded ? text : `${limitedText}...`}</p>

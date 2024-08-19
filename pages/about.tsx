@@ -88,7 +88,7 @@ export default function About() {
                 <div className="grid-container d-none d-lg-grid">
                     <div className="item1 stats-card-item">
                         <div className="text-items">
-                            <p className='count'>8130</p>
+                            <p className='count'>8,130</p>
                             <p className='name'>B2B Meetings</p>
 
                         </div>
@@ -97,7 +97,7 @@ export default function About() {
                     <div className="item2 stats-card-item">
 
                         <div className="text-items">
-                            <p className='count'>8130</p>
+                            <p className='count'>927</p>
                             <p className='name'>Speakers</p>
 
                         </div>
@@ -113,7 +113,7 @@ export default function About() {
                     </div>
                     <div className="item4 stats-card-item">
                         <div className="text-items">
-                            <p className='count'>8130</p>
+                            <p className='count'>352</p>
                             <p className='name'>Exhibitors</p>
 
                         </div>
@@ -121,7 +121,7 @@ export default function About() {
                     </div>
                     <div className="item5 stats-card-item">
                         <div className="text-items">
-                            <p className='count'>12427</p>
+                            <p className='count'>12,427</p>
                             <p className='name'>Total Attendence</p>
 
                         </div>
@@ -130,7 +130,7 @@ export default function About() {
 
                     <div className="item6 stats-card-item">
                         <div className="text-items">
-                            <p className='count'>8130</p>
+                            <p className='count'>138</p>
                             <p className='name'>High-Level Dignitories</p>
 
                         </div>
@@ -146,7 +146,7 @@ export default function About() {
                     </div>
                     <div className="item8 stats-card-item">
                         <div className="text-items">
-                            <p className='count'>03</p>
+                            <p className='count'>3</p>
                             <p className='name'>High Level Roundtables</p>
 
                         </div>

@@ -20,8 +20,8 @@ export default function Banner() {
 
             <div className="text-container container">
                 <h1 className='banner-heading'>
-                    Navigating the
-                    Future of FDI
+                    
+                    Foreign Direct Investment
                 </h1>
                 <h2 className='banner-heading-2'>Overcoming Challenges, Seizing New Global Opportunities</h2>
 
