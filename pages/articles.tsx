@@ -1,6 +1,11 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion";
-import { Blogs } from '@/contants/data';
+
+import Globals from '@/modules/Globals';
+import { Blogs } from '@/models/blogs';
+
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
+import { Blogitems } from '@/models/blogitems';
 
 const containerVariants = {
     hidden: {},
@@ -15,8 +20,41 @@ const cardVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
 };
-export default function Articles() {
 
+export async function getStaticProps() {
+    try {
+        const datasourceStr: string = await Globals.KontentClient.item("blog_page")
+            // .languageParameter(Globals.CURRENT_LANG_CODENAME)
+            .toObservable()
+            .toPromise()
+            .then((r: any) => {
+                return JSON.stringify(r.item);
+            });
+
+        const data: Blogs = JSON.parse(datasourceStr);
+            console.log(data, "this is data")
+        return {
+            props: {
+                data,
+            },
+            revalidate: 120,
+        };
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return {
+            props: {
+                data: null,
+            },
+        };
+    }
+}
+
+
+function ListPage({ data }: { data: Blogs }) {
+    if (!data) {
+        return <SpinnerComponent />;
+    }
+    var formatName = "";
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     return (
@@ -41,7 +79,7 @@ export default function Articles() {
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                     >
-                        {Blogs.map((item: any, index: number) => {
+                        {/* {BlogsData.map((item: any, index: number) => {
                             return (
                                 <motion.div className="col-lg-3 mb-3" key={`article-${index}`}
                                     variants={cardVariants}
@@ -54,6 +92,22 @@ export default function Articles() {
                                     </div>
                                 </motion.div>
                             )
+                        })} */}
+
+                        {data.articlesItems.value.map((m: any, index: number) => {
+                            var item : Blogitems = m;
+                            return (
+                                <motion.div className="col-lg-3 mb-3" key={`article-${index}`}
+                                    variants={cardVariants}
+                                >
+
+                                    <div className='blog-card'>
+
+                                        <img src={item.image.value[0].url} alt="" className='' />
+                                        <p className='name'>{item.heading.value}</p>
+                                    </div>
+                                </motion.div>
+                            )
                         })}
                     </motion.div>
                 </div>
@@ -61,3 +115,5 @@ export default function Articles() {
         </div>
     )
 }
+
+export default ListPage;

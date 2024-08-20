@@ -299,7 +299,7 @@ export const Brochure = [
 ]
 
 
-export const Blogs = [
+export const BlogsData = [
     {
         name: "Blog name",
         image: "/assets/imgs/article-1.png",

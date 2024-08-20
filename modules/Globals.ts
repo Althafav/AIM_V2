@@ -14,11 +14,11 @@ export default class Globals {
             useSecuredMode: true, // Queries the Delivery API using secure access.
         },
         secureApiKey: Globals.SECURE_API_KEY,
-     
+
     });
 
     static SITE_NAME = "AIM";
-
+    static CURRENT_LANG_CODENAME: string = "default";
 
     static BASE_URL: string =
         process.env.NODE_ENV === "production"

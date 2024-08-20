@@ -31,15 +31,12 @@ export default function EventHighlights() {
             }}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        
 
-
-                        </div>
-
-                        <div className="col-lg-6">
-                            <p className='section-tag'>THEME OF THE YEAR 2025</p>
-                            <p className='section-head'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
-                            <p className='section-head'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
+                        <div className="col-12">
+                            <p className='section-tag text-center'>THEME OF THE YEAR</p>
+                            <p className='section-head sub-1 text-center'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
+                            <p className='section-head main-text text-center'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: <br /> TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
                         </div>
                     </div>
                 </div>
@@ -47,14 +44,14 @@ export default function EventHighlights() {
 
 
 
-            <div className="container mb-5">
+            <section className="container mb-5">
 
                 <div className="row">
                     <div className="col-lg-4"><p>{aboutAim1}</p></div>
                     <div className="col-lg-4"><p>{aboutAim2}</p></div>
                     <div className="col-lg-4"><p>{aboutAim3}</p></div>
                 </div>
-            </div>
+            </section>
 
 
             <section>

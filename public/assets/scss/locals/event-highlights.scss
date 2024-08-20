@@ -20,11 +20,12 @@
     }
 
     .theme-of-the-year {
-        height: 100vh;
+        height: 390px;
         display: flex;
         align-items: center;
         .section-tag {
             color: white;
+            
         }
 
         .section-head {
@@ -34,17 +35,28 @@
             background-clip: text;
             text-fill-color: transparent;
 
-            font-size: 48px;
             letter-spacing: -3px;
             line-height: 1.1;
             font-weight: bold;
-            max-width: 640px;
-
+            
+            text-align: center;
             @media screen and (max-width: 800px) {
                 font-size: 32px;
                 
             }
         }
+
+        .sub-1 {
+            font-size: 32px;
+            text-align: center;
+        }
+        .main-text {
+            font-size: 48px;
+          
+            margin: auto;
+        }
+
+
     }
 
     .theme-subHead {
