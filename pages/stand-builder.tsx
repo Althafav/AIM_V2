@@ -26,11 +26,11 @@ export default function StandBuilder() {
             <section>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 d-flex justify-content-center align-items-center">
+                        <div className="col-lg-4 d-flex justify-content-center align-items-center">
                             <img src="/assets/imgs/Creation House New Logo 1.png" alt="" className='logo' />
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-8">
                             <h2>Creation House</h2>
                             <p>{text1}</p>
                             <p>{text2}</p>

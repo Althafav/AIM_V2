@@ -106,7 +106,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="#">
+                      <Link href="/flight">
                         Flight
                       </Link>
                     </li>
@@ -210,7 +210,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="#">
+                      <Link href="/flight">
                         Flight
                       </Link>
                     </li>
