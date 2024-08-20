@@ -8,7 +8,7 @@ const AudientsCTAComponent: React.FC = () => {
     return (
         <section ref={ref} className='audients-section-wrapper'>
             <div className="section-container">
-                <div className="row">
+                <div className="row mb-5">
                     <div className="col-12 d-flex justify-content-center">
 
                         <motion.div
@@ -29,7 +29,7 @@ const AudientsCTAComponent: React.FC = () => {
                             transition={{ duration: 1, delay: 0.5 }}
                         >
                             Join us in Shaping Tomorrow, Today
-                        </motion.p>``
+                        </motion.p>
                     </div>
 
 

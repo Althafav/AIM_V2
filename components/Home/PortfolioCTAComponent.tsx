@@ -49,7 +49,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             transition={{ duration: 1, delay: 0.5 }}
                         >
                             The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
-                        </motion.p>``
+                        </motion.p>
                     </div>
 
 
@@ -78,7 +78,7 @@ const PortfolioCTAComponent: React.FC = () => {
                                             <div className="text-container">
                                                 <div className='d-flex flex-column'>
                                                     <span className='main-head--card'>{item.mainHead}</span>
-                                                    <span className='sub-head--card'>kicker Line here</span>
+                                                    <span className='sub-head--card mt-1'>{item.kicker}</span>
                                                 </div>
                                                 <Link href={item.link ? item.link : '#'} >
 

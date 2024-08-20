@@ -24,7 +24,7 @@ const cardVariants = {
 export async function getStaticProps() {
     try {
         const datasourceStr: string = await Globals.KontentClient.item("blog_page")
-            // .languageParameter(Globals.CURRENT_LANG_CODENAME)
+            .languageParameter(Globals.CURRENT_LANG_CODENAME)
             .toObservable()
             .toPromise()
             .then((r: any) => {
@@ -32,7 +32,7 @@ export async function getStaticProps() {
             });
 
         const data: Blogs = JSON.parse(datasourceStr);
-            console.log(data, "this is data")
+        console.log(data, "this is data")
         return {
             props: {
                 data,
@@ -94,21 +94,23 @@ function ListPage({ data }: { data: Blogs }) {
                             )
                         })} */}
 
-                        {data.articlesItems.value.map((m: any, index: number) => {
-                            var item : Blogitems = m;
-                            return (
-                                <motion.div className="col-lg-3 mb-3" key={`article-${index}`}
-                                    variants={cardVariants}
-                                >
+                        {data.articlesItems.value.map((i: any, key: number) =>
+                            i.chooseArticle.value == null
+                                ? ((formatName = i.system.id),
+                                    (
+                                        <motion.div className="col-lg-3 mb-3" key={`article-${key}`}
+                                            variants={cardVariants}
+                                        >
 
-                                    <div className='blog-card'>
+                                            <div className='blog-card'>
 
-                                        <img src={item.image.value[0].url} alt="" className='' />
-                                        <p className='name'>{item.heading.value}</p>
-                                    </div>
-                                </motion.div>
-                            )
-                        })}
+                                                <img src={i.image.value[0].url} alt="" className='' />
+                                                <p className='name'>{i.heading.value}</p>
+                                            </div>
+                                        </motion.div>
+                                    ))
+                                : ""
+                        )}
                     </motion.div>
                 </div>
             </section>

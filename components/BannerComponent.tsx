@@ -6,7 +6,7 @@ import { SlCalender } from 'react-icons/sl';
 
 export default function BannerComponent() {
 
-    const customHeading = " World's Leading Investment Platform"
+    const customHeading = "Annual Investment Meeting"
     return (
         <div className="banner-wrapper">
             <div className="video-section">

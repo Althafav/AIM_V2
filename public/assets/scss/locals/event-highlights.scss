@@ -59,6 +59,22 @@
 
     }
 
+    .hosting-abudhabi {
+        height: 100vh;
+        position: relative;
+        .aim2025abudhabi {
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+        }
+
+        .inner-text-content {
+            position: absolute;
+            z-index: 1;
+            top: 40px;
+        }
+    }
+
     .theme-subHead {
         font-size: 20px;
         color: $primary-color-varient;

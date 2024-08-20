@@ -9,7 +9,7 @@ export default function EventHighlights() {
     const aboutAim1 = "The Annual Investments Meeting (AIM) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. "
     const aboutAim2 = "AIM 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. "
     const aboutAim3 = "By fostering economic diversification and providing actionable insights into emerging trends, AIM 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives."
-
+    const aboutAim = "The Annual Investments Meeting (AIM) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. AIM 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. By fostering economic diversification and providing actionable insights into emerging trends, AIM 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives."
     const aboutAbuDhabi = "Where the allure of tradition meets the pulse of innovation. As we prepare to host AIM 2025, immerse yourself in a city where ancient culture seamlessly intertwines with cutting-edge advancements. Envision yourself exploring vibrant souks and contemporary marvels, where every corner unveils a new experience. From the serene beauty of the Corniche to the dynamic energy of cutting-edge developments, Abu Dhabi transcends being merely a destination—it's an odyssey of discovery and inspiration. Join us in experiencing a city that embodies both timeless elegance and forward-thinking vision, setting the stage for an unforgettable AIM 2025. "
     return (
         <div className='event-highlights-page-wrapper'>
@@ -31,7 +31,7 @@ export default function EventHighlights() {
             }}>
                 <div className="container">
                     <div className="row">
-                        
+
 
                         <div className="col-12">
                             <p className='section-tag text-center'>THEME OF THE YEAR</p>
@@ -44,44 +44,69 @@ export default function EventHighlights() {
 
 
 
-            <section className="container mb-5">
+            <section className=" mb-5">
 
-                <div className="row">
-                    <div className="col-lg-4"><p>{aboutAim1}</p></div>
-                    <div className="col-lg-4"><p>{aboutAim2}</p></div>
-                    <div className="col-lg-4"><p>{aboutAim3}</p></div>
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12"><p className='text-center paragraph'>{aboutAim}</p></div>
+                     
+                    </div>
+
                 </div>
+
+
             </section>
 
 
-            <section>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h2 className='section-heading'>Hosting AIM 2025 in Abu Dhabi </h2>
+            <section className='hosting-abudhabi'>
+                <div className=" inner-text-content">
+
+                    <div className="section-container">
+
+                        <div className="row g-3">
+                            <div className="col-12">
+                                <h2 className='section-heading'>Hosting AIM 2025 in Abu Dhabi </h2>
+
+
+                            </div>
 
 
                         </div>
 
-                        <div className="col-12">
-                            <p>{aboutAbuDhabi}</p>
-                        </div>
+                        <div className="row pt-2">
+                            <div className="col-lg-6 d-flex align-items-center justify-content-center">
+                                <p className='paragraph'>{aboutAbuDhabi}</p>
+                            </div>
 
-                        <div className="col-12 mt-3">
-                            <Link href="https://visitabudhabi.ae/en">
-                                <button className='text-primary'>Experience Abu Dhabi | Travel and Tourism | Visit Abu Dhabi </button>
+                            <div className="col-lg-6 d-flex align-items-center justify-content-center">
 
-                            </Link>
+                                <div>
+                                    <Link href="https://visitabudhabi.ae/en">
+                                        <button className='text-primary'>Experience Abu Dhabi | Travel and Tourism | Visit Abu Dhabi </button>
 
-                            <div className="date-venue mt-3">
-                                <p>7 – 9 April 2025
+                                    </Link>
 
-                                </p>
-                                <p> ADNEC, Abu Dhabi, United Arab Emirates</p>
+                                    <div className="date-venue mt-3">
+                                        <p>7 – 9 April 2025
+
+                                        </p>
+                                        <p> ADNEC, Abu Dhabi, United Arab Emirates</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+
+
+
                     </div>
+
                 </div>
+                <img src="/assets/imgs/abudhab2025.png" alt="" className='w-100 cover aim2025abudhabi' style={{ width: "100%" }} />
+
+
+
             </section>
 
 

@@ -3,14 +3,16 @@ export const PortfolioCards = [
         image: "/assets/imgs/FDI-card-bg.png",
         mainHead: "Foreign Direct Investment",
         btnName: "fdi",
-        link: '/foriegn-direct-investment'
+        link: '/foriegn-direct-investment',
+        kicker: "Shaping future economies through impactful cross-border investments"
     },
 
     {
         image: "/assets/imgs/Trad-innovation-card-bg.png",
-        mainHead: "Trade Innovation",
+        mainHead: "Global Trade",
         btnName: "trade-innovation",
         link: '/trade-innovation',
+        kicker: 'Shaping the global economy with innovative trade solutions'
     },
 
 
@@ -19,6 +21,7 @@ export const PortfolioCards = [
         mainHead: "Advanced Manufacturing",
         btnName: "advancedManufacturing",
         link: '/advanced-manufacturing',
+        kicker: 'Optimizing productivity and efficiency through integrated physical and digital processes'
     },
 
 
@@ -27,6 +30,7 @@ export const PortfolioCards = [
         mainHead: "Future Cities",
         btnName: "future-cities",
         link: '/future-cities',
+        kicker: 'Emerging as dynamic hubs, driving growth, resilience, and global collaboration'
     },
 
 
@@ -35,6 +39,7 @@ export const PortfolioCards = [
         mainHead: "Digital Economy",
         btnName: "digital-economy",
         link: '/digital-economy',
+        kicker: "It is rapidly becoming a vast ecosystem driven by advanced digital technologies"
     },
 
 
@@ -43,6 +48,7 @@ export const PortfolioCards = [
         mainHead: "Future Finance",
         btnName: "future-finance",
         link: "/future-finance",
+        kicker: "Revolutionizing finance with cutting-edge technology and visionary innovation"
     },
 
     {
@@ -50,6 +56,7 @@ export const PortfolioCards = [
         mainHead: "Startups Unicorn",
         btnName: "startup",
         link: "/startup",
+        kicker: "Catalyzing growth with innovative ideas and agile solutions"
     },
 
     {
@@ -57,6 +64,7 @@ export const PortfolioCards = [
         mainHead: "Entrepreneurs",
         btnName: "entrepreneurs",
         link: "entrepreneurs",
+        kicker: 'Connecting Visionaries Creating Future'
     },
 
 
@@ -93,19 +101,13 @@ export const TestimonialCard = [
 
     },
 
-    // {
-    //     quote : "Best-organized conferences",
-    //     name : "Arshad Khan",
-    //     company: "Arabian Bourse Ltd",
-    //     profilePicSrc: "/assets/imgs/person1.png",
-    //     testimonialVideoSrc : "/assets/videos/testtt2.mp4"
-
-    // }
+  
 ]
 
 
 export const ArticlesCard = [
-    {
+    {   
+        id: 'article1',
         image: "/assets/imgs/article-1.png",
         heading: "WHO strengthens local production focus at AIM Congress 2024..",
         date: "12 May 2024 ",
