@@ -4,17 +4,45 @@
         height: 100vh;
         position: relative;
 
-        
+
 
         video {
 
             object-fit: cover;
             width: 100%;
             height: 100vh;
-    
+
             @media screen and (max-width: 800px) {
                 height: 100vh;
-    
+
+            }
+        }
+    }
+
+    .theme-of-the-year {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        .section-tag {
+            color: white;
+        }
+
+        .section-head {
+            background: linear-gradient(to right, white, #099FFC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            font-size: 48px;
+            letter-spacing: -3px;
+            line-height: 1.1;
+            font-weight: bold;
+            max-width: 640px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 32px;
+                
             }
         }
     }

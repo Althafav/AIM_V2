@@ -23,17 +23,23 @@ export default function EventHighlights() {
 
 
 
-            <div className='column-section-1' >
+            <div className=' theme-of-the-year' style={{
+                backgroundImage: "url('/assets/imgs/AIM 2025 Theme Background.png')",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <p className='section-head'>THEME OF THE YEAR 2025</p>
+
 
                         </div>
 
                         <div className="col-lg-6">
-                            <p className='theme-subHead'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
-                            <p className='theme-mainHead'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
+                            <p className='section-tag'>THEME OF THE YEAR 2025</p>
+                            <p className='section-head'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
+                            <p className='section-head'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
                         </div>
                     </div>
                 </div>
