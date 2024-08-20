@@ -123,13 +123,13 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/stand-builder">
+                      <Link href="/media-partners">
                         Media Partners
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/stand-builder">
+                      <Link href="/our-partners">
                         Our Partners
                       </Link>
                     </li>
