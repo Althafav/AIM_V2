@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function TravelPartner() {
     return (
         <div className='travel-partner-page-wrapper'>
-            <div className="banner-section-wrapper">
+            <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

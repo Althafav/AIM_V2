@@ -8,7 +8,7 @@ export default function StandBuilder() {
     const text2 = "AIM Delegates can also avail of special rates from partner hotels which are accessible to the venue, to Regional and International Airports, and to most Locations frequented by Tourists."
     return (
         <div className='stand-builder-page-wrapper' >
-            <div className="banner-section-wrapper">
+            <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

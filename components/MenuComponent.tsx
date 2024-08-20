@@ -14,6 +14,7 @@ export default function MenuComponent() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
 
   const handleToggle = () => {
     setIsToggle(prevState => !prevState);
@@ -49,6 +50,10 @@ export default function MenuComponent() {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const toggleResourcesDropdown = () => {
+    setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
   };
 
   return (
@@ -91,10 +96,45 @@ export default function MenuComponent() {
                   PORTFOLIOS
                 </Link>
               </li>
-              <li className='menu-item'>
-                <Link href="#">
-                  RESOURCES
-                </Link>
+              <li className='menu-item logistics' onMouseEnter={toggleResourcesDropdown} onMouseLeave={toggleResourcesDropdown}>
+                <span>RESOURCES</span>
+                {isResourcesDropdownOpen && (
+                  <ul className="dropdown">
+                    <li className="dropdown-item">
+                      <Link href="/travel-partner">
+                        Album
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/brochure">
+                        Brochure
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/stand-builder">
+                        Post Show Reports
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/stand-builder">
+                        Blogs
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/stand-builder">
+                        Media Partners
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/stand-builder">
+                        Our Partners
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li className='menu-item logistics' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                 <span>LOGISTICS</span>

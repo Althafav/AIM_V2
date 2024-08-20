@@ -8,7 +8,7 @@ export default function StandBuilder() {
     const text2 = "We have been selected as the official contractor for several exhibitions as we assist the exhibitors from pre-show planning, and during show assistance to post-show close-out."
     return (
         <div className='stand-builder-page-wrapper' >
-            <div className="banner-section-wrapper">
+            <div className="inner-banner-section-wrapper">
                 {/* <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

@@ -1,7 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Marquee from "react-fast-marquee";
-import useEmblaCarousel from 'embla-carousel-react'
+
 import { PortfolioCards } from "@/contants/data.js"
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 import Link from 'next/link';
@@ -24,15 +23,7 @@ const PortfolioCTAComponent: React.FC = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev()
-    }, [emblaApi])
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext()
-    }, [emblaApi])
+  
 
     return (
         <section ref={ref} className='section-wrapper portfolio-section-wrapper' id='Portfolio'>

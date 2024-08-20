@@ -261,3 +261,40 @@ export const shamsiTravelsServices = [
     }
 ]
 
+
+export const Brochure = [
+    {
+        name: "English",
+        image: "/assets/imgs/English - AIM Brochure.webp",
+        link: "https://aimcongress.com/reports/download-brochure/5b20ce28-6fbe-45fb-a97c-75bf42437e78"
+
+    },
+
+    {
+        name: "English",
+        image: "/assets/imgs/English - AIM Brochure.webp",
+        link: "https://aimcongress.com/reports/download-brochure/5b20ce28-6fbe-45fb-a97c-75bf42437e78"
+
+    },
+
+
+    {
+        name: "English",
+        image: "/assets/imgs/English - AIM Brochure.webp",
+        link: "https://aimcongress.com/reports/download-brochure/5b20ce28-6fbe-45fb-a97c-75bf42437e78"
+
+    },
+
+
+    {
+        name: "English",
+        image: "/assets/imgs/English - AIM Brochure.webp",
+        link: "https://aimcongress.com/reports/download-brochure/5b20ce28-6fbe-45fb-a97c-75bf42437e78"
+
+    },
+
+
+
+
+]
+
