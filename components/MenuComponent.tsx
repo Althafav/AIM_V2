@@ -111,7 +111,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/stand-builder">
+                      <Link href="/postshow-reports">
                         Post Show Reports
                       </Link>
                     </li>
