@@ -117,7 +117,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/stand-builder">
+                      <Link href="/articles">
                         Blogs
                       </Link>
                     </li>

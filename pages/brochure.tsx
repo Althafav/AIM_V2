@@ -20,7 +20,7 @@ const cardVariants = {
 };
 
 
-export default function brochure() {
+export default function Broucher() {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -38,9 +38,10 @@ export default function brochure() {
                 </div>
             </div>
 
-            <section ref={ref}>
-                <div className="container">
+            <section >
+                <div className="container"  ref={ref}>
                     <motion.div className="row"
+                       
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
