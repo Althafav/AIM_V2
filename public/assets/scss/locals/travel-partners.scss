@@ -1,33 +1,5 @@
 .travel-partner-page-wrapper {
-    .banner-section-wrapper {
-        position: relative;
-
-        .banner-image {
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .inner-text-container {
-            position: absolute;
-            z-index: 2;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-
-            .banner-heading {
-                color: #fff;
-                text-transform: uppercase;
-                font-weight: bold;
-                position: relative;
-                max-width: 800px;
-                font-size: 72px;
-                letter-spacing: -3px;
-            }
-
-
-        }
-    }
+    
 
     .travels-name {
         font-size: 32px;

@@ -111,7 +111,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="#">
+                      <Link href="/stand-builder">
                         Stand Builder
                       </Link>
                     </li>
@@ -215,7 +215,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="#">
+                      <Link href="/stand-builder">
                         Stand Builder
                       </Link>
                     </li>
