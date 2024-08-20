@@ -2,12 +2,17 @@ import { shamsiTravelsServices } from '@/contants/data'
 import React from 'react'
 import { FaGlobe, FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
+import { motion } from "framer-motion";
 
 export default function TravelPartner() {
     return (
         <div className='travel-partner-page-wrapper'>
             <div className="banner-section-wrapper">
-                <img src="/assets/imgs/travel-agent-banner-bg.png" alt="" className='banner-image' />
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                    src="/assets/imgs/travel-agent-banner-bg.png" alt="" className='banner-image' />
 
                 <div className="inner-text-container">
                     <h1 className='banner-heading'>Travel Partners</h1>
@@ -25,7 +30,9 @@ export default function TravelPartner() {
                             </div>
 
                             <div>
-                                <img src="/assets/imgs/shamsi-travels-logo.png" alt="" className='travels-logo' />
+                                <img
+
+                                    src="/assets/imgs/shamsi-travels-logo.png" alt="" className='travels-logo' />
                             </div>
                         </div>
 
@@ -59,12 +66,12 @@ export default function TravelPartner() {
                         <div className="col-12  d-flex justify-content-center flex-column gap-3 align-items-center">
                             <p className='fs-3 m-0 p-0'>Connect with us</p>
                             <div className='d-flex align-items-center gap-3'>
-                                <FaGlobe  color='rgb(210,81,49)'/>
+                                <FaGlobe color='rgb(210,81,49)' />
                                 <span> www.alshamsitravels.com</span>
                             </div>
 
                             <div className='d-flex align-items-center gap-3'>
-                                <IoMdMail  color='rgb(210,81,49)'/>
+                                <IoMdMail color='rgb(210,81,49)' />
                                 <span>info@alshamsitravels.com</span>
                             </div>
 
