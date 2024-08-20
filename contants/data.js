@@ -227,3 +227,37 @@ export const advancedManufacturingFAQ = [
     { id: 'four', heading: 'What emerging trends are shaping the FDI landscape?', content: 'Key trends influencing FDI include digital transformation, the shift towards green and sustainable investments, and the rise of new economic powers. Digitalization is driving investment in sectors like fintech and e-commerce, while sustainability is guiding investments towards renewable energy and clean technologies. Geopolitical dynamics are also influencing FDI as countries use it for economic diplomacy and to build strategic partnerships. AIM Congress 2025 will address these emerging trends, providing attendees with cutting-edge insights and opportunities to align their FDI strategies with the latest developments in the global market. ' }
 ]
 
+
+
+export const shamsiTravelsServices = [
+    {
+        name: "CORPORATE",
+        image: "/assets/imgs/CORPORATE.png"
+    },
+
+    {
+        name: "TRAVEL INSURANCE",
+        image: "/assets/imgs/TRAVEL INSURANCE.png"
+    },
+
+    {
+        name: "FLIGHTS/HOTELS",
+        image: "/assets/imgs/FLIGHTSHOTELS.png"
+    },
+
+    {
+        name: "TRANSPORTATION",
+        image: "/assets/imgs/TRANSPORTATION.png"
+    },
+
+    {
+        name: "LOCAL TOURS",
+        image: "/assets/imgs/LOCAL TOURS.png"
+    },
+
+    {
+        name: "VISA ASSISTANCE",
+        image: "/assets/imgs/VISA ASSISTANCE.png"
+    }
+]
+

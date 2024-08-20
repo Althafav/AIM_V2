@@ -13,6 +13,7 @@ export default function MenuComponent() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleToggle = () => {
     setIsToggle(prevState => !prevState);
@@ -45,6 +46,10 @@ export default function MenuComponent() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollTop]);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
@@ -91,29 +96,38 @@ export default function MenuComponent() {
                   RESOURCES
                 </Link>
               </li>
-              <li className='menu-item'>
-                <Link href="#">
-                  LOGISTICS
-                </Link>
+              <li className='menu-item logistics' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                <span>LOGISTICS</span>
+                {isDropdownOpen && (
+                  <ul className="dropdown">
+                    <li className="dropdown-item">
+                      <Link href="/travel-partner">
+                        Travel Partner
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="#">
+                        Flight
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="#">
+                        Stand Builder
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-
-
-
 
             </ul>
           </div>
 
           <div className='d-lg-block d-none'>
-
-
             <Link href="/contact-us" className='menu-cta-wrapper'>
-              {/* <button className='menu-cta-btn'><span>Secure Your Spot</span></button> */}
+
               <button className='register-interest-cta'>Register your interest</button>
             </Link>
           </div>
-
-
-
           <motion.div
             className="menu-icon-wrapper d-lg-none d-block"
             onClick={handleToggle}
@@ -162,7 +176,7 @@ export default function MenuComponent() {
                     className='menu-logo white-logo' />
 
                 </Link>
-                <IoMdClose size={32} className='menu-icon' cursor="pointer" onClick={handleToggle}/>
+                <IoMdClose size={32} className='menu-icon' cursor="pointer" onClick={handleToggle} />
               </div>
 
               <li className='mobile-menu-item'>
@@ -186,10 +200,27 @@ export default function MenuComponent() {
                 </Link>
               </li>
 
-              <li className='mobile-menu-item'>
-                <Link href="/#Portfolio" onClick={handleToggle}>
-                  LOGISTICS
-                </Link>
+              <li className='mobile-menu-item' onClick={toggleDropdown}>
+                <span>LOGISTICS</span>
+                {isDropdownOpen && (
+                  <ul className="dropdown">
+                    <li className="dropdown-item">
+                      <Link href="/travel-partner">
+                        Travel Partner
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="#">
+                        Flight
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="#">
+                        Stand Builder
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
 
               <li className='mobile-menu-item'>
