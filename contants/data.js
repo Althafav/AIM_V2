@@ -298,3 +298,34 @@ export const Brochure = [
 
 ]
 
+
+export const Blogs = [
+    {
+        name: "Blog name",
+        image: "/assets/imgs/article-1.png",
+        link: "",
+    },
+
+    {
+        name: "Blog name",
+        image: "/assets/imgs/article-1.png",
+        link: "",
+    },
+
+    {
+        name: "Blog name",
+        image: "/assets/imgs/article-1.png",
+        link: "",
+    },
+
+    {
+        name: "Blog name",
+        image: "/assets/imgs/article-1.png",
+        link: "",
+    },
+
+
+    
+
+]
+
