@@ -41,7 +41,7 @@ const ThemeSectionComponent: React.FC = () => {
                 <motion.div className="col-12 mt-4" initial={{ y: 100, opacity: 0 }}
                     animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                     transition={{ duration: 1, delay: 1.1 }}>
-                    <img src="/assets/imgs/theme-bg.png" alt="" style={{width: "100%", objectFit: "cover"}}/>
+                    <img src="/assets/imgs/AIM Web  banner 00   -05 (1).jpg" alt="" style={{width: "100%", objectFit: "cover"}}/>
                 </motion.div>
             </div>
 
