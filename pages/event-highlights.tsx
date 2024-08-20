@@ -6,7 +6,9 @@ import React from 'react'
 import Marquee from 'react-fast-marquee'
 
 export default function EventHighlights() {
-    const about2025 = "The Annual Investments Meeting (AIM) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. AIM 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. By fostering economic diversification and providing actionable insights into emerging trends, AIM 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives. "
+    const aboutAim1 = "The Annual Investments Meeting (AIM) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. "
+    const aboutAim2 = "AIM 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. "
+    const aboutAim3 = "By fostering economic diversification and providing actionable insights into emerging trends, AIM 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives."
 
     const aboutAbuDhabi = "Where the allure of tradition meets the pulse of innovation. As we prepare to host AIM 2025, immerse yourself in a city where ancient culture seamlessly intertwines with cutting-edge advancements. Envision yourself exploring vibrant souks and contemporary marvels, where every corner unveils a new experience. From the serene beauty of the Corniche to the dynamic energy of cutting-edge developments, Abu Dhabi transcends being merely a destination—it's an odyssey of discovery and inspiration. Join us in experiencing a city that embodies both timeless elegance and forward-thinking vision, setting the stage for an unforgettable AIM 2025. "
     return (
@@ -21,7 +23,7 @@ export default function EventHighlights() {
 
 
 
-            <div className='column-section-1'>
+            <div className='column-section-1' >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
@@ -41,7 +43,11 @@ export default function EventHighlights() {
 
             <div className="container mb-5">
 
-                <p>{about2025}</p>
+                <div className="row">
+                    <div className="col-lg-4"><p>{aboutAim1}</p></div>
+                    <div className="col-lg-4"><p>{aboutAim2}</p></div>
+                    <div className="col-lg-4"><p>{aboutAim3}</p></div>
+                </div>
             </div>
 
 
@@ -109,7 +115,7 @@ export default function EventHighlights() {
             <section >
                 <Marquee>
 
-                    <p className='stay-tuned'>Stay tuned—our AGENDA is coming, fresh perspectives and groundbreaking ideas! </p>
+                    <p className='stay-tuned'>Stay tuned—our AGENDA is coming, packed with fresh perspectives and groundbreaking ideas! </p>
 
                 </Marquee>
             </section>

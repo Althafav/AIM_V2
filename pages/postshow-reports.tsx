@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'
-import { motion, useInView } from "framer-motion";
-import { Brochure } from '@/contants/data';
-import Link from 'next/link';
-import { PiDownloadSimple } from 'react-icons/pi';
+import { motion } from "framer-motion";
+
 
 
 
@@ -10,8 +8,8 @@ import { PiDownloadSimple } from 'react-icons/pi';
 
 export default function PostshowReport() {
 
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
+ 
+ 
     return (
         <div className='postshow-report-page-wrapper' >
             <div className="inner-banner-section-wrapper">
