@@ -8,14 +8,15 @@ import AboutComponent from '@/components/Portfolio/AboutComponent';
 import { fdiBenefits, fdiFAQ } from '@/contants/data';
 import { Portfoliofeatures } from '@/models/portfoliofeatures';
 import Globals from '@/modules/Globals';
+import { Portfoliopage } from '@/models/portfoliopage';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const [pageData, setPageData] = useState<Portfoliofeatures | null>(null);
+    const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
     useEffect(() => {
-        Globals.KontentClient.item("fdi_features")
+        Globals.KontentClient.item("fdi_portfolio")
             .toObservable()
             .subscribe((response: any) => {
                 console.log('API Response:', response);
@@ -31,8 +32,7 @@ export default function ForiegnDirectInvestment() {
         setIsExpanded(!isExpanded);
     };
 
-    const text = `Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.   Foreign Direct Investment (FDI) is set to reshape the global economic landscape as we approach 2025, with its influence extending far beyond mere capital flows. FDI acts as a bridge between nations, fostering economic interdependence, enhancing global trade, and encouraging the transfer of technology and expertise. As the world becomes more interconnected, FDIs role in stimulating economic growth, driving innovation, and fostering international collaboration becomes increasingly significant.`;
-    const limitedText = text.substring(0, 450);
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -40,8 +40,8 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc="/assets/imgs/fdi-banner-bg.png" Heading={"Foreign Direct Investment"} portfolioColorName="fdi" />
-            <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} portfolioColorName="fdi" />
+            <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
             <CardGrid  pageData={pageData}/>
 
             <section className='benefits-section-wrapper'>

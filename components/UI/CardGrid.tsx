@@ -1,10 +1,11 @@
 import { Portfoliofeatures } from '@/models/portfoliofeatures';
+import { Portfoliopage } from '@/models/portfoliopage';
 import { Serviceitem } from '@/models/serviceitem';
 import Globals from '@/modules/Globals';
 import React, { useEffect, useState } from 'react'
 
 interface CardGridProps {
-    pageData: Portfoliofeatures | null;
+    pageData: Portfoliopage | null;
 }
 
 const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
@@ -21,17 +22,17 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
             <div className="section-container">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className='section-heading'>FEATURES AND ACTIVITIES
+                        <h1 className='section-heading'>{pageData.featureheading.value}
                         </h1>
                     </div>
                     <div className="col-12">
-                        <p className='sub-heading'>Overcoming Challenges, Seizing New Global Opportunities</p>
+                        <p className='sub-heading'>{pageData.featuresubheading.value}</p>
                     </div>
                 </div>
 
                 <div className="row key-benefits mt-4">
                     <div className="masonry-container">
-                        {pageData.items.value.map((m: any, index) => {
+                        {pageData.features.value.map((m: any, index) => {
                             const item: Serviceitem = m;
 
 

@@ -7,7 +7,7 @@ export default function AboutComponent(props: any) {
         setIsExpanded(!isExpanded);
     };
 
-    
+
     const limitedText = props.aboutParagraph.substring(0, 450);
     return (
         <section className='about-portfolio-section-wrapper'>
@@ -17,7 +17,13 @@ export default function AboutComponent(props: any) {
                         <h1 className='section-heading'>{props.aboutHeading}</h1>
                     </div>
                     <div className="col-12">
-                        <p className={`paragraph ${isExpanded ? 'expanded' : 'faded'}`}>{isExpanded ? props.aboutParagraph : `${limitedText}...`}</p>
+                        <div
+                            className={`paragraph ${isExpanded ? 'expanded' : 'faded'}`}
+                            dangerouslySetInnerHTML={{
+                                __html: isExpanded ? props.aboutParagraph : limitedText,
+                            }}
+                        />
+                       
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center mt-3" onClick={handleToggle}>
                         <button className='read-more-btn'>{isExpanded ? 'Read Less' : 'Read More'}</button>
