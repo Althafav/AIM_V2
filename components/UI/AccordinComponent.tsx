@@ -1,46 +1,53 @@
+import { Faqitem } from '@/models/faqitem';
+import { Portfoliopage } from '@/models/portfoliopage';
 import React, { useState } from 'react';
 
-type AccordionItem = {
-  id: string;
-  heading: string;
-  content: string;
-};
+
 
 type AccordionProps = {
-  data: AccordionItem[];
+  pageData: Portfoliopage | null;
 };
 
-const AccordionComponent: React.FC<AccordionProps> = ({ data }) => {
+const AccordionComponent: React.FC<AccordionProps> = ({ pageData }) => {
 
 
   return (
     <div className="accordion" id="accordionExample">
-      {data.map((item: any, index: number) => (
-        <div className="accordion-item" key={item.id}>
-          <h2 className="accordion-header" id={`heading${item.id}`}>
-            <button
-              className={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target={`#collapse${item.id}`}
-              aria-expanded={index === 0 ? 'true' : 'false'}
-              aria-controls={`collapse${item.id}`}
+      {pageData?.faq.value.map((m: any, index: number) => {
+        var item: Faqitem = m;
+        return (
+          <div className="accordion-item" key={item.system.id}>
+            <h2 className="accordion-header" id={`heading${item.system.id}`}>
+              <button
+                className={`accordion-button fs-5 ${index === 0 ? '' : 'collapsed'}`}
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target={`#collapse${item.system.id}`}
+                aria-expanded={index === 0 ? 'true' : 'false'}
+                aria-controls={`collapse${item.system.id}`}
+              >
+                {item.title.value}
+              </button>
+            </h2>
+            <div
+              id={`collapse${item.system.id}`}
+              className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+              aria-labelledby={`heading${item.system.id}`}
+              data-bs-parent="#accordionExample"
             >
-              {item.heading}
-            </button>
-          </h2>
-          <div
-            id={`collapse${item.id}`}
-            className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-            aria-labelledby={`heading${item.id}`}
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">
-              {item.content}
+              <div className="accordion-body">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: item.content.value,
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        )
+      }
+
+      )}
     </div>
   );
 };

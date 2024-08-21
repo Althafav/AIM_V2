@@ -88,7 +88,7 @@ export default function ForiegnDirectInvestment() {
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ} />
+                    <AccordionComponent pageData={pageData} />
                 </div>
             </section>
         </motion.div>
