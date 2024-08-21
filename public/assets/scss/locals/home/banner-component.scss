@@ -36,11 +36,6 @@
             font-size: 62px;
             letter-spacing: -3px;
 
-            // @media screen and (max-width: 1600px) {
-            //     font-size: 62px;
-            //     letter-spacing: -2px;
-            // }
-
             @media screen and (max-width: 800px) {
                 font-size: 42px;
                 letter-spacing: -2px;
@@ -106,43 +101,7 @@
     }
 
 
-    .stats-content {
-        position: absolute;
-        right: 250px;
-        bottom: 20px;
-        z-index: 2;
-        color: white;
-
-        span {
-            text-transform: uppercase;
-            font-size: 20px;
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-        }
-
-        .count {
-            font-weight: 600;   
-            font-size: 32px;
-        }
-
-
-        @media screen and (max-width: 800px) {
-            left: 0;
-            bottom: 10px;  
-            right: unset;
-            span {
-                
-                font-size: 16px;
-                
-            }
     
-            .count {
-                
-                font-size: 20px;
-            }
-        }
-    }
 
 
     &::after {
@@ -153,5 +112,47 @@
         height: 100%;
         background-color: rgba(0, 0, 0, 0.805);
         z-index: 1;
+    }
+}
+
+.stats-content {
+    padding: 40px 0;
+    background: $primary-color;
+    color: white;
+    
+    
+
+
+
+    span {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    .count {
+        font-weight: 600;   
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
+
+    @media screen and (max-width: 800px) {
+        left: 0;
+        bottom: 10px;  
+        right: unset;
+       
+        span {
+            
+            font-size: 16px;
+            
+        }
+
+        .count {
+            
+            font-size: 20px;
+        }
     }
 }
