@@ -4,7 +4,8 @@ import Link from 'next/link'
 import React from 'react'
 import { BsTelephone } from 'react-icons/bs'
 import { CiMail } from 'react-icons/ci'
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import { FaThreads, FaXTwitter } from 'react-icons/fa6'
 
 export default function FooterComponent() {
   return (
@@ -16,16 +17,15 @@ export default function FooterComponent() {
           <div className="col-lg-4 mb-4 mb-lg-0">
             <div className=''>
               <div className="logos">
-                <img src="/assets/imgs/facebook.png" alt="" />
-                <img src="/assets/imgs/whatsapp.png" alt="" />
-                <img src="/assets/imgs/linkedin.png" alt="" />
+                <FaFacebook color='white' />
+                <FaWhatsapp color='white' />
+                <FaLinkedin color='white' />
 
-                <img src="/assets/imgs/instagram.png" alt="" />
-                <img src="/assets/imgs/thread.png" alt="" />
-                <img src="/assets/imgs/youtube.png" alt="" />
-                <img src="/assets/imgs/twitterX.png" alt="" />
-                <img src="/assets/imgs/google.png" alt="" />
-                <img src="/assets/imgs/ticktok.png" alt="" />
+                <FaInstagram color='white'/>
+                <FaThreads color='white'/>
+                <FaYoutube color='white'/>
+                <FaXTwitter color='white'/>
+                <FaTiktok color='white'/>
 
               </div>
 
