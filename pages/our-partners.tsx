@@ -25,3 +25,7 @@ export default function OurPartners() {
         </div>
     )
 }
+
+
+
+

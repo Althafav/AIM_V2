@@ -1,8 +1,20 @@
 import React from 'react'
 import { motion, useInView } from "framer-motion";
-export default function MediaPartners() {
+import { Partnerspage } from '@/models/partnerspage';
+import Globals from '@/modules/Globals';
+import MediaPartnerComponent from '@/components/MediaPartners';
+import Head from 'next/head';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
+
+
+function ListPage({ data }: { data: Partnerspage }) {
+
+    if (!data) {
+        return <SpinnerComponent />;
+    }
     return (
         <div className='media-partners-page'>
+
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
@@ -18,10 +30,36 @@ export default function MediaPartners() {
             <section>
                 <div className="container">
                     <div className="row">
-                        
+                        <MediaPartnerComponent />
                     </div>
                 </div>
             </section>
         </div>
     )
 }
+
+
+
+export async function getStaticProps() {
+    const datasourceStr: string = await Globals.KontentClient.item("partners_page_2024")
+        .languageParameter(Globals.CURRENT_LANG_CODENAME)
+        .toObservable()
+        .toPromise()
+        .then((r: any) => {
+            return JSON.stringify(r.item);
+        });
+
+    const data: Partnerspage = JSON.parse(datasourceStr);
+
+    return {
+        props: {
+            data,
+        },
+        revalidate: 120,
+    };
+}
+
+
+
+export default ListPage;
+
