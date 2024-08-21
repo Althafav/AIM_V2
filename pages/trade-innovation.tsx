@@ -27,7 +27,7 @@ These investments contribute to the development of industries, infrastructure, a
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={`Trade Innovation`} subHeading="Digitizing the International Trade & the Sustainability and Transparency of Global Supply Chains" portfolioColorName="trade-innovation" />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/Trade Innovation.jpg" Heading={`Trade Innovation`} subHeading="Digitizing the International Trade & the Sustainability and Transparency of Global Supply Chains" portfolioColorName="trade-innovation" />
 
             <AboutComponent aboutHeading="Navigating the Future of Trade Innovation" aboutParagraph={text} />
 

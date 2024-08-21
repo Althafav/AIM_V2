@@ -4,7 +4,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
-import { fdiFAQ, tradeInnovationFAQ } from '@/contants/data';
+import { fdiFAQ } from '@/contants/data';
 const DigitalEconomy = () => {
     const text = `The digital economy is rapidly evolving, driven by an ecosystem of interconnected digital technologies that significantly impact economic and societal changes. This ecosystem, fuelled by data, generates substantial value while also introducing risks related to privacy and online security. Some technologies are already embedded in daily life, while others are emerging. 
 
@@ -20,7 +20,7 @@ AIM Congress 2025 aims to conceptualize the transition to a digitally enabled ec
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Digital Economy"} subHeading="Embracing Digital Transformation: An ecosystem of interdependent digital technologies for a sustainable and inclusive future." portfolioColorName="digital-economy" />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/Digital Economy.png"  Heading={"Digital Economy"} subHeading="Embracing Digital Transformation: An ecosystem of interdependent digital technologies for a sustainable and inclusive future." portfolioColorName="digital-economy" />
             <AboutComponent aboutHeading="Navigating the Future of Digital Economy" aboutParagraph={text} />
             <CardGrid />
 
@@ -33,7 +33,7 @@ AIM Congress 2025 aims to conceptualize the transition to a digitally enabled ec
                         </div>
                     </div>
 
-                    <AccordionComponent data={tradeInnovationFAQ}/>
+                    <AccordionComponent data={fdiFAQ}/>
                 </div>
             </section>
         </motion.div>

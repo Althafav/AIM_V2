@@ -10,7 +10,7 @@ export default function PortfolioBanner(props: any) {
 
 
             <motion.img
-                src="/assets/imgs/fdi-banner-bg.png"
+                src={props.bannerImageSrc}
                 alt=""
                 className="banner-bg"
                 initial={{ opacity: 0 }}

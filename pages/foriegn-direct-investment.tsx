@@ -23,7 +23,7 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Foreign Direct Investment"} portfolioColorName="fdi" />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/fdi-banner-bg.png" Heading={"Foreign Direct Investment"} portfolioColorName="fdi" />
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
             <CardGrid />
 

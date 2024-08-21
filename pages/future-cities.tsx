@@ -26,7 +26,7 @@ As we face global challenges such as social cohesion and environmental sustainab
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Future Cities"} subHeading="Creating cities of tomorrow: A hub for global prosperity, social cohesion, and economic opportunity through megacities and international cooperation. " portfolioColorName="future-cities" />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/Future Cities.jpg" Heading={"Future Cities"} subHeading="Creating cities of tomorrow: A hub for global prosperity, social cohesion, and economic opportunity through megacities and international cooperation. " portfolioColorName="future-cities" />
             <AboutComponent aboutHeading="Navigating the Future of Future Cities" aboutParagraph={text} />
             <CardGrid />
 

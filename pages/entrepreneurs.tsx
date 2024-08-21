@@ -26,7 +26,7 @@ To summarise, the growth of the world economy depends on entrepreneurs. A more c
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"AIM Vision Entrepreneurs 2025"} subHeading=" From 4.0 to 5.0: Developing a Future Investment Map for the World" portfolioColorName="entrepreneurs"/>
+            <PortfolioBanner bannerImageSrc="/assets/imgs/Entrepreneurs.jpg" Heading={"AIM Vision Entrepreneurs 2025"} subHeading=" From 4.0 to 5.0: Developing a Future Investment Map for the World" portfolioColorName="entrepreneurs"/>
             <AboutComponent aboutHeading="A New Balanced World Structure: Emerging Wave of a Globalized Investing Landscape" aboutParagraph={text}/>
             <CardGrid />
 

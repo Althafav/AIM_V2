@@ -31,7 +31,7 @@ In conclusion, improved security, more accessibility, and a dedication to sustai
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"AIM Embracing The “Future of Finance” "} subHeading="From 4.0 to 5.0: Rethinking and Embracing: The Direction of Financial Innovation Going Forward " portfolioColorName="future-finance" />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/FFF.jpg" Heading={"AIM Embracing The “Future of Finance” "} subHeading="From 4.0 to 5.0: Rethinking and Embracing: The Direction of Financial Innovation Going Forward " portfolioColorName="future-finance" />
             <AboutComponent aboutHeading="Fuelling the FUTURE OF FINANCIAL REVOLUTION" aboutParagraph={text} />
             <CardGrid />
 

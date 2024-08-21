@@ -15,7 +15,7 @@ const AdvancedManufacturing = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner Heading={"Advanced Manufacturing"} subHeading="Leveraging Industry & Bringing Advanced Factories to Life" portfolioColorName={"advancedManufacturing"} />
+            <PortfolioBanner bannerImageSrc="/assets/imgs/Advanced Manufacturing.jpeg" Heading={"Advanced Manufacturing"} subHeading="Leveraging Industry & Bringing Advanced Factories to Life" portfolioColorName={"advancedManufacturing"} />
             <AboutComponent aboutHeading="Navigating the Future of Advanced Manufacturing" aboutParagraph={text} />
             <CardGrid />
 
