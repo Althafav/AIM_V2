@@ -55,14 +55,44 @@ export default function FooterComponent() {
               <div className="col-lg-3 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Portfolios</p>
                 <div className='footer-nav'>
-                  <p>Foreign Direct Investment</p>
-                  <p>Trade Innovation</p>
-                  <p>Advanced Manufacturing</p>
-                  <p>Future Cities</p>
-                  <p>Digital Economy</p>
-                  <p>Future Finance</p>
-                  <p>Startups Unicorn</p>
-                  <p>Entrepreneurship</p>
+                  <Link href="/foriegn-direct-investment">
+
+                    <p>Foreign Direct Investment</p>
+                  </Link>
+                  <Link href="/trade-innovation">
+                    <p>Global Trade</p>
+
+                  </Link>
+
+                  <Link href="/advanced-manufacturing">
+
+                    <p>Advanced Manufacturing</p>
+                  </Link>
+
+                  <Link href="/future-cities">
+
+                    <p>Future Cities</p>
+                  </Link>
+
+                  <Link href="/digital-economy">
+                    <p>Digital Economy</p>
+
+                  </Link>
+
+                  <Link href="/future-finance">
+                    <p>Future Finance</p>
+
+                  </Link>
+
+                  <Link href="/startup">
+
+                    <p>Startups Unicorn</p>
+                  </Link>
+
+                  <Link href="/entrepreneurs">
+                    <p>Entrepreneurship</p>
+
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-3 mb-4 mb-lg-0">
