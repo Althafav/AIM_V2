@@ -48,7 +48,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
+                            Portfolios Strategically Designed for your Needs Discover. Explore. Refine. Transform. Succeed. 
                         </motion.p>
                     </div>
 
