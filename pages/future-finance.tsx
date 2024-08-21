@@ -62,7 +62,7 @@ In conclusion, improved security, more accessibility, and a dedication to sustai
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ} />
+                    <AccordionComponent pageData={pageData} />
                 </div>
             </section>
         </motion.div>

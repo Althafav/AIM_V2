@@ -15,6 +15,7 @@ export default function MenuComponent() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isResourcesDropdownOpen, setIsResourcesDropdownOpen] = useState(false);
+  const [isPortfolioDropdownOpen, setIsPortfolioDropdownOpen] = useState(false);
 
   const handleToggle = () => {
     setIsToggle(prevState => !prevState);
@@ -56,6 +57,10 @@ export default function MenuComponent() {
     setIsResourcesDropdownOpen(!isResourcesDropdownOpen);
   };
 
+  const togglePortfolioDropdown = () => {
+    setIsPortfolioDropdownOpen(!isPortfolioDropdownOpen);
+  };
+
   return (
     <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
@@ -91,12 +96,62 @@ export default function MenuComponent() {
                   AIM 2025
                 </Link>
               </li>
-              <li className='menu-item'>
-                <Link href="/#Portfolio">
-                  PORTFOLIOS
-                </Link>
+              <li className='menu-item hover-menu-container' onMouseEnter={togglePortfolioDropdown} onMouseLeave={togglePortfolioDropdown}>
+                <span>PORTFOLIOS</span>
+
+                {isPortfolioDropdownOpen && (
+                  <ul className="dropdown">
+
+                    <li className="dropdown-item">
+                      <Link href="/foriegn-direct-investment">
+                        FDI
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/trade-innovation">
+                        Global Trade
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/advanced-manufacturing">
+                        Advanced Manufacturing
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/future-cities">
+                        Future Cities
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/digital-economy">
+                        Digital Economy
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/future-finance">
+                        Future Finance
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/startup">
+                        Startups Unicorn
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/entrepreneurs">
+                        Entrepreneurs
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li className='menu-item logistics' onMouseEnter={toggleResourcesDropdown} onMouseLeave={toggleResourcesDropdown}>
+              <li className='menu-item hover-menu-container' onMouseEnter={toggleResourcesDropdown} onMouseLeave={toggleResourcesDropdown}>
                 <span>RESOURCES</span>
                 {isResourcesDropdownOpen && (
                   <ul className="dropdown">
@@ -136,7 +191,7 @@ export default function MenuComponent() {
                   </ul>
                 )}
               </li>
-              <li className='menu-item logistics' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+              <li className='menu-item hover-menu-container' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                 <span>LOGISTICS</span>
                 {isDropdownOpen && (
                   <ul className="dropdown">

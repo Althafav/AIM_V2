@@ -35,7 +35,7 @@ export default function About() {
 
             <div className='about-us-section-wrapper'
                 style={{
-                    backgroundImage: "url('/assets/imgs/aimbg (1).png')",
+                    backgroundImage: "url('/assets/imgs/aimbg (1).jpg')",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center",

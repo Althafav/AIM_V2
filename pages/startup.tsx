@@ -43,7 +43,7 @@ const StartUp = () => {
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ} />
+                    <AccordionComponent pageData={pageData} />
                 </div>
             </section>
         </motion.div>

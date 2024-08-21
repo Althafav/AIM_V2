@@ -46,7 +46,7 @@ const AdvancedManufacturing = () => {
                         </div>
                     </div>
 
-                    <AccordionComponent data={advancedManufacturingFAQ} />
+                    <AccordionComponent pageData={pageData} />
                 </div>
             </section>
         </motion.div>

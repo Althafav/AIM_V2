@@ -51,7 +51,7 @@ export default function TradeInnovation() {
                         </div>
                     </div>
 
-                    <AccordionComponent data={tradeInnovationFAQ} />
+                    <AccordionComponent pageData={pageData} />
                 </div>
             </section>
         </motion.div>
