@@ -75,7 +75,7 @@ export default function ArticlesComponent() {
 
             </section>
 
-            <section className='articles-component-wrapper'>
+            {/* <section className='articles-component-wrapper'>
                 <div className="section-container">
                     <div className="row">
                         {UpcommingEvent.map((item: any, index: number) => {
@@ -107,7 +107,7 @@ export default function ArticlesComponent() {
                     </div>
                 </div>
 
-            </section>
+            </section> */}
         </>
 
     )

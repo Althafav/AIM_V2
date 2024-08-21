@@ -64,8 +64,11 @@ export default function About() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
-                            <p className='section-head'>To establish a global community addressing challenges collaboratively and inclusively.</p>
 
+                            <span className='text-secondary fs-3 mb-3'>Mission</span>
+                            <p className='section-head d-flex flex-column gap-2'>
+                                <span>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -76,9 +79,13 @@ export default function About() {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 d-flex justify-content-end">
-                            <p className='section-head'>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</p>
+                            <div>
 
-                           
+
+                                <span className='text-secondary fs-3 mb-3'>Vision</span>
+                                <p className='section-head'>To establish a global community addressing challenges collaboratively and inclusively.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>

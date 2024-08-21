@@ -37,7 +37,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span>Portfolio Strategically Designed for your Idea</span>
+                            <span>Portfolios Strategically Designed for your Needs</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -48,7 +48,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                             Explore. Refine. Transform. Succeed. 
+                            Discover. Explore. Refine. Transform. Succeed. 
                         </motion.p>
                     </div>
 
