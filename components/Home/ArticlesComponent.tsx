@@ -2,6 +2,8 @@ import { ArticlesCard, UpcommingEvent } from '@/contants/data'
 import { Blogitems } from '@/models/blogitems';
 import { Blogs } from '@/models/blogs';
 import Globals from '@/modules/Globals';
+import Helper from "@/modules/Helper";
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 export default function ArticlesComponent() {
@@ -39,19 +41,29 @@ export default function ArticlesComponent() {
                             }
                             return (
                                 <div className={colClass + " mb-3"} key={`article-card-${index}`}>
-                                    <div className="article-card">
-                                        <div className="article-badge">
-                                            News Article
-                                        </div>
-                                        <img src={item.image.value[0].url} alt="" />
-                                        <div className="content">
+                                    <Link
+                                        passHref
+                                        legacyBehavior
+                                        href={`/article/${Helper.formatUrlParameter(
+                                            item.heading.value
+                                        )}`}
+                                    >
+                                        <div className="article-card">
+                                            <div className="article-badge">
+                                                News Article
+                                            </div>
+                                            <img src={item.image.value[0].url} alt="" />
+                                            <div className="content">
 
-                                            <p className='heading'>{item.heading.value}</p>
-                                            <div className='timestamp'>
-                                                <span>12 May 2024 </span>
+                                                <p className='heading'>{item.heading.value}</p>
+                                                <div className='timestamp'>
+                                                    <span>12 May 2024 </span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+
+                                    </Link>
+
                                 </div>
                             )
                         })}

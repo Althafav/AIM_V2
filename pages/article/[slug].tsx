@@ -126,9 +126,7 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
                                             {searchData.heading.value}
                                         </h1>
                                     </div>
-                                    {/* <div className="col-12 col-lg-6 col-xl-6">
-                                    
-                                </div> */}
+                                
                                 </div>
                                 <div className="row article-body">
                                     <div
@@ -136,7 +134,7 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
                                             __html: searchData.content.value,
                                         }}
                                     />
-                                    <div>
+                                    {/* <div>
                                         {(searchData as Blogitems).ctas.value.map(
                                             (c: any, x: number) => {
                                                 const cI: Cta = c as Cta;
@@ -162,7 +160,7 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
                                                 );
                                             }
                                         )}
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </section>
