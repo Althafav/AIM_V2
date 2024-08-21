@@ -40,6 +40,8 @@ export default function Articles() {
     if (!pageData) {
         return <SpinnerComponent />;
     }
+
+    
     return (
         <div className='articles-page-wrapper'>
             <div className="inner-banner-section-wrapper">
