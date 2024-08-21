@@ -100,11 +100,11 @@ export default function MenuComponent() {
                 <span>RESOURCES</span>
                 {isResourcesDropdownOpen && (
                   <ul className="dropdown">
-                    <li className="dropdown-item">
+                    {/* <li className="dropdown-item">
                       <Link href="/travel-partner">
                         Album
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="dropdown-item">
                       <Link href="/brochure">
                         Brochure
