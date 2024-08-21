@@ -33,7 +33,7 @@ These investments contribute to the development of industries, infrastructure, a
 
 
 
-            <CardGrid />
+          
 
 
             <section className='frequently-asked-questions-wrapper'>

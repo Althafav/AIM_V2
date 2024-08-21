@@ -22,7 +22,7 @@ AIM Congress 2025 aims to conceptualize the transition to a digitally enabled ec
         >
             <PortfolioBanner bannerImageSrc="/assets/imgs/Digital Economy.png"  Heading={"Digital Economy"} subHeading="Embracing Digital Transformation: An ecosystem of interdependent digital technologies for a sustainable and inclusive future." portfolioColorName="digital-economy" />
             <AboutComponent aboutHeading="Navigating the Future of Digital Economy" aboutParagraph={text} />
-            <CardGrid />
+           
 
 
             <section className='frequently-asked-questions-wrapper'>

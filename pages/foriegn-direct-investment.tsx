@@ -1,14 +1,31 @@
 
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import { fdiBenefits, fdiFAQ } from '@/contants/data';
+import { Portfoliofeatures } from '@/models/portfoliofeatures';
+import Globals from '@/modules/Globals';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
+
+    const [pageData, setPageData] = useState<Portfoliofeatures | null>(null);
+
+    useEffect(() => {
+        Globals.KontentClient.item("fdi_features")
+            .toObservable()
+            .subscribe((response: any) => {
+                console.log('API Response:', response);
+                setPageData(response.item);
+            });
+    }, []);
+
+    if (!pageData) {
+        return <></>
+    }
 
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
@@ -25,7 +42,7 @@ export default function ForiegnDirectInvestment() {
         >
             <PortfolioBanner bannerImageSrc="/assets/imgs/fdi-banner-bg.png" Heading={"Foreign Direct Investment"} portfolioColorName="fdi" />
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
-            <CardGrid />
+            <CardGrid  pageData={pageData}/>
 
             <section className='benefits-section-wrapper'>
                 <div className="section-container">
@@ -71,7 +88,7 @@ export default function ForiegnDirectInvestment() {
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ}/>
+                    <AccordionComponent data={fdiFAQ} />
                 </div>
             </section>
         </motion.div>

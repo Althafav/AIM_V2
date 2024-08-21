@@ -22,7 +22,7 @@ Startup cultures are frequently characterized by an entrepreneurial and collabor
         >
             <PortfolioBanner bannerImageSrc="/assets/imgs/Startups.jpeg" Heading={"Startups & Unicorn"} subHeading={`"Connecting Visionaries & Building Futures"`} portfolioColorName="startup" />
             <AboutComponent aboutHeading="Navigating the Future of FDI" aboutParagraph={text} />
-            <CardGrid />
+           
 
 
             <section className='frequently-asked-questions-wrapper'>

@@ -1,16 +1,20 @@
-import React from 'react'
+import { Portfoliofeatures } from '@/models/portfoliofeatures';
+import { Serviceitem } from '@/models/serviceitem';
+import Globals from '@/modules/Globals';
+import React, { useEffect, useState } from 'react'
 
-const CardGrid = () => {
-    const cardData = [
-        { title: "Economic Growth", imageUrl: "/assets/imgs/economic-growth.png" },
-        { title: "Sustainability Focus", imageUrl: "/assets/imgs/sustainability-focus.png" },
-        { title: "Market Expansion", imageUrl: "/assets/imgs/market-expansion.png" },
-        { title: "Resource Acquisition", imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Geopolitical Influences", imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Risk Diversification", imageUrl: "/assets/imgs/resource-acquisition.png" },
-        { title: "Technology & Innovation", imageUrl: "/assets/imgs/technology-innovation.png" },
-        { title: "Digital Transformation", imageUrl: "assets/digital-transformation.png" },
-    ];
+interface CardGridProps {
+    pageData: Portfoliofeatures | null;
+}
+
+const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
+
+    if (!pageData) {
+        return <></>;
+    }
+
+
+
     return (
         <section className='key-features-section-wrapper '>
 
@@ -25,10 +29,44 @@ const CardGrid = () => {
                     </div>
                 </div>
 
-
                 <div className="row key-benefits mt-4">
-
                     <div className="masonry-container">
+                        {pageData.items.value.map((m: any, index) => {
+                            const item: Serviceitem = m;
+
+
+                            const sizePattern = ['large', 'large', 'small', 'small'];
+                            const sizeClass = sizePattern[index % sizePattern.length];
+
+                            return (
+                                <div
+                                    key={index}
+                                    className={`masonry-item feature-card-item card-${sizeClass}`}
+                                >
+                                    <img
+                                        src={item.image.value[0].url}
+                                        alt={`feature-${index + 1}`}
+                                        className="benefit-card-bg"
+                                    />
+                                    <p className="features-name">{item.name.value}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    )
+}
+
+
+
+export default CardGrid;
+
+
+{/* <div className="masonry-container">
                         <div className="masonry-column">
                             <div className="card card-1">
                                 <img src="/assets/imgs/economic-growth.png" alt="" className='benefit-card-bg' />
@@ -64,11 +102,4 @@ const CardGrid = () => {
                                 <img src="/assets/imgs/digital-transformation.png" alt="" className='benefit-card-bg' />
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-export default CardGrid
+                    </div> */}
