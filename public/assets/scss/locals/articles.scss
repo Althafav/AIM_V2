@@ -29,3 +29,12 @@
 
 
 }
+
+.articles-page-wrapper {
+    .blog-card {
+        .blog-image {
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+}

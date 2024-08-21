@@ -22,26 +22,31 @@ const cardVariants = {
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
 };
 
+export async function getStaticProps() {
+    // Fetch data at build time
+    const datasourceStr: string = await Globals.KontentClient.item("blog_page")
+        .languageParameter(Globals.CURRENT_LANG_CODENAME)
+        .toObservable()
+        .toPromise()
+        .then((r: any) => {
+            return JSON.stringify(r.item);
+        });
 
-export default function Articles() {
+    const data: Blogs = JSON.parse(datasourceStr);
+    return {
+        props: {
+            pageData: data
+        },
+        revalidate: 10, // Revalidate the data every 10 seconds (adjust as needed)
+    };
+}
+
+export default function Articles({ pageData }: { pageData: Blogs }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-    const [pageData, setPageData] = useState<Blogs | null>(null);
 
-    useEffect(() => {
-        Globals.KontentClient.item("blog_page")
-            .toObservable()
-            .subscribe((response: any) => {
-                console.log('API Response:', response);
-                setPageData(response.item);
-            });
-    }, []);
+   
 
-    if (!pageData) {
-        return <SpinnerComponent />;
-    }
-
-    
     return (
         <div className='articles-page-wrapper'>
             <div className="inner-banner-section-wrapper">
@@ -56,7 +61,6 @@ export default function Articles() {
                 </div>
             </div>
 
-
             <section ref={ref}>
                 <div className="container">
                     <motion.div className="row"
@@ -64,15 +68,10 @@ export default function Articles() {
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                     >
-
-
                         {pageData.articlesItems.value.map((m: any, index: number) => {
-
                             var item: Blogitems = m;
                             return (
-                                <div className="col-lg-3 mb-3" key={`article-${index}`}
-
-                                >
+                                <motion.div className="col-lg-3 mb-3" key={`article-${index}`} variants={cardVariants}>
                                     <Link
                                         passHref
                                         legacyBehavior
@@ -80,21 +79,14 @@ export default function Articles() {
                                             item.heading.value
                                         )}`}
                                     >
-
-                                        <div className='blog-card'
-
-                                        >
-
-                                            <img src={item.image.value[0].url} alt="" className='' />
+                                        <div className='blog-card'>
+                                            <img src={item.image.value[0].url} alt="" className='blog-image' />
                                             <p className='name'>{item.heading.value}</p>
                                         </div>
-
                                     </Link>
-                                </div>
+                                </motion.div>
                             )
                         })}
-
-
                     </motion.div>
                 </div>
             </section>
