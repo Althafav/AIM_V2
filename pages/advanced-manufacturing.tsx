@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 import { advancedManufacturingFAQ, fdiFAQ } from '@/contants/data';
+import { Portfoliopage } from '@/models/portfoliopage';
+import Globals from '@/modules/Globals';
 
 const AdvancedManufacturing = () => {
-    const text = `Advanced manufacturing integrates physical and digital technologies to enhance factory operations and supply chain management. The primary goals are to boost performance and adapt swiftly to market changes. Advanced factories leverage interconnected systems and real-time data to optimize production and pre-emptively maintain equipment. Unlike traditional factories that use robotics and automation, advanced factories feature fully integrated systems that merge physical and digital processes.  `;
+
+    const [pageData, setPageData] = useState<Portfoliopage | null>(null);
+
+    useEffect(() => {
+        Globals.KontentClient.item("advanced_manufacturing_portfolio")
+            .toObservable()
+            .subscribe((response: any) => {
+                console.log('API Response:', response);
+                setPageData(response.item);
+            });
+    }, []);
+
+    if (!pageData) {
+        return <></>
+    }
+
+   
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -15,9 +33,9 @@ const AdvancedManufacturing = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc="/assets/imgs/Advanced Manufacturing.jpeg" Heading={"Advanced Manufacturing"} subHeading="Leveraging Industry & Bringing Advanced Factories to Life" portfolioColorName={"advancedManufacturing"} />
-            <AboutComponent aboutHeading="Navigating the Future of Advanced Manufacturing" aboutParagraph={text} />
-         
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName={"advancedManufacturing"} />
+            <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
+
 
 
             <section className='frequently-asked-questions-wrapper'>
@@ -28,7 +46,7 @@ const AdvancedManufacturing = () => {
                         </div>
                     </div>
 
-                    <AccordionComponent data={advancedManufacturingFAQ}/>
+                    <AccordionComponent data={advancedManufacturingFAQ} />
                 </div>
             </section>
         </motion.div>

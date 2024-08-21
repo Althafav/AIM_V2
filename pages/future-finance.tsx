@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
 import CardGrid from '@/components/UI/CardGrid';
 import { fdiFAQ } from '@/contants/data';
+import { Portfoliopage } from '@/models/portfoliopage';
+import Globals from '@/modules/Globals';
 const FutureFinance = () => {
+
+    const [pageData, setPageData] = useState<Portfoliopage | null>(null);
+
+    useEffect(() => {
+        Globals.KontentClient.item("future_finance_portfolio")
+            .toObservable()
+            .subscribe((response: any) => {
+                console.log('API Response:', response);
+                setPageData(response.item);
+            });
+    }, []);
+
+    if (!pageData) {
+        return <></>
+    }
+
     const text = `Digital disruption is revolutionizing our world, driven by mobile apps, home automation, and cashless transactions. Cloud-based ERP, automation, and cognitive technologies are streamlining processes, and blockchain is accelerating this transformation. These advancements free up time and resources, enabling a focus on strategic tasks. To thrive in this dynamic environment, leverage these innovations with AIM to stay competitive and unlock new growth opportunities. 
 
 “Click to Read More”   
@@ -31,9 +49,9 @@ In conclusion, improved security, more accessibility, and a dedication to sustai
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc="/assets/imgs/FFF.jpg" Heading={"AIM Embracing The “Future of Finance” "} subHeading="From 4.0 to 5.0: Rethinking and Embracing: The Direction of Financial Innovation Going Forward " portfolioColorName="future-finance" />
-            <AboutComponent aboutHeading="Fuelling the FUTURE OF FINANCIAL REVOLUTION" aboutParagraph={text} />
-     
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="future-finance" />
+            <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
+
 
 
             <section className='frequently-asked-questions-wrapper'>
@@ -44,7 +62,7 @@ In conclusion, improved security, more accessibility, and a dedication to sustai
                         </div>
                     </div>
 
-                    <AccordionComponent data={fdiFAQ}/>
+                    <AccordionComponent data={fdiFAQ} />
                 </div>
             </section>
         </motion.div>
