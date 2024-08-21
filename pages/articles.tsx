@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from "framer-motion";
-
+import Helper from "@/modules/Helper";
 import Globals from '@/modules/Globals';
 import { Blogs } from '@/models/blogs';
 
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { Blogitems } from '@/models/blogitems';
+import Link from 'next/link';
 
 const containerVariants = {
     hidden: {},
@@ -70,13 +71,23 @@ export default function Articles() {
                                 <div className="col-lg-3 mb-3" key={`article-${index}`}
 
                                 >
-                                    <div className='blog-card' 
-                                        
+                                    <Link
+                                        passHref
+                                        legacyBehavior
+                                        href={`/article/${Helper.formatUrlParameter(
+                                            item.heading.value
+                                        )}`}
                                     >
 
-                                        <img src={item.image.value[0].url} alt="" className='' />
-                                        <p className='name'>{item.heading.value}</p>
-                                    </div>
+                                        <div className='blog-card'
+
+                                        >
+
+                                            <img src={item.image.value[0].url} alt="" className='' />
+                                            <p className='name'>{item.heading.value}</p>
+                                        </div>
+
+                                    </Link>
                                 </div>
                             )
                         })}

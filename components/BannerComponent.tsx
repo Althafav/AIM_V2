@@ -41,11 +41,11 @@ export default function BannerComponent() {
             <div className="stats-content ">
                
 
-                <ul className='row g-lg-5 g-0'>
+                <ul className='row g-lg-5 g-1'>
                     <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
                         <div className='d-flex flex-column gap-0'>
 
-                            <span className='count'>175</span>
+                            <span className='count'>179</span>
                             <span>Countries</span>
                         </div>
                     </li>
@@ -53,7 +53,7 @@ export default function BannerComponent() {
                     <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
                         <div className='d-flex flex-column gap-0'>
 
-                            <span className='count'>12,000</span>
+                            <span className='count'>12,427</span>
                             <span>Participants</span>
                         </div>
                     </li>
@@ -61,7 +61,7 @@ export default function BannerComponent() {
                     <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
                         <div className='d-flex flex-column gap-0'>
 
-                            <span className='count'>450</span>
+                            <span className='count'>412</span>
                             <span>Sessions</span>
                         </div>
                     </li>
@@ -69,7 +69,7 @@ export default function BannerComponent() {
                     <li className='col-lg-3 col-6 mb-3 mb-lg-0'>
                         <div className='d-flex flex-column gap-0'>
 
-                            <span className='count'>900</span>
+                            <span className='count'>927</span>
                             <span>Speakers</span>
                         </div>
                     </li>
