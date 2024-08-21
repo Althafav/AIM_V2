@@ -7,6 +7,7 @@ import { IoMdClose } from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CiGlobe } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -284,21 +285,97 @@ export default function MenuComponent() {
                   AIM 2025
                 </Link>
               </li>
-              <li className='mobile-menu-item'>
-                <Link href="/#Portfolio" onClick={handleToggle}>
-                  PORTFOLIOS
-                </Link>
+              <li className='mobile-menu-item' onClick={togglePortfolioDropdown}>
+                <span className='d-flex align-items-center justify-content-between'>PORTFOLIOS  {!isPortfolioDropdownOpen ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}</span>
+                {isPortfolioDropdownOpen && (
+                  <ul className="mobile-dropdown">
+                    <li className="dropdown-item">
+                      <Link href="/foriegn-direct-investment">
+                        FDI
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/trade-innovation">
+                        Global Trade
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/advanced-manufacturing">
+                        Advanced Manufacturing
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/media-partners">
+                        Media Partners
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/future-cities">
+                        Future Cities
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/future-finance">
+                        Future Finance
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/startup">
+                        Startups Unicorn
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/entrepreneurs">
+                        Entrepreneurs
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              <li className='mobile-menu-item'>
-                <Link href="/#Portfolio" onClick={handleToggle}>
-                  RESOURCES
-                </Link>
+              <li className='mobile-menu-item' onClick={toggleResourcesDropdown}>
+                <span className='d-flex align-items-center justify-content-between'>RESOURCES  {!isResourcesDropdownOpen ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}</span>
+                {isResourcesDropdownOpen && (
+                  <ul className="mobile-dropdown">
+                    <li className="dropdown-item">
+                      <Link href="/brochure">
+                        Brochure
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/postshow-reports">
+                        Post Show Reports
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
+                      <Link href="/articles">
+                        Blogs
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/media-partners">
+                        Media Partners
+                      </Link>
+                    </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/our-partners">
+                        Our Partners
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
 
               <li className='mobile-menu-item' onClick={toggleDropdown}>
-                <span>LOGISTICS</span>
+                <span className='d-flex align-items-center justify-content-between'>LOGISTICS  {!isDropdownOpen ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}</span>
                 {isDropdownOpen && (
-                  <ul className="dropdown">
+                  <ul className="mobile-dropdown">
                     <li className="dropdown-item">
                       <Link href="/travel-partner">
                         Travel Partner

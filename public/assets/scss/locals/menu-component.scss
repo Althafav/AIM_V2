@@ -225,12 +225,37 @@
                 cursor: pointer;
                 border-bottom: 1px solid rgb(59, 59, 59);
 
-                &:hover {
-                    color: $primary-color-varient;
-                }
+                // &:hover {
+                //     color: $primary-color-varient;
+                // }
 
                 &:last-child {
                     border: none;
+                }
+
+                .mobile-dropdown {
+                    padding: 20px 0px;
+
+                    li {
+
+                        padding: 20px 0px;
+                        border-bottom: 1px solid #444;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+
+                        a {
+                            text-decoration: underline;
+                        }
+
+                        &:hover {
+                            background-color: #444;
+                        }
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+
+                    }
                 }
             }
         }
