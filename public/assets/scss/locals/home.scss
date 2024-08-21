@@ -69,3 +69,61 @@
 
 }
 
+
+.postshow-report-page-wrapper {
+    .partners-category-wrap {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 50px;
+
+        .partners-category-li {
+            display: inline;
+            margin: 0 5px;
+
+            .category-btn {
+                color: white;
+                background: #2C4A75;
+                padding: 6px 10px;
+                border-radius: 25px;
+
+                &:hover {
+                    background: $primary-color;
+                }
+            }
+
+            .category-btn-active {
+                color: white;
+                background: $primary-color;
+                padding: 6px 10px;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    .report-wrapper {
+        position: relative;
+
+        &:hover {
+            .report-image {
+                filter: brightness(0.5);
+            }
+
+            .report-image-content {
+                display: unset;
+            }
+        }
+
+        .report-image {
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            height: 300px;
+            max-width: 500px;
+            margin: auto;
+
+
+        }
+
+    }
+
+}
