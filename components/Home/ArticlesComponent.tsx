@@ -57,7 +57,7 @@ export default function ArticlesComponent() {
 
                                                 <p className='heading'>{item.heading.value}</p>
                                                 <div className='timestamp'>
-                                                    <span>12 May 2024 </span>
+                                                    <span>{item.date.value}</span>
                                                 </div>
                                             </div>
                                         </div>
