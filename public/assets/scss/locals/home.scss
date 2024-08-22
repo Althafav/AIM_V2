@@ -72,9 +72,11 @@
 
 .postshow-report-page-wrapper {
     .partners-category-wrap {
-        list-style: none;
         text-align: center;
+        display: flex;
         margin-bottom: 50px;
+        gap: 5px;
+        flex-wrap: wrap;
 
         .partners-category-li {
             display: inline;

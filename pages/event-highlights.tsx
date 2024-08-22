@@ -75,7 +75,7 @@ export default function EventHighlights() {
                         </div>
 
                         <div className="row pt-2">
-                            <div className="col-lg-6 d-flex align-items-center justify-content-center">
+                            <div className="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
                                 <p className='paragraph'>{aboutAbuDhabi}</p>
                             </div>
 

@@ -59,7 +59,7 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
                         animate={isInView ? "visible" : "hidden"}
                     >
                         {brochureData.map((item: any, index: number) => (
-                            <motion.div className="col-lg-3" key={`brochure-item-${index}`} variants={cardVariants}>
+                            <motion.div className="col-lg-3 mb-3 " key={`brochure-item-${index}`} variants={cardVariants}>
                                 <div className='brochure-card'>
                                     <img src={item.image} alt="" className='' />
                                     <div className='download-btn-floating'>

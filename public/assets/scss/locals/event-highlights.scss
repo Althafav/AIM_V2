@@ -23,9 +23,10 @@
         height: 390px;
         display: flex;
         align-items: center;
+
         .section-tag {
             color: white;
-            
+
         }
 
         .section-head {
@@ -38,22 +39,34 @@
             letter-spacing: -3px;
             line-height: 1.1;
             font-weight: bold;
-            
+
             text-align: center;
+
             @media screen and (max-width: 800px) {
                 font-size: 32px;
-                
+
             }
         }
 
         .sub-1 {
             font-size: 32px;
             text-align: center;
+
+            @media screen and (max-width: 800px) {
+                font-size: 22px;
+
+            }
         }
+
         .main-text {
             font-size: 48px;
-          
+
             margin: auto;
+
+            @media screen and (max-width: 800px) {
+                font-size: 28px;
+
+            }
         }
 
 
@@ -62,6 +75,7 @@
     .hosting-abudhabi {
         height: 100vh;
         position: relative;
+
         .aim2025abudhabi {
             position: absolute;
             z-index: -1;
