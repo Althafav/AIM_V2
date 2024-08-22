@@ -122,7 +122,7 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
                         {pageData.articlesItems.value.map((m: any, index: number) => {
                             var item: Blogitems = m;
                             return (
-                                <motion.div className="col-lg-3 mb-3" key={`article-${index}`} variants={cardVariants}>
+                                <motion.div className="col-lg-3 col-md-6 col-12 mb-3" key={`article-${index}`} variants={cardVariants}>
                                     <Link
                                         passHref
                                         legacyBehavior

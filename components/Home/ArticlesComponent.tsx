@@ -53,12 +53,12 @@ export default function ArticlesComponent() {
                 >
                     {limitedArticles?.map((m: any, index: number) => {
                         const item: Blogitems = m;
-                        let colClass = "col-lg-4"; // default
+                        let colClass = "col-lg-4 col-md-6 col-12"; // default
 
                         if (index === 3) {
-                            colClass = "col-lg-8";
+                            colClass = "col-lg-8 col-md-6 col-12";
                         } else if (index === 4) {
-                            colClass = "col-lg-4";
+                            colClass = "col-lg-4 col-md-6 col-12";
                         }
 
                         return (

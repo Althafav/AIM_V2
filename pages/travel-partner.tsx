@@ -48,7 +48,7 @@ export default function TravelPartner() {
                     <div className="row mt-4">
                         {shamsiTravelsServices.map((item: any, index: number) => {
                             return (
-                                <div className="col-lg-4 mb-4 d-flex justify-content-center" key={`travel-service-item-${index}`}>
+                                <div className="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center" key={`travel-service-item-${index}`}>
 
                                     <div className='item flex flex-column align-items-center justify-content-center '>
                                         <img src={item.image} alt="" />
