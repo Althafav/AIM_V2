@@ -172,32 +172,77 @@ export default function About() {
 
 
                 <div className="d-lg-none">
-                    <Marquee gradient={false}>
+                    <Marquee gradient={false} pauseOnHover={true}>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>8,130</p>
+                                <p className='name'>B2B Meetings</p>
+
+                            </div>
                             <img src="/assets/imgs/b2bmembers.png" alt="aim 2025 b2b members count" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>927</p>
+                                <p className='name'>Speakers</p>
+
+                            </div>
                             <img src="/assets/imgs/speakers.png" alt="aim 2025 speakers count" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>412</p>
+                                <p className='name'>Sessions</p>
+
+                            </div>
                             <img src="/assets/imgs/sessions.png" alt="aim 2025 sessions count" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>352</p>
+                                <p className='name'>Exhibitors</p>
+
+                            </div>
                             <img src="/assets/imgs/exhibitors.png" alt="aim 2025 exhibitors count" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>12,427</p>
+                                <p className='name'>Total Attendence</p>
+
+                            </div>
                             <img src="/assets/imgs/totalattendence.png" alt="aim 2025 attendence count" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>138</p>
+                                <p className='name'>High-Level Dignitories</p>
+
+                            </div>
                             <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>179</p>
+                                <p className='name'>Countries</p>
+
+                            </div>
                             <img src="/assets/imgs/total-countries.png" alt="aim 2025" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>3</p>
+                                <p className='name'>High Level Roundtables</p>
+
+                            </div>
                             <img src="/assets/imgs/highlevelRoundtables.png" alt="aim 2025" />
                         </div>
                         <div className="marquee-item">
+                            <div className="text-items">
+                                <p className='count'>136</p>
+                                <p className='name'>Participating Startups</p>
+
+                            </div>
                             <img src="/assets/imgs/startups.png" alt="aim 2025" />
                         </div>
                     </Marquee>
