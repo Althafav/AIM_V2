@@ -7,6 +7,7 @@ import CardGrid from '@/components/UI/CardGrid';
 import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -20,7 +21,7 @@ const StartUp = () => {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
    
     return (

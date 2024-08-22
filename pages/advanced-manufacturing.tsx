@@ -7,6 +7,7 @@ import CardGrid from '@/components/UI/CardGrid';
 import { advancedManufacturingFAQ, fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 const AdvancedManufacturing = () => {
 
@@ -22,7 +23,7 @@ const AdvancedManufacturing = () => {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
 
    

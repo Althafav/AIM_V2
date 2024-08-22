@@ -7,6 +7,7 @@ import CardGrid from '@/components/UI/CardGrid';
 import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 const FutureFinance = () => {
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
@@ -21,7 +22,7 @@ const FutureFinance = () => {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
 
     const text = `Digital disruption is revolutionizing our world, driven by mobile apps, home automation, and cashless transactions. Cloud-based ERP, automation, and cognitive technologies are streamlining processes, and blockchain is accelerating this transformation. These advancements free up time and resources, enabling a focus on strategic tasks. To thrive in this dynamic environment, leverage these innovations with AIM to stay competitive and unlock new growth opportunities. 

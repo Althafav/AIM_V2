@@ -7,6 +7,7 @@ import CardGrid from '@/components/UI/CardGrid';
 import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 const DigitalEconomy = () => {
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
@@ -21,9 +22,9 @@ const DigitalEconomy = () => {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
-   
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
