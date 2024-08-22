@@ -12,18 +12,18 @@ const ThemeSectionComponent: React.FC = () => {
                     <div className="col-12 d-flex justify-content-center">
 
                         <motion.div
-                            className='main-head'
+                            className='sub-head'
                             initial={{ x: -100, opacity: 0 }}
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span className='small-head'>Mapping the Future of</span><span>Global Investment</span>
+                            <span className='small-head'>Mapping the Future of</span><span> Global Investment</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
 
                         <motion.p
-                            className='sub-head'
+                            className=' main-head'
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
