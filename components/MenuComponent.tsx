@@ -70,7 +70,7 @@ export default function MenuComponent() {
             <div className="top-items d-flex justify-content-end align-items-center mb-1">
               <div className="d-flex gap-5 align-items-center">
                 <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div>
-                <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div>
+                {/* <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div> */}
               </div>
             </div>
           </div>
