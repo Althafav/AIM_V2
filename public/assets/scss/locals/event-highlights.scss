@@ -75,8 +75,14 @@
     }
 
     .hosting-abudhabi {
-        height: 120vh;
+        height: 100vh;
         position: relative;
+
+        @media screen and (max-width: 800px) {
+            height: 120vh;
+        }
+
+
 
         .aim2025abudhabi {
             position: absolute;
