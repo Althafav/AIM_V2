@@ -192,7 +192,7 @@
 
 
     .mobile-menu-nav {
-        position: absolute;
+        position: fixed;
         padding: 0;
         top: 0;
         padding: 20px 0px;
@@ -200,7 +200,10 @@
         background-color: #000;
         color: #000;
         width: 100%;
+        height: 100vh;
         z-index: 105;
+       
+        overflow-y: auto;
 
         .menu__overlay {
             width: 100%;
