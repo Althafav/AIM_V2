@@ -83,7 +83,7 @@ export default function EventHighlights() {
 
                                 <div>
                                     <Link href="https://visitabudhabi.ae/en">
-                                        <button className='text-primary'>Experience Abu Dhabi | Travel and Tourism | Visit Abu Dhabi </button>
+                                        <button className='text-primary p-3'>Experience Abu Dhabi | Travel and Tourism | Visit Abu Dhabi </button>
 
                                     </Link>
 

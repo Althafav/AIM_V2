@@ -132,7 +132,10 @@ export default function FooterComponent() {
                   <p>Press</p>
                   <p>Media</p>
                   <p>Downloads</p>
-                  <p>Blogs</p>
+                  <Link href="/articles">
+                    <p>Blogs</p>
+
+                  </Link>
                   <p>Partnership Media</p>
                   <p>Our Partners</p>
                   <p>Career</p>
