@@ -60,15 +60,19 @@ export default function TestimonialsComponent() {
                             {TestimonialCard.map((item: any, index: number) => (
 
 
-                                <div className="testimonial-card"
+                                <div className={`testimonial-card ${!item.testimonialVideoSrc && "testimonial-card-2"}`}
                                     key={`testimonial-${index}`}
                                     onMouseEnter={() => handleMouseEnter(index)}
                                     onMouseLeave={() => handleMouseLeave(index)}>
                                     <div className='preview-items'>
                                         <svg width="58" height="34" viewBox="0 0 58 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M45.384 33.576H26.696L42.184 0.167969H57.672L45.384 33.576ZM20.68 33.576H0.455999L18.504 0.167969H33.992L20.68 33.576Z" fill="#0094FB" />
+                                            <path d="M45.384 33.576H26.696L42.184 0.167969H57.672L45.384 33.576ZM20.68 33.576H0.455999L18.504 0.167969H33.992L20.68 33.576Z" fill={`${item.testimonialVideoSrc ? "#0094FB" : "white"}`} />
                                         </svg>
-                                        <p className='testimonial-words'>{item.quote}</p>
+                                        <p className='testimonial-words-main'>{item.quote}</p>
+
+                                        {item.quoteSub && (
+                                            <p className='quote-sub'>{item.quoteSub}</p>
+                                        )}
 
                                         <div className='profile'>
                                             <span className='name'>{item.name}</span>
@@ -88,7 +92,7 @@ export default function TestimonialsComponent() {
                                         Your browser does not support the video tag.
                                     </video>
 
-                                    {isHovered[index] && (
+                                    {item.testimonialVideoSrc && isHovered[index] && (
                                         <button className="mute-button" onClick={() => toggleMute(index)}>
                                             {isMuted[index] ? "Unmute" : "Mute"}
                                         </button>

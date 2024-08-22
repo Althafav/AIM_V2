@@ -9,6 +9,9 @@
         background-color: $primary-color-varient;
 
         .article-main-image {
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
             position: absolute;
             left: 50%;
             bottom: 0;

@@ -6,6 +6,7 @@ $(".testimonialCarousel").owlCarousel({
   items: 4,
   loop: true,
   dots: false,
+  autoplayHoverPause: true,
   nav: false,
   responsiveClass: true,
   responsive: {

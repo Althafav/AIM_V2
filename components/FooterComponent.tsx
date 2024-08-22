@@ -17,15 +17,46 @@ export default function FooterComponent() {
           <div className="col-lg-4 mb-4 mb-lg-0">
             <div className=''>
               <div className="logos">
-                <FaFacebook color='white' />
-                <FaWhatsapp color='white' />
-                <FaLinkedin color='white' />
+                <Link href="https://www.facebook.com/AIMCongress" target='_blank'>
 
-                <FaInstagram color='white'/>
-                <FaThreads color='white'/>
-                <FaYoutube color='white'/>
-                <FaXTwitter color='white'/>
-                <FaTiktok color='white'/>
+                  <FaFacebook color='white' />
+                </Link>
+
+                <Link href="https://whatsapp.com/channel/0029VaArQjN0VycN7W0HdG1Q" target='_blank'>
+                  <FaWhatsapp color='white' />
+
+                </Link>
+
+                <Link href="https://www.linkedin.com/company/aim-congress/?viewAsMember=true" target='_blank'>
+                  <FaLinkedin color='white' />
+
+                </Link>
+
+                <Link href="https://www.instagram.com/aimcongress/?hl=en" target='_blank'>
+
+                  <FaInstagram color='white' />
+                </Link>
+
+                <Link href="https://www.threads.net/@aimcongress" target='_blank'>
+
+                  <FaThreads color='white' />
+                </Link>
+
+                <Link href="https://www.youtube.com/@AnnualInvestmentMeeting" target='_blank'>
+
+                  <FaYoutube color='white' />
+                </Link>
+
+                <Link href="https://x.com/AIM_Congress" target='_blank'>
+                  <FaXTwitter color='white' />
+
+                </Link>
+
+
+                <Link href="https://www.tiktok.com/@aimcongress?_t=8p4nMoWxZJ3&_r=1" target='_blank'>
+                  <FaTiktok color='white' />
+
+                </Link>
 
               </div>
 

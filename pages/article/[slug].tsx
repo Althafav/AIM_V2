@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const data: Array<Blogitems> = JSON.parse(datasourceStr);
     const { slug } = params as unknown as SlugModel;
-  
+
     return {
         props: {
             data,
@@ -105,7 +105,7 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
                     <div className="article-detail-page-wrapper">
                         <div className="article-banner-wrapper">
                             <Image
-                            className="article-main-image"
+                                className="article-main-image"
                                 src={searchData.image.value[0].url}
                                 alt={searchData.heading.value}
                                 width={585}
@@ -126,7 +126,7 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
                                             {searchData.heading.value}
                                         </h1>
                                     </div>
-                                
+
                                 </div>
                                 <div className="row article-body">
                                     <div

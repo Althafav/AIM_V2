@@ -74,14 +74,7 @@ export const PortfolioCards = [
 ]
 
 export const TestimonialCard = [
-    {
-        quote: "Best Networking Conference",
-        name: "Mirna Arif",
-        company: "GM Microsoft, Egypt",
-        profilePicSrc: "/assets/imgs/Mirna Arif.jpg",
-        testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
-
-    },
+    
 
     {
         quote: "Best forum for cultivating industry connections.",
@@ -89,6 +82,15 @@ export const TestimonialCard = [
         company: "Vice President of CCI in Volgoda, Russia",
         profilePicSrc: "/assets/imgs/Dmriti Telegin.jpg",
         testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Dmriti-Telegin.mov"
+
+    },
+
+    {
+        quote: "Best Networking Conference",
+        name: "Mirna Arif",
+        company: "GM Microsoft, Egypt",
+        profilePicSrc: "/assets/imgs/Mirna Arif.jpg",
+        testimonialVideoSrc: "https://d2g6bqkf4g3jqe.cloudfront.net/videos/Mirna-Arif.mov"
 
     },
 
@@ -101,7 +103,15 @@ export const TestimonialCard = [
 
     },
 
-  
+    {
+        quote : "Best-organized conferences",
+        name : "Arshad Khan",
+        company: "Arabian Bourse Ltd",
+        profilePicSrc: "/assets/imgs/person1.png",
+        quoteSub: "Having participated in several conferences regionally and globally, I would rate AIM Digital as one of the best-organized conferences in terms of content, speakers, and overall management. Although this was the first digital edition, still it went very smoothly. The coordination and guidance provided by the organizing team were useful."
+        // testimonialVideoSrc : "/assets/videos/testtt2.mp4"
+
+    }
 ]
 
 
