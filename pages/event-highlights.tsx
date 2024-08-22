@@ -152,7 +152,7 @@ export default function EventHighlights() {
                 <div className='container'>
                     <div className="row">
                         <div className="col-12 d-flex justify-content-lg-center flex-column gap-2 align-items-lg-center">
-                            <p className='join-us-caption'>Join us at AIM Congress 2025</p>
+                            <p className='join-us-caption'>Join us at <strong>AIM Congress 2025</strong></p>
                             <p className='join-us-caption-2'>Empowering tomorrow, today!</p>
                         </div>
                     </div>

@@ -290,46 +290,46 @@ export default function MenuComponent() {
                 {isPortfolioDropdownOpen && (
                   <ul className="mobile-dropdown">
                     <li className="dropdown-item">
-                      <Link href="/foriegn-direct-investment">
+                      <Link href="/foriegn-direct-investment" onClick={handleToggle}>
                         FDI
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/trade-innovation">
+                      <Link href="/trade-innovation" onClick={handleToggle}>
                         Global Trade
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/advanced-manufacturing">
+                      <Link href="/advanced-manufacturing" onClick={handleToggle}>
                         Advanced Manufacturing
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/media-partners">
+                      <Link href="/media-partners" onClick={handleToggle}>
                         Media Partners
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/future-cities">
+                      <Link href="/future-cities" onClick={handleToggle}>
                         Future Cities
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/future-finance">
+                      <Link href="/future-finance" onClick={handleToggle}>
                         Future Finance
                       </Link>
                     </li>
 
-                    <li className="dropdown-item">
+                    <li className="dropdown-item" onClick={handleToggle}>
                       <Link href="/startup">
                         Startups Unicorn
                       </Link>
                     </li>
 
-                    <li className="dropdown-item">
+                    <li className="dropdown-item" onClick={handleToggle}>
                       <Link href="/entrepreneurs">
                         Entrepreneurs
                       </Link>
@@ -342,29 +342,29 @@ export default function MenuComponent() {
                 {isResourcesDropdownOpen && (
                   <ul className="mobile-dropdown">
                     <li className="dropdown-item">
-                      <Link href="/brochure">
+                      <Link href="/brochure"  onClick={handleToggle}>
                         Brochure
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/postshow-reports">
+                      <Link href="/postshow-reports" onClick={handleToggle}>
                         Post Show Reports
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/articles">
+                      <Link href="/articles" onClick={handleToggle}>
                         Blogs
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/media-partners">
+                      <Link href="/media-partners" onClick={handleToggle}>
                         Media Partners
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/our-partners">
+                      <Link href="/our-partners" onClick={handleToggle}>
                         Our Partners
                       </Link>
                     </li>
@@ -377,17 +377,17 @@ export default function MenuComponent() {
                 {isDropdownOpen && (
                   <ul className="mobile-dropdown">
                     <li className="dropdown-item">
-                      <Link href="/travel-partner">
+                      <Link href="/travel-partner" onClick={handleToggle}>
                         Travel Partner
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/flight">
+                      <Link href="/flight" onClick={handleToggle}>
                         Flight
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/stand-builder">
+                      <Link href="/stand-builder" onClick={handleToggle}>
                         Stand Builder
                       </Link>
                     </li>
