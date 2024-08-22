@@ -16,7 +16,7 @@ export default function EventHighlights() {
             <div className="banner-section-wrapper">
 
                 <video width="100%" autoPlay loop muted controls={false} preload="auto">
-                    <source src="https://d2g6bqkf4g3jqe.cloudfront.net/videos/AIM 2025 Bigger Video 1.mp4" type="video/mp4" className='banner-video-event-highlights' width="100%" />
+                    <source src="https://d2g6bqkf4g3jqe.cloudfront.net/videos/AIM 2025 Bigger Video.mp4" type="video/mp4" className='banner-video-event-highlights' width="100%" />
                 </video>
             </div>
 
