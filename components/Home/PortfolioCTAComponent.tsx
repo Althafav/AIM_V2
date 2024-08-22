@@ -9,7 +9,7 @@ const containerVariants = {
     hidden: {},
     visible: {
         transition: {
-            staggerChildren: 0.3, 
+            staggerChildren: 0.3,
         },
     },
 };
@@ -23,7 +23,7 @@ const PortfolioCTAComponent: React.FC = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
-  
+
 
     return (
         <section ref={ref} className='section-wrapper portfolio-section-wrapper' id='Portfolio'>
@@ -48,7 +48,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            Discover. Explore. Refine. Transform. Succeed. 
+                            Discover. Explore. Refine. Transform. Succeed.
                         </motion.p>
                     </div>
 
@@ -73,22 +73,26 @@ const PortfolioCTAComponent: React.FC = () => {
 
                                     <motion.div className="portfolio-card"
                                     >
-                                        <div className="cta-card-item">
-                                            <img src={item.image} alt="" />
-                                            <div className="text-container">
-                                                <div className='d-flex flex-column'>
-                                                    <span className='main-head--card'>{item.mainHead}</span>
-                                                    <span className='sub-head--card mt-1'>{item.kicker}</span>
-                                                </div>
-                                                <Link href={item.link ? item.link : '#'} >
+                                        <Link href={item.link ? item.link : '#'} >
+                                            <div className="cta-card-item">
+                                                <img src={item.image} alt="" />
+                                                <div className="text-container">
+                                                    <div className='d-flex flex-column'>
+                                                        <span className='main-head--card'>{item.mainHead}</span>
+                                                        <span className='sub-head--card mt-1'>{item.kicker}</span>
+                                                    </div>
 
-                                                    <button className={`know-more-btn ${item.btnName}`}>Know More <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M17.4657 4.21318C17.5965 3.39515 17.0395 2.62593 16.2214 2.49507L2.89092 0.362647C2.07289 0.231791 1.30367 0.788853 1.17281 1.60688C1.04196 2.42491 1.59902 3.19413 2.41704 3.32498L14.2664 5.22047L12.3709 17.0698C12.24 17.8879 12.7971 18.6571 13.6151 18.7879C14.4332 18.9188 15.2024 18.3617 15.3332 17.5437L17.4657 4.21318ZM1.8798 16.0427L16.8643 5.19113L15.1047 2.76136L0.120192 13.613L1.8798 16.0427Z" fill="white" />
-                                                    </svg>
-                                                    </button>
-                                                </Link>
+                                                    <div>
+
+                                                        <button className={`know-more-btn ${item.btnName}`}>Know More <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17.4657 4.21318C17.5965 3.39515 17.0395 2.62593 16.2214 2.49507L2.89092 0.362647C2.07289 0.231791 1.30367 0.788853 1.17281 1.60688C1.04196 2.42491 1.59902 3.19413 2.41704 3.32498L14.2664 5.22047L12.3709 17.0698C12.24 17.8879 12.7971 18.6571 13.6151 18.7879C14.4332 18.9188 15.2024 18.3617 15.3332 17.5437L17.4657 4.21318ZM1.8798 16.0427L16.8643 5.19113L15.1047 2.76136L0.120192 13.613L1.8798 16.0427Z" fill="white" />
+                                                        </svg>
+                                                        </button>
+                                                    </div>
+
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </motion.div>
                                 </motion.div>
                             )

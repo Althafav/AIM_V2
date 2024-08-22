@@ -8,6 +8,7 @@ import AboutComponent from '@/components/Portfolio/AboutComponent';
 import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 export default function ForiegnDirectInvestment() {
 
@@ -23,7 +24,7 @@ export default function ForiegnDirectInvestment() {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
   
 
@@ -36,7 +37,7 @@ export default function ForiegnDirectInvestment() {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="entrepreneurs"/>
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-           
+            <CardGrid  pageData={pageData}/>
 
 
             <section className='frequently-asked-questions-wrapper'>

@@ -34,7 +34,7 @@ const DigitalEconomy = () => {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="digital-economy" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-
+            <CardGrid pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>

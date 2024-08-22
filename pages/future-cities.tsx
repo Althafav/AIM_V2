@@ -7,6 +7,7 @@ import CardGrid from '@/components/UI/CardGrid';
 import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 const FutureCities = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -20,7 +21,7 @@ const FutureCities = () => {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
 
     
@@ -33,7 +34,7 @@ const FutureCities = () => {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="future-cities" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-
+            <CardGrid  pageData={pageData}/>
 
 
             <section className='frequently-asked-questions-wrapper'>

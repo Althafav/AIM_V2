@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Brochure } from '@/contants/data';
 import Link from 'next/link';
 import { PiDownloadSimple } from 'react-icons/pi';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 const containerVariants = {
     hidden: {},
@@ -19,10 +20,10 @@ const cardVariants = {
 };
 
 export async function getStaticProps() {
-  
+
     return {
         props: {
-            brochureData: Brochure, 
+            brochureData: Brochure,
         },
     };
 }
@@ -31,6 +32,10 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+
+    if (!brochureData) {
+        return <SpinnerComponent />
+    }
 
     return (
         <div className='brochure-page-wrapper' >

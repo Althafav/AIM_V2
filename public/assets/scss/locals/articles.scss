@@ -34,10 +34,36 @@
 }
 
 .articles-page-wrapper {
+    width: 100%;
+    
     .blog-card {
         .blog-image {
             height: 200px;
             object-fit: cover;
         }
+    }
+
+    .pagination-controls {
+        display: flex;
+        gap: 8px;
+    }
+
+    .pagination-button{
+        opacity: 0.5;
+    }
+
+    .pagination-button.active {
+        opacity: 1;
+    }
+
+    .control-btn {
+        background: $primary-color;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+    }
+
+    .control-btn.disabled {
+        opacity: 0.5;
     }
 }
