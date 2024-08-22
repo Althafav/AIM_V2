@@ -61,6 +61,8 @@
 }
 
 .benefits-section-wrapper {
+    position: relative;
+    overflow: hidden;
 
     img {
         width: 100%;
@@ -79,9 +81,14 @@
         }
     }
 
+    
+
     .benefit-items {
-        
+        max-height: 600px;
+        overflow-y: auto;
+
         position: relative;
+
         &::after {
             content: "";
             position: absolute;
@@ -137,3 +144,5 @@
         letter-spacing: -2px;
     }
 }
+
+

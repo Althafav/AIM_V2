@@ -32,18 +32,22 @@ export default function TestimonialsComponent() {
         }
     };
 
-    try {
-        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/jquery-3.5.1.min.js`, () => {
+    useEffect(() => {
+        // Load external JS scripts only once
 
-        });
         JsLoader.loadFile(`${Globals.BASE_URL}assets/js/owl.carousel.min.js`, () => {
+            JsLoader.loadFile(`${Globals.BASE_URL}assets/js/testimonialCarousel.js`, () => {
 
+
+            });
         });
 
-        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/testimonialCarousel.js`, () => {
 
-        });
-    } catch { }
+
+        return () => {
+            $('.testimonialCarousel').trigger('destroy.owl.carousel');
+        };
+    }, []);
 
 
     return (

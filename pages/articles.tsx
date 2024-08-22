@@ -23,7 +23,7 @@ const cardVariants = {
 };
 
 export async function getStaticProps() {
-    // Fetch data at build time
+    
     const datasourceStr: string = await Globals.KontentClient.item("blog_page")
         .languageParameter(Globals.CURRENT_LANG_CODENAME)
         .toObservable()
@@ -37,7 +37,7 @@ export async function getStaticProps() {
         props: {
             pageData: data
         },
-        revalidate: 10, // Revalidate the data every 10 seconds (adjust as needed)
+        revalidate: 10, 
     };
 }
 

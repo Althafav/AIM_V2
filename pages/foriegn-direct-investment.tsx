@@ -12,6 +12,7 @@ import { Portfoliopage } from '@/models/portfoliopage';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
+    
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -48,7 +49,7 @@ export default function ForiegnDirectInvestment() {
                 <div className="section-container">
                     <div className="row">
                         <div className="col-lg-4">
-                            <h1 className='mainheading text-fdi'>Benefits of Foriegn Direct Investment</h1>
+                            <h1 className='mainheading text-fdi '>Benefits of Foriegn Direct Investment</h1>
                         </div>
                         <div className="col-lg-7 d-flex justify-content-center flex-column gap-3">
                             <img src="/assets/imgs/benefits-fdi.png" alt="" />

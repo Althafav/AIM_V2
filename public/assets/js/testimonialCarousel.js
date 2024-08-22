@@ -1,10 +1,10 @@
 $(".testimonialCarousel").owlCarousel({
-  slideSpeed: 500,
+  slideSpeed: 200,
   paginationSpeed: 400,
   margin: 20,
   autoplay: true,
   items: 4,
-  loop: false,
+  loop: true,
   dots: false,
   nav: false,
   responsiveClass: true,

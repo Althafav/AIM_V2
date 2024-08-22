@@ -66,7 +66,7 @@ const PortfolioCTAComponent: React.FC = () => {
                     >
                         {PortfolioCards.map((item: any, index: number) => {
                             return (
-                                <motion.div className="col-lg-3 col-6 mb-4" key={`portfoliocard-${index}`}
+                                <motion.div className="col-lg-3 col-12 mb-4" key={`portfoliocard-${index}`}
                                     variants={cardVariants}
 
                                 >
