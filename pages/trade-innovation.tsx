@@ -8,6 +8,7 @@ import AboutComponent from '@/components/Portfolio/AboutComponent';
 import { fdiFAQ, tradeInnovationFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 export default function TradeInnovation() {
 
@@ -23,7 +24,7 @@ export default function TradeInnovation() {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent />;
     }
 
 

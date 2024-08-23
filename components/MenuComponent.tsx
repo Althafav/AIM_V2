@@ -140,7 +140,7 @@ export default function MenuComponent() {
 
                     <li className="dropdown-item">
                       <Link href="/startup">
-                        Startups Unicorn
+                        Startups & Unicorns
                       </Link>
                     </li>
 
@@ -325,7 +325,7 @@ export default function MenuComponent() {
 
                     <li className="dropdown-item" onClick={handleToggle}>
                       <Link href="/startup">
-                        Startups Unicorn
+                        Startups & Unicorns
                       </Link>
                     </li>
 

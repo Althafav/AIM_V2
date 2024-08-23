@@ -9,6 +9,7 @@ import { fdiBenefits, fdiFAQ } from '@/contants/data';
 import { Portfoliofeatures } from '@/models/portfoliofeatures';
 import Globals from '@/modules/Globals';
 import { Portfoliopage } from '@/models/portfoliopage';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -26,7 +27,7 @@ export default function ForiegnDirectInvestment() {
     }, []);
 
     if (!pageData) {
-        return <></>
+        return <SpinnerComponent/>
     }
 
     const handleToggle = () => {

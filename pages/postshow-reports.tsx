@@ -5,6 +5,7 @@ import Globals from '@/modules/Globals';
 import { Postshowreportyear } from '@/models/postshowreportyear';
 import { Reportitem } from '@/models/reportitem';
 import Link from 'next/link';
+import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 export default function PostshowReport() {
     const [pageData, setPageData] = useState<Postshowreport | null>(null);
@@ -26,7 +27,7 @@ export default function PostshowReport() {
     }, []);
 
     if (!pageData) {
-        return <></>;
+        return <SpinnerComponent/>;
     }
 
     const handleCategoryClick = (categoryId: string) => {

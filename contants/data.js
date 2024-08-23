@@ -53,7 +53,7 @@ export const PortfolioCards = [
 
     {
         image: "/assets/imgs/startup-unicorn.png",
-        mainHead: "Startups Unicorn",
+        mainHead: "Startups & Unicorns",
         btnName: "startup",
         link: "/startup",
         kicker: "Catalyzing growth with innovative ideas and agile solutions"
@@ -64,7 +64,7 @@ export const PortfolioCards = [
         mainHead: "Entrepreneurs",
         btnName: "entrepreneurs",
         link: "entrepreneurs",
-        kicker: 'Connecting Visionaries Creating Future'
+        kicker: 'Connecting Visionaries. Creating Future'
     },
 
 

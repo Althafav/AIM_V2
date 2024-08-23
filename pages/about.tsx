@@ -129,7 +129,7 @@ export default function About() {
                     <div className="item5 stats-card-item">
                         <div className="text-items">
                             <p className='count'>12,427</p>
-                            <p className='name'>Total Attendence</p>
+                            <p className='name'>Total Attendance</p>
 
                         </div>
                         <img src="/assets/imgs/totalattendence.png" alt="aim 2025 attendence count" />
@@ -138,7 +138,7 @@ export default function About() {
                     <div className="item6 stats-card-item">
                         <div className="text-items">
                             <p className='count'>138</p>
-                            <p className='name'>High-Level Dignitories</p>
+                            <p className='name'>High-Level Dignitaries</p>
 
                         </div>
                         <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />

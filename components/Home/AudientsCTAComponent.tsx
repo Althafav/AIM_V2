@@ -17,7 +17,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span className='' style={{textTransform: "uppercase"}}>Be a Part of AIM 2025</span>
+                            <span className='' style={{textTransform: "capitalize"}}>Be a Part of AIM 2025</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
