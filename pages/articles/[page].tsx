@@ -7,6 +7,7 @@ import { Blogitems } from '@/models/blogitems';
 import Link from 'next/link';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -100,6 +101,15 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
 
     return (
         <div className='articles-page-wrapper'>
+            <Head>
+                <title>AIM Congress | Blogs - Page {currentPage}</title>
+                <meta name="description" content={`Read our latest blogs. Page ${currentPage}`} />
+                <link rel="canonical" href={`${Globals.BASE_URL}articles/${currentPage}`} />
+                <meta property="og:title" content={`Our Blogs - Page ${currentPage}`} />
+                <meta property="og:description" content={`Explore our blog articles on page ${currentPage}.`} />
+                <meta property="og:url" content={`${Globals.BASE_URL}articles/${currentPage}`} />
+                <meta property="og:image" content="/assets/imgs/AIM-logo-60x.png" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
@@ -131,7 +141,7 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
                                         )}`}
                                     >
                                         <div className='blog-card'>
-                                            <Image width="400" height={200} src={item.image.value[0].url} alt="" className='blog-image' quality={80}/>
+                                            <Image width="400" height={200} src={item.image.value[0].url} alt="" className='blog-image' quality={80} />
                                             <p className='name'>{item.heading.value}</p>
                                         </div>
                                     </Link>
