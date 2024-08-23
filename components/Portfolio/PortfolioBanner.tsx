@@ -27,7 +27,10 @@ export default function PortfolioBanner(props: any) {
 
 
                 <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
-                    <button className={`register-interest-cta ${props.portfolioColorName}`}>Register your interest</button>
+                    <Link href="/register-interest"> 
+
+                        <button className={`register-interest-cta ${props.portfolioColorName}`}>Register your interest</button>
+                    </Link>
                     <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
                 </div>
 

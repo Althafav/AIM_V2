@@ -361,6 +361,53 @@ img {
     object-fit: cover
 }
 
+.register-interest-form-wrapper {
+    .register-interest-submit-btn {
+        margin-top: 40px;
+        background-color: $primary-color;
+        padding: 8px 24px;
+
+        span {
+            color: white
+        }
+    }
+
+
+    ._form-fieldset {
+        border: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    ._form-label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+        color: #333;
+    }
+
+    ._row._checkbox-radio {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 5px;
+    }
+
+   
+
+    ._row._checkbox-radio span {
+        font-size: 16px;
+        color: #555;
+        cursor: pointer;
+    }
+
+    
+
+    
+
+}
+
 
 
 

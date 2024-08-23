@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Link from 'next/link';
 
 const AudientsCTAComponent: React.FC = () => {
     const ref = useRef(null);
@@ -17,7 +18,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span className='' style={{textTransform: "capitalize"}}>Be a Part of AIM 2025</span>
+                            <span className='' style={{ textTransform: "capitalize" }}>Be a Part of AIM 2025</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -40,8 +41,10 @@ const AudientsCTAComponent: React.FC = () => {
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}>
                         <div className="cta-card-item">
+                            <Link href="/register-interest">
 
-                            <img src="/assets/imgs/Delegate Card 1.png" alt="" />
+                                <img src="/assets/imgs/Delegate Card 1.png" alt="" />
+                            </Link>
                         </div>
                     </motion.div>
 
@@ -49,8 +52,11 @@ const AudientsCTAComponent: React.FC = () => {
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.7 }}>
                         <div className="cta-card-item">
+                            <Link href="/register-interest">
+                                <img src="/assets/imgs/Exhibitor Card.png" alt="" />
 
-                            <img src="/assets/imgs/Exhibitor Card.png" alt="" />
+                            </Link>
+
                         </div>
                     </motion.div>
 
@@ -59,7 +65,11 @@ const AudientsCTAComponent: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.9 }}>
                         <div className="cta-card-item">
 
-                            <img src="/assets/imgs/Partner Card 1.png" alt="" />
+                            <Link href="/register-interest">
+
+                                <img src="/assets/imgs/Partner Card 1.png" alt="" />
+                            </Link>
+
 
                         </div>
                     </motion.div>

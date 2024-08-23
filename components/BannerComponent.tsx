@@ -26,7 +26,10 @@ export default function BannerComponent() {
 
 
                     <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
+                        <Link href="/register-interest">
+                        
                         <button className='register-interest-cta mb-4 mb-lg-0'>Register your interest</button>
+                        </Link>
                         <p className='date-venue'>7 - 9 April 2025 | Abu Dhabi, United Arab Emirates</p>
                     </div>
 

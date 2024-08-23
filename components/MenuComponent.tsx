@@ -219,7 +219,7 @@ export default function MenuComponent() {
           </div>
 
           <div className='d-lg-block d-none'>
-            <Link href="/contact-us" className='menu-cta-wrapper'>
+            <Link href="/register-interest" className='menu-cta-wrapper'>
 
               <button className='register-interest-cta'>Register your interest</button>
             </Link>
@@ -397,7 +397,7 @@ export default function MenuComponent() {
 
               <li className='mobile-menu-item'>
 
-                <Link href="/contact-us" onClick={handleToggle}>
+                <Link href="/register-interest" onClick={handleToggle}>
                   <div className='menu-cta-wrapper w-100'>
                     <button className='register-interest-cta'>Register your interest</button>
                   </div>
