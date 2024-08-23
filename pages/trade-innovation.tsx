@@ -46,12 +46,7 @@ export default function TradeInnovation() {
 
             <section className='frequently-asked-questions-wrapper'>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className='main-heaiding'>frequently asked questions (FAQ)</h1>
-                        </div>
-                    </div>
-
+                   
                     <AccordionComponent pageData={pageData} />
                 </div>
             </section>

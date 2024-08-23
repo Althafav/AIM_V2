@@ -26,7 +26,7 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                         </h1>
                     </div>
                     <div className="col-12">
-                        <p className='sub-heading'>{pageData.featuresubheading.value}</p>
+                        <p className='sub-heading' style={{textTransform: "capitalize"}}>{pageData.featuresubheading.value}</p>
                     </div>
                 </div>
 
