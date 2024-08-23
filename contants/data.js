@@ -108,7 +108,7 @@ export const TestimonialCard = [
         name : "Arshad Khan",
         company: "Arabian Bourse Ltd",
         profilePicSrc: "/assets/imgs/person1.png",
-        quoteSub: "Having participated in several conferences regionally and globally, I would rate AIM Digital as one of the best-organized conferences in terms of content, speakers, and overall management. Although this was the first digital edition, still it went very smoothly. The coordination and guidance provided by the organizing team were useful."
+        quoteSub: "Having participated in several conferences regionally and globally, I would rate AIM Digital as one of the best-organized conferences in terms of content, speakers, and overall management. The coordination and guidance provided by the organizing team were useful."
         // testimonialVideoSrc : "/assets/videos/testtt2.mp4"
 
     }

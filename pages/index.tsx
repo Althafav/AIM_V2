@@ -34,7 +34,8 @@ export default function Home() {
     >
       <Head>
         <title>AIM Congress | 2025</title>
-        <meta name="description" content="" />
+        <meta name="title" content="AIM Congress | 2025" />
+        <meta name="description" content="To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts." />
       </Head>
 
       <BannerComponent />

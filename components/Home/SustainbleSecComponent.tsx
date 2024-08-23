@@ -3,7 +3,7 @@ import React from 'react'
 export default function SustainbleSecComponent() {
     return (
         <section className='sustainable-section-wrapper ' style={{
-            backgroundImage: "url('/assets/imgs/sustainable-bg.png')",
+            backgroundImage: "url('/assets/imgs/sustainable-bg.jpg')",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",

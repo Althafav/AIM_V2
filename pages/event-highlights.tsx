@@ -1,6 +1,7 @@
-import AccordionComponent from '@/components/UI/AccordinComponent'
-import { BenefitsOfParticipatingInAim2025 } from '@/contants/aimbenefits'
 
+import { BenefitsOfParticipatingInAim2025 } from '@/contants/aimbenefits'
+import { motion } from "framer-motion";
+import Head from 'next/head';
 import Link from 'next/link'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
@@ -12,7 +13,20 @@ export default function EventHighlights() {
     const aboutAim = "The Annual Investments Meeting (AIM) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. AIM 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. By fostering economic diversification and providing actionable insights into emerging trends, AIM 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives."
     const aboutAbuDhabi = "Where the allure of tradition meets the pulse of innovation. As we prepare to host AIM 2025, immerse yourself in a city where ancient culture seamlessly intertwines with cutting-edge advancements. Envision yourself exploring vibrant souks and contemporary marvels, where every corner unveils a new experience. From the serene beauty of the Corniche to the dynamic energy of cutting-edge developments, Abu Dhabi transcends being merely a destination—it's an odyssey of discovery and inspiration. Join us in experiencing a city that embodies both timeless elegance and forward-thinking vision, setting the stage for an unforgettable AIM 2025. "
     return (
-        <div className='event-highlights-page-wrapper'>
+        <motion.div className='event-highlights-page-wrapper'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+
+            <Head>
+                <title>AIM Congress | Event Highlights</title>
+                <meta name="title" content="Event Highlights 2025" />
+
+                <meta name="description" content="THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE:
+TOWARDS A NEW BALANCED WORLD STRUCTURE" />
+            </Head>
             <div className="banner-section-wrapper">
 
                 <video width="100%" autoPlay loop muted controls={false} preload="auto">
@@ -50,7 +64,7 @@ export default function EventHighlights() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12"><p className='text-center paragraph'>{aboutAim}</p></div>
-                     
+
                     </div>
 
                 </div>
@@ -160,6 +174,6 @@ export default function EventHighlights() {
                 </div>
             </section>
 
-        </div>
+        </motion.div>
     )
 }

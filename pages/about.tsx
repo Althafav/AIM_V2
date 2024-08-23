@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Marquee from 'react-fast-marquee';
+import Head from 'next/head';
 
 export default function About() {
     const sentence1 = "AIM Congress is an initiative of the AIM Global Foundation, an independent international organization fully committed to empower the world’s economy by boosting effective promotion strategies and facilitating opportunities for economic productivity and expansion."
@@ -9,7 +10,17 @@ export default function About() {
 
     return (
 
-        <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <Head>
+                <title>AIM Congress | About</title>
+                <meta name="title" content="About AIM Congress 2025" />
+                <meta name="description" content="AIM Congress is an initiative of the AIM Global Foundation, an independent international organization fully committed to empower the world’s economy by boosting effective promotion strategies and facilitating opportunities for economic productivity and expansion." />
+            </Head>
             <div className="about-banner-wrapper">
 
 
@@ -262,7 +273,7 @@ export default function About() {
                 <img src="/assets/imgs/about last image 1.png" alt="" className='about-last-img' />
             </div>
 
-        </>
+        </motion.div>
 
 
     )
