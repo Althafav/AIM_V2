@@ -31,7 +31,7 @@ export default function PortfolioBanner(props: any) {
 
                         <button className={`register-interest-cta ${props.portfolioColorName}`}>Register your interest</button>
                     </Link>
-                    <p className='date-venue'>7 - 9 April | Abu dhabi, United Arab Emirates</p>
+                    <p className='date-venue'>{props.dataVenu}</p>
                 </div>
 
 
