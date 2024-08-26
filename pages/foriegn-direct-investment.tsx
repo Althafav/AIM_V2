@@ -58,7 +58,7 @@ export default function ForiegnDirectInvestment() {
                                 {fdiBenefits.map((item: any, index: number) => {
                                     return (
 
-                                        <div className='benefit-item' key={`benefit-item-${index}`}>
+                                        <div className='benefit-item mb-3' key={`benefit-item-${index}`}>
                                             <p className='benefit-name'>{item.name}</p>
                                             <p className='benefit-desc'>{item.content}</p>
 
