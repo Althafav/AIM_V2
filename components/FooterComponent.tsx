@@ -117,7 +117,7 @@ export default function FooterComponent() {
 
                   <Link href="/startup">
 
-                    <p>Startups Unicorn</p>
+                    <p>Startups & Unicorn</p>
                   </Link>
 
                   <Link href="/entrepreneurs">
