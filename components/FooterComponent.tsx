@@ -10,7 +10,7 @@ import { FaThreads, FaXTwitter } from 'react-icons/fa6'
 export default function FooterComponent() {
   return (
     <div className='footer-component-wrapper '>
-      <img src="/assets/imgs/Gradient.png" alt="" className='footer-bg' />
+      <img src="/assets/imgs/Gradient.jpg" alt="" className='footer-bg' />
 
       <div className="container">
         <div className="row footer-content">

@@ -25,7 +25,7 @@ export default function About() {
 
 
                 <motion.img
-                    src="/assets/imgs/Gradient.png"
+                    src="/assets/imgs/Gradient.jpg"
                     alt=""
                     className="banner-bg"
                     initial={{ opacity: 0 }}

@@ -1,7 +1,7 @@
-import { Portfoliofeatures } from '@/models/portfoliofeatures';
+
 import { Portfoliopage } from '@/models/portfoliopage';
 import { Serviceitem } from '@/models/serviceitem';
-import Globals from '@/modules/Globals';
+import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 
 interface CardGridProps {
@@ -14,7 +14,9 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
         return <></>;
     }
 
-
+    const truncateText = (text: string, wordLimit: number) => {
+        return text.split(" ").slice(0, wordLimit).join(" ") + (text.split(" ").length > wordLimit ? "..." : "");
+    }
 
     return (
         <section className='key-features-section-wrapper '>
@@ -26,7 +28,7 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                         </h1>
                     </div>
                     <div className="col-12">
-                        <p className='sub-heading' style={{textTransform: "capitalize"}}>{pageData.featuresubheading.value}</p>
+                        <p className='sub-heading' style={{ textTransform: "capitalize" }}>{pageData.featuresubheading.value}</p>
                     </div>
                 </div>
 
@@ -44,11 +46,19 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                                     key={index}
                                     className={`masonry-item feature-card-item card-${sizeClass}`}
                                 >
+
                                     <img
                                         src={item.image.value[0].url}
                                         alt={`feature-${index + 1}`}
                                         className="benefit-card-bg"
                                     />
+                                    <div className='feature-hovered-item'>
+                                        <p className="fw-bold">{item.name.value}</p>
+                                        <p
+                                            className="desc"
+                                            dangerouslySetInnerHTML={{ __html: truncateText(item.content.value, 30) }}
+                                        />
+                                    </div>
                                     <p className="features-name">{item.name.value}</p>
                                 </div>
                             );

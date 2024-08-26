@@ -5,7 +5,7 @@ import React from "react";
 export default function HeaderComponent() {
   return (
     <>
-       <link
+      <link
         href={`${Globals.BASE_URL}assets/css/owl.carousel.min.css`}
         rel="stylesheet"
         media="all"
