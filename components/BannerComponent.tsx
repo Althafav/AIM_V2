@@ -7,6 +7,7 @@ import { SlCalender } from 'react-icons/sl';
 export default function BannerComponent() {
 
     const customHeading = "Annual Investment Meeting"
+    const subHeading = "The World’s Leading Investment Platform"
     return (
         <>
 
@@ -22,7 +23,7 @@ export default function BannerComponent() {
                     <h1 className='banner-heading'>
                         {customHeading}
                     </h1>
-                    <h2 className='banner-heading-2'>Harnessing new potential around the world!</h2>
+                    <h2 className='banner-heading-2'>{subHeading}</h2>
 
 
                     <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
