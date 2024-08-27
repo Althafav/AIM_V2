@@ -7,6 +7,7 @@ import JsLoader from "@/modules/JsLoader";
 import SuccessComponent from "@/components/SuccessMessageComponent";
 import { Bochurepage } from "@/models/bochurepage";
 import { motion } from "framer-motion";
+import SpinnerComponent from "@/components/UI/SpinnerComponent";
 
 export default class RegisterPage extends React.Component<
     {},
@@ -69,7 +70,7 @@ export default class RegisterPage extends React.Component<
         const { pageData, isLoaded } = this.state;
 
         if (!isLoaded) {
-            return <React.Fragment />;
+            return <SpinnerComponent />;
         }
 
         JsLoader.loadFile(`${Globals.BASE_URL}assets/js/registerInterest.js`);

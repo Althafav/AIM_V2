@@ -9,6 +9,8 @@ import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { startupFeaturesAndActivities } from '@/contants/startupData';
+import BenefitsComponent from '@/components/Portfolio/BenefitsComponent';
+import { Serviceitem } from '@/models/serviceitem';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -105,6 +107,41 @@ const StartUp = () => {
                 </div>
             </section>
 
+
+            <section className='startup-benefits-wrapper'>
+                <div className="section-container">
+                    <div className="row d-flex align-items-center">
+                        <div className="col-lg-6 mb-3 mb-lg-0">
+                            <div>
+                                <h1 className='mainHead'>{pageData.benefitsheading.value}</h1>
+                                <h2 className='subHead'>{pageData.benefitssubheading.value}</h2>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6">
+                            <div className="row">
+                                {pageData.benefits.value.map((m: any, index: number) => {
+                                    var item: Serviceitem = m;
+                                    return (
+
+                                        <div className="col-12 mb-2">
+                                            <div className="startup-benefit-card">
+                                                <h4>{item.name.value}</h4>
+                                                <div className='px-4 py-2'>
+                                                    <p
+                                                        className="description"
+                                                        dangerouslySetInnerHTML={{ __html: item.content.value }}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 

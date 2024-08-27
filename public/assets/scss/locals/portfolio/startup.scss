@@ -95,3 +95,59 @@
         font-weight: bold;
     }
 }
+
+
+.startup-benefits-wrapper {
+    padding: 40px 0;
+    position: relative;
+    background: #1D1D1D;
+
+    .section-container {
+        position: relative;
+        z-index: 1;
+
+        .mainHead {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            max-width: 400px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 28px;
+            }
+        }
+
+        .subHead {
+            font-size: 24px;
+            font-weight: 600;
+
+            @media screen and (max-width: 800px) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        inset: 0;
+        position: absolute;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+        z-index: 0;
+    }
+
+    .startup-benefit-card {
+        background-color: #2F2F2F;
+        padding: 20px;
+
+        p {
+            color: white;
+        }
+
+        ul {
+            li {
+                margin-bottom: 5px;
+                text-align: left;
+            }
+        }
+    }
+}
