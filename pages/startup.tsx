@@ -53,11 +53,11 @@ const StartUp = () => {
                     </div>
 
                     <div className="row mt-4">
-                        <div className="col-lg-6 ">
+                        <div className="col-lg-6 mb-lg-0 mb-3">
                             <div className="row g-3">
                                 {startupFeaturesAndActivities.map((item: any, index: number) => {
                                     return (
-                                        <div className="col-lg-4 " key={`features-${index}`}
+                                        <div className="col-md-4 col-6 " key={`features-${index}`}
 
                                         >
                                             <div className="startup-feature-activities-card">
@@ -95,7 +95,7 @@ const StartUp = () => {
                         <div className="col-12">
                             <h1 className='pitch-heading'>Pitch Your <br />
                                 Next Big Thing</h1>
-                            <h2 className='mt-3 '>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
+                            <h2 className='mt-3 pitch-subheading'>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
                         </div>
 
                         <div className="col-12 mt-3">

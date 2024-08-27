@@ -61,6 +61,28 @@
         font-size: 120px;
         letter-spacing: -3px;
         line-height: 1;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 84px;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            font-size: 42px;
+        }
+    }
+
+    .pitch-subheading {
+        font-size: 36px;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 24px;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 
     .pitch-cta-btn {
