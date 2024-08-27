@@ -127,7 +127,7 @@ const StartUp = () => {
                                     var item: Serviceitem = m;
                                     return (
 
-                                        <div className="col-12 mb-2">
+                                        <div className="col-12 mb-2" key={`benefits-${index}`}>
                                             <div className="startup-benefit-card">
                                                 <h4>{item.name.value}</h4>
                                                 <div className='px-4 py-2'>
