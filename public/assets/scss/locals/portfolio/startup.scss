@@ -1,0 +1,75 @@
+.features-activities-wrapper {
+
+    .startup-feature-activities-card {
+        width: 100%;
+        height: 172px;
+        background: rgb(34, 32, 32);
+        position: relative;
+
+        .item-name {
+            color: white;
+            font-size: 22px;
+            max-width: 200px;
+            position: absolute;
+            text-align: start;
+            left: 10px;
+            bottom: 10px;
+        }
+    }
+
+    .youtube-section {
+        height: 300px;
+        padding: 20px;
+        background-color: bisque;
+    }
+
+    .details-features-activities {
+        .section-heading {
+            font-size: 32px;
+            text-align: start;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+
+    }
+
+}
+
+.pitch-section-wrapper {
+    position: relative;
+    background: #1D1D1D;
+
+    &::after {
+        content: "";
+        inset: 0;
+        position: absolute;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+        z-index: 0;
+    }
+
+    .section-container {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .pitch-heading {
+        color: $startup;
+        font-size: 120px;
+        letter-spacing: -3px;
+        line-height: 1;
+    }
+
+    .pitch-cta-btn {
+        background: $startup;
+        width: 180px;
+        height: 46px;
+        border-radius: 40px;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

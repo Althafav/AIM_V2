@@ -27,6 +27,11 @@ h5 {
     color: white;
     line-height: 1.1;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 800px) {
+        text-align: start;
+    }
+
 }
 
 p {
@@ -449,3 +454,4 @@ img {
 @import "./locals/travel-partners.scss";
 
 @import "./locals/articles.scss";
+@import "./locals/portfolio/startup.scss";

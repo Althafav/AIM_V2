@@ -27,6 +27,8 @@ const StartUp = () => {
         return <SpinnerComponent />;
     }
 
+    const descriptionFeaturesActivities = "AIM Startup, a pivotal aspect of AIM Congress, offers essential tools and funding to empower digital entrepreneurs and overcome resource limitations. With UAE's ambition to be a global tech hub by 2025, startups have emerged as key players, with investments surpassing $2.9 billion last year. These ventures are at the forefront of innovations in AI, blockchain, and renewable energy, driving industry transformation and drawing considerable investment. They also accelerate digital adoption."
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -39,13 +41,13 @@ const StartUp = () => {
                 <p>Nav</p>
             </div> */}
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            {/* <CardGrid pageData={pageData} /> */}
-            <section>
-                <div className="container">
-                    <div className='row'>
+
+            <section className='features-activities-wrapper'>
+                <div className="section-container">
+                    <div className='row g-0'>
                         <div className="col-12">
                             <h2 className='section-heading'>Features & Activities</h2>
-                            <p className='text-center'>Dynamic features and activities fueling startup evolution and success.</p>
+                            <p className='text-lg-center'>Dynamic features and activities fueling startup evolution and success.</p>
                         </div>
 
                     </div>
@@ -56,10 +58,10 @@ const StartUp = () => {
                                 {startupFeaturesAndActivities.map((item: any, index: number) => {
                                     return (
                                         <div className="col-lg-4 " key={`features-${index}`}
-                                           
+
                                         >
-                                            <div className="bg-secondary p-3 rounded">
-                                                <p className='text-white'>{item.name}</p>
+                                            <div className="startup-feature-activities-card">
+                                                <p className='item-name'>{item.name}</p>
                                             </div>
                                         </div>
                                     )
@@ -69,13 +71,14 @@ const StartUp = () => {
                         <div className="col-lg-6">
                             <div className="row">
                                 <div className="col-12 ">
-                                    <div className='bg-warning p-3 h-100'>
+                                    <div className='youtube-section'>
                                         <p>You tube video will be here</p>
                                     </div>
                                 </div>
-                                <div className="col-12">
-                                    <div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos veniam ad saepe dolorum, quasi officia corrupti omnis numquam rerum ab. In, reprehenderit. Porro alias, minus ipsum reiciendis sequi quidem fugiat!</p>
+                                <div className="col-12 mt-4">
+                                    <div className='details-features-activities'>
+                                        <h3 className='section-heading'>Conferences</h3>
+                                        <p>{descriptionFeaturesActivities}</p>
                                     </div>
                                 </div>
 
@@ -84,6 +87,22 @@ const StartUp = () => {
                     </div>
                 </div>
 
+            </section>
+
+            <section className='pitch-section-wrapper'>
+                <div className="section-container ">
+                    <div className="row">
+                        <div className="col-12">
+                            <h1 className='pitch-heading'>Pitch Your <br />
+                                Next Big Thing</h1>
+                            <h2 className='mt-3 '>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
+                        </div>
+
+                        <div className="col-12 mt-3">
+                            <button className='pitch-cta-btn'>Participate</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
 
