@@ -56,7 +56,7 @@ const PortfolioCTAComponent: React.FC = () => {
                 </div>
 
 
-                <div className="row g-3 mt-4">
+                <div className="mt-4">
 
 
                     <motion.div className="row"

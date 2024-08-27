@@ -6,7 +6,7 @@ const ThemeSectionComponent: React.FC = () => {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className='theme-section-wrapper section-wrapper'>
+        <section ref={ref} className='theme-section-wrapper section-wrapper' style={{overflowX: "hidden"}}>
             <div className="section-container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
