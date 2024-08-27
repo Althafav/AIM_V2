@@ -8,9 +8,10 @@ import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
+import { startupFeaturesAndActivities } from '@/contants/startupData';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
-
+    const [hoveredDescription, setHoveredDescription] = useState<string | null>(null);
     useEffect(() => {
         Globals.KontentClient.item("startup_portfolio")
             .toObservable()
@@ -20,10 +21,20 @@ const StartUp = () => {
             });
     }, []);
 
+
+
     if (!pageData) {
         return <SpinnerComponent />;
     }
-   
+
+    const handleMouseEnter = (description: string) => {
+        setHoveredDescription(description);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredDescription(null);
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -32,20 +43,64 @@ const StartUp = () => {
             transition={{ duration: 0.5 }}
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="startup" />
-            <div className='portfolio-sticky-nav-menu'>
+            {/* <div className='portfolio-sticky-nav-menu'>
                 <p>Nav</p>
-            </div>
+            </div> */}
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid pageData={pageData} />
+            {/* <CardGrid pageData={pageData} /> */}
+            <section>
+                <div className="container">
+                    <div className='row'>
+                        <div className="col-12">
+                            <h2 className='section-heading'>Features & Activities</h2>
+                            <p className='text-center'>Dynamic features and activities fueling startup evolution and success.</p>
+                        </div>
+
+                    </div>
+
+                    <div className="row mt-4">
+                        <div className="col-lg-6 ">
+                            <div className="row g-3">
+                                {startupFeaturesAndActivities.map((item: any, index: number) => {
+                                    return (
+                                        <div className="col-lg-4 " key={`features-${index}`}
+                                            onMouseEnter={() => handleMouseEnter(item.content)} // Handle hover
+                                            onMouseLeave={handleMouseLeave} // Reset on mouse leave
+                                        >
+                                            <div className="bg-secondary p-3 rounded">
+                                                <p className='text-white'>{item.name}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="row">
+                                <div className="col-12 ">
+                                    <div className='bg-warning p-3 h-100'>
+                                        <p>You tube video will be here</p>
+                                    </div>
+                                </div>
+                                <div className="col-12">
+                                    <div>
+                                        <p>{hoveredDescription ? hoveredDescription : "Hover over a feature to see its description"}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
 
 
             <section className='frequently-asked-questions-wrapper'>
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h1 className='main-heaiding'>frequently asked questions</h1>
-                        </div>
-                    </div>
+
 
                     <AccordionComponent pageData={pageData} />
                 </div>
