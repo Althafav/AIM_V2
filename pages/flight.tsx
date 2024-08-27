@@ -16,7 +16,7 @@ export default function StandBuilder() {
                     src="/assets/imgs/flights-banner-bg.jpg" alt="" className='banner-image' />
 
                 <div className="inner-text-container">
-                    <h1 className='banner-heading'>Flight</h1>
+                    <h1 className='banner-heading'>ETIHAD</h1>
                 </div>
             </div>
 

@@ -27,7 +27,7 @@ function ListPage({ data }: { data: Partnerspage }) {
                         src="/assets/imgs/fdi-banner-bg.png" alt="" className='banner-image' />
 
                     <div className="inner-text-container">
-                        <h1 className='banner-heading'>Our Partners</h1>
+                        <h1 className='banner-heading'>AIM Congress 2024 Partners</h1>
                     </div>
                 </div>
 

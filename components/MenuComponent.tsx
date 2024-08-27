@@ -186,7 +186,7 @@ export default function MenuComponent() {
 
                     <li className="dropdown-item">
                       <Link href="/our-partners">
-                        Our Partners
+                        AIM Congress 2024 Partners
                       </Link>
                     </li>
                   </ul>
@@ -203,12 +203,12 @@ export default function MenuComponent() {
                     </li>
                     <li className="dropdown-item">
                       <Link href="/flight">
-                        Flight
+                        Official Airline Carrier
                       </Link>
                     </li>
                     <li className="dropdown-item">
                       <Link href="/stand-builder">
-                        Stand Builder
+                        Official Contractor
                       </Link>
                     </li>
                   </ul>
@@ -221,7 +221,7 @@ export default function MenuComponent() {
           <div className='d-lg-block d-none'>
             <Link href="/register-interest" className='menu-cta-wrapper'>
 
-              <button className='register-interest-cta'>Register your interest</button>
+              <button className='register-interest-cta'>Join us Now</button>
             </Link>
           </div>
           <motion.div
@@ -342,7 +342,7 @@ export default function MenuComponent() {
                 {isResourcesDropdownOpen && (
                   <ul className="mobile-dropdown">
                     <li className="dropdown-item">
-                      <Link href="/brochure"  onClick={handleToggle}>
+                      <Link href="/brochure" onClick={handleToggle}>
                         Brochure
                       </Link>
                     </li>
@@ -365,7 +365,7 @@ export default function MenuComponent() {
 
                     <li className="dropdown-item">
                       <Link href="/our-partners" onClick={handleToggle}>
-                        Our Partners
+                        AIM Congress 2024 Partners
                       </Link>
                     </li>
                   </ul>
@@ -383,12 +383,12 @@ export default function MenuComponent() {
                     </li>
                     <li className="dropdown-item">
                       <Link href="/flight" onClick={handleToggle}>
-                        Flight
+                        Official Airline Carrier
                       </Link>
                     </li>
                     <li className="dropdown-item">
                       <Link href="/stand-builder" onClick={handleToggle}>
-                        Stand Builder
+                        Official Contractor
                       </Link>
                     </li>
                   </ul>
@@ -399,7 +399,7 @@ export default function MenuComponent() {
 
                 <Link href="/register-interest" onClick={handleToggle}>
                   <div className='menu-cta-wrapper w-100'>
-                    <button className='register-interest-cta'>Register your interest</button>
+                    <button className='register-interest-cta'>Join us Now</button>
                   </div>
                 </Link>
               </li>
