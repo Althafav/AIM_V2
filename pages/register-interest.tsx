@@ -89,14 +89,15 @@ export default class RegisterPage extends React.Component<
                     />
                 </Head>
 
-                <div className="inner-banner-section-wrapper">
+                <div className="inner-banner-section-wrapper"
+                >
                     <motion.img
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 2 }}
                         src="/assets/imgs/brochure-banner-bg.jpg" alt="" className='banner-image' />
 
-                    <div className="inner-text-container">
+                    <div className="inner-text-container container">
                         <h1 className='banner-heading'>Register Your Interest</h1>
                     </div>
                 </div>

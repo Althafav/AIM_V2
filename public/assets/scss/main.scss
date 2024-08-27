@@ -10,7 +10,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 body {
@@ -266,18 +266,21 @@ ul {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 20px;
+        width: 100%;
+        max-width: 1000px;
 
         .banner-heading {
             color: #fff;
             text-transform: uppercase;
             font-weight: bold;
             position: relative;
-
-            font-size: 72px;
+            text-align: center;
+            font-size: 68px;
             letter-spacing: -3px;
 
             @media screen and (max-width: 800px) {
-                font-size: 42px;
+                font-size: 32px;
+                text-align: start;
             }
         }
 
