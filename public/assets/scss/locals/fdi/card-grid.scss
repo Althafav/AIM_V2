@@ -56,16 +56,19 @@
     }
 
     .features-name {
-        text-align: center;
+       
         margin-top: 8px;
+        font-size: 24px;
+        text-align: start;
+        max-width: 200px;
         font-weight: bold;
         position: absolute;
         z-index: 1;
         bottom: 20px;
         left: 20px;
-        color: white;
+        color: #fff;
         opacity: 1;
-        transition: opacity 0.19s ease-in;
+        transition: opacity .19s ease-in;
     }
 
     .feature-hovered-item {

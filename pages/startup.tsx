@@ -11,7 +11,7 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { startupFeaturesAndActivities } from '@/contants/startupData';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
-    const [hoveredDescription, setHoveredDescription] = useState<string | null>(null);
+
     useEffect(() => {
         Globals.KontentClient.item("startup_portfolio")
             .toObservable()
@@ -26,14 +26,6 @@ const StartUp = () => {
     if (!pageData) {
         return <SpinnerComponent />;
     }
-
-    const handleMouseEnter = (description: string) => {
-        setHoveredDescription(description);
-    };
-
-    const handleMouseLeave = () => {
-        setHoveredDescription(null);
-    };
 
     return (
         <motion.div
@@ -64,8 +56,7 @@ const StartUp = () => {
                                 {startupFeaturesAndActivities.map((item: any, index: number) => {
                                     return (
                                         <div className="col-lg-4 " key={`features-${index}`}
-                                            onMouseEnter={() => handleMouseEnter(item.content)} // Handle hover
-                                            onMouseLeave={handleMouseLeave} // Reset on mouse leave
+                                           
                                         >
                                             <div className="bg-secondary p-3 rounded">
                                                 <p className='text-white'>{item.name}</p>
@@ -84,7 +75,7 @@ const StartUp = () => {
                                 </div>
                                 <div className="col-12">
                                     <div>
-                                        <p>{hoveredDescription ? hoveredDescription : "Hover over a feature to see its description"}</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos veniam ad saepe dolorum, quasi officia corrupti omnis numquam rerum ab. In, reprehenderit. Porro alias, minus ipsum reiciendis sequi quidem fugiat!</p>
                                     </div>
                                 </div>
 

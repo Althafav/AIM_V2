@@ -16,7 +16,7 @@ export default function Document() {
         <HeaderComponent />
         <link rel="preconnect" href="https://deliver.kontent.ai" crossOrigin="anonymous" />
         <Script
-          src={`/assets/js/bootstrap.bundle.min.js`}
+          src={`${Globals.BASE_URL}assets/js/bootstrap.bundle.min.js`}
           strategy="afterInteractive"
         />
        
