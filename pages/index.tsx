@@ -43,9 +43,9 @@ export default function Home() {
       <div ref={themeRef}>
         {inViewTheme && <ThemeSectionComponent />}
       </div>
-      <div ref={audientsRef}>
+      {/* <div ref={audientsRef}>
         {inViewAudients && <AudientsCTAComponent />}
-      </div>
+      </div> */}
       <div ref={portfolioRef}>
         {inViewPortfolio && <PortfolioCTAComponent />}
       </div>
