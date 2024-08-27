@@ -12,7 +12,7 @@ const AccordionComponent: React.FC<AccordionProps> = ({ pageData }) => {
 
 
   return (
-    <>
+    <div className='section-container'>
       <div className="row">
         <div className="col-12">
           <h1 className='main-heaiding'>FAQs</h1>
@@ -56,7 +56,7 @@ const AccordionComponent: React.FC<AccordionProps> = ({ pageData }) => {
 
         )}
       </div>
-    </>
+    </div>
   );
 };
 

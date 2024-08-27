@@ -1,20 +1,24 @@
 .about-portfolio-section-wrapper {
 
     .about-content {
-        max-width: 80%;
-        margin: auto;
+        
 
-        @media screen and (max-width: 800px) {
-            max-width: 100%;
-        }
+        
 
         .section-heading {
             font-size: 48px;
             font-weight: bold;
             color: $primary-color-varient;
-            letter-spacing: -3px;
+            letter-spacing: -2px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 800px) {
+                text-align: left;
+                font-size: 32px;
+                margin-bottom: 5px;
+            }
+
         }
 
         .paragraph {
@@ -57,6 +61,11 @@
         color: $light-text;
         font-size: 24px;
         text-align: center;
+
+        @media screen and (max-width: 800px) {
+            text-align: left;
+            font-size: 20px;
+        }
     }
 }
 
@@ -74,6 +83,7 @@
         font-size: 64px;
         line-height: 1;
         font-weight: bold;
+        
 
         @media screen and (max-width: 800px) {
             font-size: 32px;
@@ -81,10 +91,10 @@
         }
     }
 
-    
+
 
     .benefit-items {
-        max-height: 1000px;
+
         overflow-y: auto;
 
         position: relative;
@@ -140,7 +150,7 @@
         font-size: 48px;
         font-weight: 600;
         color: $primary-color-varient;
-        
+
         letter-spacing: -2px;
     }
 }
@@ -153,7 +163,4 @@
     top: 0px;
     z-index: 100;
     position: -webkit-sticky;
-  }
-  
-
-
+}

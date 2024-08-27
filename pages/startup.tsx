@@ -109,11 +109,11 @@ const StartUp = () => {
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
 
 
-                    <AccordionComponent pageData={pageData} />
-                </div>
+
+                <AccordionComponent pageData={pageData} />
+
             </section>
         </motion.div>
     )

@@ -13,7 +13,7 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 export default function ForiegnDirectInvestment() {
     const [isExpanded, setIsExpanded] = useState(false);
-    
+
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -27,7 +27,7 @@ export default function ForiegnDirectInvestment() {
     }, []);
 
     if (!pageData) {
-        return <SpinnerComponent/>
+        return <SpinnerComponent />
     }
 
     const handleToggle = () => {
@@ -42,9 +42,9 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-        <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} portfolioColorName="fdi" />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} portfolioColorName="fdi" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid  pageData={pageData}/>
+            <CardGrid pageData={pageData} />
 
             <section className='benefits-section-wrapper'>
                 <div className="section-container">

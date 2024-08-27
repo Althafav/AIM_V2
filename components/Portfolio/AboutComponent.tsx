@@ -11,7 +11,7 @@ export default function AboutComponent(props: any) {
     const limitedText = props.aboutParagraph.substring(0, 450);
     return (
         <section className='about-portfolio-section-wrapper'>
-            <div className="container">
+            <div className="section-container">
                 <div className="row about-content">
                     <div className="col-12">
                         <h1 className='section-heading'>{props.aboutHeading}</h1>

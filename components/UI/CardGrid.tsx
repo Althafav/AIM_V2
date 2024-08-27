@@ -19,20 +19,19 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
     }
 
     return (
-        <section className='key-features-section-wrapper '>
 
-            <div className="section-container">
-                <div className="row">
+        <section className='key-features-section-wrapper '>
+            <div className='section-container'>
+
+
+                <div className="row key-benefits mt-4">
                     <div className="col-12">
                         <h1 className='section-heading'>{pageData.featureheading.value}
                         </h1>
                     </div>
-                    <div className="col-12">
+                    <div className="col-12 mb-3">
                         <p className='sub-heading' style={{ textTransform: "capitalize" }}>{pageData.featuresubheading.value}</p>
                     </div>
-                </div>
-
-                <div className="row key-benefits mt-4">
                     <div className="masonry-container">
                         {pageData.features.value.map((m: any, index) => {
                             const item: Serviceitem = m;
@@ -66,10 +65,8 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                     </div>
                 </div>
 
-
             </div>
 
-           
         </section>
     )
 }
