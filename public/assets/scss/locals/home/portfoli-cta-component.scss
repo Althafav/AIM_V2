@@ -5,13 +5,13 @@
         font-weight: bold;
         text-align: center;
         color: black;
-        letter-spacing: 0.5;
+        
         text-transform: capitalize;
         line-height: 1.1;
         display: flex;
         flex-direction: column;
         color: $primary-color-varient;
-        letter-spacing: -3px;
+        letter-spacing: -1px;
 
         @media screen and (max-width: 800px) {
             font-size: 32px;
@@ -37,7 +37,8 @@
     .cta-card-item {
         width: 100%;
         border-radius: 30px;
-
+        max-width: 375px;
+        
         display: flex;
         align-items: end;
         justify-content: center;
@@ -71,7 +72,7 @@
             .main-head--card {
                 color: white;
                 font-size: 32px;
-                max-width: 200px;
+                max-width: 175px;
                 line-height: 1.1;
                 font-weight: bold;
                 letter-spacing: -1px;

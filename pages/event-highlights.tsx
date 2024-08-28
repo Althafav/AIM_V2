@@ -155,7 +155,7 @@ TOWARDS A NEW BALANCED WORLD STRUCTURE" />
             <section >
                 <Marquee>
 
-                    <p className='stay-tuned'>Stay tuned—our AGENDA is coming, packed with fresh perspectives and groundbreaking ideas! </p>
+                    <p className='stay-tuned'>Stay tuned our AGENDA is coming</p>
 
                 </Marquee>
             </section>
