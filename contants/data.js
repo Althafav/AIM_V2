@@ -10,17 +10,17 @@ export const PortfolioCards = [
     {
         image: "/assets/imgs/Trad-innovation-card-bg.png",
         mainHead: "Global Trade",
-        btnName: "trade-innovation",
-        link: '/trade-innovation',
+        btnName: "global-trade",
+        link: '/global-trade',
         kicker: 'Shaping the global economy with innovative trade solutions'
     },
 
 
     {
         image: "/assets/imgs/Advanced-mft-card-bg.png",
-        mainHead: "Advanced Manufacturing",
+        mainHead: "Global Manufacturing",
         btnName: "advancedManufacturing",
-        link: '/advanced-manufacturing',
+        link: '/global-manufacturing',
         kicker: 'Optimizing productivity and efficiency through integrated physical and digital processes'
     },
 

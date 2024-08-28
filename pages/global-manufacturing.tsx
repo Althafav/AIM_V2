@@ -1,21 +1,20 @@
-
-import AccordionComponent from '@/components/UI/AccordinComponent';
-import CardGrid from '@/components/UI/CardGrid';
 import React, { useEffect, useState } from 'react'
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
 import AboutComponent from '@/components/Portfolio/AboutComponent';
-import { fdiFAQ, tradeInnovationFAQ } from '@/contants/data';
+import AccordionComponent from '@/components/UI/AccordinComponent';
+import CardGrid from '@/components/UI/CardGrid';
+import { advancedManufacturingFAQ, fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
-export default function TradeInnovation() {
+const AdvancedManufacturing = () => {
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
     useEffect(() => {
-        Globals.KontentClient.item("global_trade_portfolio")
+        Globals.KontentClient.item("advanced_manufacturing_portfolio")
             .toObservable()
             .subscribe((response: any) => {
                 console.log('API Response:', response);
@@ -27,7 +26,7 @@ export default function TradeInnovation() {
         return <SpinnerComponent />;
     }
 
-
+   
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -35,21 +34,20 @@ export default function TradeInnovation() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} portfolioColorName="trade-innovation" />
-
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register/global-manufacturing'} portfolioColorName={"advancedManufacturing"} />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-
-            <CardGrid pageData={pageData} />
-
-
+            <CardGrid  pageData={pageData}/>
 
 
             <section className='frequently-asked-questions-wrapper'>
+                <div className="container">
+                   
 
-
-                <AccordionComponent pageData={pageData} />
-
+                    <AccordionComponent pageData={pageData} />
+                </div>
             </section>
         </motion.div>
     )
 }
+
+export default AdvancedManufacturing 

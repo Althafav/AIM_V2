@@ -69,7 +69,7 @@ export default function MenuComponent() {
           <div className="col-12">
             <div className="top-items d-flex justify-content-end align-items-center mb-1">
               <div className="d-flex gap-5 align-items-center">
-                <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div>
+                {/* <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div> */}
                 {/* <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div> */}
               </div>
             </div>
@@ -109,14 +109,14 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/trade-innovation">
+                      <Link href="/global-trade">
                         Global Trade
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/advanced-manufacturing">
-                        Advanced Manufacturing
+                      <Link href="/global-manufacturing">
+                        Global Manufacturing
                       </Link>
                     </li>
 
@@ -139,7 +139,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/startup">
+                      <Link href="https://startup.aimcongress.com/" target='_blank'>
                         Startups & Unicorns
                       </Link>
                     </li>
@@ -295,13 +295,13 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/trade-innovation" onClick={handleToggle}>
+                      <Link href="/global-trade" onClick={handleToggle}>
                         Global Trade
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/advanced-manufacturing" onClick={handleToggle}>
-                        Advanced Manufacturing
+                      <Link href="/global-manufacturing" onClick={handleToggle}>
+                        Global Manufacturing
                       </Link>
                     </li>
 
@@ -324,7 +324,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item" onClick={handleToggle}>
-                      <Link href="/startup">
+                      <Link href="https://startup.aimcongress.com/" target='_blank'>
                         Startups & Unicorns
                       </Link>
                     </li>

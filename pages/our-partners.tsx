@@ -15,8 +15,6 @@ function ListPage({ data }: { data: Partnerspage }) {
 
         <React.Fragment>
 
-            
-
             <div className='our-partners-page'>
 
                 <div className="inner-banner-section-wrapper">

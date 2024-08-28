@@ -39,7 +39,7 @@ export default function StandBuilder() {
                             <p className='mt-3'>*to avail discount please visit etihadairways*</p>
 
                             <div >
-                                <Link href="https://www.etihad.com/en-ae/">
+                                <Link href="https://www.etihad.com/en-ae/" target='_blank'>
                                     <button className='mt-3 text-primary bg-white'>Book Now</button>
 
                                 </Link>

@@ -81,7 +81,7 @@ export default class RegisterPage extends React.Component<
                     <title>{`${Globals.SITE_NAME} | CONTACT US`}</title>
                     <meta
                         name="title"
-                        content={`${Globals.SITE_NAME} | Register Your Interest`}
+                        content={`${Globals.SITE_NAME} | Register Your Interest As Exhibitor`}
                     />
                     <meta
                         name="description"
@@ -852,7 +852,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
                                             </div>
                                             <div className="row">
-                                                <div className="form-group col-12 col-lg-6 col-xl-6">
+                                                <div className="form-group col-12 col-lg-6 col-xl-6 ">
                                                     <fieldset className="_form-fieldset">
                                                         <div className="_row">
                                                             <span className="_form-label">
@@ -874,6 +874,7 @@ export default class RegisterPage extends React.Component<
                                                                 value="Exhibitor"
                                                                 className="any"
                                                                 required
+
                                                             />
                                                             <span>
                                                                 <label>Exhibitor</label>
@@ -959,7 +960,7 @@ export default class RegisterPage extends React.Component<
                                                     </fieldset>
                                                 </div>
 
-                                                <div className="form-group col-12 col-lg-6 col-xl-6">
+                                                <div className="form-group col-12 col-lg-6 col-xl-6 d-none">
                                                     <fieldset className="_form-fieldset">
                                                         <div className="_row">
                                                             <span className="_form-label">
@@ -981,6 +982,7 @@ export default class RegisterPage extends React.Component<
                                                                 value="Foreign Direct Investment"
                                                                 className="any"
                                                                 required
+
                                                             />
                                                             <span>
                                                                 <label>Foreign Direct Investment</label>
@@ -992,6 +994,7 @@ export default class RegisterPage extends React.Component<
                                                                 type="checkbox"
                                                                 name="field[61][]"
                                                                 value="Foreign Portfolio Investment"
+
                                                             />
                                                             <span>
                                                                 <label>Global Trade</label>
@@ -1003,6 +1006,7 @@ export default class RegisterPage extends React.Component<
                                                                 type="checkbox"
                                                                 name="field[61][]"
                                                                 value="Small &amp; Medium Enterprises (SMEs)"
+                                                               
                                                             />
                                                             <span>
                                                                 <label>
@@ -1017,6 +1021,7 @@ export default class RegisterPage extends React.Component<
                                                                 type="checkbox"
                                                                 name="field[61][]"
                                                                 value="Future Cities"
+                                                                checked
                                                             />
                                                             <span>
                                                                 <label>Future Cities</label>

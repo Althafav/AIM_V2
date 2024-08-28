@@ -90,14 +90,14 @@ export default function FooterComponent() {
 
                     <p>Foreign Direct Investment</p>
                   </Link>
-                  <Link href="/trade-innovation">
+                  <Link href="/global-trade">
                     <p>Global Trade</p>
 
                   </Link>
 
-                  <Link href="/advanced-manufacturing">
+                  <Link href="/global-manufacturing">
 
-                    <p>Advanced Manufacturing</p>
+                    <p>Global Manufacturing</p>
                   </Link>
 
                   <Link href="/future-cities">

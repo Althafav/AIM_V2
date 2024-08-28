@@ -38,7 +38,7 @@ const StartUp = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} portfolioColorName="startup" />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} registerLink={'/register/startup'} portfolioColorName="startup" />
             {/* <div className='portfolio-sticky-nav-menu'>
                 <p>Nav</p>
             </div> */}

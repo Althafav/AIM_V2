@@ -25,7 +25,7 @@ export default function CtaComponent() {
                                 </p>
 
                                 <div className=''>
-                                    <button className='registernow-cta'>Register Now</button>
+                                    <button className='registernow-cta'>Join us Now</button>
 
                                 </div>
                             </div>

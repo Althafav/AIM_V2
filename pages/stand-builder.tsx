@@ -46,8 +46,8 @@ export default function StandBuilder() {
                                 <span>+971564034046</span>
                             </div>
 
-                            <div >
-                                <Link href="https://creation-house.ae/">
+                            <div>
+                                <Link href="https://creation-house.ae/" target='_blank'>
                                     <button className='mt-3 text-primary bg-white'>Visit Website</button>
 
                                 </Link>
