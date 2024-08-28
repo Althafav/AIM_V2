@@ -299,8 +299,9 @@ ul {
 }
 
 .logo {
-    width: 240px;
+    width: 100%;
     object-fit: contain;
+    max-width: 280px;
 }
 
 
@@ -460,3 +461,4 @@ img {
 
 @import "./locals/articles.scss";
 @import "./locals/portfolio/startup.scss";
+@import "./locals/thank-you.scss";

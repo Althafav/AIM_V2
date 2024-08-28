@@ -4,10 +4,11 @@ import React from "react";
 
 import Globals from "@/modules/Globals";
 import JsLoader from "@/modules/JsLoader";
-import SuccessComponent from "@/components/SuccessMessageComponent";
+
 import { Bochurepage } from "@/models/bochurepage";
 import { motion } from "framer-motion";
 import SpinnerComponent from "@/components/UI/SpinnerComponent";
+
 
 export default class RegisterPage extends React.Component<
     {},
@@ -1206,8 +1207,8 @@ export default class RegisterPage extends React.Component<
                                             </div>
                                         </div>
 
-                                        <div className="_form-thank-you" style={{ display: "none" }}>
-                                            <SuccessComponent />
+                                        <div className="_form-thank-you " style={{ display: "none" }}>
+                                          
                                         </div>
                                     </form>
                                 </div>

@@ -1,5 +1,41 @@
-window.cfields = {"23":"job_title","12":"mobile_phone","3":"country","4":"nature_of_business","61":"aim_pillars","228":"aim_interests","275":"aim_partnership_types","229":"aim_download_brochure","230":"aim_download_sponsorship_packages","231":"aim_subscribe_to_newsletter","304":"aim_2023_interested_in_bloomberg_event","305":"aim_2023_interested_in_finnoverse_event","328":"mainsource","329":"subsource","38":"forms_submitted"};
-
+window.cfields = {"23":"job_title","12":"mobile_phone","3":"country","4":"nature_of_business","61":"aim_portfolio","228":"aim_interests","275":"aim_partnership_types","229":"aim_download_brochure","230":"aim_download_sponsorship_packages","231":"aim_subscribe_to_newsletter","328":"mainsource","329":"subsource","38":"forms_submitted"};
+window._show_thank_you = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
+    form.querySelector('._form-content').style.display = 'none';
+    // thank_you.innerHTML = message;
+    window.location.href = "/thank-you";
+    thank_you.style.display = 'none';
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        // Site tracking URL to use after inline form submission.
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
+window._show_unsubscribe = function(id, message, trackcmp_url, email) {
+    var form = document.getElementById('_form_' + id + '_'), unsub = form.querySelector('._form-thank-you');
+    var branding = form.querySelector('._form-branding');
+    if (branding) {
+        branding.style.display = 'none';
+    }
+    form.querySelector('._form-content').style.display = 'none';
+    unsub.style.display = 'block';
+    form.insertAdjacentHTML('afterend', message)
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        // Site tracking URL to use after inline form submission.
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
 window._show_error = function(id, message, html) {
     var form = document.getElementById('_form_' + id + '_'),
         err = document.createElement('div'),
@@ -22,10 +58,45 @@ window._show_error = function(id, message, html) {
         err.appendChild(div);
     }
 };
+window._show_pc_confirmation = function(id, header, detail, show, email) {
+    var form = document.getElementById('_form_' + id + '_'), pc_confirmation = form.querySelector('._form-pc-confirmation');
+    if (pc_confirmation.style.display === 'none') {
+        form.querySelector('._form-content').style.display = 'none';
+        pc_confirmation.innerHTML = "<div class='_form-title'>" + header + "</div>" + "<p>" + detail + "</p>" +
+        "<button class='_submit' id='hideButton'>Manage preferences</button>";
+        pc_confirmation.style.display = 'block';
+        var mp = document.querySelector('input[name="mp"]');
+        mp.value = '0';
+    } else {
+        form.querySelector('._form-content').style.display = 'inline';
+        pc_confirmation.style.display = 'none';
+    }
+
+    var hideButton = document.getElementById('hideButton');
+    // Add event listener to the button
+    hideButton.addEventListener('click', function() {
+        var submitButton = document.querySelector('#_form_394_submit');
+        submitButton.disabled = false;
+        submitButton.classList.remove('processing');
+        var mp = document.querySelector('input[name="mp"]');
+        mp.value = '1';
+        window.location.href = window.location.href;
+    });
+
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {
+        // Site tracking URL to use after inline form submission.
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
 window._load_script = function(url, callback, isSubmit) {
     var head = document.querySelector('head'), script = document.createElement('script'), r = false;
     var submitButton = document.querySelector('#_form_394_submit');
-    script.type = 'text/javascript';
     script.charset = 'utf-8';
     script.src = url;
     if (callback) {
@@ -79,8 +150,23 @@ window._load_script = function(url, callback, isSubmit) {
     var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
 
     var getUrlParam = function(name) {
-        var params = new URLSearchParams(window.location.search);
-        return params.get(name) || false;
+        if (name.toLowerCase() !== 'email') {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name) || false;
+        }
+        // email is a special case because a plus is valid in the email address
+        var qString = window.location.search;
+        if (!qString) {
+            return false;
+        }
+        var parameters = qString.substr(1).split('&');
+        for (var i = 0; i < parameters.length; i++) {
+            var parameter = parameters[i].split('=');
+            if (parameter[0].toLowerCase() === 'email') {
+                return parameter[1] === undefined ? true : decodeURIComponent(parameter[1]);
+            }
+        }
+        return false;
     };
 
     var acctDateFormat = "%d/%B/%Y";
@@ -427,7 +513,8 @@ window._load_script = function(url, callback, isSubmit) {
     var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
 
     const formSupportsPost = false;
-    var form_submit = function(e) {
+          var form_submit = function(e) {
+
         e.preventDefault();
         if (validate_form()) {
             // use this trick to get the submit button & disable it using plain javascript
@@ -443,40 +530,35 @@ window._load_script = function(url, callback, isSubmit) {
               var formData = new FormData();
               const searchParams = new URLSearchParams(serialized);
               searchParams.forEach((value, key) => {
-                formData.append(key, value);
+                if (key !== 'hideButton') {
+                    formData.append(key, value);
+                }
+                //formData.append(key, value);
               });
+                            let request = {
+                                headers: {
+                                    "Accept": "application/json"
+                                },
+                                body: formData,
+                                method: "POST"
+                            };
 
-              const response = await fetch('//ac.strategic.ae/proc.php?jsonp=true', {
-                headers: {
-                  "Accept": "application/json"
-                },
-                body: formData,
-                method: "POST"
-              });
+                            let pageUrlParams = new URLSearchParams(window.location.search);
+                            if (pageUrlParams.has('t')) {
+                                request.headers.Authorization = 'Bearer ' + pageUrlParams.get('t');
+                            }
+              const response = await fetch('https://strategic31677.activehosted.com/proc.php?jsonp=true', request);
               return response.json();
             }
-
-            if (formSupportsPost) {
-              submitForm().then((data) => {
-                eval(data.js);
-              });
-            } else {
-              _load_script('//ac.strategic.ae/proc.php?' + serialized + '&jsonp=true', null, true);
-            }
-
-            if ($("#brochure").prop("checked") == true) {
-                downloadDocument("AIM Brochure.pdf", "/documents/AIM_Brochure.pdf");
+                if (formSupportsPost) {
+                  submitForm().then((data) => {
+                    eval(data.js);
+                  });
+                } else {
+                  _load_script('https://strategic31677.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
                 }
-               
-                if ($("#Sponsorship").prop("checked") == true) {
-                  downloadDocument("AIM Sponsorship Packages.pdf", "/documents/Sponsorship_Packages.pdf");
-                  }
-                  window.scrollTo(0, 0);
-
         }
         return false;
     };
     addEvent(form_to_submit, 'submit', form_submit);
 })();
-
-
