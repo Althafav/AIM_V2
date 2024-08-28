@@ -988,10 +988,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Foreign Portfolio Investment"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Foreign Portfolio Investment"
+                                                                id="field_61Global Trade" type="checkbox" name="field[61][]" value="Global Trade"
                                                             />
                                                             <span>
                                                                 <label>Global Trade</label>
@@ -999,10 +996,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Small &amp; Medium Enterprises (SMEs)"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Small &amp; Medium Enterprises (SMEs)"
+                                                                id="field_61Global Manufacturing " type="checkbox" name="field[61][]" value="Global Manufacturing "
                                                             />
                                                             <span>
                                                                 <label>
@@ -1048,10 +1042,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Startups"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Startups"
+                                                                id="field_61Startups &amp; Unicorns" type="checkbox" name="field[61][]" value="Startups &amp; Unicorns"
                                                             />
                                                             <span>
                                                                 <label>Startups & Unicorns</label>
@@ -1060,10 +1051,7 @@ export default class RegisterPage extends React.Component<
 
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Entrepreneurs"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Startups"
+                                                                id="field_61Entrepreneurs" type="checkbox" name="field[61][]" value="Entrepreneurs"
                                                             />
                                                             <span>
                                                                 <label>Entrepreneurs</label>
