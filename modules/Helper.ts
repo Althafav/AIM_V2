@@ -2,12 +2,18 @@ import Globals from "./Globals";
 
 
 export default class formatParameter {
-  static formatUrlParameter = (name: any) => {
-    name = name.replace(/ /g, "-");
+  static formatUrlParameter = (name: string) => {
+      
+    name = name.replace(/\s+/g, "-");
+
     name = name.replace(/[?.:,"'’/()%]/g, "");
+
     name = name.toLowerCase();
+
+    name = name.replace(/^-+|-+$/g, "");
+
     return name;
-  };
+};
 
   
 
