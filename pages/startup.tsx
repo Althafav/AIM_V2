@@ -95,6 +95,7 @@ const StartUp = () => {
             </section>
 
             <section className='pitch-section-wrapper'>
+                <img src="/assets/imgs/Startup stage.png" alt="" className='pitch-section-bg'/>
                 <div className="section-container ">
                     <div className="row">
                         <div className="col-12">

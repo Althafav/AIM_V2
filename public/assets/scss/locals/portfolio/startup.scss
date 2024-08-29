@@ -44,18 +44,31 @@
 
 .pitch-section-wrapper {
     position: relative;
-    background: #1D1D1D;
+    background: #000000;
+    min-height: 100vh;
 
-    &::after {
-        content: "";
-        inset: 0;
+    .pitch-section-bg{
         position: absolute;
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+        bottom: 0;
         z-index: 0;
+        right: 0;
+        width: 60%;
+
+        @media screen and (max-width: 1000px) {
+            width: 90%;
+        }
     }
 
+    // &::after {
+    //     content: "";
+    //     inset: 0;
+    //     position: absolute;
+    //     background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+    //     z-index: 0;
+    // }
+
     .section-container {
-        height: 600px;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         position: relative;

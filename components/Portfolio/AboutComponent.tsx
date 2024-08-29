@@ -14,7 +14,7 @@ export default function AboutComponent(props: any) {
             <div className="section-container">
                 <div className="row about-content">
                     <div className="col-12">
-                        <h1 className='section-heading'>{props.aboutHeading}</h1>
+                        <h2 className='section-heading'>{props.aboutHeading}</h2>
                     </div>
                     <div className="col-12">
                         <div
