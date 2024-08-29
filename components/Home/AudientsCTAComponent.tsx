@@ -67,7 +67,7 @@ const AudientsCTAComponent: React.FC = () => {
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.7 }}>
                         <div className="cta-card-item">
-                            <Link href="/register/exhibitor">
+                            <Link href="/register-interest/exhibitor">
                                 <img src="/assets/imgs/Exhibitor Card.png" alt="" />
 
                             </Link>
@@ -80,7 +80,7 @@ const AudientsCTAComponent: React.FC = () => {
                         transition={{ duration: 0.5, delay: 0.9 }}>
                         <div className="cta-card-item">
 
-                            <Link href="/register/sponsor">
+                            <Link href="/register-interest/sponsor">
 
                                 <img src="/assets/imgs/Become a sponsor.png" alt="" />
                             </Link>

@@ -1,5 +1,5 @@
 {
-  "name": "creation-house-v2",
+  "name": "aim-v2",
   "version": "2.0.0",
   "private": true,
   "scripts": {
@@ -19,7 +19,6 @@
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
-    "react-hover-video-player": "^10.0.2",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.13.0"
   },

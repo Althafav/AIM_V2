@@ -32,7 +32,7 @@ const FutureCities = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} dateVenu={pageData.dateandvenu.value} subHeading={pageData.bannersubheading.value} registerLink={'/register/future-cities'} portfolioColorName="future-cities" />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} dateVenu={pageData.dateandvenu.value} subHeading={pageData.bannersubheading.value} registerLink={'/register-interest/future-cities'} portfolioColorName="future-cities" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
             <CardGrid  pageData={pageData}/>
 

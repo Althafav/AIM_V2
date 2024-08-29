@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function CtaComponent() {
@@ -25,7 +26,11 @@ export default function CtaComponent() {
                                 </p>
 
                                 <div className=''>
-                                    <button className='registernow-cta'>Join us Now</button>
+                                    <Link href="/register-interest">
+
+                                        <button className='registernow-cta'>Join us Now</button>
+
+                                    </Link>
 
                                 </div>
                             </div>

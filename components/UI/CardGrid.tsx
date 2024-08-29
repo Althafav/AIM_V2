@@ -51,13 +51,13 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                                         alt={`feature-${index + 1}`}
                                         className="benefit-card-bg"
                                     />
-                                    <div className='feature-hovered-item'>
+                                    {/* <div className='feature-hovered-item'>
                                         <p className="fw-bold">{item.name.value}</p>
                                         <p
                                             className="desc"
                                             dangerouslySetInnerHTML={{ __html: truncateText(item.content.value, 30) }}
                                         />
-                                    </div>
+                                    </div> */}
                                     <p className="features-name">{item.name.value}</p>
                                 </div>
                             );
