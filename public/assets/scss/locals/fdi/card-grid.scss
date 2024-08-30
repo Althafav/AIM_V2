@@ -25,16 +25,7 @@
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 30px;
-    &::after {
-        content: "";
-        inset: 0;
-        position: absolute;
-        z-index: 0;
-        background: black;
-        opacity: 0;
-        border-radius: 30px;
-        transition: opacity 0.3s ease;
-    }
+    
 
     &.card-small {
         grid-row: span 10; // Adjust for the height of small cards (e.g., 250px)
@@ -71,19 +62,7 @@
         transition: opacity .19s ease-in;
     }
 
-    .feature-hovered-item {
-        position: absolute;
-        z-index: 1;
-        top: 20px;
-        left: 20px;
-        color: white;
-        opacity: 0;
-        transition: opacity 0.19s ease-in;
-
-        .desc {
-            font-size: 16px;
-        }
-    }
+    
 
     &::before {
         content: "";
@@ -97,17 +76,7 @@
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-
-        .feature-hovered-item {
-            opacity: 1;
-        }
-
-        .features-name {
-            opacity: 0;
-        }
-
-        &::after {
-            opacity: 1; // Adjust opacity to show a black overlay on hover
-        }
+        border-radius: 30px;
+      
     }
 }

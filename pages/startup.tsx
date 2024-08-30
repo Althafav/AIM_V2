@@ -99,13 +99,35 @@ const StartUp = () => {
                 <div className="section-container ">
                     <div className="row">
                         <div className="col-12">
-                            <h1 className='pitch-heading'>Pitch Your <br />
-                                Next Big Thing</h1>
+                            <h2 className='pitch-heading'>Pitch Your <br />
+                                Next Big Thing</h2>
                             <h2 className='mt-3 pitch-subheading'>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
                         </div>
 
                         <div className="col-12 mt-3">
                             <button className='pitch-cta-btn'>Participate</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='target-cta-cards-wrapper'>
+                <div className="section-container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h2 className='section-heading'>Get Involved with AIM Congress Today</h2>
+                        </div>
+                    </div>
+                    <div className="row d-flex align-items-end">
+                       
+                        <div className="col-lg-4 mb-3">
+                            <img src="/assets/imgs/Aimvestor.png" alt="" />
+                        </div>
+                        <div className="col-lg-4 mb-3">
+                            <img src="/assets/imgs/Partner.png" alt="" />
+                        </div>
+                        <div className="col-lg-4 mb-3">
+                            <img src="/assets/imgs/Startup.png" alt="" />
                         </div>
                     </div>
                 </div>
@@ -133,7 +155,7 @@ const StartUp = () => {
                                                 <h4>{item.name.value}</h4>
                                                 <div className='px-4 py-2'>
                                                     <p
-                                                        className="description"
+                                                        className="description--startup"
                                                         dangerouslySetInnerHTML={{ __html: item.content.value }}
                                                     />
                                                 </div>

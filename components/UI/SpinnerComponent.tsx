@@ -1,36 +1,49 @@
 import React from 'react';
 
 const SpinnerComponent = () => {
-    return (
-        <div className="spinner-wrapper">
-            <div className="spinner"></div>
-            <style jsx>{`
-        .spinner-wrapper {
+  return (
+    <div className="loader-container">
+      <div className="logo-wrapper">
+        <img src="/assets/imgs/AIM-logo.png" alt="Company Logo" className="logo" />
+      </div>
+      <style jsx>{`
+        .loader-container {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: black;
+          background-color: black;
         }
-        .spinner {
-          border: 4px solid rgba(0, 0, 0, 0.1);
-          border-left-color:#8BE2C6;
-          border-radius: 50%;
-          width: 40px;
-          height: 40px;
-          animation: spin 1s linear infinite;
+
+        .logo-wrapper {
+          position: relative;
+          width: 200px;
+          height: auto;
         }
-        @keyframes spin {
+
+        .logo {
+          width: 100%;
+          height: auto;
+          filter: grayscale(100%);
+          mask-image: linear-gradient(to right, black, transparent);
+          mask-size: 200% 100%;
+          mask-position: 0 0;
+          animation: reveal 2s infinite;
+        }
+
+        @keyframes reveal {
           0% {
-            transform: rotate(0deg);
+            mask-position: 0 0;
+            filter: grayscale(100%);
           }
           100% {
-            transform: rotate(360deg);
+            mask-position: 100% 0;
+            filter: grayscale(0%);
           }
         }
       `}</style>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default SpinnerComponent;

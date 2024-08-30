@@ -11,7 +11,7 @@ function ListPage({ data }: { data: Partnerspage }) {
     if (!data) {
         return <SpinnerComponent />;
     }
-    return (
+    return (  
 
         <React.Fragment>
 
