@@ -130,19 +130,21 @@
 
 
 .startup-benefits-wrapper {
-    padding: 40px 0;
+    height: 100vh;
     position: relative;
     background: #1D1D1D;
 
     .section-container {
         position: relative;
         z-index: 1;
+        height: 100vh;
+        display: flex;
 
         .mainHead {
             font-size: 48px;
-            font-weight: bold;
+            font-weight: 600;
             letter-spacing: -1px;
-            max-width: 400px;
+            max-width: 350px;
             color: $startup;
 
             @media screen and (max-width: 800px) {
@@ -152,7 +154,7 @@
 
         .subHead {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 100;
 
             @media screen and (max-width: 800px) {
                 font-size: 20px;
@@ -192,6 +194,7 @@
             li {
                 margin-bottom: 5px;
                 text-align: left;
+                color: rgb(212, 212, 212);
             }
         }
     }
