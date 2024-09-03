@@ -79,7 +79,10 @@ export default function FooterComponent() {
               <div className="col-lg-3 col-md-6 col-12">
                 <p className='footer-nav-head'>About</p>
                 <div className='footer-nav'>
-                  <p>AIM Foundation</p>
+                  <Link href="https://www.aimglobalfoundation.com/">
+
+                    <p>AIM Foundation</p>
+                  </Link>
                   <p>AIM Congress</p>
                 </div>
               </div>
@@ -129,16 +132,25 @@ export default function FooterComponent() {
               <div className="col-lg-3 col-md-3 col-12 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Resources</p>
                 <div className="footer-nav">
-                  <p>Press</p>
+                  {/* <p>Press</p>
                   <p>Media</p>
-                  <p>Downloads</p>
+                  <p>Downloads</p> */}
+                  <Link href="/postshow-reports">
+                    <p>Post Show Reports</p>
+                  </Link>
                   <Link href="/articles">
                     <p>Blogs</p>
 
                   </Link>
-                  <p>Partnership Media</p>
-                  <p>Our Partners</p>
-                  <p>Career</p>
+                  <Link href="/media-partners">
+
+                    <p> Media Partners</p>
+                  </Link>
+                  <Link href="/our-partners">
+                    <p>AIM Congress 2024 Partners</p>
+
+                  </Link>
+                  {/* <p>Career</p> */}
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-12 mb-4 mb-lg-0">

@@ -45,19 +45,16 @@ export default function About() {
             </div>
 
             <div className='about-us-section-wrapper'
-                style={{
-                    backgroundImage: "url('/assets/imgs/aimbg (1).jpg')",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
+           
             >
 
 
                 <div className="container text-content">
-                    <div className="row">
+                    <div className="row d-flex align-items-center">
 
-                        <div className="col-lg-6"></div>
+                        <div className="col-lg-6">
+                            <img src="/assets/imgs/aimbg (1).jpg" alt="aim-congress-2024" />
+                        </div>
                         <div className="col-lg-6">
                             <p className='' > {sentence1}</p>
                             <p className='' > {sentence2}</p>

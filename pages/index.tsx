@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
 import { useInView } from 'react-intersection-observer';
 import CtaComponent from "@/components/CtaComponent";
+import HomeSpeakersComponent from "@/components/HomeSpeakersComponent";
 
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
@@ -58,11 +59,14 @@ export default function Home() {
       <div ref={articlesRef}>
         {inViewArticles && <ArticlesComponent />}
       </div>
-      <div ref={youtubeRef}>
+      {/* <div ref={youtubeRef}>
         {inViewYoutube && <YoutubeSectionComponent />}
-      </div>
+      </div> */}
       <div ref={ctaBannerRef}>
         {inViewCtaBanner && <CtaComponent />}
+      </div>
+      <div ref={ctaBannerRef}>
+        {inViewCtaBanner && <HomeSpeakersComponent />}
       </div>
     </motion.div>
   );

@@ -1,7 +1,7 @@
 // _document.tsx
 
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import HeaderComponent from "@/components/HeaderComponent";
 import Globals from "@/modules/Globals";
 import { Html, Head, Main, NextScript } from "next/document";
@@ -30,7 +30,7 @@ export default function Document() {
           strategy="beforeInteractive"
         />
 
-        <SpeedInsights />
+      
       </body>
     </Html>
   );

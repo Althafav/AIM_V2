@@ -25,6 +25,18 @@ static PROJECT_ID: string = "615577b9-4e2b-0074-b4f8-20f11d30f5ae";
 
     static BASE_URL_AIM_Website: string = "http://localhost:4000";
 
+
+    static API_URL: string =
+    process.env.NODE_ENV === "production"
+      ? "https://payment.aimcongress.com/api/"
+      // : "http://localhost:1048/api/";
+      : "https://payment.aimcongress.com/api/";
+
+      static NETWORK_URL: string =
+      process.env.NODE_ENV === "production"
+        ? "https://payment.aimcongress.com/Payment/Payment/"
+        : "http://localhost:1048/Payment/Payment/";
+
     static BASE_URL: string =
         process.env.NODE_ENV === "production"
             ? "https://aim-revamp-demo.vercel.app/"

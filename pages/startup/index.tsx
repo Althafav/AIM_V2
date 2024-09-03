@@ -39,9 +39,9 @@ const StartUp = () => {
             transition={{ duration: 0.5 }}
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} registerLink={'/register-interest/startup'} portfolioColorName="startup" />
-            {/* <div className='portfolio-sticky-nav-menu'>
+            <div className='portfolio-sticky-nav-menu'>
                 <p>Nav</p>
-            </div> */}
+            </div>
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
 
             <section className='features-activities-wrapper'>

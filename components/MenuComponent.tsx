@@ -77,7 +77,7 @@ export default function MenuComponent() {
         </div>
 
         <div className="d-flex align-items-end justify-content-between">
-          <Link href="/" className="logo-wrapper">
+          <Link href="https://aimcongress.com/" className="logo-wrapper">
             <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
               className='menu-logo white-logo' />
 
@@ -104,36 +104,36 @@ export default function MenuComponent() {
                   <ul className="dropdown">
 
                     <li className="dropdown-item">
-                      <Link href="/foriegn-direct-investment">
+                      <Link href="https://fdi.aimcongress.com/foriegn-direct-investment">
                         FDI
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/global-trade">
+                      <Link href="https://trade.aimcongress.com/global-trade">
                         Global Trade
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/global-manufacturing">
+                      <Link href="https://manufacturing.aimcongress.com/global-manufacturing">
                         Global Manufacturing
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/future-cities">
+                      <Link href="https://futurecities.aimcongress.com/future-cities">
                         Future Cities
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/digital-economy">
+                      <Link href="https://digitaleconomy.aimcongress.com/digital-economy">
                         Digital Economy
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/future-finance">
+                      <Link href="https://futurefinance.aimcongress.com/future-finance">
                         Future Finance
                       </Link>
                     </li>
@@ -145,7 +145,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/entrepreneurs">
+                      <Link href="https://entrepreneurs.aimcongress.com/entrepreneurs">
                         Entrepreneurs
                       </Link>
                     </li>
@@ -267,7 +267,7 @@ export default function MenuComponent() {
           >
             <ul className='mobile-menu-items'>
               <div className='d-flex justify-content-between px-4 py-3'>
-                <Link href="/" className="logo-wrapper">
+                <Link href="https://aimcongress.com/" className="logo-wrapper">
                   <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
                     className='menu-logo white-logo' />
 
@@ -290,35 +290,31 @@ export default function MenuComponent() {
                 {isPortfolioDropdownOpen && (
                   <ul className="mobile-dropdown">
                     <li className="dropdown-item">
-                      <Link href="/foriegn-direct-investment" onClick={handleToggle}>
+                      <Link href="https://fdi.aimcongress.com/foriegn-direct-investment" onClick={handleToggle}>
                         FDI
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/global-trade" onClick={handleToggle}>
+                      <Link href="https://trade.aimcongress.com/global-trade" onClick={handleToggle}>
                         Global Trade
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/global-manufacturing" onClick={handleToggle}>
+                      <Link href="https://manufacturing.aimcongress.com/global-manufacturing" onClick={handleToggle}>
                         Global Manufacturing
                       </Link>
                     </li>
 
-                    <li className="dropdown-item">
-                      <Link href="/media-partners" onClick={handleToggle}>
-                        Media Partners
-                      </Link>
-                    </li>
+                   
 
                     <li className="dropdown-item">
-                      <Link href="/future-cities" onClick={handleToggle}>
+                      <Link href="https://futurecities.aimcongress.com/future-cities" onClick={handleToggle}>
                         Future Cities
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/future-finance" onClick={handleToggle}>
+                      <Link href="https://futurefinance.aimcongress.com/future-finance" onClick={handleToggle}>
                         Future Finance
                       </Link>
                     </li>
@@ -330,7 +326,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item" onClick={handleToggle}>
-                      <Link href="/entrepreneurs">
+                      <Link href="https://entrepreneurs.aimcongress.com/entrepreneurs">
                         Entrepreneurs
                       </Link>
                     </li>

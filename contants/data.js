@@ -3,7 +3,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/FDI-card-bg.png",
         mainHead: "Foreign Direct Investment",
         btnName: "fdi",
-        link: '/foriegn-direct-investment',
+        link: 'https://fdi.aimcongress.com/foriegn-direct-investment',
         kicker: "Shaping future economies through impactful cross-border investments"
     },
 
@@ -11,7 +11,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/Trad-innovation-card-bg.png",
         mainHead: "Global Trade",
         btnName: "global-trade",
-        link: '/global-trade',
+        link: 'https://trade.aimcongress.com/global-trade',
         kicker: 'Shaping the global economy with innovative trade solutions'
     },
 
@@ -20,7 +20,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/Advanced-mft-card-bg.png",
         mainHead: "Global Manufacturing",
         btnName: "advancedManufacturing",
-        link: '/global-manufacturing',
+        link: 'https://manufacturing.aimcongress.com/global-manufacturing',
         kicker: 'Optimizing productivity and efficiency through integrated physical and digital processes'
     },
 
@@ -29,7 +29,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/future-cities-card-bg.png",
         mainHead: "Future Cities",
         btnName: "future-cities",
-        link: '/future-cities',
+        link: 'https://futurecities.aimcongress.com/future-cities',
         kicker: 'Emerging as dynamic hubs, driving growth, resilience, and global collaboration'
     },
 
@@ -38,7 +38,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/digital-economy.png",
         mainHead: "Digital Economy",
         btnName: "digital-economy",
-        link: '/digital-economy',
+        link: 'https://digitaleconomy.aimcongress.com/digital-economy',
         kicker: "It is rapidly becoming a vast ecosystem driven by advanced digital technologies"
     },
 
@@ -47,7 +47,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/future-finance.png",
         mainHead: "Future Finance",
         btnName: "future-finance",
-        link: "/future-finance",
+        link: "https://futurefinance.aimcongress.com/future-finance",
         kicker: "Revolutionizing finance with cutting-edge technology and visionary innovation"
     },
 
@@ -55,7 +55,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/startup-unicorn.png",
         mainHead: "Startups & Unicorns",
         btnName: "startup",
-        link: "/startup",
+        link: "https://startup.aimcongress.com/",
         kicker: "Catalyzing growth with innovative ideas and agile solutions"
     },
 
@@ -63,7 +63,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/entrepreneurs.png",
         mainHead: "Entrepreneurs",
         btnName: "entrepreneurs",
-        link: "entrepreneurs",
+        link: "https://entrepreneurs.aimcongress.com/entrepreneurs",
         kicker: 'Connecting Visionaries. Creating Future'
     },
 
