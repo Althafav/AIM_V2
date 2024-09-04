@@ -275,6 +275,7 @@ export const shamsiTravelsServices = [
 
 
 export const Brochure = [
+    
     {
         name: "English",
         image: "/assets/imgs/English - AIM Brochure.webp",

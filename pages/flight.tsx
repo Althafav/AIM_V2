@@ -34,7 +34,7 @@ export default function StandBuilder() {
                             <p>{text2}</p>
 
 
-                            <p className='mt-4 mb-3'>Plan your business trip to AIM Congress 2024 with Etihad Airways using</p>
+                            <p className='mt-4 mb-3'>Plan your business trip to AIM Congress 2025 with Etihad Airways using</p>
                             <p>PROMO CODE: <strong>EYAIM24 </strong></p>
                             <p className='mt-3'>*to avail discount please visit etihadairways*</p>
 

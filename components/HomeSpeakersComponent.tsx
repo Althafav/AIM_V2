@@ -94,13 +94,13 @@ export default class HomeSpeakersComponent extends React.Component<
     }
 
     return HighLevelSpeakers.length > 0 ? (
-      <section className="speaker-componet-wrapper p-b-0">
+      <div className="speaker-component-wrapper">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1 className="section-heading">
-                GOVERNMENT OFFICIALS AND SPEAKERS <br /> 
-                AT AIM CONGRESS 2024
+              <h1 className="section-heading mb-4">
+                Government Officials And Speakers <br /> 
+                At AIM Congress 2024
               </h1>
             </div>
           </div>
@@ -137,13 +137,14 @@ export default class HomeSpeakersComponent extends React.Component<
               } else {
                 return 0;
               }
-            }).map((m: any, index) => {
+            }).slice(0, 10).map((m: any, index: number) => {
               var speaker: conferenceSpeakersModel = m;
               if (speaker.image) {
                 return (
                   <a
-                    href={`/conference-speaker/${speaker.id}`}
+                    href={`#`}
                     style={{ color: "unset" }}
+                    key={`speaker-${index}`}
                   >
                     <div className="card-speaker-item">
                       <div className="speaker-image-wrapper">
@@ -165,18 +166,9 @@ export default class HomeSpeakersComponent extends React.Component<
             })}
           </div>
 
-          <div className="row">
-            <div className="col-12 m-t-20 text-center">
-              <a
-                href={`${Globals.BASE_URL}register-interest`}
-                className="landing-banner-btn"
-              >
-                Register Your Interest
-              </a>
-            </div>
-          </div>
+         
         </div>
-      </section>
+      </div>
     ) : (
       ""
     );

@@ -3,7 +3,11 @@ import { Blogitems } from "@/models/blogitems";
 import { Blogs } from "@/models/blogs";
 import { Postshowreport } from "@/models/postshowreport";
 import { Postshowreportyear } from "@/models/postshowreportyear";
+import { Pressrelaseitem } from "@/models/pressrelaseitem";
+import { Pressrelease } from "@/models/pressrelease";
 import { Reportitem } from "@/models/reportitem";
+import { Speaker } from "@/models/speaker";
+import { Sponsorspage } from "@/models/sponsorspage";
 
 
 
@@ -22,6 +26,14 @@ export const TypeResolver = [
   new KontentDelivery.TypeResolver("Postshowreportyear", (rawData: any) => new Postshowreportyear()),
 
   new KontentDelivery.TypeResolver("Reportitem", (rawData: any) => new Reportitem()),
+  new KontentDelivery.TypeResolver("Speaker", (rawData: any) => new Speaker()),
+  new KontentDelivery.TypeResolver("Sponsorspage", (rawData: any) => new Sponsorspage()),
+  new KontentDelivery.TypeResolver("Pressrelease", (rawData: any) => new Pressrelease()),
+  new KontentDelivery.TypeResolver("Pressrelaseitem", (rawData: any) => new Pressrelaseitem()),
+
+
+
+
 
 
 

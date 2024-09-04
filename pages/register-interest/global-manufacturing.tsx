@@ -997,7 +997,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Global Manufacturing " type="checkbox" name="field[61][]" value="Global Manufacturing " 
+                                                                id="field_61Global Manufacturing" type="checkbox" name="field[61][]" value="Global Manufacturing" 
                                                                 checked
                                                             />
                                                             <span>

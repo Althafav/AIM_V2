@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
 import { useInView } from 'react-intersection-observer';
 import CtaComponent from "@/components/CtaComponent";
-import HomeSpeakersComponent from "@/components/HomeSpeakersComponent";
 
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
@@ -14,6 +13,8 @@ const SustainbleSecComponent = dynamic(() => import("@/components/Home/Sustainbl
 const TestimonialsComponent = dynamic(() => import("@/components/Home/TestimonialsComponent"));
 const ArticlesComponent = dynamic(() => import("@/components/Home/ArticlesComponent"));
 const YoutubeSectionComponent = dynamic(() => import("@/components/Home/YoutubeSectionComponent"));
+const HomeSpeakersComponent = dynamic(() => import("@/components/HomeSpeakersComponent"));
+const HomeSponsorsComponent = dynamic(() => import("@/components/HomeSponsorsComponent"));
 
 
 export default function Home() {
@@ -25,6 +26,9 @@ export default function Home() {
   const [articlesRef, inViewArticles] = useInView({ triggerOnce: true });
   const [youtubeRef, inViewYoutube] = useInView({ triggerOnce: true });
   const [ctaBannerRef, inViewCtaBanner] = useInView({ triggerOnce: true });
+  const [speakersRef, inViewSpeakers] = useInView({ triggerOnce: true });
+  const [sponsorsRef, inViewSponsors] = useInView({ triggerOnce: true });
+
 
   return (
     <motion.div
@@ -65,9 +69,14 @@ export default function Home() {
       <div ref={ctaBannerRef}>
         {inViewCtaBanner && <CtaComponent />}
       </div>
-      <div ref={ctaBannerRef}>
-        {inViewCtaBanner && <HomeSpeakersComponent />}
+      <div ref={speakersRef}>
+        {inViewSpeakers && <HomeSpeakersComponent />}
       </div>
+
+      <div ref={sponsorsRef}>
+        {inViewSponsors && <HomeSponsorsComponent />}
+      </div>
+
     </motion.div>
   );
 }

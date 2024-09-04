@@ -6,7 +6,7 @@ import Head from 'next/head';
 export default function About() {
     const sentence1 = "AIM Congress is an initiative of the AIM Global Foundation, an independent international organization fully committed to empower the world’s economy by boosting effective promotion strategies and facilitating opportunities for economic productivity and expansion."
     const sentence2 = "AIM Congress has established itself as a leading investment platform in the Middle East, which aspires to ignite positive transformation by creating investment opportunities, upholding solidarity and developing economic relations among nations, as well as addressing the global ordeals that made a profound impact on economic growth."
-    const sentence3 = "AIM Congress continues to gather corporate leaders, policy-makers, businessmen, regional and international investors, entrepreneurs, leading academics, and experts showcasing up-to-date information, strategies and knowledge on attracting investments. Which brings together visitors from both the public and private sectors in the United Arab Emirates and worldwide."
+    const sentence3 = "AIM Congress continues to gather corporate leaders, policy-makers, businessmen, regional and international investors, entrepreneurs, leading academics, and experts showcasing up-to-date information, strategies and knowledge on attracting investments. Which brings together visitors from both the public and private sectors in the United Arab Emirates and Worldwide."
 
     return (
 
@@ -45,19 +45,19 @@ export default function About() {
             </div>
 
             <div className='about-us-section-wrapper'
-           
+
             >
 
 
                 <div className="container text-content">
                     <div className="row d-flex align-items-center">
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 mb-3 mb-lg-0">
                             <img src="/assets/imgs/aimbg (1).jpg" alt="aim-congress-2024" />
                         </div>
                         <div className="col-lg-6">
                             <p className='' > {sentence1}</p>
-                            <p className='' > {sentence2}</p>
+                            <p className='pt-lg-4 pb-lg-4' > {sentence2}</p>
                             <p className='' > {sentence3}</p>
 
 
@@ -75,7 +75,9 @@ export default function About() {
 
                             <span className='text-secondary fs-3 mb-3'>Mission</span>
                             <p className='section-head d-flex flex-column gap-2'>
-                                <span>To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts.</span>
+                                <span>To create and enhance collaborative partnerships
+                                    across various sectors for positive social,
+                                    environmental, and economic impacts.</span>
                             </p>
                         </div>
                     </div>
@@ -146,10 +148,10 @@ export default function About() {
                     <div className="item6 stats-card-item">
                         <div className="text-items">
                             <p className='count'>138</p>
-                            <p className='name'>High-Level Dignitaries</p>
+                            <p className='name'>High-level Dignitaries</p>
 
                         </div>
-                        <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />
+                        <img src="/assets/imgs/dignitades.jpg" alt="aim 2025" />
                     </div>
                     <div className="item7 stats-card-item">
                         <div className="text-items">
@@ -157,15 +159,15 @@ export default function About() {
                             <p className='name'>Countries</p>
 
                         </div>
-                        <img src="/assets/imgs/total-countries.png" alt="aim 2025" />
+                        <img src="/assets/imgs/worldwide.jpg" alt="aim 2025" />
                     </div>
                     <div className="item8 stats-card-item">
                         <div className="text-items">
                             <p className='count'>3</p>
-                            <p className='name'>High Level Roundtables</p>
+                            <p className='name'>High-level Roundtables</p>
 
                         </div>
-                        <img src="/assets/imgs/highlevelRoundtables.png" alt="aim 2025" />
+                        <img src="/assets/imgs/roundtables.jpg" alt="aim 2025" />
                     </div>
                     <div className="item9 stats-card-item">
                         <div className="text-items">
@@ -267,7 +269,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <img src="/assets/imgs/about last image 1.png" alt="" className='about-last-img' />
+                <img src="/assets/imgs/AIM 24 Audience without Cameraman.png" alt="" className='about-last-img' />
             </div>
 
         </motion.div>

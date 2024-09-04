@@ -1,9 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useInView } from "framer-motion";
 import { Brochure } from '@/contants/data';
 import Link from 'next/link';
 import { PiDownloadSimple } from 'react-icons/pi';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
+import Globals from '@/modules/Globals';
+import { Postshowreport } from '@/models/postshowreport';
+import { Postshowreportyear } from '@/models/postshowreportyear';
+import { Reportitem } from '@/models/reportitem';
 
 const containerVariants = {
     hidden: {},
@@ -33,9 +37,23 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
-    if (!brochureData) {
-        return <SpinnerComponent />
+    const [pageData, setPageData] = useState<Postshowreport | null>(null);
+
+    useEffect(() => {
+        Globals.KontentClient.item("brochure_reports")
+            .withParameter("depth", "2")
+            .toObservable()
+            .subscribe((response: any) => {
+                console.log('API Response:', response);
+                setPageData(response.item);
+            });
+    }, []);
+
+    if (!pageData) {
+        return <SpinnerComponent />;
     }
+
+
 
     return (
         <div className='brochure-page-wrapper' >
@@ -53,7 +71,7 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
 
             <section>
                 <div className="container" ref={ref}>
-                    <motion.div className="row"
+                    {/* <motion.div className="row"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -71,7 +89,64 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
                                 </div>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </motion.div> */}
+
+                    <div className="col-12 agenda-revamp-wrapper">
+                        <ul className="partners-category-wrap">
+                            {pageData.items.value.map((c: any, index) => {
+                                let category: Postshowreportyear = c;
+                                return (
+                                    <li className="partners-category-li" key={category.system.id}>
+                                        <a id={category.system.id} className={`${index == 0 ? "category-btn-active" : "category-btn"} ctaegory-btn-all`} href="javascript:0"
+                                            onClick={() => {
+                                                $(".ctaegory-btn-all").removeClass("category-btn-active");
+                                                $(".ctaegory-btn-all").addClass("category-btn");
+                                                $("#" + category.system.id).addClass("category-btn-active");
+
+                                                $(".agenda").addClass("d-none");
+                                                $(`#agenda_${category.system.id}`).removeClass("d-none");
+
+                                                $(".date-tabs").removeClass("date-tabs-active");
+                                                $(".agenda-card").addClass("d-none");
+                                                $(`#agenda_${category.system.id}_0`).addClass("date-tabs-active");
+                                                $(`#agenda_time_${category.system.id}_0`).removeClass("d-none");
+                                            }}
+                                        >
+                                            {category.year.value}
+                                        </a>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+
+                    {pageData.items.value.map((c: any, index) => {
+                        let category: Postshowreportyear = c;
+                        return (
+                            <div className={`${index == 0 ? "" : "d-none"} agenda col-12`} id={`agenda_${category.system.id}`}>
+                                <div className="row">
+                                    {
+                                        category.items.value.map((a: any, index: any) => {
+                                            let report: Reportitem = a;
+                                            return (
+                                                <div className="col-12 col-md-6 col-lg-3 m-b-30 report-wrapper" key={`brochure-${index}`}>
+                                                    <a href={`/reports/download-brochure/${report.system.id}`}>
+                                                        <div className="report-image" style={{ background: "url(" + report.image.value[0].url + ")" }}>
+                                                            
+                                                        </div>
+
+                                                        <div className="report-image-content">
+                                                            <p>Download</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
             </section>
         </div>

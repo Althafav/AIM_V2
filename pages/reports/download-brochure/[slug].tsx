@@ -1,66 +1,70 @@
+import SuccessComponent from "@/components/SuccessMessageComponent";
+import { Reportitem } from "@/models/reportitem";
+import Globals from "@/modules/Globals";
+import JsLoader from "@/modules/JsLoader";
 import Head from "next/head";
 import React from "react";
 
 
-import Globals from "@/modules/Globals";
-import JsLoader from "@/modules/JsLoader";
-import SuccessComponent from "@/components/SuccessMessageComponent";
-import { Bochurepage } from "@/models/bochurepage";
-import { motion } from "framer-motion";
-import SpinnerComponent from "@/components/UI/SpinnerComponent";
-
-export default class RegisterPage extends React.Component<
+export default class SpeakerDetailPage extends React.Component<
     {},
     {
-        pageData: Bochurepage;
+        pageData: Reportitem;
         isLoaded: boolean;
     }
 > {
     constructor(props: any) {
         super(props);
         this.state = {
-            pageData: new Bochurepage(),
+            pageData: new Reportitem(),
             isLoaded: false,
         };
     }
 
     componentDidMount() {
-        Globals.KontentClient.item("sponsors_form")
-            .languageParameter(Globals.CURRENT_LANG_CODENAME)
+        const id = window.location.pathname.replace("/reports/download-brochure/", "");
+
+        Globals.KontentClient.items()
+            .equalsFilter("system.id", id)
             .toObservable()
             .subscribe((response: any) => {
                 this.setState({
-                    pageData: response.item,
+                    pageData: response.firstItem,
                     isLoaded: true,
                 });
             });
+
+
     }
 
     checkBrochure() {
-        if ($("#brochure").prop("checked") == true) {
+        if ($('#brochure').prop("checked") == true) {
             $("#field_229Yes").prop("checked", true);
             $("#field_229No").prop("checked", false);
-        } else if ($("#brochure").prop("checked") == false) {
+        }
+        else if ($('#brochure').prop("checked") == false) {
             $("#field_229Yes").prop("checked", false);
             $("#field_229No").prop("checked", true);
         }
     }
 
     checkSponsorship() {
-        if ($("#Sponsorship").prop("checked") == true) {
+        if ($('#Sponsorship').prop("checked") == true) {
             $("#field_230Yes").prop("checked", true);
             $("#field_230No").prop("checked", false);
-        } else if ($("#Sponsorship").prop("checked") == false) {
+        }
+        else if ($('#Sponsorship').prop("checked") == false) {
             $("#field_230Yes").prop("checked", false);
             $("#field_230No").prop("checked", true);
         }
     }
 
     checkNewsletter() {
-        if ($("#newsletter").prop("checked") == true) {
+        if ($('#newsletter').prop("checked") == true) {
             $("#field_231Yes").prop("checked", true);
             $("#field_231No").prop("checked", false);
-        } else if ($("#newsletter").prop("checked") == false) {
+        }
+        else if ($('#newsletter').prop("checked") == false) {
             $("#field_231Yes").prop("checked", false);
             $("#field_231No").prop("checked", true);
         }
@@ -70,46 +74,36 @@ export default class RegisterPage extends React.Component<
         const { pageData, isLoaded } = this.state;
 
         if (!isLoaded) {
-            return <SpinnerComponent />;
+            return <React.Fragment />;
         }
 
-        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/registerInterest.js`);
+        JsLoader.loadFile(`${Globals.BASE_URL}assets/js/downloadBrochure.js`);
 
         return (
             <React.Fragment>
                 <Head>
-                    <title>{`${Globals.SITE_NAME} | CONTACT US`}</title>
-                    <meta
-                        name="title"
-                        content={`${Globals.SITE_NAME} | Register Your Interest`}
-                    />
-                    <meta
-                        name="description"
-                        content={`${Globals.SITE_NAME} | Register now to join AIM Congress 2024 in Abu Dhabi and connect`}
-                    />
+                    <title>{`${Globals.SITE_NAME} | Download Brochure`}</title>
                 </Head>
+                <div className="inner-banner-section-wrapper">
+                    <img
 
-                <div className="inner-banner-section-wrapper"
-                >
-                    <motion.img
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 2 }}
-                        src="/assets/imgs/brochure-banner-bg.jpg" alt="" className='banner-image' />
+                        src="/assets/imgs/postshow-banner-bg.jpg" alt="" className='banner-image' />
 
-                    <div className="inner-text-container container">
-                        <h1 className='banner-heading'>Register Your Interest</h1>
+                    <div className="inner-text-container">
+                        <h1 className='banner-heading'>Download Brochure</h1>
                     </div>
                 </div>
 
-                <section className="register-interest-form-wrapper container">
+                <div className="register-interest-form-wrapper container">
 
                     <div className="row">
-
                         <div className="col-12">
+                            <h2 className="section-heading text-left mt-5">
+                                Download Brochure
+                            </h2>
+                            <p className="m-0 d-none" id="downloadFileLink">{pageData.reportpdf.value[0].url}</p>
 
-
-                            <div className="row">
+                            <section className="row">
                                 <div className="col-12">
                                     <form
                                         method="POST"
@@ -124,16 +118,8 @@ export default class RegisterPage extends React.Component<
                                         <input type="hidden" name="m" value="0" />
                                         <input type="hidden" name="act" value="sub" />
                                         <input type="hidden" name="v" value="2" />
-                                        <input
-                                            type="hidden"
-                                            name="or"
-                                            value="87dd3af2187abe9a07709ed7f1daacda"
-                                        />
-                                        <input
-                                            type="hidden"
-                                            name="field[38]"
-                                            value="AIM 2025-Register Your Interest"
-                                        />
+                                        <input type="hidden" name="or" value="87dd3af2187abe9a07709ed7f1daacda" />
+                                        <input type="hidden" name="field[38]" value={`Download Brochure - ${pageData.name.value}`} />
 
                                         <div className="_form-content">
                                             <div className="row">
@@ -162,8 +148,7 @@ export default class RegisterPage extends React.Component<
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <input
                                                         type="text"
-                                                        itemID="customer_account"
-                                                        name="customer_account"
+                                                        itemID="customer_account" name="customer_account"
                                                         className="form-control"
                                                         placeholder="Organization *"
                                                         required
@@ -195,8 +180,7 @@ export default class RegisterPage extends React.Component<
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <input
                                                         type="text"
-                                                        itemID="field[12]"
-                                                        name="field[12]"
+                                                        itemID="field[12]" name="field[12]"
                                                         className="form-control"
                                                         placeholder="Mobile Phone *"
                                                         required
@@ -211,7 +195,9 @@ export default class RegisterPage extends React.Component<
                                                         className="form-control"
                                                         required
                                                     >
-                                                        <option value="">Country *</option>
+                                                        <option value="">
+                                                            Country *
+                                                        </option>
                                                         <option value="Afghanistan">Afghanistan</option>
                                                         <option value="Albania">Albania</option>
                                                         <option value="Algeria">Algeria</option>
@@ -557,407 +543,496 @@ export default class RegisterPage extends React.Component<
                                                         className="form-control"
                                                         required
                                                     >
-                                                        <option value="">Nature of Business *</option>
-                                                        <option value="Accelerators">Accelerators</option>
-                                                        <option value="Adhesives &amp; Paints">
+                                                        <option value="">
+                                                            Nature of Business *
+                                                        </option>
+                                                        <option value="Accelerators" >
+                                                            Accelerators
+                                                        </option>
+                                                        <option value="Adhesives &amp; Paints" >
                                                             Adhesives &amp; Paints
                                                         </option>
-                                                        <option value="Aerospace">Aerospace</option>
-                                                        <option value="Agriculture">Agriculture</option>
-                                                        <option value="Agriculture and Agribusiness">
+                                                        <option value="Aerospace" >
+                                                            Aerospace
+                                                        </option>
+                                                        <option value="Agriculture" >
+                                                            Agriculture
+                                                        </option>
+                                                        <option value="Agriculture and Agribusiness" >
                                                             Agriculture and Agribusiness
                                                         </option>
-                                                        <option value="Architecture &amp; Design">
+                                                        <option value="Architecture &amp; Design" >
                                                             Architecture &amp; Design
                                                         </option>
-                                                        <option value="Artificial Intelligence">
+                                                        <option value="Artificial Intelligence" >
                                                             Artificial Intelligence
                                                         </option>
-                                                        <option value="Arts and Culture">
+                                                        <option value="Arts and Culture" >
                                                             Arts and Culture
                                                         </option>
-                                                        <option value="Associations and Federations">
+                                                        <option value="Associations and Federations" >
                                                             Associations and Federations
                                                         </option>
-                                                        <option value="Automotive">Automotive</option>
-                                                        <option value="Automotive Glass">
+                                                        <option value="Automotive" >
+                                                            Automotive
+                                                        </option>
+                                                        <option value="Automotive Glass" >
                                                             Automotive Glass
                                                         </option>
-                                                        <option value="Aviation">Aviation</option>
-                                                        <option value="Banks and Other Financial Institutions">
+                                                        <option value="Aviation" >
+                                                            Aviation
+                                                        </option>
+                                                        <option value="Banks and Other Financial Institutions" >
                                                             Banks and Other Financial Institutions
                                                         </option>
-                                                        <option value="Beveled Glass">Beveled Glass</option>
-                                                        <option value="Building Materials">
+                                                        <option value="Beveled Glass" >
+                                                            Beveled Glass
+                                                        </option>
+                                                        <option value="Building Materials" >
                                                             Building Materials
                                                         </option>
-                                                        <option value="Business Council">
+                                                        <option value="Business Council" >
                                                             Business Council
                                                         </option>
-                                                        <option value="Chambers of Commerce and Industry">
+                                                        <option value="Chambers of Commerce and Industry" >
                                                             Chambers of Commerce and Industry
                                                         </option>
-                                                        <option value="Chemical Industry">
+                                                        <option value="Chemical Industry" >
                                                             Chemical Industry
                                                         </option>
-                                                        <option value="Coloured and Pure Glass">
+                                                        <option value="Coloured and Pure Glass" >
                                                             Coloured and Pure Glass
                                                         </option>
-                                                        <option value="Commerce">Commerce</option>
-                                                        <option value="Conglomerate">Conglomerate</option>
-                                                        <option value="Construction and Engineering">
+                                                        <option value="Commerce" >
+                                                            Commerce
+                                                        </option>
+                                                        <option value="Conglomerate" >
+                                                            Conglomerate
+                                                        </option>
+                                                        <option value="Construction and Engineering" >
                                                             Construction and Engineering
                                                         </option>
-                                                        <option value="Consultancy">Consultancy</option>
-                                                        <option value="Consumer Goods">Consumer Goods</option>
-                                                        <option value="Contracting">Contracting</option>
-                                                        <option value="Corporate">Corporate</option>
-                                                        <option value="Cosmetics">Cosmetics</option>
-                                                        <option value="Decor Glass">Decor Glass</option>
-                                                        <option value="Defense/Military">
+                                                        <option value="Consultancy" >
+                                                            Consultancy
+                                                        </option>
+                                                        <option value="Consumer Goods" >
+                                                            Consumer Goods
+                                                        </option>
+                                                        <option value="Contracting" >
+                                                            Contracting
+                                                        </option>
+                                                        <option value="Corporate" >
+                                                            Corporate
+                                                        </option>
+                                                        <option value="Cosmetics" >
+                                                            Cosmetics
+                                                        </option>
+                                                        <option value="Decor Glass" >
+                                                            Decor Glass
+                                                        </option>
+                                                        <option value="Defense/Military" >
                                                             Defense/Military
                                                         </option>
-                                                        <option value="Digital Solution">
+                                                        <option value="Digital Solution" >
                                                             Digital Solution
                                                         </option>
-                                                        <option value="Diplomatic Mission">
+                                                        <option value="Diplomatic Mission" >
                                                             Diplomatic Mission
                                                         </option>
-                                                        <option value="Dust Control &amp; Vacuum Cleaners">
+                                                        <option value="Dust Control &amp; Vacuum Cleaners" >
                                                             Dust Control &amp; Vacuum Cleaners
                                                         </option>
-                                                        <option value="Economic Development">
+                                                        <option value="Economic Development" >
                                                             Economic Development
                                                         </option>
-                                                        <option value="Education">Education</option>
-                                                        <option value="Energy and Mining">
+                                                        <option value="Education" >
+                                                            Education
+                                                        </option>
+                                                        <option value="Energy and Mining" >
                                                             Energy and Mining
                                                         </option>
-                                                        <option value="Event Organizer">
+                                                        <option value="Event Organizer" >
                                                             Event Organizer
                                                         </option>
-                                                        <option value="Facades and Cabins">
+                                                        <option value="Facades and Cabins" >
                                                             Facades and Cabins
                                                         </option>
-                                                        <option value="Facilities Management">
+                                                        <option value="Facilities Management" >
                                                             Facilities Management
                                                         </option>
-                                                        <option value="Fiber Glass">Fiber Glass</option>
-                                                        <option value="Fishery">Fishery</option>
-                                                        <option value="Flat Glass">Flat Glass</option>
-                                                        <option value="Flooring">Flooring</option>
-                                                        <option value="Food &amp; Beverages">
+                                                        <option value="Fiber Glass" >
+                                                            Fiber Glass
+                                                        </option>
+                                                        <option value="Fishery" >
+                                                            Fishery
+                                                        </option>
+                                                        <option value="Flat Glass" >
+                                                            Flat Glass
+                                                        </option>
+                                                        <option value="Flooring" >
+                                                            Flooring
+                                                        </option>
+                                                        <option value="Food &amp; Beverages" >
                                                             Food &amp; Beverages
                                                         </option>
-                                                        <option value="Foreign Affairs">
+                                                        <option value="Foreign Affairs" >
                                                             Foreign Affairs
                                                         </option>
-                                                        <option value="Furniture Manufacturers">
+                                                        <option value="Furniture Manufacturers" >
                                                             Furniture Manufacturers
                                                         </option>
-                                                        <option value="Glass Machinery">
+                                                        <option value="Glass Machinery" >
                                                             Glass Machinery
                                                         </option>
-                                                        <option value="Glass Manufacturing">
+                                                        <option value="Glass Manufacturing" >
                                                             Glass Manufacturing
                                                         </option>
-                                                        <option value="Government">Government</option>
-                                                        <option value="Government Department">
+                                                        <option value="Government" >
+                                                            Government
+                                                        </option>
+                                                        <option value="Government Department" >
                                                             Government Department
                                                         </option>
-                                                        <option value="Government Programs and Initiatives">
+                                                        <option value="Government Programs and Initiatives" >
                                                             Government Programs and Initiatives
                                                         </option>
-                                                        <option value="Green Technology and Climate Change">
+                                                        <option value="Green Technology and Climate Change" >
                                                             Green Technology and Climate Change
                                                         </option>
-                                                        <option value="Hand Craft">Hand Craft</option>
-                                                        <option value="Handrail">Handrail</option>
-                                                        <option value="Healthcare and Pharmaceutical">
+                                                        <option value="Hand Craft" >
+                                                            Hand Craft
+                                                        </option>
+                                                        <option value="Handrail" >
+                                                            Handrail
+                                                        </option>
+                                                        <option value="Healthcare and Pharmaceutical" >
                                                             Healthcare and Pharmaceutical
                                                         </option>
-                                                        <option value="Heat Treated Glass">
+                                                        <option value="Heat Treated Glass" >
                                                             Heat Treated Glass
                                                         </option>
-                                                        <option value="Hospitality">Hospitality</option>
-                                                        <option value="Immigration Service">
+                                                        <option value="Hospitality" >
+                                                            Hospitality
+                                                        </option>
+                                                        <option value="Immigration Service" >
                                                             Immigration Service
                                                         </option>
-                                                        <option value="Incubators">Incubators</option>
-                                                        <option value="Infrastructure">Infrastructure</option>
-                                                        <option value="Insurance">Insurance</option>
-                                                        <option value="Inter-governmental organizations (IGOs)">
+                                                        <option value="Incubators" >
+                                                            Incubators
+                                                        </option>
+                                                        <option value="Infrastructure" >
+                                                            Infrastructure
+                                                        </option>
+                                                        <option value="Insurance" >
+                                                            Insurance
+                                                        </option>
+                                                        <option value="Inter-governmental organizations (IGOs)" >
                                                             Inter-governmental organizations (IGOs)
                                                         </option>
-                                                        <option value="Investment &amp; Trade">
+                                                        <option value="Investment &amp; Trade" >
                                                             Investment &amp; Trade
                                                         </option>
-                                                        <option value="Investment and Freezones">
+                                                        <option value="Investment and Freezones" >
                                                             Investment and Freezones
                                                         </option>
-                                                        <option value="Investment Firm">
+                                                        <option value="Investment Firm" >
                                                             Investment Firm
                                                         </option>
-                                                        <option value="Investment Promotion Agency">
+                                                        <option value="Investment Promotion Agency" >
                                                             Investment Promotion Agency
                                                         </option>
-                                                        <option value="Investor">Investor</option>
-                                                        <option value="IT, ICT and Telecommunication">
+                                                        <option value="Investor" >
+                                                            Investor
+                                                        </option>
+                                                        <option value="IT, ICT and Telecommunication" >
                                                             IT, ICT and Telecommunication
                                                         </option>
-                                                        <option value="Law and Legal Affairs">
+                                                        <option value="Law and Legal Affairs" >
                                                             Law and Legal Affairs
                                                         </option>
-                                                        <option value="Life Sciences">Life Sciences</option>
-                                                        <option value="Lightning">Lightning</option>
-                                                        <option value="Local Government Units">
+                                                        <option value="Life Sciences" >
+                                                            Life Sciences
+                                                        </option>
+                                                        <option value="Lightning" >
+                                                            Lightning
+                                                        </option>
+                                                        <option value="Local Government Units" >
                                                             Local Government Units
                                                         </option>
-                                                        <option value="Logistics and Transportation">
+                                                        <option value="Logistics and Transportation" >
                                                             Logistics and Transportation
                                                         </option>
-                                                        <option value="Luxury Goods &amp; Jewelry">
+                                                        <option value="Luxury Goods &amp; Jewelry" >
                                                             Luxury Goods &amp; Jewelry
                                                         </option>
-                                                        <option value="Management &amp; Investment">
+                                                        <option value="Management &amp; Investment" >
                                                             Management &amp; Investment
                                                         </option>
-                                                        <option value="Manufacturing">Manufacturing</option>
-                                                        <option value="Maritime">Maritime</option>
-                                                        <option value="Marketing">Marketing</option>
-                                                        <option value="Marketing and Advertising">
+                                                        <option value="Manufacturing" >
+                                                            Manufacturing
+                                                        </option>
+                                                        <option value="Maritime" >
+                                                            Maritime
+                                                        </option>
+                                                        <option value="Marketing" >
+                                                            Marketing
+                                                        </option>
+                                                        <option value="Marketing and Advertising" >
                                                             Marketing and Advertising
                                                         </option>
-                                                        <option value="MDF, Panels and Laminates">
+                                                        <option value="MDF, Panels and Laminates" >
                                                             MDF, Panels and Laminates
                                                         </option>
-                                                        <option value="Media">Media</option>
-                                                        <option value="Ministries">Ministries</option>
-                                                        <option value="Non-Profit Organizations">
+                                                        <option value="Media" >
+                                                            Media
+                                                        </option>
+                                                        <option value="Ministries" >
+                                                            Ministries
+                                                        </option>
+                                                        <option value="Non-Profit Organizations" >
                                                             Non-Profit Organizations
                                                         </option>
-                                                        <option value="Oil and Gas">Oil and Gas</option>
-                                                        <option value="Others">Others</option>
-                                                        <option value="Partitions Skylights">
+                                                        <option value="Oil and Gas" >
+                                                            Oil and Gas
+                                                        </option>
+                                                        <option value="Others" >
+                                                            Others
+                                                        </option>
+                                                        <option value="Partitions Skylights" >
                                                             Partitions Skylights
                                                         </option>
-                                                        <option value="Pharmaceutical Glass">
+                                                        <option value="Pharmaceutical Glass" >
                                                             Pharmaceutical Glass
                                                         </option>
-                                                        <option value="Plastics">Plastics</option>
-                                                        <option value="Plywood, Hardboard Decorative">
+                                                        <option value="Plastics" >
+                                                            Plastics
+                                                        </option>
+                                                        <option value="Plywood, Hardboard Decorative" >
                                                             Plywood, Hardboard Decorative
                                                         </option>
-                                                        <option value="Private Equity">Private Equity</option>
-                                                        <option value="Private Sector">Private Sector</option>
-                                                        <option value="Professional Services">
+                                                        <option value="Private Equity" >
+                                                            Private Equity
+                                                        </option>
+                                                        <option value="Private Sector" >
+                                                            Private Sector
+                                                        </option>
+                                                        <option value="Professional Services" >
                                                             Professional Services
                                                         </option>
-                                                        <option value="Property Development">
+                                                        <option value="Property Development" >
                                                             Property Development
                                                         </option>
-                                                        <option value="Property Portal">
+                                                        <option value="Property Portal" >
                                                             Property Portal
                                                         </option>
-                                                        <option value="Property Valuation">
+                                                        <option value="Property Valuation" >
                                                             Property Valuation
                                                         </option>
-                                                        <option value="Protective Glass">
+                                                        <option value="Protective Glass" >
                                                             Protective Glass
                                                         </option>
-                                                        <option value="Publishing House">
+                                                        <option value="Publishing House" >
                                                             Publishing House
                                                         </option>
-                                                        <option value="Pyrex Glass">Pyrex Glass</option>
-                                                        <option value="Raw Materials">Raw Materials</option>
-                                                        <option value="Real Estate">Real Estate</option>
-                                                        <option value="Real Estate Brokers">
+                                                        <option value="Pyrex Glass" >
+                                                            Pyrex Glass
+                                                        </option>
+                                                        <option value="Raw Materials" >
+                                                            Raw Materials
+                                                        </option>
+                                                        <option value="Real Estate" >
+                                                            Real Estate
+                                                        </option>
+                                                        <option value="Real Estate Brokers" >
                                                             Real Estate Brokers
                                                         </option>
-                                                        <option value="Regional Organizations">
+                                                        <option value="Regional Organizations" >
                                                             Regional Organizations
                                                         </option>
-                                                        <option value="Retail">Retail</option>
-                                                        <option value="Robotics">Robotics</option>
-                                                        <option value="Securit">Securit</option>
-                                                        <option value="Shipbuilding">Shipbuilding</option>
-                                                        <option value="Shock Resistant Glass">
+                                                        <option value="Retail" >
+                                                            Retail
+                                                        </option>
+                                                        <option value="Robotics" >
+                                                            Robotics
+                                                        </option>
+                                                        <option value="Securit" >
+                                                            Securit
+                                                        </option>
+                                                        <option value="Shipbuilding" >
+                                                            Shipbuilding
+                                                        </option>
+                                                        <option value="Shock Resistant Glass" >
                                                             Shock Resistant Glass
                                                         </option>
-                                                        <option value="Smart Solutions">
+                                                        <option value="Smart Solutions" >
                                                             Smart Solutions
                                                         </option>
-                                                        <option value="Software">Software</option>
-                                                        <option value="Sovereign Wealth Funds">
+                                                        <option value="Software" >
+                                                            Software
+                                                        </option>
+                                                        <option value="Sovereign Wealth Funds" >
                                                             Sovereign Wealth Funds
                                                         </option>
-                                                        <option value="Special Economic Zones">
+                                                        <option value="Special Economic Zones" >
                                                             Special Economic Zones
                                                         </option>
-                                                        <option value="Spider Glass">Spider Glass</option>
-                                                        <option value="Sports and Recreation">
+                                                        <option value="Spider Glass" >
+                                                            Spider Glass
+                                                        </option>
+                                                        <option value="Sports and Recreation" >
                                                             Sports and Recreation
                                                         </option>
-                                                        <option value="Startups">Startups</option>
-                                                        <option value="Supermarket">Supermarket</option>
-                                                        <option value="Supplier">Supplier</option>
-                                                        <option value="Table Wear">Table Wear</option>
-                                                        <option value="Technology">Technology</option>
-                                                        <option value="Textile and Apparel">
+                                                        <option value="Startups" >
+                                                            Startups
+                                                        </option>
+                                                        <option value="Supermarket" >
+                                                            Supermarket
+                                                        </option>
+                                                        <option value="Supplier" >
+                                                            Supplier
+                                                        </option>
+                                                        <option value="Table Wear" >
+                                                            Table Wear
+                                                        </option>
+                                                        <option value="Technology" >
+                                                            Technology
+                                                        </option>
+                                                        <option value="Textile and Apparel" >
                                                             Textile and Apparel
                                                         </option>
-                                                        <option value="Timber, Hardwood &amp; Softwood">
+                                                        <option value="Timber, Hardwood &amp; Softwood" >
                                                             Timber, Hardwood &amp; Softwood
                                                         </option>
-                                                        <option value="Tools &amp; Cutting Machines">
+                                                        <option value="Tools &amp; Cutting Machines" >
                                                             Tools &amp; Cutting Machines
                                                         </option>
-                                                        <option value="Tourism and Hospitality">
+                                                        <option value="Tourism and Hospitality" >
                                                             Tourism and Hospitality
                                                         </option>
-                                                        <option value="Trade &amp; Industry">
+                                                        <option value="Trade &amp; Industry" >
                                                             Trade &amp; Industry
                                                         </option>
-                                                        <option value="Transportation">Transportation</option>
-                                                        <option value="Treatment Products and Composite">
+                                                        <option value="Transportation" >
+                                                            Transportation
+                                                        </option>
+                                                        <option value="Treatment Products and Composite" >
                                                             Treatment Products and Composite
                                                         </option>
-                                                        <option value="UN Specialized Agency">
+                                                        <option value="UN Specialized Agency" >
                                                             UN Specialized Agency
                                                         </option>
-                                                        <option value="Universities &amp; Academic Institutions">
+                                                        <option value="Universities &amp; Academic Institutions" >
                                                             Universities &amp; Academic Institutions
                                                         </option>
-                                                        <option value="Utilities">Utilities</option>
-                                                        <option value="Veneer">Veneer</option>
-                                                        <option value="Venture Capital">
+                                                        <option value="Utilities" >
+                                                            Utilities
+                                                        </option>
+                                                        <option value="Veneer" >
+                                                            Veneer
+                                                        </option>
+                                                        <option value="Venture Capital" >
                                                             Venture Capital
                                                         </option>
-                                                        <option value="Water Recycle">Water Recycle</option>
-                                                        <option value="Wood">Wood</option>
-                                                        <option value="Wood Accessories (Doors-Windows-Fittings)">
+                                                        <option value="Water Recycle" >
+                                                            Water Recycle
+                                                        </option>
+                                                        <option value="Wood" >
+                                                            Wood
+                                                        </option>
+                                                        <option value="Wood Accessories (Doors-Windows-Fittings)" >
                                                             Wood Accessories (Doors-Windows-Fittings)
                                                         </option>
-                                                        <option value="Wood Furniture Manufacturers">
+                                                        <option value="Wood Furniture Manufacturers" >
                                                             Wood Furniture Manufacturers
                                                         </option>
-                                                        <option value="Wood Suppliers">Wood Suppliers</option>
-                                                        <option value="Wood Working Machinery">
+                                                        <option value="Wood Suppliers" >
+                                                            Wood Suppliers
+                                                        </option>
+                                                        <option value="Wood Working Machinery" >
                                                             Wood Working Machinery
                                                         </option>
-                                                        <option value="Wooden Windows and Doors">
+                                                        <option value="Wooden Windows and Doors" >
                                                             Wooden Windows and Doors
                                                         </option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div className="row">
-                                                <div className="form-group col-12 col-lg-6 col-xl-6">
+                                                {/* <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <fieldset className="_form-fieldset">
                                                         <div className="_row">
                                                             <span className="_form-label">
                                                                 Interested to attend as *
                                                             </span>
                                                         </div>
-                                                        <input
-                                                            data-autofill="false"
-                                                            type="hidden"
-                                                            id="field[228][]"
-                                                            name="field[228][]"
-                                                            value="~|"
-                                                        />
+                                                        <input data-autofill="false" type="hidden" id="field[228][]" name="field[228][]" value="~|" />
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Exhibitor"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Exhibitor"
-                                                                className="any"
-                                                                required
-                                                            />
+                                                            <input id="field_228Exhibitor" type="checkbox" name="field[228][]" value="Exhibitor" className="any" required />
                                                             <span>
-                                                                <label>Exhibitor</label>
+                                                                <label>
+                                                                    Exhibitor
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Sponsor"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Sponsor"
-                                                            />
+                                                            <input id="field_228Sponsor" type="checkbox" name="field[228][]" value="Sponsor" />
                                                             <span>
-                                                                <label>Sponsor</label>
+                                                                <label>
+                                                                    Sponsor
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Supporting Partner"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Supporting Partner"
-                                                            />
+                                                            <input id="field_228Supporting Partner" type="checkbox" name="field[228][]" value="Supporting Partner" />
                                                             <span>
-                                                                <label>Supporting Partner</label>
+                                                                <label>
+                                                                    Supporting Partner
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Media Partner"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Media Partner"
-                                                            />
+                                                            <input id="field_228Media Partner" type="checkbox" name="field[228][]" value="Media Partner" />
                                                             <span>
-                                                                <label>Media Partner</label>
+                                                                <label>
+                                                                    Media Partner
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Startups"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Startups"
-                                                            />
+                                                            <input id="field_228Startups" type="checkbox" name="field[228][]" value="Startups" />
                                                             <span>
-                                                                <label>Startups</label>
+                                                                <label>
+                                                                    Startups
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Conference / Workshop Attendee"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Conference / Workshop Attendee"
-                                                            />
+                                                            <input id="field_228Conference / Workshop Attendee" type="checkbox" name="field[228][]" value="Conference / Workshop Attendee" />
                                                             <span>
-                                                                <label>Conference / Workshop Attendee</label>
+                                                                <label>
+                                                                    Conference / Workshop Attendee
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Awards"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Awards"
-                                                            />
+                                                            <input id="field_228Awards" type="checkbox" name="field[228][]" value="Awards" />
                                                             <span>
-                                                                <label>Awards</label>
+                                                                <label>
+                                                                    Awards
+                                                                </label>
                                                             </span>
                                                         </div>
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Visitor"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Visitor"
-                                                            />
+                                                            <input id="field_228Visitor" type="checkbox" name="field[228][]" value="Visitor" />
                                                             <span>
-                                                                <label>Visitor</label>
+                                                                <label>
+                                                                    Visitor
+                                                                </label>
                                                             </span>
                                                         </div>
                                                     </fieldset>
-                                                </div>
+                                                </div> */}
+
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <fieldset className="_form-fieldset">
@@ -988,10 +1063,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Foreign Portfolio Investment"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Foreign Portfolio Investment"
+                                                                id="field_61Global Trade" type="checkbox" name="field[61][]" value="Global Trade"
                                                             />
                                                             <span>
                                                                 <label>Global Trade</label>
@@ -999,14 +1071,11 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Small &amp; Medium Enterprises (SMEs)"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Small &amp; Medium Enterprises (SMEs)"
+                                                                id="field_61Global Manufacturing" type="checkbox" name="field[61][]" value="Global Manufacturing"
                                                             />
                                                             <span>
                                                                 <label>
-                                                                    Advanced Manufacturing
+                                                                    Global Manufacturing
                                                                 </label>
                                                             </span>
                                                         </div>
@@ -1048,10 +1117,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Startups"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Startups"
+                                                                id="field_61Startups &amp; Unicorns" type="checkbox" name="field[61][]" value="Startups &amp; Unicorns"
                                                             />
                                                             <span>
                                                                 <label>Startups & Unicorns</label>
@@ -1060,10 +1126,7 @@ export default class RegisterPage extends React.Component<
 
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_61Entrepreneurs"
-                                                                type="checkbox"
-                                                                name="field[61][]"
-                                                                value="Startups"
+                                                                id="field_61Entrepreneurs" type="checkbox" name="field[61][]" value="Entrepreneurs"
                                                             />
                                                             <span>
                                                                 <label>Entrepreneurs</label>
@@ -1075,11 +1138,9 @@ export default class RegisterPage extends React.Component<
                                                 </div>
                                             </div>
 
-                                            <div className="row m-t-15">
-                                                <div className="col-6 d-flex gap-2">
-                                                    <input
-                                                        id="brochure"
-                                                        type="checkbox"
+                                            <div className="row m-t-15 d-none">
+                                                <div className="col-6">
+                                                    <input id="brochure" type="checkbox" checked
                                                         onClick={(e) => {
                                                             this.checkBrochure();
                                                         }}
@@ -1092,9 +1153,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="col-6 d-none">
-                                                    <input
-                                                        id="Sponsorship"
-                                                        type="checkbox"
+                                                    <input id="Sponsorship" type="checkbox"
                                                         onClick={(e) => {
                                                             this.checkSponsorship();
                                                         }}
@@ -1106,10 +1165,8 @@ export default class RegisterPage extends React.Component<
                                                     </span>
                                                 </div>
 
-                                                <div className="col-6 d-flex gap-2">
-                                                    <input
-                                                        id="newsletter"
-                                                        type="checkbox"
+                                                <div className="col-6">
+                                                    <input id="newsletter" type="checkbox"
                                                         onClick={(e) => {
                                                             this.checkNewsletter();
                                                         }}
@@ -1118,87 +1175,69 @@ export default class RegisterPage extends React.Component<
                                                         <label className="checkbox-label">
                                                             Subscribe to our Newsletter
                                                         </label>
+
                                                     </span>
                                                 </div>
                                             </div>
 
+
+
                                             <div className="row" hidden>
                                                 <div className="col-12">
-                                                    <div className="_form_element _x94688527 _full_width ">
+                                                    <div className="_form_element _x94688527 _full_width " >
                                                         <fieldset className="_form-fieldset">
                                                             <legend className="_form-label">
                                                                 AIM Download Brochure
                                                             </legend>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_229Yes"
-                                                                    type="radio"
-                                                                    name="field[229]"
-                                                                    value="Yes"
-                                                                />
-                                                                <span>Yes</span>
+                                                                <input id="field_229Yes" type="radio" name="field[229]" value="Yes" checked />
+                                                                <span>
+                                                                    Yes
+                                                                </span>
                                                             </div>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_229No"
-                                                                    type="radio"
-                                                                    name="field[229]"
-                                                                    value="No"
-                                                                    checked
-                                                                />
-                                                                <span>No</span>
+                                                                <input id="field_229No" type="radio" name="field[229]" value="No" />
+                                                                <span>
+                                                                    No
+                                                                </span>
                                                             </div>
                                                         </fieldset>
                                                     </div>
-                                                    <div className="_form_element _x76405091 _full_width ">
+                                                    <div className="_form_element _x76405091 _full_width " >
                                                         <fieldset className="_form-fieldset">
                                                             <legend className="_form-label">
                                                                 AIM Download Sponsorship Packages
                                                             </legend>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_230Yes"
-                                                                    type="radio"
-                                                                    name="field[230]"
-                                                                    value="Yes"
-                                                                />
-                                                                <span>Yes</span>
+                                                                <input id="field_230Yes" type="radio" name="field[230]" value="Yes" />
+                                                                <span>
+                                                                    Yes
+                                                                </span>
                                                             </div>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_230No"
-                                                                    type="radio"
-                                                                    name="field[230]"
-                                                                    value="No"
-                                                                    checked
-                                                                />
-                                                                <span>No</span>
+                                                                <input id="field_230No" type="radio" name="field[230]" value="No" checked />
+                                                                <span>
+                                                                    No
+                                                                </span>
                                                             </div>
                                                         </fieldset>
                                                     </div>
-                                                    <div className="_form_element _x84871342 _full_width ">
+                                                    <div className="_form_element _x84871342 _full_width " >
                                                         <fieldset className="_form-fieldset">
-                                                            <legend className="_form-label" >
+                                                            <legend className="_form-label">
                                                                 AIM Subscribe to Newsletter
                                                             </legend>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_231Yes"
-                                                                    type="radio"
-                                                                    name="field[231]"
-                                                                    value="Yes"
-                                                                />
-                                                                <span>Yes</span>
+                                                                <input id="field_231Yes" type="radio" name="field[231]" value="Yes" />
+                                                                <span>
+                                                                    Yes
+                                                                </span>
                                                             </div>
                                                             <div className="_row _checkbox-radio">
-                                                                <input
-                                                                    id="field_231No"
-                                                                    type="radio"
-                                                                    name="field[231]"
-                                                                    value="No"
-                                                                    checked
-                                                                />
-                                                                <span>No</span>
+                                                                <input id="field_231No" type="radio" name="field[231]" value="No" checked />
+                                                                <span>
+                                                                    No
+                                                                </span>
                                                             </div>
                                                         </fieldset>
                                                     </div>
@@ -1218,19 +1257,22 @@ export default class RegisterPage extends React.Component<
                                             </div>
                                         </div>
 
-                                        <div className="_form-thank-you" style={{ display: "none" }}>
+                                        <div
+                                            className="_form-thank-you"
+                                            style={{ display: "none" }}
+                                        >
                                             <SuccessComponent />
                                         </div>
                                     </form>
                                 </div>
-                            </div>
+                            </section>
                         </div>
                     </div>
+                </div>
 
 
-                </section>
 
-            </React.Fragment>
+            </React.Fragment >
         );
     }
 }

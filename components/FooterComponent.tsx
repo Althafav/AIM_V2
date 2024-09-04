@@ -1,4 +1,5 @@
 import Globals from '@/modules/Globals'
+import JsLoader from '@/modules/JsLoader'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -8,6 +9,10 @@ import { FaFacebook, FaGoogle, FaInstagram, FaLinkedin, FaTiktok, FaWhatsapp, Fa
 import { FaThreads, FaXTwitter } from 'react-icons/fa6'
 
 export default function FooterComponent() {
+  try {
+    JsLoader.loadFile(`${Globals.BASE_URL}assets/js/newsLetter.js`);
+  } catch (e) {
+  }
   return (
     <div className='footer-component-wrapper '>
       <img src="/assets/imgs/Gradient.jpg" alt="" className='footer-bg' />
@@ -62,15 +67,44 @@ export default function FooterComponent() {
 
               <div className='mt-5 mb-4 mb-lg-0'>
                 <label htmlFor="newsletter" className='text-white mb-2'>Signup for Newsletter</label>
-                <form action="" className='d-flex align-items-center gap-3'>
-                  <input type="text" className='form-control w-50 rounded' placeholder='Enter email here' />
-                  <div>
-                    <button className='newslettercta-btn'>Join for free</button>
+                <form method="POST" action="//ac.strategic.ae/proc.php" id="_form_110_" className="_form _form_110 _inline-form  _dark" noValidate data-styles-version="3">
+                  <input type="hidden" name="u" value="110" />
+                  <input type="hidden" name="f" value="110" />
+                  <input type="hidden" name="s" />
+                  <input type="hidden" name="c" value="0" />
+                  <input type="hidden" name="m" value="0" />
+                  <input type="hidden" name="act" value="sub" />
+                  <input type="hidden" name="v" value="2" />
+                  <input type="hidden" name="or" value="bff160ec8a6ac2667a9c338328779bd6" />
+                  <div className="_form-content">
+
+                    <div className='row'>
+                      <div className='col-12'>
+                        <input type="text" id="email" name="email" className='form-control w-50 rounded' style={{ width: "302px !important", marginBottom: "10px" }} placeholder='Enter email here' required />
+                      </div>
+                    </div>
+
+                    <div className='row'>
+                      <div className='col-12'>
+                        <div className="g-recaptcha newsletter-captcha m-b-5" data-sitekey="6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go">
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div className='row'>
+                      <div className='col-12'>
+                        <button className='newslettercta-btn' type='submit' id="_form_110_submit" style={{ display: "block", marginTop: "10px" }}>Subscribe</button>
+                      </div>
+                    </div>
+
                   </div>
+                  <div
+                    className="_form-newsletter-thank-you subscribe-message text-success"
+                    style={{ display: "none" }}
+                  ></div>
                 </form>
               </div>
-
-
 
             </div>
           </div>
@@ -79,51 +113,55 @@ export default function FooterComponent() {
               <div className="col-lg-3 col-md-6 col-12">
                 <p className='footer-nav-head'>About</p>
                 <div className='footer-nav'>
-                  <Link href="https://www.aimglobalfoundation.com/">
-
+                  <Link href="https://www.aimglobalfoundation.com/" target='_blank'>
                     <p>AIM Foundation</p>
+
                   </Link>
-                  <p>AIM Congress</p>
+
+                  <Link href="/about">
+
+                    <p>AIM Congress</p>
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-12 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Portfolios</p>
                 <div className='footer-nav'>
-                  <Link href="/foriegn-direct-investment">
+                  <Link href="https://fdi.aimcongress.com/foriegn-direct-investment">
 
                     <p>Foreign Direct Investment</p>
                   </Link>
-                  <Link href="/global-trade">
+                  <Link href="https://trade.aimcongress.com/global-trade">
                     <p>Global Trade</p>
 
                   </Link>
 
-                  <Link href="/global-manufacturing">
+                  <Link href="https://manufacturing.aimcongress.com/global-manufacturing">
 
                     <p>Global Manufacturing</p>
                   </Link>
 
-                  <Link href="/future-cities">
+                  <Link href="https://futurecities.aimcongress.com/future-cities">
 
                     <p>Future Cities</p>
                   </Link>
 
-                  <Link href="/digital-economy">
+                  <Link href="https://digitaleconomy.aimcongress.com/digital-economy">
                     <p>Digital Economy</p>
 
                   </Link>
 
-                  <Link href="/future-finance">
+                  <Link href="https://futurefinance.aimcongress.com/future-finance">
                     <p>Future Finance</p>
 
                   </Link>
 
-                  <Link href="/startup">
+                  <Link href="https://startup.aimcongress.com/" target='_blank'>
 
                     <p>Startups & Unicorns</p>
                   </Link>
 
-                  <Link href="/entrepreneurs">
+                  <Link href="https://entrepreneurs.aimcongress.com/entrepreneurs">
                     <p>Entrepreneurship</p>
 
                   </Link>
@@ -132,25 +170,30 @@ export default function FooterComponent() {
               <div className="col-lg-3 col-md-3 col-12 mb-4 mb-lg-0">
                 <p className='footer-nav-head'>Resources</p>
                 <div className="footer-nav">
-                  {/* <p>Press</p>
-                  <p>Media</p>
-                  <p>Downloads</p> */}
-                  <Link href="/postshow-reports">
-                    <p>Post Show Reports</p>
+                  <Link href="/brochure">
+                    <p>Brochure</p>
+
                   </Link>
+                  <Link href="/press-release">
+                    <p>Press Release</p>
+
+                  </Link>
+                  
                   <Link href="/articles">
                     <p>Blogs</p>
 
                   </Link>
+
                   <Link href="/media-partners">
 
-                    <p> Media Partners</p>
+                    <p>Media Partners</p>
                   </Link>
+
                   <Link href="/our-partners">
-                    <p>AIM Congress 2024 Partners</p>
+                    <p>Our Partners</p>
 
                   </Link>
-                  {/* <p>Career</p> */}
+               
                 </div>
               </div>
               <div className="col-lg-3 col-md-3 col-12 mb-4 mb-lg-0">

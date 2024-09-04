@@ -167,6 +167,11 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
+                      <Link href="/press-release">
+                        Press Release
+                      </Link>
+                    </li>
+                    <li className="dropdown-item">
                       <Link href="/postshow-reports">
                         Post Show Reports
                       </Link>
@@ -219,9 +224,9 @@ export default function MenuComponent() {
           </div>
 
           <div className='d-lg-block d-none'>
-            <Link href="/register-interest" className='menu-cta-wrapper'>
+            <Link href="/contact-us" className='menu-cta-wrapper'>
 
-              <button className='register-interest-cta'>Join us Now</button>
+              <button className='register-interest-cta'>Contact Us</button>
             </Link>
           </div>
           <motion.div
@@ -305,7 +310,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
 
-                   
+
 
                     <li className="dropdown-item">
                       <Link href="https://futurecities.aimcongress.com/future-cities" onClick={handleToggle}>
@@ -342,11 +347,19 @@ export default function MenuComponent() {
                         Brochure
                       </Link>
                     </li>
+
+                    <li className="dropdown-item">
+                      <Link href="/press-release" onClick={handleToggle}>
+                        Press Release
+                      </Link>
+                    </li>
+
                     <li className="dropdown-item">
                       <Link href="/postshow-reports" onClick={handleToggle}>
                         Post Show Reports
                       </Link>
                     </li>
+                    
                     <li className="dropdown-item">
                       <Link href="/articles" onClick={handleToggle}>
                         Blogs
@@ -393,9 +406,9 @@ export default function MenuComponent() {
 
               <li className='mobile-menu-item'>
 
-                <Link href="/register-interest" onClick={handleToggle}>
+                <Link href="/contact-us" onClick={handleToggle}>
                   <div className='menu-cta-wrapper w-100'>
-                    <button className='register-interest-cta'>Join us Now</button>
+                    <button className='register-interest-cta'>Contact Us</button>
                   </div>
                 </Link>
               </li>

@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function CtaComponent() {
-    const para1 = "Discover how the UAE is driving economic transformation with innovation and sustainability. With a growing GDP, significant diversification, and ambitious renewable energy goals, AIM Congress is shaping a prosperous and responsible future."
+    const para1 = "Discover how the UAE is driving economic transformation through innovation and sustainability. With a growing GDP, significant diversification, and ambitious renewable energy goals, AIM Congress is shaping a prosperous and responsible future. "
 
-    const para2 = " Be part of this exciting journey, join us at AIM Congress 2025 and witness how we're shaping tomorrow today!"
+    const para2 = "Be part of this exciting journey—join us at AIM Congress 2025 and witness how we're shaping tomorrow, today! "
     return (
         <section className='cta-banner-component-wrapper'>
             <div className="section-container">

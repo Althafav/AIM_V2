@@ -99,7 +99,7 @@ export default class RegisterPage extends React.Component<
                         src="/assets/imgs/brochure-banner-bg.jpg" alt="" className='banner-image' />
 
                     <div className="inner-text-container container">
-                        <h1 className='banner-heading'>Register Your Interest</h1>
+                        <h1 className='banner-heading'>Contact Us</h1>
                     </div>
                 </div>
 
@@ -133,7 +133,7 @@ export default class RegisterPage extends React.Component<
                                         <input
                                             type="hidden"
                                             name="field[38]"
-                                            value="AIM 2025-Register Your Interest"
+                                            value="AIM 2025-Contact Us"
                                         />
 
                                         <div className="_form-content">
@@ -1208,7 +1208,7 @@ export default class RegisterPage extends React.Component<
                                         </div>
 
                                         <div className="_form-thank-you " style={{ display: "none" }}>
-                                          
+
                                         </div>
                                     </form>
                                 </div>
