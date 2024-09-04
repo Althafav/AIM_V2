@@ -13,6 +13,8 @@ export default class RegisterPage extends React.Component<
     {},
     {
         pageData: Bochurepage;
+        mainsource: string;
+        subsource: string;
         isLoaded: boolean;
     }
 > {
@@ -20,17 +22,25 @@ export default class RegisterPage extends React.Component<
         super(props);
         this.state = {
             pageData: new Bochurepage(),
+            mainsource: "",
+            subsource: "",
             isLoaded: false,
         };
     }
 
     componentDidMount() {
+        const params = new URLSearchParams(window.location.search);
+        const mainsourceParameter = params.get('mainsource') || '/';
+        const subSourceParameter = params.get('subsource') || '/';
+
         Globals.KontentClient.item("sponsors_form")
             .languageParameter(Globals.CURRENT_LANG_CODENAME)
             .toObservable()
             .subscribe((response: any) => {
                 this.setState({
                     pageData: response.item,
+                    mainsource: mainsourceParameter,
+                    subsource: subSourceParameter,
                     isLoaded: true,
                 });
             });
@@ -67,7 +77,7 @@ export default class RegisterPage extends React.Component<
     }
 
     render(): React.ReactNode {
-        const { pageData, isLoaded } = this.state;
+        const { pageData, mainsource, subsource, isLoaded } = this.state;
 
         if (!isLoaded) {
             return <SpinnerComponent />;
@@ -135,6 +145,9 @@ export default class RegisterPage extends React.Component<
                                             value="AIM 2025-Register Your Interest"
                                         />
 
+                                        <input type="hidden" name="field[328]" value={mainsource} />
+                                        <input type="hidden" name="field[329]" value={subsource} />
+
                                         <div className="_form-content">
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -194,7 +207,7 @@ export default class RegisterPage extends React.Component<
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <input
-                                                        type="text"
+                                                        type="number"
                                                         itemID="field[12]"
                                                         name="field[12]"
                                                         className="form-control"
@@ -874,7 +887,7 @@ export default class RegisterPage extends React.Component<
                                                                 value="Exhibitor"
                                                                 className="any"
                                                                 required
-                                                                
+
                                                             />
                                                             <span>
                                                                 <label>Exhibitor</label>
@@ -1209,7 +1222,7 @@ export default class RegisterPage extends React.Component<
                                         </div>
 
                                         <div className="_form-thank-you" style={{ display: "none" }}>
-                                         
+
                                         </div>
                                     </form>
                                 </div>

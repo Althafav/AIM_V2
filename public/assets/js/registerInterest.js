@@ -592,14 +592,9 @@ window._load_script = function (url, callback, isSubmit) {
             var mobileNumber = Number($('input[name="field[12]"]').val());
             var country = $('select[name="field[3]"]').val();
             var businessNature = $('select[name="field[4]"]').val();
-            // var message = $('textarea[name="field[6]"]').val();
-            // if (message == undefined) {
-            //     message = "N/A";
-            // }
-            // if(message){
-            //     message = message.replaceAll("\n","\\\\n");
-            // }
             var formSubmitted = $('input[name="field[38]"]').val();
+            var mainSource = $('input[name="field[328]"]').val();
+            var subSource = $('input[name="field[329]"]').val();
             var itemName = name;
             var leadType = "AIM Lead";
 
@@ -620,6 +615,8 @@ window._load_script = function (url, callback, isSubmit) {
                    \\\"lead_company\\\":\\\"${organization}\\\",
                    \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
                    \\\"interested_in____1\\\":{\\\"labels\\\":[${interest}]},
+                   \\\"text6__1\\\":\\\"${mainSource}\\\",
+                   \\\"text68__1\\\":\\\"${subSource}\\\",
                    \\\"text49__1\\\":\\\"${formSubmitted}\\\"}\") 
                    {id}}`;
 
