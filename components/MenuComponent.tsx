@@ -168,7 +168,7 @@ export default function MenuComponent() {
                       </Link>
                     </li>
                     <li className="dropdown-item">
-                      <Link href="/press-release">
+                      <Link href="/press-releases">
                         Press Release
                       </Link>
                     </li>
@@ -350,7 +350,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="/press-release" onClick={handleToggle}>
+                      <Link href="/press-releases" onClick={handleToggle}>
                         Press Release
                       </Link>
                     </li>

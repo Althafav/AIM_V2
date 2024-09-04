@@ -2,12 +2,21 @@ import Globals from "./Globals";
 
 
 export default class formatParameter {
-  static formatUrlParameter = (name: any) => {
-    name = name.replace(/ /g, "-");
+  static formatUrlParameter = (name: string) => {
+    // Replace spaces with hyphens
+    name = name.replace(/\s+/g, "-");
+
+    // Remove special characters
     name = name.replace(/[?.:,"'’/()%]/g, "");
+
+    // Convert to lowercase
     name = name.toLowerCase();
+
+    // Remove leading and trailing hyphens
+    name = name.replace(/^-+|-+$/g, "");
+
     return name;
-  };
+};
 
   
 

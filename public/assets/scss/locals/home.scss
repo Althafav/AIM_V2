@@ -106,6 +106,8 @@
     .report-wrapper {
         position: relative;
 
+        direction: rtl;
+
         &:hover {
             .report-image {
                 filter: brightness(0.5);

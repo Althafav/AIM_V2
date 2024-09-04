@@ -36,11 +36,6 @@ export default function BannerComponent() {
 
                 </div>
 
-
-
-
-
-
             </div>
 
 

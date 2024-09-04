@@ -123,7 +123,7 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
                     {pageData.items.value.map((c: any, index) => {
                         let category: Postshowreportyear = c;
                         return (
-                            <div className={`${index == 0 ? "" : "d-none"} agenda col-12`} id={`agenda_${category.system.id}`}>
+                            <div className={`${index == 0 ? "" : "d-none"} agenda col-12`} id={`agenda_${category.system.id}`} key={`brochure-items-${index}`}>
                                 <div className="row">
                                     {
                                         category.items.value.map((a: any, index: any) => {
