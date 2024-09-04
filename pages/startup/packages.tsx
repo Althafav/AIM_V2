@@ -5,7 +5,7 @@ export default function packages() {
     return (
         <div className='packages-page-wrapper'>
             <div className="empty-top">
-                
+             
             </div>
             <div className="inner-banner-wrapper ">
 
@@ -135,13 +135,22 @@ export default function packages() {
                             <tr>
                                 <td></td>
                                 <td className='text-center'>
-                                    <span style={{ padding: "8px 24px", background: "#6B6B6B", borderRadius: "50px", color: "white" }}>$1,500</span>
+                                    <div className='startup-package-btn' style={{background: "#6B6B6B", borderRadius: "50px", color: "white" }}>
+                                        <span className='price'>$1,500</span>
+                                        <span className='action-tag'>Buy Now</span>
+                                    </div>
                                 </td>
                                 <td className='text-center'>
-                                    <span style={{ padding: "8px 24px", background: "#000000", borderRadius: "50px", color: "white" }}>$3,750</span>
+                                    <div className='startup-package-btn' style={{background: "#000000", borderRadius: "50px", color: "white" }}>
+                                        <span className='price'>$3,750</span>
+                                        <span className='action-tag'>Buy Now</span>
+                                    </div>
                                 </td>
                                 <td className='text-center'>
-                                    <span style={{ padding: "8px 24px", background: "#F28E3E", borderRadius: "50px", color: "white" }}>$6,499</span>
+                                    <div className='startup-package-btn' style={{background: "#F28E3E", borderRadius: "50px", color: "white" }}>
+                                        <span className='price'>$6,499</span>
+                                        <span className='action-tag'>Buy Now</span>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>

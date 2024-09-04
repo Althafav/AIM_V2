@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CiGlobe } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
+import Globals from '@/modules/Globals';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -77,7 +78,7 @@ export default function MenuComponent() {
         </div>
 
         <div className="d-flex align-items-end justify-content-between">
-          <Link href="https://aimcongress.com/" className="logo-wrapper">
+          <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
             <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
               className='menu-logo white-logo' />
 
@@ -359,7 +360,7 @@ export default function MenuComponent() {
                         Post Show Reports
                       </Link>
                     </li>
-                    
+
                     <li className="dropdown-item">
                       <Link href="/articles" onClick={handleToggle}>
                         Blogs

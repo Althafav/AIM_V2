@@ -413,23 +413,49 @@
     }
 }
 
+.empty-top {
+    height: 120px;
+    background-color: black;
+    width: 100%;
+}
 
 .packages-page-wrapper {
+
+    
+
     .inner-banner-wrapper {
         height: 500px;
         background-color: black;
         display: flex;
-        align-items: end;
+        align-items: center;
 
         .banner-heading {
             margin-top: 40px;
             font-size: 96px;
             color: $startup;
             max-width: 860px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 72px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 32px;
+            }
         }
 
         .subBannerHeading {
             font-size: 36px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+            }
+
         }
     }
 
@@ -439,18 +465,58 @@
             font-weight: 600;
             text-align: center;
             color: $primary-color-varient;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+            }
         }
 
         .subHeading {
             font-size: 24px;
             color: $light-text;
             text-align: center;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 16px;
+            }
         }
 
         tr,
         th,
         td {
             padding: 20px;
+        }
+
+        .startup-package-btn {
+            display: inline-block;
+            cursor: pointer;
+            width: 100px;
+            padding: 8px;
+            transition: all 0.2s ease;
+
+
+           &:hover {
+            .price {
+                display: none;
+            }
+            .action-tag {
+                display: block;
+            }
+           }
+
+            .action-tag {
+                display: none;
+
+            }
+
         }
 
 
