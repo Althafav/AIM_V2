@@ -195,7 +195,7 @@ export default class RegisterPage extends React.Component<
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
                                                     <input
-                                                        type="text"
+                                                        type="number"
                                                         itemID="field[12]"
                                                         name="field[12]"
                                                         className="form-control"
