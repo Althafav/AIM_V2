@@ -11,6 +11,11 @@ export default function ScriptsComponents() {
       ></Script>
 
 
+      <Script
+        type="text/javascript"
+        src={`/assets/js/main.js`}
+      ></Script>
+
 
 
 

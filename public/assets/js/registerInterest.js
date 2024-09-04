@@ -558,6 +558,15 @@ window._load_script = function (url, callback, isSubmit) {
                 _load_script('https://strategic31677.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
             }
 
+            if ($("#brochure").prop("checked") == true) {
+                downloadDocument("AIM Brochure.pdf", "/documents/AIM_Brochure.pdf");
+            }
+
+            if ($("#Sponsorship").prop("checked") == true) {
+                downloadDocument("AIM Sponsorship Packages.pdf", "/documents/Sponsorship_Packages.pdf");
+            }
+            window.scrollTo(0, 0);
+
             /////Monday PUSH API Starts/////
             debugger
             var interest = $('input[name="field[228][]"]:checked')

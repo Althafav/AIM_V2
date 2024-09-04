@@ -107,6 +107,7 @@
         position: relative;
 
         direction: rtl;
+        text-align: center;
 
         &:hover {
             .report-image {
@@ -205,7 +206,8 @@
 .report-wrapper {
     position: relative;
     margin-bottom: 10px;
-
+    direction: rtl;
+    text-align: center;
     &:hover {
         .report-image {
             filter: brightness(0.5);
@@ -219,7 +221,7 @@
     .report-image {
         background-position: center !important;
         background-repeat: no-repeat !important;
-        background-size: cover !important;
+        background-size: contain !important;
         height: 300px;
         max-width: 500px;
         margin: auto;
@@ -296,4 +298,10 @@
             }
         }
     }
+}
+
+
+.press-release-body{
+    direction: rtl;
+    text-align: center;
 }

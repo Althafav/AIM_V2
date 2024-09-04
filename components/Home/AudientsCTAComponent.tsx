@@ -38,32 +38,32 @@ const AudientsCTAComponent: React.FC = () => {
 
                 <div className="row">
 
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-3 mb-lg-0" initial={{ y: 100, opacity: 0 }}
+                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.5 }}>
                         <div className="cta-card-item">
                             <Link href="/register-interest">
 
-                                <img src="/assets/imgs/Delegate Card 1.png" alt="" />
+                                <img src="/assets/imgs/Delegate Card.png" alt="" />
                             </Link>
                         </div>
                     </motion.div>
 
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-3 mb-lg-0" initial={{ y: 100, opacity: 0 }}
+                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.9 }}>
                         <div className="cta-card-item">
 
                             <Link href="/register-interest">
 
-                                <img src="/assets/imgs/Partner Card 1.png" alt="" />
+                                <img src="/assets/imgs/Partner Card.png" alt="" />
                             </Link>
 
 
                         </div>
                     </motion.div>
 
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-3 mb-lg-0" initial={{ y: 100, opacity: 0 }}
+                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
                         animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                         transition={{ duration: 0.5, delay: 0.7 }}>
                         <div className="cta-card-item">
@@ -82,7 +82,7 @@ const AudientsCTAComponent: React.FC = () => {
 
                             <Link href="/register-interest/sponsor">
 
-                                <img src="/assets/imgs/Become a sponsor.png" alt="" />
+                                <img src="/assets/imgs/Sponsor Card.png" alt="" />
                             </Link>
 
 

@@ -29,8 +29,12 @@ export default function Document() {
           src={`${Globals.BASE_URL}assets/js/jquery-3.5.1.min.js`}
           strategy="beforeInteractive"
         />
+        <Script
+          type="text/javascript"
+          src={`/assets/js/main.js`}
+          
+        ></Script>
 
-      
       </body>
     </Html>
   );
