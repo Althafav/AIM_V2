@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 
     const data: Array<Pressrelaseitem> = JSON.parse(datasourceStr);
     const ids: string[] = data.map((item: Pressrelaseitem) =>
-        Helper.formatUrlParameter(item.heading.value)
+        Helper.formatUrlParameter(item.name.value)
     );
 
     const paths = ids.map((slug) => ({ params: { slug } }));
@@ -66,7 +66,7 @@ function DetailPage({ data }: { data: Array<Pressrelaseitem> }) {
     const { slug } = router.query;
     if (data) {
         const searchData = data.find(
-            (f: Pressrelaseitem) => Helper.formatUrlParameter(f.heading.value) === slug
+            (f: Pressrelaseitem) => Helper.formatUrlParameter(f.name.value) === slug
         );
         if (searchData) {
             return (
