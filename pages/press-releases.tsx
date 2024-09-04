@@ -43,17 +43,15 @@ export default function PressRelease() {
                                     return (
 
                                         <div className="col-12 col-md-6 col-lg-4 m-b-30 report-wrapper" key={`press-release-${index}`}>
-                                            <a href={`/press-releases/press-release/${Helper.formatUrlParameter(
+                                            <a href={`/press-release/${Helper.formatUrlParameter(
                                                 report.name.value
-                                            )}`} target="_blank">
+                                            )}`}>
                                                 <div className="report-image" style={{ background: "url(" + report.image.value[0].url + ")" }}>
 
                                                 </div>
                                                 <p className="text-center p-t-10 f-600" style={{ color: "black" }}>{report.name.value}</p>
                                             </a>
                                         </div>
-
-
                                     )
                                 })
                             }
