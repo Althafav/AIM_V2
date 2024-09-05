@@ -1,33 +1,50 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { FaThreads, FaXTwitter } from 'react-icons/fa6'
+import { Basiccontentpage } from '@/models/basiccontentpage'
+import Globals from '@/modules/Globals'
+import SpinnerComponent from '@/components/UI/SpinnerComponent'
 
 export default function ThankYouPage() {
-    const text1 = "We have successfully received your information. Our team is currently reviewing your details and will take the necessary actions promptly."
-    const text2 = "Should you have any questions or require further clarification, please don't hesitate to reach out to us through our contact page. "
-    const text3 = "We appreciate your interest and engagement with AIM Congress 2025. "
+
 
     const lowerText = "Stay tuned for more updates and information here on our website and social media."
 
-    const description = text1 + text2 + text3
+
+
+    const [pageData, setPageData] = useState<Basiccontentpage | null>(null);
+
+    useEffect(() => {
+        Globals.KontentClient.item("thankyou_page")
+            .toObservable()
+            .subscribe((response: any) => {
+                console.log('API Response:', response);
+                setPageData(response.item);
+            });
+    }, []);
+
+    if (!pageData) {
+        return <SpinnerComponent />;
+    }
 
     return (
         <>
             <Head>
 
-                <title>Thank You for Your Submission | AIM Congress 2025</title>
-                <meta name="description" content="Thank you for your submission to AIM Congress 2025. We have successfully received your details. Our team will review your information and get back to you shortly. Stay updated with the latest news and updates from AIM Congress on our website and social media." />
-                <meta name="keywords" content="AIM Congress 2025, Thank You, Submission Received, Event, Conference, International, Business, Investment, Updates" />
+                <title>{pageData.page_title.value}</title>
+                <meta name="description" content={pageData.metaDescription?.value} />
+                <meta name="keywords" content={pageData.metaDescription?.value} />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://www.aimcongress.com/thank-you" />
             </Head>
 
             <div className='thankyou-page-wrapper'>
                 <div className="content-container">
-                    <h1>Thank You</h1>
-                    <p className='mt-2'>{description}</p>
+                    <h1>{pageData.heading.value}</h1>
+                    {/* <p className='mt-2'>{description}</p> */}
+                    <p className='mt-2' dangerouslySetInnerHTML={{ __html: pageData.content.value }} />
                     <p className='mt-3'>{lowerText}</p>
 
                     <div className='d-flex gap-3 justify-content-lg-start justify-content-center'>

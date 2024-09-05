@@ -568,7 +568,6 @@ window._load_script = function (url, callback, isSubmit) {
             window.scrollTo(0, 0);
 
             /////Monday PUSH API Starts/////
-            debugger
             var interest = $('input[name="field[228][]"]:checked')
                 .map(function () {
                     if ($(this).val() == "Partner" || $(this).val() == "Becoming Event Partner" || $(this).val() == "Supporting Partner") {

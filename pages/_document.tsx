@@ -32,7 +32,7 @@ export default function Document() {
         <Script
           type="text/javascript"
           src={`/assets/js/main.js`}
-          
+          strategy="beforeInteractive"
         ></Script>
 
       </body>
