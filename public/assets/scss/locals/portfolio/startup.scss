@@ -221,7 +221,18 @@
 }
 
 .pitch-page-wrapper {
+    margin-top: 175px;
 
+    .inner-banner-section-wrapper{
+        height: 100vh;
+    }
+
+    .pitch-banner-video {
+        width: 100%;
+        height: 100vh;
+        object-position: top;
+
+    }
     .about-pitch-section {
         position: relative;
         height: 100vh;

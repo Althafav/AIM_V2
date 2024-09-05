@@ -5,8 +5,10 @@ export default function pitch() {
     return (
         <div className='pitch-page-wrapper'>
             <div className="inner-banner-section-wrapper">
-                <div className="inner-text-container">
-                    <h1 className='banner-heading'>Video here</h1>
+                <div className="video-wrapper">
+                    <video autoPlay loop muted controls={false} preload="auto" className='pitch-banner-video'>
+                        <source src='https://d2g6bqkf4g3jqe.cloudfront.net/videos/startup-bg.mp4' />
+                    </video>
                 </div>
             </div>
 
