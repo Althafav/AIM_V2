@@ -1,3 +1,8 @@
+.portfolio-solid-menu {
+    background: black;
+    padding-bottom: 0;
+}
+
 .features-activities-wrapper {
 
     .startup-feature-activities-card {
@@ -223,7 +228,7 @@
 .pitch-page-wrapper {
     margin-top: 175px;
 
-    .inner-banner-section-wrapper{
+    .inner-banner-section-wrapper {
         height: 100vh;
     }
 
@@ -233,6 +238,7 @@
         object-position: top;
 
     }
+
     .about-pitch-section {
         position: relative;
         height: 100vh;
@@ -482,8 +488,12 @@
     }
 }
 
+.portfolio-margin-top {
+    margin-top: 265px;
+}
+
 .packages-page-wrapper {
-    margin: 175px;
+
 
 
     .inner-banner-wrapper {
@@ -495,6 +505,11 @@
 
         .inner-banner-component {
             background-color: black;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
         }
 
         .banner-heading {
@@ -591,4 +606,282 @@
 
     }
 
+}
+
+.startup-registerPage-wrapper {
+    .heading-startup {
+        text-align: start;
+    }
+
+    .subHeading {
+        color: $secondary-text;
+    }
+
+    .startup-register-form {
+        margin-top: 60px;
+
+        .startup-submit-btn {
+            background: $startup;
+            width: 176px;
+            height: 46px;
+            border-radius: 50px;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+
+.ourPartnersPage-wrapper {
+
+
+    .inner-banner-wrapper {
+
+        height: 500px;
+
+        display: flex;
+        align-items: center;
+
+        .inner-banner-component {
+            background-color: black;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+        }
+
+        .banner-heading {
+            margin-top: 40px;
+            font-size: 96px;
+            color: $startup;
+            max-width: 860px;
+            margin-bottom: 10px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 72px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 32px;
+            }
+        }
+
+        .subBannerHeading {
+            font-size: 36px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+            }
+
+        }
+    }
+
+
+    .starup-partners-wrapper {
+        margin-top: 60px;
+
+        @media all and (max-width: 700px) {
+            margin-top: 135px;
+        }
+
+        @media all and (max-width: 400px) {
+            margin-top: 125px;
+        }
+
+        @media all and (max-width: 330px) {
+            margin-top: 115px;
+        }
+
+
+        .starup-partner-heading {
+            color: #E58A2E;
+            text-transform: uppercase;
+            font-weight: 600;
+            text-align: center;
+            font-size: 35px;
+            margin: 50px 0;
+        }
+
+        .startup-banner {
+            width: 100%;
+            max-width: 1450px;
+            margin: auto;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 30px;
+
+            .startup-banner-item {
+                position: relative;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                height: 500px;
+                float: left;
+                cursor: pointer;
+                transition: width .2s linear;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgb(0 0 0 / 23%);
+                }
+
+                .startup-banner-inner {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 20px;
+                    z-index: 1;
+
+                    @media all and (max-width: 500px) {
+                        left: 5px;
+
+                        p {
+                            padding-left: 5px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    p {
+                        color: white;
+                        border-left: 4px solid #FF9933;
+                        padding-left: 12px;
+                        font-size: 16px;
+                    }
+                }
+
+                .startup-banner-inner-content {
+                    position: absolute;
+                    top: 30px;
+                    left: 20px;
+                    height: 450px;
+                    overflow: hidden;
+                    width: calc(100% - 40px);
+                    display: none;
+                    font-size: 15px;
+                    line-height: 1.5;
+                    z-index: 1;
+                    background: #000000c7;
+                    padding: 15px;
+
+                    .startup-banner-content {
+                        color: white;
+                        text-align: justify;
+                    }
+
+                    ul {
+                        padding-left: 20px;
+                        list-style: disc;
+                    }
+
+                    ol {
+                        padding-left: 20px;
+                        list-style: auto;
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+                        line-height: 1.3;
+                    }
+                }
+
+                &:hover {
+                    .startup-banner-inner {
+                        display: none;
+                    }
+
+                    .startup-banner-inner-content {
+                        display: unset;
+                    }
+                }
+
+            }
+        }
+
+        .partners-category-wrap {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 50px;
+
+            .partners-category-li {
+                display: inline-block;
+                margin: 5px;
+
+                .category-btn {
+                    color: white;
+                    background: #2C4A75;
+                    padding: 12px 24px;
+                    border-radius: 25px;
+
+                    &:hover {
+                        background: #FF9933;
+                    }
+                }
+
+                .category-btn-active {
+                    color: white;
+                    background: #FF9933;
+                    padding: 12px 24px;
+                    border-radius: 25px;
+                }
+            }
+        }
+
+        .partner-item-wrapper {
+            .partner-link {
+                .partner-bg-wrap {
+                    border: 1px solid #2C4A75;
+                    border-radius: 15px;
+                    padding: 10px;
+                    margin-bottom: 40px;
+
+                    .partner-bg {
+                        background-repeat: no-repeat !important;
+                        background-size: contain !important;
+                        background-position: center !important;
+                        height: 180px;
+                    }
+                }
+
+                .partner-name {
+                    text-align: center;
+                    color: #1c2f4b;
+                    background: #f7f7f7;
+                    padding: 10px 0px;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    .partner-bg-wrap {
+                        border: 1px solid #E58A2E;
+                    }
+
+                    .partner-name {
+                        color: #E58A2E;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.startup-btn {
+    padding: 12px 24px;
+    background: $startup;
+    color: white;
+    border-radius: 50px;
 }

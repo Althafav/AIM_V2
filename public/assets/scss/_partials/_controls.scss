@@ -22,10 +22,11 @@ button {
 }
 
 input.form-control, select.form-control, textarea.form-control {
-    min-height: 2.6875rem;
+    min-height: 3.6875rem;
     border: none;
-    border-bottom: 0.125rem solid $d;
-    border-radius: 0;
+    border: 2px solid $d;
+    /* border-bottom: .125rem solid #ddd; */
+    border-radius: 8;
     box-shadow: none;
     outline: none;
 

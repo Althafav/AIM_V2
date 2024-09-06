@@ -17,7 +17,10 @@ export default function StartupMenuComponent() {
                                 <li>Pitch Competition</li>
 
                             </Link>
-                            <li>our Partners</li>
+                            <Link href="/startup/partners">
+                                <li>our Partners</li>
+
+                            </Link>
                         </ul>
                     </div>
                 </div>

@@ -47,7 +47,7 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                                 >
 
                                     <img
-                                        src={item.image.value[0].url}
+                                        src={item.image?.value[0]?.url}
                                         alt={`feature-${index + 1}`}
                                         className="benefit-card-bg"
                                     />

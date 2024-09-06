@@ -4,9 +4,9 @@ import { TiTick } from 'react-icons/ti'
 
 export default function packages() {
     return (
-        <div className='packages-page-wrapper'>
+        <div className='packages-page-wrapper portfolio-margin-top'>
            
-            <div className="inner-banner-wrapper ">
+            <div className="inner-banner-wrapper portfolio-inner-wrapper">
 
                 <div className="container inner-banner-component">
                     <div className="row">
