@@ -35,7 +35,16 @@ export default function PartnerRegisterPage() {
                         </div>
 
                         <div className="row mt-5">
-                            <form>
+                            <form method="POST" action="//ac.strategic.ae/proc.php" id="_form_468_" className="_form _form_468 _inline-form  _dark" noValidate data-styles-version="3">
+                                <input type="hidden" name="u" value="468" />
+                                <input type="hidden" name="f" value="468" />
+                                <input type="hidden" name="s" />
+                                <input type="hidden" name="c" value="0" />
+                                <input type="hidden" name="m" value="0" />
+                                <input type="hidden" name="act" value="sub" />
+                                <input type="hidden" name="v" value="2" />
+                                <input type="hidden" name="or" value="0482eec0e0d75cb0326ad52c0334068e" />
+                                <input type="hidden" name="field[38]" value="AIM Startup 2025 - Partner Registration" />
                                 <div className="_form-content startup-form-container">
                                     <div className="row">
                                         <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -96,13 +105,13 @@ export default function PartnerRegisterPage() {
                                     <div className="row">
                                         <div className="form-group col-12 col-lg-6 col-xl-6">
                                             <label htmlFor="date" className="form-label">
-                                                Mobile Number: <span className="danger">*</span>
+                                                Mobile Number: (use country code) <span className="danger">*</span>
                                             </label>
                                             <input
                                                 type="text"
                                                 id="field[12]" name="field[12]"
                                                 className="form-control"
-                                                placeholder="Mobile Phone *"
+                                                placeholder="eg: +971 **********"
                                                 required
                                             />
                                         </div>

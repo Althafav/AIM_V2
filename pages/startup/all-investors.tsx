@@ -3,6 +3,7 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { StartupInvestorEligibilityCriteria } from '@/contants/startupData';
 import { Aimstartupinvestorpage } from '@/models/aimstartupinvestorpage';
 import Globals from '@/modules/Globals';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 export default function AllInvestorPage() {
@@ -31,13 +32,19 @@ export default function AllInvestorPage() {
     return (
         <div className='allInvestorPage-wrapper'>
             <div className="allInvestor-banner-wrapper">
-                <img src="/assets/imgs/Investor Landing Image.jpg" alt="" className='allInvestor-landingBannerImage' />
+                <Link href="/startup/investor-register">
+                    <img src="/assets/imgs/Investor Landing Image.jpg" alt="" className='allInvestor-landingBannerImage' />
+
+                </Link>
+
             </div>
+
+
 
             <section>
                 <div className="container">
-                    <h3 className='startup-section-heading '>Eligibility Criteria</h3>
-                    <ul className="criteria-nav-tab mt-5">
+                    <h3 className='startup-section-heading mb-3 '>Eligibility Criteria</h3>
+                    <ul className="criteria-nav-tab ">
                         {StartupInvestorEligibilityCriteria.map(category => (
                             <li className="nav-item" key={category.id}>
                                 <button
@@ -55,7 +62,7 @@ export default function AllInvestorPage() {
                         <div className="section-container row ">
                             {selectedCategory?.items.map((item: any, index: number) => {
                                 return (
-                                    <div className="col-lg-4 mb-5" key={`criteria-item-${index}`}>
+                                    <div className="col-lg-4 col-md-6 mb-3" key={`criteria-item-${index}`}>
                                         <div className='criteria-item-card h-100'>
                                             <img src={item.img} alt={item.name} style={{ width: '60px', marginRight: '10px', objectFit: "contain" }} />
                                             <span className='name'>{item.name}</span>

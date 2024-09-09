@@ -154,14 +154,15 @@
 
 
 .startup-benefits-wrapper {
-    height: 100vh;
+   
     position: relative;
     background: #1D1D1D;
+    padding: 60px 0;
 
     .section-container {
         position: relative;
         z-index: 1;
-        height: 100vh;
+
         display: flex;
 
         .mainHead {
@@ -231,6 +232,7 @@
     .inner-banner-section-wrapper {
 
         height: 90vh;
+
         &::after {
             display: none;
         }
@@ -251,7 +253,7 @@
         display: flex;
         align-items: center;
 
- 
+
 
         &::after {
             content: "";
@@ -265,10 +267,10 @@
         .about-pitch-bg-image {
             width: 100%;
             object-fit: cover;
-         
+
             height: 450px;
 
-          
+
         }
 
 
@@ -276,12 +278,12 @@
         .inner-text-container {
             position: relative;
             z-index: 2;
-        
+
 
             .row {
                 display: flex;
 
-       
+
                 align-items: center;
 
                 .heading {
@@ -519,37 +521,42 @@
 .inner-banner-wrapper {
 
     height: 500px;
-
+    width: 100%;
     display: flex;
     align-items: center;
+
+
 
     .inner-banner-component {
         background-color: black;
         height: 500px;
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         padding: 80px;
+
+        @media screen and (max-width: 800px) {
+            padding: 40px;
+        }
     }
 
     .banner-heading {
         margin-top: 40px;
-        font-size: 96px;
+        font-size: 56px;
         color: $startup;
         max-width: 860px;
         margin-bottom: 10px;
 
-        @media screen and (max-width: 1000px) {
-            font-size: 72px;
-        }
 
-        @media screen and (max-width: 600px) {
+
+        @media screen and (max-width: 800px) {
             font-size: 32px;
         }
     }
 
     .subBannerHeading {
-        font-size: 36px;
+        font-size: 32px;
 
         @media screen and (max-width: 1000px) {
             font-size: 28px;
@@ -661,19 +668,7 @@
 .ourPartnersPage-wrapper {
 
     .starup-partners-wrapper {
-        margin-top: 60px;
-
-        @media all and (max-width: 700px) {
-            margin-top: 135px;
-        }
-
-        @media all and (max-width: 400px) {
-            margin-top: 125px;
-        }
-
-        @media all and (max-width: 330px) {
-            margin-top: 115px;
-        }
+        margin: 40px 0;
 
 
         .starup-partner-heading {
@@ -784,18 +779,28 @@
             }
         }
 
+
+
         .partners-category-wrap {
             list-style: none;
-            text-align: center;
-            margin-bottom: 50px;
+            text-align: start;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; // For smooth scrolling on iOS
+            scrollbar-width: none; // Hide scrollbar for Firefox
+
+            &::-webkit-scrollbar {
+                display: none; // Hide scrollbar for Chrome, Safari, and other WebKit-based browsers
+            }
 
             .partners-category-li {
-                display: inline-block;
-                margin: 5px;
+                flex: 0 0 auto;
+                margin-right: 1rem;
 
                 .category-btn {
                     color: white;
-                    background: #2C4A75;
+                    background: #000000;
                     padding: 12px 24px;
                     border-radius: 25px;
 

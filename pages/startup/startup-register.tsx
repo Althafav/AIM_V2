@@ -16,7 +16,16 @@ export default function StartupRegister() {
                     </div>
 
                     <div className="row">
-                        <form className='startup-register-form'>
+                        <form method="POST" action="https://strategic31677.activehosted.com/proc.php" id="_form_406_" className="_form _form_406 _inline-form  _dark startup-register-form" noValidate data-styles-version="5">
+                            <input type="hidden" name="u" value="406" />
+                            <input type="hidden" name="f" value="406" />
+                            <input type="hidden" name="s" />
+                            <input type="hidden" name="c" value="0" />
+                            <input type="hidden" name="m" value="0" />
+                            <input type="hidden" name="act" value="sub" />
+                            <input type="hidden" name="v" value="2" />
+                            <input type="hidden" name="or" value="f8cc3a8b936478eb5176ec1465aee944" />
+                            <input type="hidden" name="field[38]" value="AIM Startup 2025 - Startup Registration" />
                             <div className="_form-content">
                                 <div className="row">
                                     <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -82,9 +91,9 @@ export default function StartupRegister() {
                                 <div className="row">
                                     <div className="form-group col-12 col-lg-6 col-xl-6">
                                         <label htmlFor="date" className="form-label">
-                                            Mobile Number: <span className="danger">*</span>
+                                            Mobile Number: (use country code) <span className="danger">*</span>
                                         </label>
-                                        <input type="text" className="form-control phone" id="field[12]" name="field[12]" required />
+                                        <input type="text" className="form-control phone" id="field[12]" name="field[12]" placeholder='eg: +971 **********' required />
                                     </div>
 
                                     <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -577,7 +586,7 @@ export default function StartupRegister() {
 
                                     <div className="form-group col-12 col-lg-6 col-xl-6">
                                         <label htmlFor="startuplogo" className="form-label">
-                                             Logo: <span className="danger">*</span>
+                                            Logo: <span className="danger">*</span>
                                         </label>
                                         <input
                                             type="file"
@@ -586,9 +595,9 @@ export default function StartupRegister() {
                                             accept="image/png, image/gif, image/jpeg"
                                             itemID="startuplogo"
                                             id="startuplogo"
-                                            // onChange={(e) => {
-                                            //     this.uploadImage("startuplogo");
-                                            // }}
+                                        // onChange={(e) => {
+                                        //     this.uploadImage("startuplogo");
+                                        // }}
                                         />
                                         <input type="text" hidden className="startuplogo form-control" id="field[254]" name="field[254]" placeholder="" required />
                                     </div>

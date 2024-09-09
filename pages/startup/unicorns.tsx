@@ -2,6 +2,7 @@ import PortfolioBanner from '@/components/Portfolio/PortfolioBanner'
 import React from 'react'
 import { motion } from "framer-motion"
 import { UnicornBenefits } from '@/contants/startupData'
+import Link from 'next/link'
 
 export default function UnicornsPage() {
     return (
@@ -85,7 +86,10 @@ export default function UnicornsPage() {
                             <h2 className='heading'>Elevate your Success with <br />AIM 2025 Pitch Competition</h2>
                         </div>
                         <div className="col-12 mt-3">
-                            <button className='startup-btn'>Know More</button>
+                            <Link href="/startup/startup-register">
+                                <button className='startup-btn'>Participate</button>
+
+                            </Link>
                         </div>
                     </div>
                 </div>
