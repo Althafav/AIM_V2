@@ -14,11 +14,12 @@ export default function pitch() {
             </div>
 
             <div className='about-pitch-section'>
-                <img src="/assets/imgs/startup-pitch.jpg" alt="" className='about-pitch-bg-image' />
 
                 <div className="container inner-text-container">
                     <div className="row ">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 mb-4 mb-lg-0">
+                            <img src="/assets/imgs/startup-pitch.jpg" alt="" className='about-pitch-bg-image' />
+
                         </div>
                         <div className="col-lg-6">
                             <h2 className='heading'>AIM Startup Dynamic <br /> Activity-Pitch Competition</h2>
@@ -30,17 +31,28 @@ export default function pitch() {
             </div>
 
             <div className='unicorn-cta-wrapper'>
-                <h2 className='big-heading'>In Search of <br />Billion Dollar Idea!</h2>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h2 className='big-heading'>In Search of <br />Billion Dollar Idea!</h2>
+
+                        </div>
+
+                    </div>
+                </div>
                 <img src="/assets/imgs/Unicorn Back.jpg" alt="" className='back-unicorn' />
 
                 <img src="/assets/imgs/Unicorn Front.png" alt="" />
 
-                <div className="text-container-wrapper">
-                    <h3>Get Your Pass to Meet the Unicorns</h3>
-                    <Link href="/startup/unicorns">
+                <div className="container d-flex justify-content-lg-end">
+                    <div className="text-container-wrapper">
+                        <h3>Get Your Pass to Meet the Unicorns</h3>
+                        <Link href="/startup/unicorns">
 
-                        <button className='cta-btn'>Participate</button>
-                    </Link>
+                            <button className='cta-btn'>Participate</button>
+                        </Link>
+                    </div>
+
                 </div>
 
             </div >

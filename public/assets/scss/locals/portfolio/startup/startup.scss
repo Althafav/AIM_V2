@@ -229,8 +229,8 @@
     margin-top: 175px;
 
     .inner-banner-section-wrapper {
-        height: 100vh;
 
+        height: 90vh;
         &::after {
             display: none;
         }
@@ -245,12 +245,13 @@
 
     .about-pitch-section {
         position: relative;
-        height: 100vh;
+        padding: 60px 0;
         background-color: black;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
 
-        @media screen and (max-width: 800px) {
-            height: 1200px;
-        }
+ 
 
         &::after {
             content: "";
@@ -264,34 +265,38 @@
         .about-pitch-bg-image {
             width: 100%;
             object-fit: cover;
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            height: 100vh;
+         
+            height: 450px;
 
-            @media screen and (max-width: 800px) {
-                height: 700px;
-            }
+          
         }
 
 
 
         .inner-text-container {
-            position: absolute;
+            position: relative;
             z-index: 2;
-            height: 100vh;
+        
 
             .row {
                 display: flex;
 
-                height: 100vh;
+       
                 align-items: center;
 
                 .heading {
                     color: $startup;
                     font-size: 48px;
                     font-weight: bold;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
+
+                    @media screen and (max-width: 1000px) {
+                        font-size: 32px;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        font-size: 24px;
+                    }
                 }
 
                 .paragraph {
@@ -321,9 +326,9 @@
         }
 
         .big-heading {
-            font-size: 185px;
+            font-size: 145px;
             width: 100%;
-            letter-spacing: -15px;
+            letter-spacing: -8px;
             line-height: 1;
             left: 50%;
             text-align: center;
@@ -331,7 +336,7 @@
             top: 225px;
             color: #fff;
             width: 100%;
-            position: absolute;
+            position: relative;
             z-index: 1;
 
             @media screen and (max-width: 1000px) {
@@ -353,18 +358,18 @@
         }
 
         .text-container-wrapper {
-            position: absolute;
+            position: relative;
             z-index: 2;
             width: 420px;
-            right: 12%;
-            top: 70%;
+            top: 260px;
+
 
             @media screen and (max-width: 1000px) {}
 
             @media screen and (max-width: 800px) {
-                left: 20px;
-                top: 50%;
                 max-width: 390px;
+                bottom: 0px;
+                top: 76px;
 
                 h3 {
                     font-size: 16px;
@@ -377,6 +382,11 @@
                 color: black;
                 margin-bottom: 10px;
                 font-size: 24px;
+
+                @media screen and (max-width: 600px) {
+                    max-width: 210px;
+                    font-size: 18px;
+                }
             }
 
             .cta-btn {
@@ -447,6 +457,11 @@
 
         p {
             padding-left: 5px;
+            font-size: 24px;
+
+            @media screen and (max-width: 800px) {
+                font-size: 18px;
+            }
         }
 
 
@@ -487,7 +502,7 @@
 
             @media screen and (max-width: 600px) {
                 font-size: 10px;
-                
+
             }
 
             &:hover {
@@ -667,7 +682,7 @@
             font-weight: 600;
             text-align: center;
             font-size: 35px;
-           
+
         }
 
         .startup-banner {
@@ -857,5 +872,5 @@
         }
     }
 
-    
+
 }
