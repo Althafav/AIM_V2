@@ -481,6 +481,11 @@
             transition: 0.2s ease;
             cursor: pointer;
 
+            @media screen and (max-width: 600px) {
+                font-size: 10px;
+                
+            }
+
             &:hover {
                 color: $startup
             }
@@ -492,55 +497,53 @@
     margin-top: 265px;
 }
 
-.packages-page-wrapper {
+.inner-banner-wrapper {
 
+    height: 500px;
 
+    display: flex;
+    align-items: center;
 
-    .inner-banner-wrapper {
-
+    .inner-banner-component {
+        background-color: black;
         height: 500px;
-
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px;
+    }
 
-        .inner-banner-component {
-            background-color: black;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px;
+    .banner-heading {
+        margin-top: 40px;
+        font-size: 96px;
+        color: $startup;
+        max-width: 860px;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 72px;
         }
 
-        .banner-heading {
-            margin-top: 40px;
-            font-size: 96px;
-            color: $startup;
-            max-width: 860px;
-            margin-bottom: 10px;
-
-            @media screen and (max-width: 1000px) {
-                font-size: 72px;
-            }
-
-            @media screen and (max-width: 600px) {
-                font-size: 32px;
-            }
-        }
-
-        .subBannerHeading {
-            font-size: 36px;
-
-            @media screen and (max-width: 1000px) {
-                font-size: 28px;
-            }
-
-            @media screen and (max-width: 600px) {
-                font-size: 24px;
-            }
-
+        @media screen and (max-width: 600px) {
+            font-size: 32px;
         }
     }
+
+    .subBannerHeading {
+        font-size: 36px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 28px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 24px;
+        }
+
+    }
+}
+
+.packages-page-wrapper {
 
     .packages-table-wrapper {
         .heading {
@@ -637,54 +640,6 @@
 
 
 .ourPartnersPage-wrapper {
-
-
-    .inner-banner-wrapper {
-
-        height: 500px;
-
-        display: flex;
-        align-items: center;
-
-        .inner-banner-component {
-            background-color: black;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px;
-        }
-
-        .banner-heading {
-            margin-top: 40px;
-            font-size: 96px;
-            color: $startup;
-            max-width: 860px;
-            margin-bottom: 10px;
-
-            @media screen and (max-width: 1000px) {
-                font-size: 72px;
-            }
-
-            @media screen and (max-width: 600px) {
-                font-size: 32px;
-            }
-        }
-
-        .subBannerHeading {
-            font-size: 36px;
-
-            @media screen and (max-width: 1000px) {
-                font-size: 28px;
-            }
-
-            @media screen and (max-width: 600px) {
-                font-size: 24px;
-            }
-
-        }
-    }
-
 
     .starup-partners-wrapper {
         margin-top: 60px;
@@ -884,4 +839,19 @@
     background: $startup;
     color: white;
     border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.startup-registerPage-wrapper {
+    .inner-banner-component {
+        .banner-heading {
+            max-width: 100%;
+        }
+    }
+
+    
 }

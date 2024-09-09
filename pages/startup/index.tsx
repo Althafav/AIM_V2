@@ -11,6 +11,7 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { startupFeaturesAndActivities } from '@/contants/startupData';
 import BenefitsComponent from '@/components/Portfolio/BenefitsComponent';
 import { Serviceitem } from '@/models/serviceitem';
+import Link from 'next/link';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -135,7 +136,10 @@ const StartUp = () => {
                     <div className="row d-flex align-items-end">
 
                         <div className="col-lg-4 mb-3">
-                            <img src="/assets/imgs/Aimvestor.png" alt="" />
+                            <Link href="/startup/all-investors">
+
+                                <img src="/assets/imgs/Aimvestor.png" alt="" />
+                            </Link>
                         </div>
                         <div className="col-lg-4 mb-3">
                             <img src="/assets/imgs/Partner.png" alt="" />

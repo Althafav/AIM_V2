@@ -21,8 +21,6 @@ export default function packages() {
                     </div>
                 </div>
 
-
-
             </div>
 
             <section className="container packages-table-wrapper">

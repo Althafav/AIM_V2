@@ -1,0 +1,68 @@
+.unicorns-page-wrapper {
+
+    .about-section {
+        .video-container-wrapper {
+            height: 450px;
+            width: 100%;
+            background-color: rgba(75, 75, 75, 0.452);
+        }
+    }
+
+    .unicorn-benefits-wrapper {
+        .benefits-card-item {
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            .name {
+                font-size: 20px;
+                font-weight: 600;
+                transition: all 0.2s ease;
+
+            }
+
+            .content {
+                font-size: 16px;
+                color: $light-text;
+                transition: all 0.2s ease;
+
+            }
+
+            &:hover {
+                .name {
+                    color: $startup;
+                }
+
+                .content {
+                    color: black;
+                }
+            }
+        }
+
+        .growth-icon {
+            width: 100%;
+            height: 450px;
+            object-fit: contain;
+        }
+    }
+
+    .sustainable_unicorn {
+        height: 100vh;
+        .left-seciton {
+            background: linear-gradient(to left , black, rgba(5, 5, 5, 0.767));
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            .heading {
+                color: white;
+                font-size: 48px;
+                font-weight: 600    ;
+            }
+
+            .content {
+                color: #777777;
+            }
+        }
+    }
+}

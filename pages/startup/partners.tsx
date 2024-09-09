@@ -5,6 +5,7 @@ import { Startuppartnersbanneritem } from '@/models/startuppartnersbanneritem';
 import { Startuppartnersitem } from '@/models/startuppartnersitem';
 import Globals from '@/modules/Globals';
 import Head from 'next/head';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 export default function PartnersPage() {
@@ -44,7 +45,10 @@ export default function PartnersPage() {
                                     </div>
 
                                     <div className="col-12 mt-4">
-                                        <button className="startup-btn">Become a Partner</button>
+                                        <Link href="/startup/partner-register">
+                                            <button className="startup-btn">Become a Partner</button>
+
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
