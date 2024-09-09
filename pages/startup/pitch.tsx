@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function pitch() {
@@ -36,7 +37,10 @@ export default function pitch() {
 
                 <div className="text-container-wrapper">
                     <h3>Get Your Pass to Meet the Unicorns</h3>
-                    <button className='cta-btn'>Participate</button>
+                    <Link href="/startup/unicorns">
+
+                        <button className='cta-btn'>Participate</button>
+                    </Link>
                 </div>
 
             </div >
@@ -69,7 +73,10 @@ export default function pitch() {
                         </div>
 
                         <div>
-                            <button className='cta-btn'>Participate</button>
+                            <Link href="/startup/startup-register">
+                                <button className='cta-btn'>Participate</button>
+
+                            </Link>
 
                         </div>
 

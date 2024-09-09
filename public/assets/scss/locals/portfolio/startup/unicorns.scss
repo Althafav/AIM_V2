@@ -46,23 +46,77 @@
     }
 
     .sustainable_unicorn {
-        height: 100vh;
+
         .left-seciton {
-            background: linear-gradient(to left , black, rgba(5, 5, 5, 0.767));
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
+            background: linear-gradient(to left, black, rgba(5, 5, 5, 0.767));
+            padding: 60px 0;
+
             .heading {
                 color: white;
                 font-size: 48px;
-                font-weight: 600    ;
+                font-weight: 600;
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 32px;
+
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 20px;
+
+                }
             }
 
             .content {
                 color: #777777;
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 18px;
+
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 16px;
+
+                }
             }
         }
     }
+
+    .cta-card-wrapper {
+        background: linear-gradient(to left, black, rgba(5, 5, 5, 0.767));
+        height: 450px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        .heading {
+            color: white;
+            font-size: 48px;
+            font-weight: 600;
+            max-width: 1000px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 32px;
+
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 20px;
+
+            }
+        }
+
+        .speaking-lady-image {
+            width: 250px;
+            position: absolute;
+            right: 200px;
+            bottom: 0;
+
+        }
+    }
+
+
 }

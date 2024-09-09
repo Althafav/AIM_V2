@@ -120,7 +120,10 @@ const StartUp = () => {
                         </div>
 
                         <div className="col-12 mt-3">
-                            <button className='pitch-cta-btn'>Participate</button>
+                            <Link href="/startup/pitch">
+                                <button className='pitch-cta-btn'>Participate</button>
+
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -149,7 +152,7 @@ const StartUp = () => {
                         </div>
                         <div className="col-lg-4 mb-3">
 
-                            <Link href="/startup/register">
+                            <Link href="/startup/startup-register">
                                 <img src="/assets/imgs/Startup.png" alt="" />
 
                             </Link>

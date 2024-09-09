@@ -68,9 +68,10 @@
     height: 100vh;
     position: relative;
     background: black;
+    padding: 60px 0;
 
-    @media screen and (max-width: 800px) {
-        height: 890px;    
+    @media screen and (max-width: 1000px) {
+        height: auto;    
     }
 
     .text-content {
@@ -81,10 +82,11 @@
 
         p {
             font-size: 20px;
-            text-align: left;
+            text-align: justify;
 
             @media screen and (max-width: 800px) {
-                font-size: 18px;
+                font-size: 16px;
+                text-align: left;
             }
         }
     }

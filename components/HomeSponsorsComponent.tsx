@@ -49,7 +49,7 @@ export default class HomeSponsorsComponent extends React.Component<
     }
 
     return (
-      <div className="home-sponsors-wrapper mb-5 mt-5">
+      <div className="home-sponsors-wrapper mb-5 ">
         <div className="container">
           <div className="row">
             <div className="col-12">

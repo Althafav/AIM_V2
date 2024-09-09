@@ -17,7 +17,7 @@ export default function UnicornsPage() {
             <section className='about-section'>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 mb-3 mb-lg-0">
                             <div className="video-container-wrapper">
 
                             </div>
@@ -75,6 +75,21 @@ export default function UnicornsPage() {
                     </div>
                     <div className="col-lg-6"></div>
                 </div>
+            </section>
+
+
+            <section className='cta-card-wrapper'>
+                <div className="container cta-card-container">
+                    <div className="row cta-card-row">
+                        <div className="col-12">
+                            <h2 className='heading'>Elevate your Success with <br />AIM 2025 Pitch Competition</h2>
+                        </div>
+                        <div className="col-12 mt-3">
+                            <button className='startup-btn'>Know More</button>
+                        </div>
+                    </div>
+                </div>
+                <img src="/assets/imgs/speaking-lady.png" alt="" className='speaking-lady-image d-none d-lg-block' />
             </section>
         </motion.div>
     )
