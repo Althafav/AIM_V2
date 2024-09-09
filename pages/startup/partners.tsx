@@ -55,7 +55,7 @@ export default function PartnersPage() {
                             <div className="col-lg-6 d-flex align-items-center justify-content-center">
                                 <div>
 
-
+                                    <p className='text-white'>Image will be here</p>
                                 </div>
                             </div>
 

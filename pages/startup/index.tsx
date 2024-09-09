@@ -142,10 +142,17 @@ const StartUp = () => {
                             </Link>
                         </div>
                         <div className="col-lg-4 mb-3">
-                            <img src="/assets/imgs/Partner.png" alt="" />
+                            <Link href="/startup/partner-register">
+
+                                <img src="/assets/imgs/Partner.png" alt="" />
+                            </Link>
                         </div>
                         <div className="col-lg-4 mb-3">
-                            <img src="/assets/imgs/Startup.png" alt="" />
+
+                            <Link href="/startup/register">
+                                <img src="/assets/imgs/Startup.png" alt="" />
+
+                            </Link>
                         </div>
                     </div>
                 </div>
