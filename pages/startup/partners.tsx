@@ -95,7 +95,7 @@ export default function PartnersPage() {
                                         <div className="col-12 col-md-6 col-lg-3 partner-item-wrapper mb-3" key={partner.system.id}>
                                             <div className="partner-link">
                                                 <div className="partner-bg-wrap text-center m-b-0" style={{ height: "100%" }}>
-                                                    <img src={partner.image.value[0].url} alt={partner.name.value} style={{ height: "80px", objectFit: "contain" }} />
+                                                    <img src={partner.image.value[0].url} alt={partner.name.value} style={{ height: "200px", objectFit: "contain" }} />
                                                     <p className="m-b-0 m-t-10" style={{ fontSize: "16px" }}><strong>{partner.name.value}</strong></p>
                                                 </div>
                                             </div>
