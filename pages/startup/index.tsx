@@ -137,7 +137,13 @@ const StartUp = () => {
                         </div>
                     </div>
                     <div className="row d-flex align-items-end">
+                        <div className="col-md-4 mb-3">
 
+                            <Link href="/startup/startup-register">
+                                <img src="/assets/imgs/Startup.png" alt="" />
+
+                            </Link>
+                        </div>
                         <div className="col-md-4 mb-3">
                             <Link href="/startup/all-investors">
 
@@ -150,13 +156,7 @@ const StartUp = () => {
                                 <img src="/assets/imgs/Partner.png" alt="" />
                             </Link>
                         </div>
-                        <div className="col-md-4 mb-3">
 
-                            <Link href="/startup/startup-register">
-                                <img src="/assets/imgs/Startup.png" alt="" />
-
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </section>

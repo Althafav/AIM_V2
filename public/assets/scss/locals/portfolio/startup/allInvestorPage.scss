@@ -57,7 +57,7 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50px;
-                font-size: 24px;
+                font-size: 20px;
 
                 @media screen and (max-width: 800px) {
                    font-size: 12px;
@@ -109,10 +109,13 @@
             position: relative;
 
             .investor-profile-image {
-                height: 240px;
-                object-fit: contain;
+                height: 250px;
+                object-fit: scale-down;
                 width: 100%;
+              
                 filter: grayscale(1);
+                padding: 30px;
+                background-color: #000000;
 
             }
 
@@ -137,6 +140,7 @@
                     font-size: 24px;
                     font-weight: bold;
                     color: white;
+                    max-width: 200px;
 
                     @media screen and (max-width: 800px) {
                         font-size: 18px;

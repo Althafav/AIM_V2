@@ -36,7 +36,7 @@ export default function InvestorComponent() {
                 {pageData.items.value.slice(0, visibleItems).map((m: any, index: number) => {
                     var item: Startuppartnersitem = m;
                     return (
-                        <div className="col-lg-2 col-md-4 col-12 mb-5" key={`investor-item-${index}`}>
+                        <div className="col-xxl-2 col-xl-3 col-md-4 col-12 mb-5" key={`investor-item-${index}`}>
                             <div className="investor-card">
 
                                 <Image src={item.image.value[0].url} alt={item.name.value} width={240} height={240} className="investor-profile-image" />

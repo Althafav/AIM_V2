@@ -43,8 +43,8 @@ export default function AllInvestorPage() {
 
             <section>
                 <div className="container">
-                    <h3 className='startup-section-heading mb-3 '>Eligibility Criteria</h3>
-                    <ul className="criteria-nav-tab ">
+                    <h3 className='startup-section-heading  '>Eligibility Criteria</h3>
+                    <ul className="criteria-nav-tab mt-4">
                         {StartupInvestorEligibilityCriteria.map(category => (
                             <li className="nav-item" key={category.id}>
                                 <button
@@ -59,7 +59,7 @@ export default function AllInvestorPage() {
 
                     <div className="tab-content mt-4">
 
-                        <div className="section-container row ">
+                        <div className="container row ">
                             {selectedCategory?.items.map((item: any, index: number) => {
                                 return (
                                     <div className="col-lg-4 col-md-6 mb-3" key={`criteria-item-${index}`}>
@@ -79,8 +79,9 @@ export default function AllInvestorPage() {
 
             <section className='investors-wrapper'>
                 <div className="container">
-                    <h3 className='startup-section-heading'>Our Angel Investors</h3>
-                    <p className='description mt-2'> Last year&apos;s event brought together an extraordinary lineup of speakers who captivated and inspired our audience. Each presenter shared unique insights and groundbreaking ideas that shaped the discourse in their respective fields. Explore the highlights from these transformative talks and discover the voices that made a lasting impact.</p>
+                    <h3 className='startup-section-heading'>Our Angel Investors</h3> 
+                    <p className='description mt-3'> Last year&apos;s event brought together an extraordinary lineup of speakers who captivated and inspired our audience. Each presenter shared unique insights and groundbreaking ideas that shaped the discourse in their respective fields. Explore the highlights from these transformative talks and discover the voices that made a lasting impact.</p>
+                    <button className='startup-btn mt-4'>Become a Partner</button>
                     <InvestorComponent />
                 </div>
             </section>
