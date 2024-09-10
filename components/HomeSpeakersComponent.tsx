@@ -93,8 +93,6 @@ export default class HomeSpeakersComponent extends React.Component<
       return <React.Fragment />;
     }
 
-    console.log(HighLevelSpeakers.length)
-
     return HighLevelSpeakers.length > 0 ? (
       <div className="speaker-component-wrapper">
         <div className="container">

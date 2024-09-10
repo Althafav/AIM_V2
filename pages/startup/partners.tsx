@@ -67,7 +67,7 @@ export default function PartnersPage() {
                                 {pageData.items.value.map((m: any, index: number) => {
                                     var category: Startuppartners = m;
                                     return (
-                                        <li className="partners-category-li mb-4">
+                                        <li className="partners-category-li mb-4" key={`categories-${index}`}>
                                             <button
                                                 id={category.system.id}
                                                 className={`ctaegory-btn-all ${category.system.id === activeCategoryId ? "category-btn-active" : "category-btn"}`}
