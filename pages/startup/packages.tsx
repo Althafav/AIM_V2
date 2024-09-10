@@ -28,7 +28,7 @@ export default function packages() {
                     <div className="col-12">
                         <h2 className='heading'>Packages Designed for Your Need</h2>
                     </div>
-                    <div className="col-12">
+                    <div className="col-12 mt-2">
                         <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2>
                     </div>
                 </div>
@@ -37,23 +37,23 @@ export default function packages() {
                     <table className='table'>
                         <thead>
                             <tr>
-                                <th>Features</th>
+                                <th className='table-heading'>Features</th>
                                 <th>
                                     <div className='d-flex flex-column align-items-center'>
-                                        <span style={{ color: "#949494", textTransform: "uppercase", fontSize: "24px", fontWeight: "normal" }}>Standard</span>
+                                        <span className='table-heading' style={{ color: "#949494", textTransform: "uppercase",  fontWeight: "normal" }}>Standard</span>
                                         <span>2 sqm booth</span>
 
                                     </div>
                                 </th>
                                 <th>
                                     <div className='d-flex flex-column align-items-center'>
-                                        <span style={{ color: "#6B6B6B", textTransform: "uppercase", fontSize: "24px", fontWeight: "normal" }}>Deluxe</span>
+                                        <span className='table-heading' style={{ color: "#6B6B6B", textTransform: "uppercase",  fontWeight: "normal" }}>Deluxe</span>
                                         <span>6 Sqm Booth</span>
                                     </div>
                                 </th>
                                 <th>
                                     <div className='d-flex flex-column align-items-center'>
-                                        <span style={{ color: "#F28E3E", textTransform: "uppercase", fontSize: "24px", fontWeight: "normal" }}>Premium</span>
+                                        <span className='table-heading' style={{ color: "#F28E3E", textTransform: "uppercase",  fontWeight: "bold" }}>Premium</span>
                                         <span>9 Sqm Booth</span>
                                     </div>
                                 </th>

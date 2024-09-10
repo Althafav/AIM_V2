@@ -12,6 +12,7 @@ import { startupFeaturesAndActivities } from '@/contants/startupData';
 import BenefitsComponent from '@/components/Portfolio/BenefitsComponent';
 import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
+import { Buttonitem } from '@/models/buttonitem';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -39,16 +40,54 @@ const StartUp = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} registerLink={'/register-interest/startup'} portfolioColorName="startup" />
 
+            <div className="portfolio-banner-wrapper">
+
+
+                <motion.img
+                    src={pageData.bannerimage.value[0].url}
+                    alt=""
+                    className="banner-bg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                />
+
+                <div className="text-container container">
+                    <h1 className='banner-heading'>
+                        {pageData.bannerheading.value}
+                    </h1>
+                    <h2 className='banner-heading-2'>{pageData.bannersubheading.value}</h2>
+
+
+                    <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
+
+                        {pageData.bannercta.value.map((m: any, index: number) => {
+                            var item: Buttonitem = m;
+                            return (
+
+                                <Link href={item.link.value}>
+                                    <button className={`register-interest-cta startup`}>{item.name.value}</button>
+                                </Link>
+                            )
+                        })}
+                        <p className='date-venue'>{pageData.dateandvenu.value}</p>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
 
             <section className='features-activities-wrapper'>
                 <div className="section-container">
                     <div className='row g-0'>
                         <div className="col-12">
-                            <h2 className='section-heading'>Features & Activities</h2>
-                            <p className='text-lg-center'>Dynamic features and activities fueling startup evolution and success.</p>
+                            <h2 className='section-heading'>{pageData.featureheading.value}</h2>
+                            <p className='text-lg-center'>{pageData.featuresubheading.value}</p>
                         </div>
 
                     </div>
@@ -56,18 +95,7 @@ const StartUp = () => {
                     <div className="row mt-4">
                         <div className="col-lg-6 mb-lg-0 mb-3">
                             <div className="row g-3">
-                                {/* {startupFeaturesAndActivities.map((item: any, index: number) => {
-                                    return (
-                                        <div className="col-md-4 col-6 " key={`features-${index}`}
-
-                                        >
-                                            <div className="startup-feature-activities-card">
-                                                <p className='item-name'>{item.name}</p>
-                                            </div>
-                                        </div>
-                                    )
-                                })} */}
-
+                            
                                 {pageData.features.value.map((m: any, index: number) => {
 
                                     var item: Serviceitem = m;
@@ -97,8 +125,8 @@ const StartUp = () => {
                                 </div>
                                 <div className="col-12 mt-4">
                                     <div className='details-features-activities'>
-                                        <h3 className='section-heading'>Conferences</h3>
-                                        <p>{descriptionFeaturesActivities}</p>
+                                        <h3 className='section-heading'>{pageData.featuresbriefheading.value}</h3>
+                                        <p dangerouslySetInnerHTML={{__html: pageData.featuresbriefcontent.value}} />
                                     </div>
                                 </div>
 
@@ -114,8 +142,7 @@ const StartUp = () => {
                 <div className="section-container ">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='pitch-heading'>Pitch Your <br />
-                                Next Big Thing</h2>
+                            <h2 className='pitch-heading'>{pageData.ctabannerheading.value}</h2>
                             <h2 className='mt-3 pitch-subheading'>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
                         </div>
 
