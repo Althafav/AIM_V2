@@ -143,7 +143,7 @@ const StartUp = () => {
                     <div className="row">
                         <div className="col-12">
                             <h2 className='pitch-heading'>{pageData.ctabannerheading.value}</h2>
-                            <h2 className='mt-3 pitch-subheading'>AIM Startup & Unicorn Dynamic Activity-Pitch Competition</h2>
+                            <h2 className='mt-3 pitch-subheading'>{pageData.ctabannersubheading.value}</h2>
                         </div>
 
                         <div className="col-12 mt-3">
