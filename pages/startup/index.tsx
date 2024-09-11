@@ -66,7 +66,7 @@ const StartUp = () => {
                             var item: Buttonitem = m;
                             return (
 
-                                <Link href={item.link.value}>
+                                <Link href={item.link.value} key={`bannercta-${index}`}>
                                     <button className={`register-interest-cta startup`}>{item.name.value}</button>
                                 </Link>
                             )

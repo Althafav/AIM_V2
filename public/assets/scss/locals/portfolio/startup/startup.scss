@@ -469,6 +469,22 @@
 
 
     }
+
+    .tailend-wrapper {
+        .tailend-heading {
+            color: $startup;
+            text-align: left;
+            font-size: 128px;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 48px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 32px;
+            }
+        }
+    }
 }
 
 
