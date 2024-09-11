@@ -598,6 +598,8 @@ window._load_script = function (url, callback, isSubmit) {
             var email = $('input[name="email"]').val();
             var jobTitle = $('input[name="field[23]"]').val();
             var mobileNumber = Number($('input[name="field[12]"]').val());
+            var phoneCode = $('select[name="phoneCode"]').val();
+            var mobileText = `+${phoneCode} ${mobileNumber}`;
             var country = $('select[name="field[3]"]').val();
             var businessNature = $('select[name="field[4]"]').val();
             var formSubmitted = $('input[name="field[38]"]').val();
@@ -619,7 +621,7 @@ window._load_script = function (url, callback, isSubmit) {
                    \\\"nature_of_business____1\\\":\\\"${businessNature}\\\",
                    \\\"text2__1\\\":\\\"${jobTitle}\\\",
                    \\\"lead_email\\\":{\\\"email\\\":\\\"${email}\\\",\\\"text\\\":\\\"${email}\\\"},
-                   \\\"numbers__1\\\":${mobileNumber},
+                \\\"dup__of_mobile8__1\\\":\\\"${mobileText}\\\",
                    \\\"lead_company\\\":\\\"${organization}\\\",
                    \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
                    \\\"interested_in____1\\\":{\\\"labels\\\":[${interest}]},
@@ -644,7 +646,7 @@ window._load_script = function (url, callback, isSubmit) {
             };
 
             $.ajax(settings).done(function (response) {
-                debugger
+                
                 console.log(response);
             });
 

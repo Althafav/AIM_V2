@@ -1,8 +1,8 @@
-window.cfields = { "23": "job_title", "12": "mobile_phone", "80": "website", "258": "aim_startup_establishment_date", "260": "aim_startup_stage", "259": "aim_startup_sector", "3": "country", "254": "aim_startup_logo", "6": "message", "255": "aim_startup_project_image", "256": "aim_startup_pitch_deck", "257": "aim_startup_password", "261": "aim_startup_short_description", "99": "nationality", "343": "aim_startup_upload_your_photo", "22": "passport_number", "274": "aim_startup_package_type", "276": "aim_startup_promo_code", "38": "forms_submitted", "303": "aim_startup_reg_source" };
+window.cfields = { "253": "aim_startup_investor_type", "254": "aim_startup_logo", "261": "aim_startup_short_description", "23": "job_title", "3": "country", "80": "website", "257": "aim_startup_password", "101": "aim_startup_ticket_size_usd", "262": "aim_startup_interested_sector", "263": "aim_startup_interested_sectorother", "264": "aim_startup_interested_stage", "265": "aim_startup_focused_countries", "38": "forms_submitted" };
 window._show_thank_you = function (id, message, trackcmp_url, email) {
     var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
     form.querySelector('._form-content').style.display = 'none';
-    // thank_you.innerHTML = message;
+    thank_you.innerHTML = message;
     thank_you.style.display = 'block';
     const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
     var visitorObject = window[vgoAlias];
@@ -57,9 +57,45 @@ window._show_error = function (id, message, html) {
         err.appendChild(div);
     }
 };
+window._show_pc_confirmation = function (id, header, detail, show, email) {
+    var form = document.getElementById('_form_' + id + '_'), pc_confirmation = form.querySelector('._form-pc-confirmation');
+    var branding = form.querySelector('._form-branding');
+    if (branding) {
+        branding.style.display = 'none';
+    }
+    if (pc_confirmation.style.display === 'none') {
+        form.querySelector('._form-content').style.display = 'none';
+        pc_confirmation.innerHTML = "<div class='_form-title'>" + header + "</div>" + "<br><p>" + detail + "</p>" +
+            "<button class='_submit' id='hideButton'>Manage preferences</button>";
+        pc_confirmation.style.display = 'block';
+    } else {
+        form.querySelector('._form-content').style.display = 'inline';
+        pc_confirmation.style.display = 'none';
+    }
+
+    var hideButton = document.getElementById('hideButton');
+    // Add event listener to the button
+    hideButton.addEventListener('click', function () {
+        var submitButton = document.querySelector('#_form_408_submit');
+        submitButton.disabled = false;
+        submitButton.classList.remove('processing');
+        window.location.href = window.location.href;
+    });
+
+    const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
+    var visitorObject = window[vgoAlias];
+    if (email && typeof visitorObject !== 'undefined') {
+        visitorObject('setEmail', email);
+        visitorObject('update');
+    } else if (typeof (trackcmp_url) != 'undefined' && trackcmp_url) {
+        // Site tracking URL to use after inline form submission.
+        _load_script(trackcmp_url);
+    }
+    if (typeof window._form_callback !== 'undefined') window._form_callback(id);
+};
 window._load_script = function (url, callback, isSubmit) {
     var head = document.querySelector('head'), script = document.createElement('script'), r = false;
-    var submitButton = document.querySelector('#_form_406_submit');
+    var submitButton = document.querySelector('#_form_408_submit');
     script.charset = 'utf-8';
     script.src = url;
     if (callback) {
@@ -73,9 +109,9 @@ window._load_script = function (url, callback, isSubmit) {
     script.onerror = function () {
         if (isSubmit) {
             if (script.src.length > 10000) {
-                _show_error("406", "Sorry, your submission failed. Please shorten your responses and try again.");
+                _show_error("408", "Sorry, your submission failed. Please shorten your responses and try again.");
             } else {
-                _show_error("406", "Sorry, your submission failed. Please try again.");
+                _show_error("408", "Sorry, your submission failed. Please try again.");
             }
             submitButton.disabled = false;
             submitButton.classList.remove('processing');
@@ -109,7 +145,7 @@ window._load_script = function (url, callback, isSubmit) {
         }
     }
     var _removed = false;
-    var form_to_submit = document.getElementById('_form_406_');
+    var form_to_submit = document.getElementById('_form_408_');
     var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
 
     var getUrlParam = function (name) {
@@ -475,7 +511,7 @@ window._load_script = function (url, callback, isSubmit) {
 
     window['recaptcha_callback'] = function () {
         // Get all recaptchas in the DOM (there may be more than one form on the page).
-        var recaptchas = document.getElementsByClassName("h-recaptcha");
+        var recaptchas = document.getElementsByClassName("g-recaptcha");
         for (var i in recaptchas) {
             // Set the recaptcha element ID, so the recaptcha can be applied to each element.
             var recaptcha_id = "recaptcha_" + i;
@@ -484,7 +520,12 @@ window._load_script = function (url, callback, isSubmit) {
             if (el != null) {
                 var sitekey = el.getAttribute("data-sitekey");
                 var stoken = el.getAttribute("data-stoken");
-                grecaptcha.render(recaptcha_id, { "sitekey": sitekey, "stoken": stoken });
+                try {
+                    grecaptcha.render(recaptcha_id, { "sitekey": sitekey, "stoken": stoken });
+                }
+                catch {
+
+                }
             }
         }
     }; _load_script(
@@ -494,14 +535,15 @@ window._load_script = function (url, callback, isSubmit) {
 
     const formSupportsPost = false;
     var form_submit = function (e) {
+
         e.preventDefault();
         if (validate_form()) {
             // use this trick to get the submit button & disable it using plain javascript
-            var submitButton = e.target.querySelector('#_form_406_submit');
+            var submitButton = e.target.querySelector('#_form_408_submit');
             submitButton.disabled = true;
             submitButton.classList.add('processing');
             var serialized = _form_serialize(
-                document.getElementById('_form_406_')
+                document.getElementById('_form_408_')
             ).replace(/%0A/g, '\\n');
             var err = form_to_submit.querySelector('._form_error');
             err ? err.parentNode.removeChild(err) : false;
@@ -509,16 +551,24 @@ window._load_script = function (url, callback, isSubmit) {
                 var formData = new FormData();
                 const searchParams = new URLSearchParams(serialized);
                 searchParams.forEach((value, key) => {
-                    formData.append(key, value);
+                    if (key !== 'hideButton') {
+                        formData.append(key, value);
+                    }
+                    //formData.append(key, value);
                 });
-
-                const response = await fetch('https://strategic31677.activehosted.com/proc.php?jsonp=true', {
+                let request = {
                     headers: {
                         "Accept": "application/json"
                     },
                     body: formData,
                     method: "POST"
-                });
+                };
+
+                let pageUrlParams = new URLSearchParams(window.location.search);
+                if (pageUrlParams.has('t')) {
+                    request.headers.Authorization = 'Bearer ' + pageUrlParams.get('t');
+                }
+                const response = await fetch('https://strategic31677.activehosted.com/proc.php?jsonp=true', request);
                 return response.json();
             }
             if (formSupportsPost) {
@@ -529,38 +579,50 @@ window._load_script = function (url, callback, isSubmit) {
                 _load_script('https://strategic31677.activehosted.com/proc.php?' + serialized + '&jsonp=true', null, true);
             }
 
-
             /////Monday PUSH API Starts/////
+            var interestedSector = $('input[name="field[264][]"]:checked')
+                .map(function () {
+                    return $(this).val().trim();
+                })
+                .get()
+                .join(', ');
+
+            var focusedCountries = $('input[name="field[265][]"]:checked')
+                .map(function () {
+                    return $(this).val().trim();
+                })
+                .get()
+                .join(', ');
+
             var portfolio = `\\\"Startups & Unicorns\\\"`;
 
             var startupDetails = "";
             var website = $('input[name="field[80]"]').val();
 
-            startupDetails = startupDetails + `Website: ${website} | `;
+            startupDetails = startupDetails + `Website: ${website} \\\\n`;
 
             var Logo = $('input[name="field[254]"]').val();
 
-            startupDetails = startupDetails + `Startup Logo: ${Logo} | `;
+            startupDetails = startupDetails + `Company Logo: ${Logo} \\\\n`;
 
-            var EstablishmentDate = $('input[name="field[258]"]').val();
+            var investorType = $('select[name="field[253]"]').val();
 
-            startupDetails = startupDetails + `Establishment Date: ${EstablishmentDate} | `;
+            startupDetails = startupDetails + `Investor Type: ${investorType} \\\\n`;
 
-            var startupStage = $('select[name="field[260]"]').val();
+            var ticketSize = $('input[name="field[101]"]').val();
 
-            startupDetails = startupDetails + `Startup Stage: ${startupStage} | `;
+            startupDetails = startupDetails + `Ticket Size: ${ticketSize} \\\\n`;
 
-            var startupSector = $('select[name="field[259]"]').val();
+            startupDetails = startupDetails + `Interested Sector: ${interestedSector} \\\\n`;
 
-            startupDetails = startupDetails + `Startup Sector: ${startupSector}`;
+            startupDetails = startupDetails + `Focused Countries: ${focusedCountries}`;
 
             var firstname = $('input[name="firstname"]').val();
             var lastname = $('input[name="lastname"]').val();
             var name = `${firstname} ${lastname}`
             var email = $('input[name="email"]').val();
             var jobTitle = $('input[name="field[23]"]').val();
-            var organization = $('input[name="customer_account"]').val();
-            var mobileNumber = Number($('input[name="field[12]"]').val());
+            var mobileNumber = Number($('input[name="phone"]').val());
             var phoneCode = $('select[name="phoneCode"]').val();
             var mobileText = `+${phoneCode} ${mobileNumber}`;
             var country = $('select[name="field[3]"]').val();
@@ -578,24 +640,23 @@ window._load_script = function (url, callback, isSubmit) {
             var leadType = "AIM Lead";
 
             const mutation = `mutation {
-     create_item(
-         board_id: 7268050149, 
-         group_id: \"new_group78314__1\", 
-         item_name: \"${itemName}\", 
-         column_values: \"{
-             \\\"lead_status\\\":\\\"New Lead\\\",
-             \\\"name\\\":\\\"${name}\\\",
-             \\\"status_1__1\\\":\\\"${leadType}\\\",
-             \\\"country____1\\\":\\\"${country}\\\",
-             \\\"text2__1\\\":\\\"${jobTitle}\\\",
-             \\\"lead_email\\\":{\\\"email\\\":\\\"${email}\\\",\\\"text\\\":\\\"${email}\\\"},
-           \\\"dup__of_mobile8__1\\\":\\\"${mobileText}\\\",
-             \\\"lead_company\\\":\\\"${organization}\\\",
-             \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
-             \\\"long_text__1\\\":\\\"${message}\\\",
-             \\\"long_text6__1\\\":\\\"${startupDetails}\\\",
-             \\\"text49__1\\\":\\\"${formSubmitted}\\\"}\") 
-             {id}}`;
+         create_item(
+             board_id: 7268050149, 
+             group_id: \"new_group78314__1\", 
+             item_name: \"${itemName}\", 
+             column_values: \"{
+                 \\\"lead_status\\\":\\\"New Lead\\\",
+                 \\\"name\\\":\\\"${name}\\\",
+                 \\\"status_1__1\\\":\\\"${leadType}\\\",
+                 \\\"country____1\\\":\\\"${country}\\\",
+                 \\\"text2__1\\\":\\\"${jobTitle}\\\",
+                 \\\"lead_email\\\":{\\\"email\\\":\\\"${email}\\\",\\\"text\\\":\\\"${email}\\\"},
+                 \\\"dup__of_mobile8__1\\\":\\\"${mobileText}\\\",
+                 \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
+                 \\\"long_text__1\\\":\\\"${message}\\\",
+                 \\\"long_text6__1\\\":\\\"${startupDetails}\\\",
+                 \\\"text49__1\\\":\\\"${formSubmitted}\\\"}\") 
+                 {id}}`;
 
             var settings = {
                 "url": "https://api.monday.com/v2",
@@ -617,7 +678,6 @@ window._load_script = function (url, callback, isSubmit) {
             });
 
             /////Monday PUSH API Ends/////
-
         }
         return false;
     };

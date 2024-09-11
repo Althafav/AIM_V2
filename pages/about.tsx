@@ -229,7 +229,7 @@ export default function About() {
                                 <p className='name'>High-Level Dignitories</p>
 
                             </div>
-                            <img src="/assets/imgs/high-level-dignitades.png" alt="aim 2025" />
+                            <img src="/assets/imgs/dignitades.jpg" alt="aim 2025" />
                         </div>
                         <div className="marquee-item">
                             <div className="text-items">
@@ -237,7 +237,7 @@ export default function About() {
                                 <p className='name'>Countries</p>
 
                             </div>
-                            <img src="/assets/imgs/total-countries.png" alt="aim 2025" />
+                            <img src="/assets/imgs/worldwide.jpg" alt="aim 2025" />
                         </div>
                         <div className="marquee-item">
                             <div className="text-items">

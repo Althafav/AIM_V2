@@ -523,7 +523,7 @@ window._load_script = function (url, callback, isSubmit) {
             var EstablishmentDate = $('input[name="field[258]"]').val();
 
             startupDetails = startupDetails + `Establishment Date: ${EstablishmentDate} | `;
-            
+
             startupDetails = startupDetails + `Partnership Types: ${partnershipType} | `;
 
             var startupPortfolio = $('input[name="field[346]"]').val();
@@ -541,6 +541,8 @@ window._load_script = function (url, callback, isSubmit) {
             var email = $('input[name="email"]').val();
             var jobTitle = $('input[name="field[23]"]').val();
             var mobileNumber = Number($('input[name="field[12]"]').val());
+            var phoneCode = $('select[name="phoneCode"]').val();
+            var mobileText = `+${phoneCode} ${mobileNumber}`;
             var country = $('select[name="field[3]"]').val();
             var formSubmitted = $('input[name="field[38]"]').val();
             var message = $('textarea[name="field[261]"]').val();
@@ -567,7 +569,7 @@ window._load_script = function (url, callback, isSubmit) {
                      \\\"country____1\\\":\\\"${country}\\\",
                      \\\"text2__1\\\":\\\"${jobTitle}\\\",
                      \\\"lead_email\\\":{\\\"email\\\":\\\"${email}\\\",\\\"text\\\":\\\"${email}\\\"},
-                     \\\"numbers__1\\\":${mobileNumber},
+                   \\\"dup__of_mobile8__1\\\":\\\"${mobileText}\\\",
                      \\\"lead_company\\\":\\\"${organization}\\\",
                      \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
                      \\\"long_text__1\\\":\\\"${message}\\\",
