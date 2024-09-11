@@ -1232,7 +1232,7 @@ export default class RegisterPage extends React.Component<
                                                     <fieldset className="_form-fieldset">
                                                         <div className="_row">
                                                             <span className="_form-label">
-                                                                Which AIM Portfolio are you interested in *
+                                                            Which AIM Portfolio are you most interested in? *
                                                             </span>
                                                         </div>
                                                         <input

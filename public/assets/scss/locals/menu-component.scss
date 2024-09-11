@@ -10,6 +10,10 @@
     transition: all 0.3s ease-out;
     z-index: 20;
 
+    .portfolio-menu-logo {
+        filter: grayscale(1);
+    }
+
     &:hover {
         background-color: black;
     }
@@ -157,7 +161,7 @@
                 left: 0;
                 background-color: #000;
                 color: white;
-                width: 250px;
+                width: 280px;
                 border-radius: 5px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 z-index: 10;
@@ -171,7 +175,12 @@
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: #444;
+                        a {
+                            color: $primary-color;
+                        }
+                        .portfolio-menu-logo {
+                            filter: grayscale(0);
+                        }
                     }
 
                     &:last-child {
