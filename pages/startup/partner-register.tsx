@@ -93,7 +93,7 @@ export default class RegisterPage extends React.Component<
                     <meta name="title" content="AIM Startup Partner Register" />
                     <meta name="description" content="AIM Startup Partner Register" />
                 </Head>
-                <div className="stratup-form-wrapper m-b-40">
+                <div className="startup-registerPage-wrapper portfolio-margin-top">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -107,7 +107,7 @@ export default class RegisterPage extends React.Component<
 
                         <div className="row">
                             <div className="col-12">
-                                <form method="POST" action="//ac.strategic.ae/proc.php" id="_form_468_" className="_form _form_468 _inline-form  _dark" noValidate data-styles-version="3">
+                                <form method="POST" action="//ac.strategic.ae/proc.php" id="_form_468_" className="_form _form_468 _inline-form  _dark startup-register-form" noValidate data-styles-version="3">
                                     <input type="hidden" name="u" value="468" />
                                     <input type="hidden" name="f" value="468" />
                                     <input type="hidden" name="s" />
@@ -1006,59 +1006,59 @@ export default class RegisterPage extends React.Component<
                                                     <input data-autofill="false" type="hidden" id="field[344][]" name="field[344][]" value="~|" />
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Venture Capitalist" type="checkbox" name="field[344][]" value="Venture Capitalist" />
-                                                        <span>
-                                                            <label>
-                                                                Venture Capitalist
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Venture Capitalist">
+                                                            Venture Capitalist
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Angel Investor" type="checkbox" name="field[344][]" value="Angel Investor" />
-                                                        <span>
-                                                            <label>
-                                                                Angel Investor
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Angel Investor">
+                                                            Angel Investor
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Angel Network" type="checkbox" name="field[344][]" value="Angel Network" />
-                                                        <span>
-                                                            <label>
-                                                                Angel Network
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Angel Network">
+                                                            Angel Network
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Community Partner" type="checkbox" name="field[344][]" value="Community Partner" />
-                                                        <span>
-                                                            <label>
-                                                                Community Partner
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Community Partner">
+                                                            Community Partner
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Accelerator" type="checkbox" name="field[344][]" value="Accelerator" />
-                                                        <span>
-                                                            <label>
-                                                                Accelerator
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Accelerator">
+                                                            Accelerator
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Incubator" type="checkbox" name="field[344][]" value="Incubator" />
-                                                        <span>
-                                                            <label>
-                                                                Incubator
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Incubator">
+                                                            Incubator
+                                                        </label>
+
                                                     </div>
                                                     <div className="_row _checkbox-radio">
                                                         <input id="field_344Others" type="checkbox" name="field[344][]" value="Others" />
-                                                        <span>
-                                                            <label>
-                                                                Others
-                                                            </label>
-                                                        </span>
+
+                                                        <label htmlFor="field_344Others">
+                                                            Others
+                                                        </label>
+
                                                     </div>
                                                 </fieldset>
                                             </div>
