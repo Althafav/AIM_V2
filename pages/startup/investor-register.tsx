@@ -588,7 +588,7 @@ export default class RegisterPage extends React.Component<
 
                                                     <select name="field[3]" id="field[3]" className="form-control country" required>
                                                         <option value="" selected>
-                                                            select country
+                                                            Country*
                                                         </option>
                                                         <option value="Afghanistan" >
                                                             Afghanistan
@@ -1374,7 +1374,7 @@ export default class RegisterPage extends React.Component<
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
 
                                                     <input
-                                                        placeholder="Website"
+                                                        placeholder="Website *"
                                                         type="text"
                                                         itemID="field[80]" name="field[80]"
                                                         className="website form-control"
@@ -1383,7 +1383,7 @@ export default class RegisterPage extends React.Component<
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
 
-                                                    <input placeholder="Ticket Size" type="text" id="field[101]" name="field[101]" className="ticketsize form-control" required />
+                                                    <input placeholder="Ticket Size (USD)*" type="text" id="field[101]" name="field[101]" className="ticketsize form-control" required />
                                                 </div>
 
 
