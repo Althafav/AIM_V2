@@ -317,7 +317,7 @@ export default class RegisterPage extends React.Component<
                                                         itemID="firstname"
                                                         id="firstname"
                                                         name="firstname"
-                                                        placeholder="First Name"
+                                                        placeholder="First Name *"
                                                         className="form-control"
                                                         required
                                                     />
@@ -328,7 +328,7 @@ export default class RegisterPage extends React.Component<
                                                         itemID="lastname"
                                                         id="lastname"
                                                         name="lastname"
-                                                        placeholder="Last Name"
+                                                        placeholder="Last Name *"
                                                         className="form-control"
                                                         required
                                                     />
@@ -342,7 +342,7 @@ export default class RegisterPage extends React.Component<
                                                         itemID="email"
                                                         id="email"
                                                         name="email"
-                                                        placeholder="Email"
+                                                        placeholder="Email *"
                                                         className="amount-email form-control"
                                                         required
 
@@ -359,7 +359,7 @@ export default class RegisterPage extends React.Component<
                                                         type="text"
                                                         itemID="field[23]"
                                                         name="field[23]"
-                                                        placeholder="Job Title"
+                                                        placeholder="Job Title *"
                                                         className="jobtitle form-control"
                                                         required
                                                     />
@@ -641,7 +641,7 @@ export default class RegisterPage extends React.Component<
                                                         type="text"
                                                         id="field[80]" name="field[80]"
                                                         className="website form-control"
-                                                        placeholder="Website"
+                                                        placeholder="Website *"
                                                     />
                                                 </div>
                                             </div>
@@ -653,7 +653,7 @@ export default class RegisterPage extends React.Component<
                                                         type="text"
                                                         id="customer_account" name="customer_account"
                                                         className="form-control"
-                                                        placeholder="Startup Name"
+                                                        placeholder="Startup Name *"
                                                         required
                                                     />
                                                 </div>
@@ -664,7 +664,7 @@ export default class RegisterPage extends React.Component<
                                                         type="date"
                                                         id="field[258]" name="field[258]"
                                                         className="form-control estDate"
-                                                        placeholder="Date Of Establishment"
+                                                        placeholder="Date Of Establishment *"
                                                         required={true}
                                                     />
                                                 </div>

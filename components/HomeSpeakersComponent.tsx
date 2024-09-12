@@ -100,8 +100,8 @@ export default class HomeSpeakersComponent extends React.Component<
           <div className="row">
             <div className="col-12">
               <h1 className="section-heading mb-4">
-                Government Officials And Speakers <br />
-                At AIM Congress 2024
+                AIM Congress 2024 <br />
+                Government Officials And Speakers
               </h1>
             </div>
           </div>

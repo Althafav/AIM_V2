@@ -104,8 +104,8 @@ export default class SpeakersPage extends React.Component<
                         src="/assets/imgs/Gradient.png" alt="" className='banner-image' />
 
                     <div className="inner-text-container">
-                        <h1 className='banner-heading' >  Government Officials And Speakers <br />
-                            At AIM Congress 2024</h1>
+                        <h1 className='banner-heading' >AIM Congress 2024
+                        Government Officials And Speakers</h1>
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@ export default class SpeakersPage extends React.Component<
                                 var speaker: conferenceSpeakersModel = m;
                                 if (speaker.image) {
                                     const truncatedCompany = speaker.designation
-                                        ? speaker.company.split(' ').slice(0, 4).join(' ')
+                                        ? speaker.company.split(' ').slice(0, 10).join(' ')
                                         : '';
                                     return (
                                         <div className=" col-xxl-2 col-xl-3 col-md-4 col-12 mb-3" key={`speakers-${index}`}>
