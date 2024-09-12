@@ -39,6 +39,7 @@ const StartUp = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
+            className=''
         >
 
             <div className="portfolio-banner-wrapper">

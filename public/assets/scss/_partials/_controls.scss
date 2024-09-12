@@ -29,6 +29,7 @@ input.form-control, select.form-control, textarea.form-control {
     border-radius: 8;
     box-shadow: none;
     outline: none;
+    padding-right: 40px;
 
     &:active, &:focus {
         border-color: $primary-color;
