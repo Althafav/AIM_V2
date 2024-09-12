@@ -80,10 +80,18 @@ export default function AllInvestorPage() {
             <section className='investors-wrapper'>
                 <div className="container">
                     <h3 className='startup-section-heading'>Our Angel Investors</h3>
-                    <p className='description mt-3'> Last year&apos;s event brought together an extraordinary lineup of speakers who captivated and inspired our audience. Each presenter shared unique insights and groundbreaking ideas that shaped the discourse in their respective fields. Explore the highlights from these transformative talks and discover the voices that made a lasting impact.</p>
-                    <Link href="/startup/investor-register">
-                        <button className='startup-btn mt-4'>Become a Partner</button>
-                    </Link>
+                    <div className="row">
+                        <div className="col-lg-8">
+                            <p className='description mt-3'> Last year&apos;s event brought together an extraordinary lineup of speakers who captivated and inspired our audience. Each presenter shared unique insights and groundbreaking ideas that shaped the discourse in their respective fields. Explore the highlights from these transformative talks and discover the voices that made a lasting impact.</p>
+                        </div>
+                        <div className="col-lg-4">
+                            <Link href="/startup/investor-register">
+                                <button className='startup-btn mt-4'>Become a Partner</button>
+                            </Link>
+                        </div>
+                    </div>
+
+
                     <InvestorComponent />
                 </div>
             </section>

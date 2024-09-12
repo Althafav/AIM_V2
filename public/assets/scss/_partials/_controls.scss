@@ -31,17 +31,29 @@ input.form-control, select.form-control, textarea.form-control {
     outline: none;
 
     &:active, &:focus {
-        border-color: #AC3534;
+        border-color: $primary-color;
         box-shadow: none;
         outline: none;
     }
 }
 
-input[type="file"] {
-    font-size: 0.75rem;
-    padding-bottom: 2.1875rem;
-}
+
 
 input[type="checkbox"] {
     margin: 10px;
+}
+
+
+select {
+    appearance: none; 
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 fill%3D%27none%27 viewBox%3D%270 0 24 24%27 stroke%3D%27currentColor%27%3E%3Cpath stroke-linecap%3D%27round%27 stroke-linejoin%3D%27round%27 stroke-width%3D%272%27 d%3D%27M19 9l-7 7-7-7%27 /%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem; // Add space for the dropdown icon
+}
+
+// To support older browsers
+select::-ms-expand {
+    display: none; // Hide the default arrow for Internet Explorer
 }
