@@ -587,12 +587,9 @@ window._load_script = function (url, callback, isSubmit) {
                 .get()
                 .join(', ');
 
-            var focusedCountries = $('input[name="field[265][]"]:checked')
-                .map(function () {
-                    return $(this).val().trim();
-                })
-                .get()
-                .join(', ');
+                var focusedCountries = $('#focusedCountriesInput')
+                .val()
+                .trim();
 
             var portfolio = `\\\"Startups & Unicorns\\\"`;
 
@@ -674,6 +671,7 @@ window._load_script = function (url, callback, isSubmit) {
             };
 
             $.ajax(settings).done(function (response) {
+                debugger
                 console.log(response);
             });
 
