@@ -1,0 +1,67 @@
+.speaker-page-wrapper {
+
+    .inner-text-container{
+        top: 80%;
+        .banner-heading {
+            font-size: 48px;
+            letter-spacing: -1px;
+            text-transform: capitalize;
+            @media screen and (max-width: 1000px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 1000px) {
+                font-size: 24px;
+            } 
+        }
+    }
+    .card-speaker-item {
+        position: relative;
+
+        &:hover {
+            .card-body-speaker {
+                opacity: 1;
+            }
+        }
+        img {
+            height: 250px;
+            object-fit: scale-down;
+            width: 100%;
+            filter: grayscale(1);
+            padding: 30px;
+            background-color: #000;
+
+        }
+
+        .card-body-speaker {
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background: #099ffcbe;
+            width: 100%;
+            color: white;
+            opacity: 0;
+            transition: all 0.2s ease;
+            overflow: hidden;
+
+            .name {
+                font-size: 22px;
+                font-weight: 600;
+                max-width: 200px;
+
+                @media screen and (max-width: 1500px) {
+                    font-size: 18px;
+                }
+            }
+
+            .company-name {
+                font-size: 14px;
+            }
+
+        }
+    }
+}

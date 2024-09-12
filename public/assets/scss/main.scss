@@ -429,7 +429,12 @@ img {
     margin-top: 120px;
 }
 
-
+.aim-btn {
+    background-color: $primary-color;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50px
+}
 
 
 
@@ -472,6 +477,7 @@ img {
 @import "./locals/portfolio/startup/startupform.scss";
 @import "./locals/portfolio/startup/allInvestorPage.scss";
 @import "./locals/portfolio/startup/unicorns.scss";
+@import "./locals/speakes-page.scss";
 
 
 

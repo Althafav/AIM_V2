@@ -4,6 +4,7 @@ import Services from "@/modules/Services";
 import conferenceSpeakerModel from "@/sysmodels/conferenceSpeakerModel";
 import conferenceSpeakersModel from "@/sysmodels/conferenceSpeakersModel";
 import axios from "axios";
+import Link from "next/link";
 import React from "react";
 
 
@@ -84,7 +85,7 @@ export default class HomeSpeakersComponent extends React.Component<
       });
   }
 
-  
+
 
   render(): React.ReactNode {
     const { HighLevelSpeakers, isLoaded } = this.state;
@@ -99,7 +100,7 @@ export default class HomeSpeakersComponent extends React.Component<
           <div className="row">
             <div className="col-12">
               <h1 className="section-heading mb-4">
-                Government Officials And Speakers <br /> 
+                Government Officials And Speakers <br />
                 At AIM Congress 2024
               </h1>
             </div>
@@ -148,7 +149,7 @@ export default class HomeSpeakersComponent extends React.Component<
                   >
                     <div className="card-speaker-item">
                       <div className="speaker-image-wrapper">
-                        
+
                         <img src={speaker.image} alt={speaker.name}
                           className="speaker-image" />
                       </div>
@@ -166,7 +167,17 @@ export default class HomeSpeakersComponent extends React.Component<
             })}
           </div>
 
-         
+
+          <div className="row">
+            <div className="col-12 d-flex align-items-center justify-content-center">
+              <Link href="/speakers">
+
+                <button className="aim-btn">View More</button>
+              </Link>
+            </div>
+          </div>
+
+
         </div>
       </div>
     ) : (

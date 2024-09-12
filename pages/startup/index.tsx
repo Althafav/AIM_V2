@@ -42,7 +42,7 @@ const StartUp = () => {
             className=''
         >
 
-            <div className="portfolio-banner-wrapper">
+            <div className="portfolio-banner-wrapper startup-banner" style={{marginTop: "175px"}}>
 
 
                 <motion.img
