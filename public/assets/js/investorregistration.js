@@ -580,7 +580,14 @@ window._load_script = function (url, callback, isSubmit) {
             }
 
             /////Monday PUSH API Starts/////
-            var interestedSector = $('input[name="field[264][]"]:checked')
+            var interestedStage = $('input[name="field[264][]"]:checked')
+                .map(function () {
+                    return $(this).val().trim();
+                })
+                .get()
+                .join(', ');
+
+                var interestedSector = $('input[name="field[262][]"]:checked')
                 .map(function () {
                     return $(this).val().trim();
                 })
@@ -610,6 +617,8 @@ window._load_script = function (url, callback, isSubmit) {
 
             startupDetails = startupDetails + `Ticket Size: ${ticketSize} \\\\n`;
 
+            startupDetails = startupDetails + `Interested Stage: ${interestedStage} \\\\n`;
+
             startupDetails = startupDetails + `Interested Sector: ${interestedSector} \\\\n`;
 
             startupDetails = startupDetails + `Focused Countries: ${focusedCountries}`;
@@ -618,6 +627,7 @@ window._load_script = function (url, callback, isSubmit) {
             var lastname = $('input[name="lastname"]').val();
             var name = `${firstname} ${lastname}`
             var email = $('input[name="email"]').val();
+            var organization = `Startup Investor - ${name}`;
             var jobTitle = $('input[name="field[23]"]').val();
             var mobileNumber = Number($('input[name="phone"]').val());
             var phoneCode = $('select[name="phoneCode"]').val();
@@ -649,6 +659,7 @@ window._load_script = function (url, callback, isSubmit) {
                  \\\"text2__1\\\":\\\"${jobTitle}\\\",
                  \\\"lead_email\\\":{\\\"email\\\":\\\"${email}\\\",\\\"text\\\":\\\"${email}\\\"},
                  \\\"dup__of_mobile8__1\\\":\\\"${mobileText}\\\",
+                 \\\"lead_company\\\":\\\"${organization}\\\",
                  \\\"aim_portfolio____1\\\":{\\\"labels\\\":[${portfolio}]},
                  \\\"long_text__1\\\":\\\"${message}\\\",
                  \\\"long_text6__1\\\":\\\"${startupDetails}\\\",
@@ -671,7 +682,6 @@ window._load_script = function (url, callback, isSubmit) {
             };
 
             $.ajax(settings).done(function (response) {
-                debugger
                 console.log(response);
             });
 

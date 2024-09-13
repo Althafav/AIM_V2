@@ -10,21 +10,13 @@ import Link from "next/link";
 import Globals from "@/modules/Globals";
 import JsLoader from "@/modules/JsLoader";
 import SpinnerComponent from "@/components/UI/SpinnerComponent";
+import { CountriesData } from "@/contants/countryData";
 
 
 function closePopup() {
     $("#popupModel").addClass("d-none");
 }
-export const countryOptions = [
-    { value: 'Afghanistan', label: 'Afghanistan' },
-    { value: 'Aland Islands', label: 'Aland Islands' },
-    { value: 'Albania', label: 'Albania' },
-    { value: 'Algeria', label: 'Algeria' },
-    { value: 'American Samoa', label: 'American Samoa' },
-    { value: 'Andorra', label: 'Andorra' },
-    { value: 'Angola', label: 'Angola' },
-    { value: 'Anguilla', label: 'Anguilla' },
-];
+
 
 const preFixStyle: React.CSSProperties = {
     position: 'absolute',
@@ -34,7 +26,8 @@ const preFixStyle: React.CSSProperties = {
     height: '3.6875rem',
     borderTopLeftRadius: '.25rem',
     borderBottomLeftRadius: '.25rem',
-    top: '0',
+    top: '5px',
+    left: '18px',
     textAlign: 'center'
 };
 
@@ -579,7 +572,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="col-8 col-md-8 p-l-0" style={{ position: "relative" }}>
                                                             <span className="pre-fix" style={preFixStyle}>971</span>
-                                                            <input type="phone" id="field[12]" name="field[12]" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder=" Mobile Phone" required />
+                                                            <input type="number" id="phone" name="phone" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder=" Mobile Phone" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1467,7 +1460,7 @@ export default class RegisterPage extends React.Component<
 
                                                         isMulti
                                                         name="colors"
-                                                        options={countryOptions}
+                                                        options={CountriesData}
                                                         className="basic-multi-select"
                                                         onChange={this.handleSelectChange}
                                                         classNamePrefix="select"

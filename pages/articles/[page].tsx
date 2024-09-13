@@ -99,6 +99,10 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
     const startPage = Math.max(1, currentPage - 1);
     const endPage = Math.min(totalPages, startPage + 3);
 
+    const truncateText = (text: string, wordLimit: number) => {
+        return text.split(" ").slice(0, wordLimit).join(" ") + (text.split(" ").length > wordLimit ? "..." : "");
+    }
+
     return (
         <div className='articles-page-wrapper'>
             <Head>
@@ -124,7 +128,7 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
 
             <section ref={ref}>
                 <div className="container">
-                    <motion.div className="row"
+                    <motion.div className="row content-max-w"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
@@ -142,7 +146,11 @@ export default function Articles({ pageData, currentPage, totalPages }: { pageDa
                                     >
                                         <div className='blog-card'>
                                             <Image width="400" height={200} src={item.image.value[0].url} alt="" className='blog-image' quality={80} />
-                                            <p className='name'>{item.heading.value}</p>
+                                            <div className="text-wrapper">
+                                                <p className='name'>{item.heading.value}</p>
+                                                <p className='text-xs'>{item.date.value}</p>
+
+                                            </div>
                                         </div>
                                     </Link>
                                 </motion.div>

@@ -12,6 +12,7 @@ export default function UnicornsPage() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             className='unicorns-page-wrapper'
+          
         >
             <PortfolioBanner bannerImageSrc={"/assets/imgs/startup-001.jpg"} Heading={"AIM Unicorns"} subHeading={"where the magic of disruption creates billion-dollar valuations"} registerLink={'/register-interest/startup'} portfolioColorName="startup" />
 

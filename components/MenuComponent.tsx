@@ -9,6 +9,7 @@ import { CiGlobe } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
+import { useRouter } from 'next/router';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -63,6 +64,10 @@ export default function MenuComponent() {
     setIsPortfolioDropdownOpen(!isPortfolioDropdownOpen);
   };
 
+  const router = useRouter();
+  const isfdiRoute = router.pathname.startsWith('/startup');
+
+
   return (
     <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
@@ -111,55 +116,55 @@ export default function MenuComponent() {
                     <li className="dropdown-item">
 
                       <Link href="https://fdi.aimcongress.com/foreign-direct-investment" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/fdi-logo.png" alt="fdi" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/fdi-logo.png" alt="fdi" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         <span>Foreign Direct Investment</span>
                       </Link>
                     </li>
                     <li className="dropdown-item">
                       <Link href="https://trade.aimcongress.com/global-trade" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/global-trade-logo.png" alt="globaltrade" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/global-trade-logo.png" alt="globaltrade" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Global Trade
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://manufacturing.aimcongress.com/global-manufacturing" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/global-manufacturing.png" alt="" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/global-manufacturing.png" alt="" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Global Manufacturing
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://futurecities.aimcongress.com/future-cities" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/future-cities-logo.png" alt="futurecities" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/future-cities-logo.png" alt="futurecities" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Future Cities
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://digitaleconomy.aimcongress.com/digital-economy" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/digital-economy-logo.png" alt="" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/digital-economy-logo.png" alt="" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Digital Economy
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://futurefinance.aimcongress.com/future-finance" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/futurefinance-logo.png" alt="futurefinance" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/futurefinance-logo.png" alt="futurefinance" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Future Finance
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://startup.aimcongress.com/" target='_blank' className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/startup-logo.png" alt="startups-unicorns" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/startup-logo.png" alt="startups-unicorns" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Startups & Unicorns
                       </Link>
                     </li>
 
                     <li className="dropdown-item">
                       <Link href="https://entrepreneurs.aimcongress.com/entrepreneurs" className='d-flex gap-3 align-items-center'>
-                        <img src="/assets/logos/entrepreneurs-logo.png" alt="entrepreneurs" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo'/>
+                        <img src="/assets/logos/entrepreneurs-logo.png" alt="entrepreneurs" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Entrepreneurs
                       </Link>
                     </li>
@@ -352,14 +357,14 @@ export default function MenuComponent() {
 
                     <li className="dropdown-item"  >
                       <Link href="https://startup.aimcongress.com/" target='_blank' className='d-flex gap-2 align-items-center' onClick={handleToggle} >
-                      <img src="/assets/logos/startup-logo.png" alt="startups-unicorns" style={{ width: "20px", objectFit: "contain" }} />
+                        <img src="/assets/logos/startup-logo.png" alt="startups-unicorns" style={{ width: "20px", objectFit: "contain" }} />
                         Startups & Unicorns
                       </Link>
                     </li>
 
                     <li className="dropdown-item" onClick={handleToggle} >
                       <Link href="https://entrepreneurs.aimcongress.com/entrepreneurs" className='d-flex gap-2 align-items-center' onClick={handleToggle} >
-                      <img src="/assets/logos/entrepreneurs-logo.png" alt="entrepreneurs" style={{ width: "20px", objectFit: "contain" }} />
+                        <img src="/assets/logos/entrepreneurs-logo.png" alt="entrepreneurs" style={{ width: "20px", objectFit: "contain" }} />
                         Entrepreneurs
                       </Link>
                     </li>

@@ -37,9 +37,15 @@
     width: 100%;
     
     .blog-card {
+        cursor: pointer;
         .blog-image {
-            height: 200px;
+            height: 300px;
+            border-radius: 30px;
             object-fit: cover;
+        }
+
+        .text-wrapper {
+            padding: 10px;
         }
     }
 
@@ -66,4 +72,9 @@
     .control-btn.disabled {
         opacity: 0.5;
     }
+}
+
+.content-max-w {
+    max-width: 1380px;
+    margin: 0 auto;
 }

@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
 import StartupMenuComponent from './StartupMenuComponent';
+import { useRouter } from 'next/router';
 
 export default function SolidMenuComponent() {
     const [isToggle, setIsToggle] = useState(false);
@@ -63,26 +64,45 @@ export default function SolidMenuComponent() {
         setIsPortfolioDropdownOpen(!isPortfolioDropdownOpen);
     };
 
+    const router = useRouter();
+    const isStartupRoute = router.pathname.startsWith('/startup');
+
+
     return (
         <nav className={`menu-wrapper portfolio-solid-menu ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`} style={{ background: "black" }}>
             <div className="container ">
                 <div className="row">
                     <div className="col-12">
-                        <div className="top-items d-flex justify-content-end align-items-center mb-1">
-                            <div className="d-flex gap-5 align-items-center">
+                        <div className="top-items-container d-flex justify-content-end align-items-center mb-1">
+                            <div className="d-flex gap-5 align-items-center  top-items">
+                                <div className='top-item'>
+                                    <img src="/assets/imgs/Ministry logos .png" alt="" className='ministry-logo' />
+                                </div>
                                 {/* <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div> */}
                                 {/* <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div> */}
+
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="d-flex align-items-end justify-content-between">
-                    <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
-                        <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
-                            className='menu-logo white-logo' />
+                    <div className='d-flex align-items-center gap-4'>
+                        <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
+                            <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
+                                className='menu-logo white-logo' />
 
-                    </Link>
+                        </Link>
+                        {isStartupRoute && (
+
+                            <Link href={`${Globals.BASE_URL}startup`} className="logo-wrapper">
+                                <img src={`/assets/logos/startup-logo.png`} alt="Logo"
+                                    style={{ width: "60px", objectFit: "contain" }} className='' />
+                            </Link>
+
+
+                        )}
+                    </div>
 
                     <div className="d-flex flex-column gap-4">
 
