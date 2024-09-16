@@ -10,6 +10,7 @@ import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
 import { useRouter } from 'next/router';
+import StartupMenuComponent from './Portfolio/startup/StartupMenuComponent';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -115,17 +116,16 @@ export default function MenuComponent() {
       logo: '/assets/logos/entrepreneurs-logo.png',
     }
 
-
   ]
 
-  const currentRouteData = RoutesData.find((data) => data.route === router.pathname);
+  const currentRouteData = RoutesData.find((data) => router.pathname.startsWith(data.route));
 
-
+  const isStartupRoute = router.pathname.startsWith('/startup');
 
 
 
   return (
-    <nav className={`menu-wrapper ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`menu-wrapper ${isStartupRoute ? 'portfolio-solid-menu' : ''}  ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
         <div className="row">
           <div className="col-12">
@@ -343,6 +343,10 @@ export default function MenuComponent() {
 
 
       </div>
+
+      {isStartupRoute && (
+        <StartupMenuComponent />
+      )}
 
       <AnimatePresence>
         {isToggle && (

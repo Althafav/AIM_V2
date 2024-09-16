@@ -10,7 +10,7 @@ export default function LayoutComponent({ children }: any) {
     const isStartupRoute = router.pathname.startsWith('/startup');
     return (
         <React.Fragment>
-            {isStartupRoute ? <SolidMenuComponent /> : <MenuComponent />}
+            <MenuComponent />
             {children}
             <FooterComponent />
         </React.Fragment>

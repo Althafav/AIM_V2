@@ -32,7 +32,7 @@ const StartUp = () => {
         return <SpinnerComponent />;
     }
 
-    const descriptionFeaturesActivities = "AIM Startup, a pivotal aspect of AIM Congress, offers essential tools and funding to empower digital entrepreneurs and overcome resource limitations. With UAE's ambition to be a global tech hub by 2025, startups have emerged as key players, with investments surpassing $2.9 billion last year. These ventures are at the forefront of innovations in AI, blockchain, and renewable energy, driving industry transformation and drawing considerable investment. They also accelerate digital adoption."
+    
 
     return (
         <motion.div

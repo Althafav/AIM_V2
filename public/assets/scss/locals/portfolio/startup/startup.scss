@@ -541,6 +541,11 @@
 
 .portfolio-margin-top {
     margin-top: 325px;
+
+    @media screen and (max-width: 800px) {
+        margin-top: 175px;
+        
+    }
 }
 
 .inner-banner-wrapper {
