@@ -169,7 +169,7 @@ const StartUp = () => {
                         {pageData.ctacarditems.value.map((m: any, index: number) => {
                             var item: ImageButton = m;
                             return (
-                                <div className="col-md-4 mb-3">
+                                <div className="col-md-4 mb-3" key={`carditems-${index}`}>
 
                                     <Link href="/startup/startup-register">
                                         <img src={item.image.value[0].url} alt="register" />
