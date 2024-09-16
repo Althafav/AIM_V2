@@ -13,6 +13,7 @@ import BenefitsComponent from '@/components/Portfolio/BenefitsComponent';
 import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
 import { Buttonitem } from '@/models/buttonitem';
+import { ImageButton } from '@/models/image_button';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -42,7 +43,7 @@ const StartUp = () => {
             className=''
         >
 
-            <div className="portfolio-banner-wrapper startup-banner" style={{marginTop: "175px"}}>
+            <div className="portfolio-banner-wrapper startup-banner portfolio-margin-top" >
 
 
                 <motion.img
@@ -96,7 +97,7 @@ const StartUp = () => {
                     <div className="row mt-4">
                         <div className="col-lg-6 mb-lg-0 mb-3">
                             <div className="row g-3">
-                            
+
                                 {pageData.features.value.map((m: any, index: number) => {
 
                                     var item: Serviceitem = m;
@@ -127,7 +128,7 @@ const StartUp = () => {
                                 <div className="col-12 mt-4">
                                     <div className='details-features-activities'>
                                         <h3 className='section-heading'>{pageData.featuresbriefheading.value}</h3>
-                                        <p dangerouslySetInnerHTML={{__html: pageData.featuresbriefcontent.value}} />
+                                        <p dangerouslySetInnerHTML={{ __html: pageData.featuresbriefcontent.value }} />
                                     </div>
                                 </div>
 
@@ -161,29 +162,24 @@ const StartUp = () => {
                 <div className="section-container">
                     <div className="row">
                         <div className="col-12">
-                            <h2 className='section-heading'>Get Involved with AIM Congress Today</h2>
+                            <h2 className='section-heading'>{pageData.ctacardsheading.value}</h2>
                         </div>
                     </div>
                     <div className="row d-flex align-items-end">
-                        <div className="col-md-4 mb-3">
+                        {pageData.ctacarditems.value.map((m: any, index: number) => {
+                            var item: ImageButton = m;
+                            return (
+                                <div className="col-md-4 mb-3">
 
-                            <Link href="/startup/startup-register">
-                                <img src="/assets/imgs/Startup.png" alt="" />
+                                    <Link href="/startup/startup-register">
+                                        <img src={item.image.value[0].url} alt="register" />
 
-                            </Link>
-                        </div>
-                        <div className="col-md-4 mb-3">
-                            <Link href="/startup/all-investors">
+                                    </Link>
+                                </div>
+                            )
+                        })}
 
-                                <img src="/assets/imgs/Aimvestor.png" alt="" />
-                            </Link>
-                        </div>
-                        <div className="col-md-4 mb-3">
-                            <Link href="/startup/partner-register">
-
-                                <img src="/assets/imgs/Partner.png" alt="" />
-                            </Link>
-                        </div>
+                     
 
                     </div>
                 </div>

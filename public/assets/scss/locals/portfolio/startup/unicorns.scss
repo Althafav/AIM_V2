@@ -7,10 +7,16 @@
         }
     }
     .about-section {
-        .video-container-wrapper {
+        .img-container-wrapper {
             height: 450px;
             width: 100%;
             background-color: rgba(75, 75, 75, 0.452);
+
+            img {
+                height: 450px;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 

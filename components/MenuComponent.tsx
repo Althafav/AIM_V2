@@ -65,7 +65,63 @@ export default function MenuComponent() {
   };
 
   const router = useRouter();
-  const isfdiRoute = router.pathname.startsWith('/startup');
+
+
+
+  const RoutesData = [
+    {
+      id: 1,
+      route: '/foreign-direct-investment',
+      logo: '/assets/logos/fdi-logo.png',
+    },
+    {
+      id: 2,
+      route: '/global-trade',
+      logo: '/assets/logos/global-trade-logo.png',
+    },
+    {
+      id: 3,
+      route: '/global-manufacturing',
+      logo: '/assets/logos/global-manufacturing.png',
+    },
+
+    {
+      id: 4,
+      route: '/future-cities',
+      logo: '/assets/logos/future-cities-logo.png',
+    },
+
+    {
+      id: 5,
+      route: '/digital-economy',
+      logo: '/assets/logos/digital-economy-logo.png',
+    },
+
+    {
+      id: 6,
+      route: '/future-finance',
+      logo: '/assets/logos/futurefinance-logo.png',
+    },
+
+    {
+      id: 7,
+      route: '/startup',
+      logo: '/assets/logos/startup-logo.png',
+    },
+
+    {
+      id: 8,
+      route: '/entrepreneurs',
+      logo: '/assets/logos/entrepreneurs-logo.png',
+    }
+
+
+  ]
+
+  const currentRouteData = RoutesData.find((data) => data.route === router.pathname);
+
+
+
 
 
   return (
@@ -87,11 +143,19 @@ export default function MenuComponent() {
         </div>
 
         <div className="d-flex align-items-end justify-content-between">
-          <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
-            <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
-              className='menu-logo white-logo' />
+          <div className='d-flex align-items-center gap-4'>
+            <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
+              <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
+                className='menu-logo white-logo' />
 
-          </Link>
+            </Link>
+
+            {currentRouteData && (
+              <Link href={currentRouteData.route} className="logo-wrapper">
+                <img src={currentRouteData.logo} alt="Logo" style={{ width: '60px', objectFit: 'contain' }} />
+              </Link>
+            )}
+          </div>
 
           <div className="d-flex flex-column gap-4">
 
