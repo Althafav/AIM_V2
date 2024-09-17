@@ -484,7 +484,11 @@ window._load_script = function (url, callback, isSubmit) {
             if (el != null) {
                 var sitekey = el.getAttribute("data-sitekey");
                 var stoken = el.getAttribute("data-stoken");
-                grecaptcha.render(recaptcha_id, { "sitekey": sitekey, "stoken": stoken });
+                try {
+                    grecaptcha.render(recaptcha_id, { "sitekey": sitekey, "stoken": stoken });
+                } catch {
+
+                }
             }
         }
     }; _load_script(

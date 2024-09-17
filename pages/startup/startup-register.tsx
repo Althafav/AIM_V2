@@ -8,6 +8,7 @@ import { Aimstratuppromocode } from "@/models/aimstratuppromocode";
 import Helpers from "@/modules/Helper";
 import JsLoader from "@/modules/JsLoader";
 import SpinnerComponent from "@/components/UI/SpinnerComponent";
+import PackagesComponent from "@/components/Portfolio/startup/PackagesComponent";
 
 function closePopup() {
     $("#popupModel").addClass("d-none");
@@ -30,12 +31,15 @@ export default class RegisterPage extends React.Component<
     {},
     {
         startupEmails: Array<string>;
-        isLoaded: Array<boolean>;
+        isLoaded: boolean;
         PromoCodes: Array<Aimstratuppromocode>;
         pitchDeck: string;
         projectImage: string;
         startupLogo: string;
         ProfilePhoto: string;
+        firstName: string;
+        lastName: string;
+        email: string;
     }
 > {
     private languageID: string = "00000000-0000-0000-0000-000000000000";
@@ -44,12 +48,15 @@ export default class RegisterPage extends React.Component<
         super(props);
         this.state = {
             startupEmails: [],
-            isLoaded: [false, false],
+            isLoaded: false,
             PromoCodes: [],
             pitchDeck: "",
             projectImage: "",
             startupLogo: "",
-            ProfilePhoto: ""
+            ProfilePhoto: "",
+            firstName: "",
+            lastName: "",
+            email: "",
         };
     }
 
@@ -57,14 +64,7 @@ export default class RegisterPage extends React.Component<
     componentDidMount() {
         $(".trailer-section").addClass("d-none");
         $("#bottom-strip").addClass("d-none");
-        axios.get(`${Globals.API_URL}RegisterAPI/getExistingEmails`).then((r: any) => {
-            const dataModel: Array<string> = r.data;
-            console.log(dataModel);
-            this.setState({
-                startupEmails: dataModel,
-                isLoaded: [true, this.state.isLoaded[1]]
-            })
-        });
+
 
         Globals.KontentClient.item("aim_startup_promo_codes")
             .languageParameter(Globals.CURRENT_LANG_CODENAME)
@@ -72,24 +72,12 @@ export default class RegisterPage extends React.Component<
             .subscribe((response: any) => {
                 this.setState({
                     PromoCodes: response.item.items.value,
-                    isLoaded: [this.state.isLoaded[0], true]
+                    isLoaded: true
                 });
             });
     }
 
-    checkEmailExist(email: string) {
-        const { startupEmails } = this.state;
-        $(".email-error").addClass("d-none");
-        if (email) {
-            startupEmails.map((e: string) => {
-                if (email.toLowerCase() == e.toLowerCase()) {
-                    $(".email-error").removeClass("d-none");
-                }
-                else {
-                }
-            })
-        }
-    }
+
 
     checkPromoCode(code: string) {
         const { PromoCodes } = this.state;
@@ -169,66 +157,6 @@ export default class RegisterPage extends React.Component<
         $("#grandTotal").val((dicountedAmount + taxAmount).toFixed(0));
     }
 
-    register() {
-        const { pitchDeck, projectImage, startupLogo } = this.state;
-        var firstname = $("#firstname").val();
-        var lastname = $("#lastname").val();
-        var email = $(".amount-email").val();
-        var password = $(".password").val();
-        var jobtitle = $(".jobtitle").val();
-        var phone = $(".phone").val();
-        var startupname = $("#customer_account").val();
-        var estDate = $(".estDate").val();
-        var startupstage = $(".startupstage").val();
-        var startupsector = $(".startupsector").val();
-        var website = $(".website").val();
-        var country = $(".country").val();
-        // var projectImage = $(".project1").val();
-        // var pitchDesk = $(".project2").val();
-        // var startuplogo = $(".startuplogo").val();
-        var description = $(".description").val();
-        var promocode = $(".promo-code-field").val();
-        var amount = $(".package-amount").val();
-        var amountPay = $("#grandTotal").val();
-        // var encPassword = Crypto.encrypt(String(password));
-        var encPassword = String(password);
-        const data = JSON.stringify(
-            {
-                "firstname": firstname,
-                "lastname": lastname,
-                "email": email,
-                "password": encPassword,
-                "jobtitle": jobtitle,
-                "phone": phone,
-                "startupname": startupname,
-                "estDate": estDate,
-                "startupstage": startupstage,
-                "startupsector": startupsector,
-                "website": website,
-                "country": country,
-                "projectImage": String(projectImage),
-                "pitchDeck": String(pitchDeck),
-                "startuplogo": String(startupLogo),
-                "description": description,
-                "promocode": promocode,
-                "amount": parseFloat(String(amount)).toFixed(0),
-                "amountPay": parseFloat(String(amountPay)).toFixed(0),
-            })
-        $.ajax({
-            url: `${Globals.API_URL}RegisterAPI/Startup`,
-            dataType: 'json',
-            type: 'POST',
-            contentType: 'application/json',
-            data: data,
-            processData: false,
-            success: function (data) {
-                if (data) {
-                    window.location.href = `https://ypncongress.com/register/payment?EmailAddress=${email}&PreFix=AIM&Amount=${parseFloat(String(amountPay)).toFixed(0)}`;
-                }
-            }
-        });
-    }
-
     uploadImage(id: string) {
         var image = document.getElementById(id);
         // var filename = File.uploadfile(image, "startup");
@@ -260,10 +188,12 @@ export default class RegisterPage extends React.Component<
         }
     }
 
-    render(): React.ReactNode {
-        const { isLoaded, pitchDeck, startupLogo, projectImage, ProfilePhoto } = this.state;
 
-        if (isLoaded.indexOf(false) > -1) {
+
+    render(): React.ReactNode {
+        const { isLoaded, pitchDeck, startupLogo, projectImage, ProfilePhoto, firstName, lastName, email } = this.state;
+
+        if (!isLoaded) {
             return <SpinnerComponent />;
         }
 
@@ -275,6 +205,8 @@ export default class RegisterPage extends React.Component<
         } catch (e) {
 
         }
+
+
 
         return (
             <React.Fragment>
@@ -312,7 +244,7 @@ export default class RegisterPage extends React.Component<
                                         <div className="_form-content">
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                 
+
                                                     <input
                                                         type="text"
                                                         itemID="firstname"
@@ -321,6 +253,7 @@ export default class RegisterPage extends React.Component<
                                                         placeholder="First Name *"
                                                         className="form-control"
                                                         required
+                                                       
                                                     />
                                                 </div>
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -332,12 +265,13 @@ export default class RegisterPage extends React.Component<
                                                         placeholder="Last Name *"
                                                         className="form-control"
                                                         required
+                                                       
                                                     />
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                  
+
                                                     <input
                                                         type="text"
                                                         itemID="email"
@@ -347,15 +281,14 @@ export default class RegisterPage extends React.Component<
                                                         className="amount-email form-control"
                                                         required
 
-                                                        onChange={(e) => {
-                                                            this.checkEmailExist(e.target.value);
-                                                        }}
+
+                                                      
                                                     />
                                                     <p className="text-danger email-error d-none">Email already exist.</p>
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                  
+
                                                     <input
                                                         type="text"
                                                         itemID="field[23]"
@@ -637,7 +570,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                  
+
                                                     <input
                                                         type="text"
                                                         id="field[80]" name="field[80]"
@@ -649,7 +582,7 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <input
                                                         type="text"
                                                         id="customer_account" name="customer_account"
@@ -660,7 +593,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <input
                                                         type="date"
                                                         id="field[258]" name="field[258]"
@@ -674,7 +607,7 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <select name="field[260]" id="field[260]" className="startupstage form-control">
                                                         <option value="" selected>
                                                             Select Startup Stage
@@ -704,7 +637,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <select name="field[259]" id="field[259]" className="startupsector form-control" >
                                                         <option selected value="">
                                                             Select Startup Sector
@@ -767,7 +700,7 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <select
                                                         name="field[3]"
                                                         itemID="field[3]"
@@ -1116,7 +1049,7 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-                                                   
+
                                                     <input
                                                         type="file"
                                                         name="startuplogo"
@@ -1135,7 +1068,7 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12">
-                                                   
+
                                                     <textarea id="field[261]" name="field[261]" placeholder="Short Description" className="description form-control" style={{ height: "120px" }} ></textarea>
                                                 </div>
                                             </div>
@@ -1150,6 +1083,7 @@ export default class RegisterPage extends React.Component<
                                             <div className="row">
                                                 <div className="col-12 text-right">
                                                     <button
+
                                                         id="_form_406_submit"
                                                         type="submit"
                                                         className="startup-btn mt-3">
@@ -1161,13 +1095,18 @@ export default class RegisterPage extends React.Component<
 
                                         <div
                                             className="_form-thank-you success"
-                                            style={{ display: "none" }}
+                                            style={{ display: "none", padding: "0", margin: "0" }}
                                         >
-                                            <p>
+                                            <p style={{ color: "black", fontWeight: "bold" }}>
                                                 Thank you for registering for the AIM Startup 2025!
                                             </p>
+
+
+                                            <PackagesComponent />
                                         </div>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>
