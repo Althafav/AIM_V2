@@ -15,7 +15,7 @@ export default function PackagesComponent() {
     });
 
     function convertUsdToAed(usdAmount: number): number {
-        const exchangeRate = 3.464;
+        const exchangeRate = 3.68;
         const aedAmount = usdAmount * exchangeRate;
         return parseFloat(aedAmount.toFixed(2));
     }
@@ -34,7 +34,7 @@ export default function PackagesComponent() {
             first_name: firstname,
             last_name: lastname,
             email: email,
-            aed_amount: 1,
+            aed_amount: priceAED,
             source: source,
             source_link: Globals.BASE_URL + window.location.pathname,
         };
@@ -177,46 +177,49 @@ export default function PackagesComponent() {
                                 <tr>
                                     <td></td>
                                     <td className='text-center'>
-                                        <div className='startup-package-btn' style={{ background: "#6B6B6B", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(1500, 'AIM Startup 2025 Deluxe-Standard', 'standard')}
+                                        <button className='startup-package-btn' style={{ background: "#6B6B6B", borderRadius: "50px", color: "white" }}
+                                            onClick={() => handleBuyNow(1500, 'AIM Startup 2025 Standard-Package', 'standard')}
+                                            disabled={loading.standard}
                                         >
                                             {loading.standard ? (
-                                                <span className="spinner">Loading...</span>
+                                                <span className="spinner">processing...</span>
                                             ) : (
                                                 <>
                                                     <span className='price' id='standardPrice'>$1,500</span>
                                                     <span className='action-tag'>Buy Now</span>
                                                 </>
                                             )}
-                                        </div>
+                                        </button>
                                     </td>
                                     <td className='text-center'>
-                                        <div className='startup-package-btn' style={{ background: "#000000", borderRadius: "50px", color: "white" }}
+                                        <button className='startup-package-btn' style={{ background: "#000000", borderRadius: "50px", color: "white" }}
                                             onClick={() => handleBuyNow(3750, 'AIM Startup 2025 Deluxe-Package', 'deluxe')}
+                                            disabled={loading.deluxe}
                                         >
                                             {loading.deluxe ? (
-                                                <span className="spinner">Loading...</span>
+                                                <span className="spinner">processing...</span>
                                             ) : (
                                                 <>
                                                     <span className='price' id='deluxePrice'>$3,750</span>
                                                     <span className='action-tag'>Buy Now</span>
                                                 </>
                                             )}
-                                        </div>
+                                        </button>
                                     </td>
                                     <td className='text-center'>
-                                        <div className='startup-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(6499, 'AIM Startup 2025 Deluxe-Premium', 'premium')}
+                                        <button className='startup-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
+                                            onClick={() => handleBuyNow(6499, 'AIM Startup 2025 Premium-Package', 'premium')}
+                                            disabled={loading.premium}
                                         >
                                             {loading.premium ? (
-                                                <span className="spinner">Loading...</span>
+                                                <span className="spinner">processing...</span>
                                             ) : (
                                                 <>
                                                     <span className='price' id='premiumPrice'>$6,499</span>
                                                     <span className='action-tag'>Buy Now</span>
                                                 </>
                                             )}
-                                        </div>
+                                        </button>
                                     </td>
                                 </tr>
                             </tbody>
