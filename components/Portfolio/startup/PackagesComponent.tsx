@@ -34,7 +34,7 @@ export default function PackagesComponent() {
             first_name: firstname,
             last_name: lastname,
             email: email,
-            aed_amount: priceAED,
+            aed_amount: 1,
             source: source,
             source_link: Globals.BASE_URL + window.location.pathname,
         };
