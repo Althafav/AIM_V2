@@ -244,25 +244,30 @@ export default class RegisterPage extends React.Component<
                                         <div className="_form-content">
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        First Name: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         itemID="firstname"
                                                         id="firstname"
                                                         name="firstname"
-                                                        placeholder="First Name *"
+                                                        placeholder="First Name "
                                                         className="form-control"
                                                         required
 
                                                     />
                                                 </div>
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
+                                                    <label htmlFor="date" className="form-label">
+                                                        Last Name: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         itemID="lastname"
                                                         id="lastname"
                                                         name="lastname"
-                                                        placeholder="Last Name *"
+                                                        placeholder="Last Name "
                                                         className="form-control"
                                                         required
 
@@ -271,13 +276,15 @@ export default class RegisterPage extends React.Component<
                                             </div>
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Email: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         itemID="email"
                                                         id="email"
                                                         name="email"
-                                                        placeholder="Email *"
+                                                        placeholder="abc@company.com"
                                                         className="amount-email form-control"
                                                         required
 
@@ -288,12 +295,14 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Job Title: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         itemID="field[23]"
                                                         name="field[23]"
-                                                        placeholder="Job Title *"
+                                                        placeholder="Job Title "
                                                         className="jobtitle form-control"
                                                         required
                                                     />
@@ -302,7 +311,7 @@ export default class RegisterPage extends React.Component<
                                             <div className="row">
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label className="form-label">Mobile Phone<span className="text-danger"> *</span></label>
 
                                                     <div className="row">
                                                         <div className="col-4 col-md-4">
@@ -570,36 +579,42 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Website:
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         id="field[80]" name="field[80]"
                                                         className="website form-control"
-                                                        placeholder="Website *"
+                                                        placeholder="www.company.com"
                                                     />
                                                 </div>
                                             </div>
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Startup Name: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="text"
                                                         id="customer_account" name="customer_account"
                                                         className="form-control"
-                                                        placeholder="Startup Name *"
+                                                        placeholder="Startup Name "
                                                         required
                                                     />
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Date of Establishment: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="date"
                                                         id="field[258]" name="field[258]"
                                                         className="form-control estDate"
                                                         placeholder="Date Of Establishment *"
-                                                        required={true}
+                                                        required
                                                     />
                                                 </div>
 
@@ -607,7 +622,9 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Startup Stage: <span className="danger">*</span>
+                                                    </label>
                                                     <select name="field[260]" id="field[260]" className="startupstage form-control">
                                                         <option value="" selected>
                                                             Select Startup Stage
@@ -637,7 +654,9 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Startup Sector: <span className="danger">*</span>
+                                                    </label>
                                                     <select name="field[259]" id="field[259]" className="startupsector form-control" >
                                                         <option selected value="">
                                                             Select Startup Sector
@@ -700,7 +719,9 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="date" className="form-label">
+                                                        Country: <span className="danger">*</span>
+                                                    </label>
                                                     <select
                                                         name="field[3]"
                                                         itemID="field[3]"
@@ -1049,7 +1070,9 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
+                                                    <label htmlFor="startuplogo" className="form-label">
+                                                        Logo: <span className="danger">*</span>
+                                                    </label>
                                                     <input
                                                         type="file"
                                                         name="startuplogo"
@@ -1068,7 +1091,9 @@ export default class RegisterPage extends React.Component<
 
                                             <div className="row">
                                                 <div className="form-group col-12">
-
+                                                    <label htmlFor="startuplogo" className="form-label">
+                                                        Short Description:
+                                                    </label>
                                                     <textarea id="field[261]" name="field[261]" placeholder="Short Description" className="description form-control" style={{ height: "120px" }} ></textarea>
                                                 </div>
                                             </div>
