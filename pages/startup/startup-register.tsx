@@ -220,7 +220,7 @@ export default class RegisterPage extends React.Component<
 
                         <div className="container">
                             <div className="row">
-                                <div className="col-12">
+                                <div className="col-12 mt-5">
                                     <h2 className='heading-startup section-heading'>Startup Register</h2>
                                 </div>
                                 {/* <div className="col-12">
@@ -230,7 +230,7 @@ export default class RegisterPage extends React.Component<
 
 
                             <div className="row">
-                                <div className="col-12">
+                                <div className="col-12 mt-4">
                                     <form method="POST" action="https://strategic31677.activehosted.com/proc.php" id="_form_406_" className="_form _form_406 _inline-form  _dark startup-register-form" noValidate data-styles-version="5">
                                         <input type="hidden" name="u" value="406" />
                                         <input type="hidden" name="f" value="406" />
@@ -253,7 +253,7 @@ export default class RegisterPage extends React.Component<
                                                         placeholder="First Name *"
                                                         className="form-control"
                                                         required
-                                                       
+
                                                     />
                                                 </div>
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
@@ -265,7 +265,7 @@ export default class RegisterPage extends React.Component<
                                                         placeholder="Last Name *"
                                                         className="form-control"
                                                         required
-                                                       
+
                                                     />
                                                 </div>
                                             </div>
@@ -282,7 +282,7 @@ export default class RegisterPage extends React.Component<
                                                         required
 
 
-                                                      
+
                                                     />
                                                     <p className="text-danger email-error d-none">Email already exist.</p>
                                                 </div>
@@ -1101,8 +1101,8 @@ export default class RegisterPage extends React.Component<
                                                 Thank you for registering for the AIM Startup 2025!
                                             </p>
 
-
                                             <PackagesComponent />
+
                                         </div>
                                     </form>
 

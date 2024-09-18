@@ -436,6 +436,11 @@ img {
     border-radius: 50px
 }
 
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
 
 
 
@@ -478,6 +483,3 @@ img {
 @import "./locals/portfolio/startup/allInvestorPage.scss";
 @import "./locals/portfolio/startup/unicorns.scss";
 @import "./locals/speakes-page.scss";
-
-
-

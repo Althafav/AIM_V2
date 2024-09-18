@@ -31,7 +31,7 @@ export default function UnicornsPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className='unicorns-page-wrapper'
+            className='unicorns-page-wrapper portfolio-margin-top'
 
         >
             <PortfolioBanner bannerImageSrc={pageData.herosectionimage.value[0].url} Heading={pageData.herosectionheading.value} subHeading={pageData.herosectionheading.value} registerLink={'/register-interest/startup'} portfolioColorName="startup" />

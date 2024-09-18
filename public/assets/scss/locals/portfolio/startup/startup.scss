@@ -540,10 +540,10 @@
 }
 
 .portfolio-margin-top {
-    margin-top: 355px;
+    margin-top: 325px;
 
     @media screen and (max-width: 800px) {
-        margin-top: 175px;
+        margin-top: 244px;
         
     }
 }
@@ -613,7 +613,8 @@
             }
 
             @media screen and (max-width: 600px) {
-                font-size: 24px;
+                font-size: 20px;
+                text-align: left;
             }
         }
 
@@ -628,6 +629,7 @@
 
             @media screen and (max-width: 600px) {
                 font-size: 16px;
+                text-align: left;
             }
         }
 
@@ -635,6 +637,11 @@
 
             .table-heading {
                 font-size: 28px;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 20px;
+                    
+                }
             }
 
             ul {
@@ -696,7 +703,7 @@
     }
 
     .startup-register-form {
-        margin-top: 60px;
+ 
 
         .startup-submit-btn {
             background: $startup;
