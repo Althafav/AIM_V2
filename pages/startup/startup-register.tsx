@@ -1127,13 +1127,13 @@ export default class RegisterPage extends React.Component<
                                             </p>
 
 
-                                            <PackagesComponent />
+
 
                                         </div>
                                     </form>
 
 
-                                  
+                                    <PackagesComponent />
 
                                 </div>
                             </div>

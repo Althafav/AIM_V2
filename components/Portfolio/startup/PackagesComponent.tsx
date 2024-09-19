@@ -183,6 +183,18 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
+                                    <td>Pitch Competition Slot (if applicable)
+                                        <ul>
+                                            <li>Preliminary rounds: Online Pitching</li>
+                                            <li>Final rounds: AIM Congress 2025 Startup Stage</li>
+                                        </ul>
+                                    </td>
+                                    <td className='text-center'>2</td>
+                                    <td className='text-center'>2</td>
+                                    <td className='text-center'>3</td>
+                                </tr>
+
+                                <tr>
                                     <td>Startup Passes with Access to:
                                         <ul>
                                             <li>Opening Ceremony</li>
@@ -193,44 +205,45 @@ export default function PackagesComponent() {
                                             <li>Official Networking App</li>
                                         </ul>
                                     </td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>3</td>
+                                    <td className='text-center'>2 PASS</td>
+                                    <td className='text-center'>2 PASS</td>
+                                    <td className='text-center'>3 PASS</td>
 
                                 </tr>
 
-
                                 <tr>
-                                    <td>Ticket for Desert Safari Experience</td>
-                                    <td className='text-center'>1</td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>3</td>
-                                </tr>
-
-                                <tr>
-                                    <td>3-Mins Pitch Competition
+                                    <td>Marketing Promotion
                                         <ul>
-                                            <li>Round 1: Online Pitch</li>
-                                            <li>Final Round: At AIM Congress 2025 (if the startup meets the eligibility criteria)</li>
+                                            <li>Social media post</li>
+                                            <li>Website Promotion</li>
                                         </ul>
                                     </td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>3</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
                                     <td>Gala Dinner</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>-</td>
-                                    <td className='text-center'>2</td>
+                                    <td className='text-center'>2 PASS</td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td>Ticket for Desert Safari Experience</td>
+                                    <td className='text-center'>1 Ticket</td>
+                                    <td className='text-center'>2 Tickets</td>
+                                    <td className='text-center'>3 Tickets</td>
                                 </tr>
 
                                 <tr>
                                     <td>UAE Visa (if required)</td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>3</td>
-                                    <td className='text-center'>5</td>
+                                    <td className='text-center'>2 Slot</td>
+                                    <td className='text-center'>3 Slot</td>
+                                    <td className='text-center'>5 Slot</td>
                                 </tr>
 
                                 <tr>
