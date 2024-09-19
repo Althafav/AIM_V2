@@ -1,17 +1,23 @@
 import React from 'react';
 
 
-interface AddOnModalProps {
+type AddOn = {
+    name: string;
+    price: number;
+};
+
+type AddOnModalProps = {
     isOpen: boolean;
     onClose: () => void;
     onConfirm: () => void;
     onSkip: () => void;
-    addons: { name: string; price: number }[];
-    selectedAddons: { name: string; price: number }[];
-    onAddonToggle: (addon: { name: string; price: number }) => void;
+    addons: AddOn[];
+    selectedAddons: { name: string; quantity: number; price: number }[];
+    onAddonToggle: (addon: AddOn) => void;
+    onQuantityChange: (addon: AddOn, quantity: number) => void;
     totalPrice: number;
-
-}
+    selectedPackage: string | null;
+};
 
 const AddOnModal: React.FC<AddOnModalProps> = ({
     isOpen,
@@ -21,32 +27,62 @@ const AddOnModal: React.FC<AddOnModalProps> = ({
     addons,
     selectedAddons,
     onAddonToggle,
+    onQuantityChange,
     totalPrice,
+    selectedPackage,
 
 }) => {
     if (!isOpen) return null;
 
+    const isSelected = (addonName: string) =>
+        selectedAddons.some(addon => addon.name === addonName);
+
+    const getQuantity = (addonName: string) =>
+        selectedAddons.find(addon => addon.name === addonName)?.quantity || 1;
+
+
+    const hasQuantityControl = (addonName: string) =>
+        addonName === 'Dessert Safari' || addonName === 'Gala Dinner';
+
     return (
-        <div className="custom-modal-overlay">
+        <div className="custom-modal-overlay" id='AddOnModal'>
             <div className="custom-modal">
                 <div className="custom-modal-header">
-                    <h5 className='text-black'>Do you want any Add-ons ?</h5>
+                    <h5 className='text-black'>{selectedPackage} Price : <strong>{totalPrice}</strong> </h5>
                     <button className="custom-modal-close" onClick={onClose}>×</button>
                 </div>
                 <div className="custom-modal-body">
-                    {addons.map((addon) => (
-                        <div key={addon.name} className="custom-modal-addon">
-                            <input
-                                type="checkbox"
-                                checked={selectedAddons.some(item => item.name === addon.name)}
-                                onChange={() => onAddonToggle(addon)}
-                            />
-                            <label style={{color: "black" , fontWeight: "normal"}}>{addon.name} - ${addon.price}</label>
+                    <p className='mb-3'>Do you want any Add-ons ?</p>
+                    {addons.map(addon => (
+                        <div key={addon.name} className="addon-item" >
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    checked={isSelected(addon.name)}
+                                    onChange={() => onAddonToggle(addon)}
+                                />
+                                {addon.name} - ${addon.price}
+                            </label>
+                            {isSelected(addon.name) && hasQuantityControl(addon.name) && (
+                                <div className="quantity-selector">
+                                    <button
+                                        onClick={() => onQuantityChange(addon, getQuantity(addon.name) - 1)}
+                                    >
+                                        -
+                                    </button>
+                                    <span>{getQuantity(addon.name)}</span>
+                                    <button
+                                        onClick={() => onQuantityChange(addon, getQuantity(addon.name) + 1)}
+                                    >
+                                        +
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
                 <div className="custom-modal-footer">
-                    <div className='text-dark'>Total: <strong>${totalPrice}</strong></div>
+                    <div className='text-dark'>Grand Total: <strong>${totalPrice}</strong></div>
                     <div className="mt-3">
                         <button className="custom-modal-confirm" onClick={onConfirm}>Confirm Add-ons</button>
                         <button className="custom-modal-skip" onClick={onSkip}>Skip Add-ons</button>

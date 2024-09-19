@@ -171,7 +171,7 @@ const StartUp = () => {
                             return (
                                 <div className="col-md-4 mb-3" key={`carditems-${index}`}>
 
-                                    <Link href="/startup/startup-register">
+                                    <Link href={item.link.value}>
                                         <img src={item.image.value[0].url} alt="register" />
 
                                     </Link>

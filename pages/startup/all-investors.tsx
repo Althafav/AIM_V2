@@ -86,7 +86,7 @@ export default function AllInvestorPage() {
                         </div>
                         <div className="col-lg-4">
                             <Link href="/startup/investor-register">
-                                <button className='startup-btn mt-4'>Become a Partner</button>
+                                <button className='startup-btn mt-4'>Become an Investor</button>
                             </Link>
                         </div>
                     </div>

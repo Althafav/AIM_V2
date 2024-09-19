@@ -10,15 +10,11 @@ import AddOnModal from './UI/AddOnModal';
 type AddOn = {
     name: string;
     price: number;
+    quantity?: number;
 };
 
-type LoadingState = {
-    standard: boolean;
-    deluxe: boolean;
-    premium: boolean;
-};
 
-type PackageType = 'standard' | 'deluxe' | 'premium';
+type PackageType = 'Standard' | 'Deluxe' | 'Premium';
 
 type Payload = {
     first_name: string | undefined;
@@ -32,8 +28,8 @@ type Payload = {
 
 
 const addonsList: AddOn[] = [
-    { name: 'Dessert Safari', price: 150 },
-    { name: 'Gala Dinner', price: 499 },
+    { name: 'Dessert Safari', price: 150, quantity: 1 },
+    { name: 'Gala Dinner', price: 499, quantity: 1 },
     { name: 'Startup Conveyor', price: 499 },
     { name: 'Pitch Demo', price: 799 },
 ];
@@ -42,66 +38,64 @@ const addonsList: AddOn[] = [
 
 export default function PackagesComponent() {
 
-    const [loading, setLoading] = useState({
-        standard: false,
-        deluxe: false,
-        premium: false,
-    });
-
-    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    const [selectedAddons, setSelectedAddons] = useState<AddOn[]>([]);
-    const [currentPrice, setCurrentPrice] = useState<number>(0);
-
+    const [loading, setLoading] = useState({ standard: false, deluxe: false, premium: false });
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+    const [selectedAddons, setSelectedAddons] = useState<{ name: string; quantity: number; price: number }[]>([]);
     const [selectedPackage, setSelectedPackage] = useState<PackageType | null>(null);
+    const [basePrice, setBasePrice] = useState<number>(0);
+
 
     const toggleAddon = (addon: AddOn) => {
-        const isSelected = selectedAddons.some(item => item.name === addon.name);
-        const updatedAddons = isSelected
-            ? selectedAddons.filter(item => item.name !== addon.name)
-            : [...selectedAddons, addon];
+        const existingAddon = selectedAddons.find(item => item.name === addon.name);
+        if (existingAddon) {
 
-        setSelectedAddons(updatedAddons);
+            setSelectedAddons(selectedAddons.filter(item => item.name !== addon.name));
+        } else {
 
-        const totalAddonPrice = updatedAddons.reduce((acc, item) => acc + item.price, 0);
-        setCurrentPrice((basePrice) => basePrice + totalAddonPrice);
-
-
+            setSelectedAddons([...selectedAddons, { ...addon, quantity: 1 }]);
+        }
     };
 
 
-    function convertUsdToAed(usdAmount: number): number {
-        const exchangeRate = 3.68;
-        const aedAmount = usdAmount * exchangeRate;
-        return parseFloat(aedAmount.toFixed(0));
-    }
+    const updateAddonQuantity = (addon: AddOn, quantity: number) => {
+        if (quantity < 1) return;
+        const updatedAddons = selectedAddons.map(item =>
+            item.name === addon.name ? { ...item, quantity } : item
+        );
+        setSelectedAddons(updatedAddons);
+    };
+
+
+    const calculateTotalPrice = () => {
+        const addonsTotal = selectedAddons.reduce((acc, addon) => acc + addon.price * addon.quantity, 0);
+        return basePrice + addonsTotal;
+    };
+
 
     const handleBuyNow = (priceUSD: number, packageType: PackageType) => {
         setSelectedPackage(packageType);
-        setCurrentPrice(priceUSD);
+        setBasePrice(priceUSD);
         setIsModalOpen(true);
     };
 
     const handleConfirmAddons = async () => {
-
         if (!selectedPackage) return;
-
-        setLoading((prev) => ({ ...prev, [selectedPackage]: true }));
-
+        setLoading(prev => ({ ...prev, [selectedPackage]: true }));
 
         const firstname = (document.getElementById('firstname') as HTMLInputElement)?.value;
         const lastname = (document.getElementById('lastname') as HTMLInputElement)?.value;
         const email = (document.getElementById('email') as HTMLInputElement)?.value;
 
-        const priceAED = convertUsdToAed(currentPrice);
+        const totalPriceAED = convertUsdToAed(calculateTotalPrice());
         const orderDescription = selectedAddons.length > 0
-            ? selectedAddons.map(addon => addon.name).join(', ')
+            ? selectedAddons.map(addon => `${addon.quantity}x ${addon.name}`).join(', ')
             : '';
 
         const payload: Payload = {
             first_name: firstname,
             last_name: lastname,
             email: email,
-            aed_amount: priceAED,
+            aed_amount: totalPriceAED,
             source: selectedPackage,
             order_description: orderDescription,
             source_link: Globals.BASE_URL + window.location.pathname,
@@ -119,7 +113,7 @@ export default function PackagesComponent() {
         } catch (error) {
             console.error('Payment error:', error);
         } finally {
-            setLoading((prev) => ({ ...prev, [selectedPackage]: false }));
+            setLoading(prev => ({ ...prev, [selectedPackage]: false }));
             setIsModalOpen(false);
         }
     };
@@ -128,6 +122,7 @@ export default function PackagesComponent() {
         setSelectedAddons([]);
         handleConfirmAddons();
     };
+
     return (
         <div className='packages-page-wrapper '>
             <section className=" packages-table-wrapper">
@@ -241,7 +236,7 @@ export default function PackagesComponent() {
                                     <td></td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#6B6B6B", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(1599, 'standard')}
+                                            onClick={() => handleBuyNow(1599, 'Standard')}
                                             disabled={loading.standard}
                                         >
                                             {loading.standard ? (
@@ -256,7 +251,7 @@ export default function PackagesComponent() {
                                     </td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#000000", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(5999, 'deluxe')}
+                                            onClick={() => handleBuyNow(5999, 'Deluxe')}
                                             disabled={loading.deluxe}
                                         >
                                             {loading.deluxe ? (
@@ -271,7 +266,7 @@ export default function PackagesComponent() {
                                     </td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(8999, 'premium')}
+                                            onClick={() => handleBuyNow(8999, 'Premium')}
                                             disabled={loading.premium}
                                         >
                                             {loading.premium ? (
@@ -299,10 +294,16 @@ export default function PackagesComponent() {
                 addons={addonsList}
                 selectedAddons={selectedAddons}
                 onAddonToggle={toggleAddon}
-                totalPrice={currentPrice}
-
+                onQuantityChange={updateAddonQuantity}
+                totalPrice={calculateTotalPrice()}
+                selectedPackage={selectedPackage}
             />
-
         </div>
     )
+}
+
+
+function convertUsdToAed(usdAmount: number): number {
+    const exchangeRate = 3.68;
+    return parseFloat((usdAmount * exchangeRate).toFixed(0));
 }
