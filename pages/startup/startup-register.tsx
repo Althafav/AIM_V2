@@ -1117,7 +1117,6 @@ export default class RegisterPage extends React.Component<
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div
                                             className="_form-thank-you success"
                                             style={{ display: "none", padding: "0", margin: "0" }}
@@ -1127,13 +1126,14 @@ export default class RegisterPage extends React.Component<
                                             </p>
 
 
-
+                                            <PackagesComponent />
 
                                         </div>
+
                                     </form>
 
 
-                                    <PackagesComponent />
+
 
                                 </div>
                             </div>

@@ -189,9 +189,9 @@ export default function PackagesComponent() {
                                             <li>Final rounds: AIM Congress 2025 Startup Stage</li>
                                         </ul>
                                     </td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>2</td>
-                                    <td className='text-center'>3</td>
+                                    <td className='text-center'>2 Slotes</td>
+                                    <td className='text-center'>2 Slotes</td>
+                                    <td className='text-center'>3 Slotes</td>
                                 </tr>
 
                                 <tr>
@@ -205,9 +205,9 @@ export default function PackagesComponent() {
                                             <li>Official Networking App</li>
                                         </ul>
                                     </td>
-                                    <td className='text-center'>2 PASS</td>
-                                    <td className='text-center'>2 PASS</td>
-                                    <td className='text-center'>3 PASS</td>
+                                    <td className='text-center'>2 Passes</td>
+                                    <td className='text-center'>2 Passes</td>
+                                    <td className='text-center'>3 Passes</td>
 
                                 </tr>
 
@@ -227,7 +227,7 @@ export default function PackagesComponent() {
                                     <td>Gala Dinner</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>-</td>
-                                    <td className='text-center'>2 PASS</td>
+                                    <td className='text-center'>2 Passes</td>
                                 </tr>
 
 
@@ -241,9 +241,9 @@ export default function PackagesComponent() {
 
                                 <tr>
                                     <td>UAE Visa (if required)</td>
-                                    <td className='text-center'>2 Slot</td>
-                                    <td className='text-center'>3 Slot</td>
-                                    <td className='text-center'>5 Slot</td>
+                                    <td className='text-center'>2 Visa</td>
+                                    <td className='text-center'>3 Visa</td>
+                                    <td className='text-center'>5 Visa</td>
                                 </tr>
 
                                 <tr>
