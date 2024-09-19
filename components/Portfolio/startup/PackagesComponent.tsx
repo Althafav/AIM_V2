@@ -4,6 +4,40 @@ import { TiTick } from 'react-icons/ti'
 import axios from 'axios';
 import Globals from '@/modules/Globals';
 
+import AddOnModal from './UI/AddOnModal';
+
+
+type AddOn = {
+    name: string;
+    price: number;
+};
+
+type LoadingState = {
+    standard: boolean;
+    deluxe: boolean;
+    premium: boolean;
+};
+
+type PackageType = 'standard' | 'deluxe' | 'premium';
+
+type Payload = {
+    first_name: string | undefined;
+    last_name: string | undefined;
+    email: string | undefined;
+    aed_amount: number;
+    source: string;
+    order_description: string;
+    source_link: string;
+};
+
+
+const addonsList: AddOn[] = [
+    { name: 'Dessert Safari', price: 150 },
+    { name: 'Gala Dinner', price: 499 },
+    { name: 'Startup Conveyor', price: 499 },
+    { name: 'Pitch Demo', price: 799 },
+];
+
 
 
 export default function PackagesComponent() {
@@ -14,56 +48,85 @@ export default function PackagesComponent() {
         premium: false,
     });
 
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [selectedAddons, setSelectedAddons] = useState<AddOn[]>([]);
+    const [currentPrice, setCurrentPrice] = useState<number>(0);
+
+    const [selectedPackage, setSelectedPackage] = useState<PackageType | null>(null);
+
+    const toggleAddon = (addon: AddOn) => {
+        const isSelected = selectedAddons.some(item => item.name === addon.name);
+        const updatedAddons = isSelected
+            ? selectedAddons.filter(item => item.name !== addon.name)
+            : [...selectedAddons, addon];
+
+        setSelectedAddons(updatedAddons);
+
+        const totalAddonPrice = updatedAddons.reduce((acc, item) => acc + item.price, 0);
+        setCurrentPrice((basePrice) => basePrice + totalAddonPrice);
+
+
+    };
+
+
     function convertUsdToAed(usdAmount: number): number {
         const exchangeRate = 3.68;
         const aedAmount = usdAmount * exchangeRate;
-        return parseFloat(aedAmount.toFixed(2));
+        return parseFloat(aedAmount.toFixed(0));
     }
 
-    const handleBuyNow = async (priceUSD: number, source: string, packageType: 'standard' | 'deluxe' | 'premium') => {
+    const handleBuyNow = (priceUSD: number, packageType: PackageType) => {
+        setSelectedPackage(packageType);
+        setCurrentPrice(priceUSD);
+        setIsModalOpen(true);
+    };
 
-        setLoading((prev) => ({ ...prev, [packageType]: true }));
+    const handleConfirmAddons = async () => {
 
-        var firstname = $("#firstname").val();
-        var lastname = $("#lastname").val();
-        var email = $("#email").val();
+        if (!selectedPackage) return;
 
-        const priceAED = convertUsdToAed(priceUSD);
+        setLoading((prev) => ({ ...prev, [selectedPackage]: true }));
 
-        const payload = {
+
+        const firstname = (document.getElementById('firstname') as HTMLInputElement)?.value;
+        const lastname = (document.getElementById('lastname') as HTMLInputElement)?.value;
+        const email = (document.getElementById('email') as HTMLInputElement)?.value;
+
+        const priceAED = convertUsdToAed(currentPrice);
+        const orderDescription = selectedAddons.length > 0
+            ? selectedAddons.map(addon => addon.name).join(', ')
+            : '';
+
+        const payload: Payload = {
             first_name: firstname,
             last_name: lastname,
             email: email,
             aed_amount: priceAED,
-            source: source,
+            source: selectedPackage,
+            order_description: orderDescription,
             source_link: Globals.BASE_URL + window.location.pathname,
         };
 
         try {
-
-
             const response = await axios.post('https://payment.aimcongress.com/api/Order/Generate', payload, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
             });
-            console.log('Payment response:', response.data);
 
             const paymentLink = response.data.payment_link;
-
-
             if (paymentLink) {
                 window.location.href = paymentLink;
             }
-
-
         } catch (error) {
             console.error('Payment error:', error);
-
         } finally {
-
-            setLoading((prev) => ({ ...prev, [packageType]: false }));
+            setLoading((prev) => ({ ...prev, [selectedPackage]: false }));
+            setIsModalOpen(false);
         }
+    };
+
+    const handleSkipAddons = () => {
+        setSelectedAddons([]);
+        handleConfirmAddons();
     };
     return (
         <div className='packages-page-wrapper '>
@@ -178,14 +241,14 @@ export default function PackagesComponent() {
                                     <td></td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#6B6B6B", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(1500, 'AIM Startup 2025 Standard-Package', 'standard')}
+                                            onClick={() => handleBuyNow(1599, 'standard')}
                                             disabled={loading.standard}
                                         >
                                             {loading.standard ? (
                                                 <span className="spinner">processing...</span>
                                             ) : (
                                                 <>
-                                                    <span className='price' id='standardPrice'>$1,500</span>
+                                                    <span className='price' id='standardPrice'>$1,599</span>
                                                     <span className='action-tag'>Buy Now</span>
                                                 </>
                                             )}
@@ -193,14 +256,14 @@ export default function PackagesComponent() {
                                     </td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#000000", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(3750, 'AIM Startup 2025 Deluxe-Package', 'deluxe')}
+                                            onClick={() => handleBuyNow(5999, 'deluxe')}
                                             disabled={loading.deluxe}
                                         >
                                             {loading.deluxe ? (
                                                 <span className="spinner">processing...</span>
                                             ) : (
                                                 <>
-                                                    <span className='price' id='deluxePrice'>$3,750</span>
+                                                    <span className='price' id='deluxePrice'>$5,999</span>
                                                     <span className='action-tag'>Buy Now</span>
                                                 </>
                                             )}
@@ -208,7 +271,7 @@ export default function PackagesComponent() {
                                     </td>
                                     <td className='text-center'>
                                         <button className='startup-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
-                                            onClick={() => handleBuyNow(6499, 'AIM Startup 2025 Premium-Package', 'premium')}
+                                            onClick={() => handleBuyNow(8999, 'premium')}
                                             disabled={loading.premium}
                                         >
                                             {loading.premium ? (
@@ -228,7 +291,17 @@ export default function PackagesComponent() {
                     </div>
                 </div>
             </section>
+            <AddOnModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onConfirm={handleConfirmAddons}
+                onSkip={handleSkipAddons}
+                addons={addonsList}
+                selectedAddons={selectedAddons}
+                onAddonToggle={toggleAddon}
+                totalPrice={currentPrice}
 
+            />
 
         </div>
     )

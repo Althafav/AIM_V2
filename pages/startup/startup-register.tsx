@@ -1126,13 +1126,13 @@ export default class RegisterPage extends React.Component<
                                                 Thank you for registering for the AIM Startup 2025!
                                             </p>
 
-                                          
+                                            <PackagesComponent />
 
 
 
                                         </div>
                                     </form>
-                                    <PackagesComponent />
+
                                 </div>
                             </div>
                         </div>
