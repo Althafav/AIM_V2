@@ -44,11 +44,13 @@ const AddOnModal: React.FC<AddOnModalProps> = ({
     const hasQuantityControl = (addonName: string) =>
         addonName === 'Dessert Safari' || addonName === 'Gala Dinner';
 
+    const estimatedAED = totalPrice * 3.68
+
     return (
         <div className="custom-modal-overlay" id='AddOnModal'>
             <div className="custom-modal">
                 <div className="custom-modal-header">
-                    <h5 className='text-black'>{selectedPackage} Price : <strong>{totalPrice}</strong> </h5>
+                    <h5 className='text-black'>{selectedPackage} Ticket : <strong>${totalPrice}</strong> </h5>
                     <button className="custom-modal-close" onClick={onClose}>×</button>
                 </div>
                 <div className="custom-modal-body">
@@ -83,6 +85,7 @@ const AddOnModal: React.FC<AddOnModalProps> = ({
                 </div>
                 <div className="custom-modal-footer">
                     <div className='text-dark'>Grand Total: <strong>${totalPrice}</strong></div>
+                    <p className='estimation-price'>Estimated amount in Dirhams : AED {estimatedAED.toFixed(0)}</p>
                     <div className="mt-3">
                         <button className="custom-modal-confirm" onClick={onConfirm}>Confirm Add-ons</button>
                         <button className="custom-modal-skip" onClick={onSkip}>Skip Add-ons</button>

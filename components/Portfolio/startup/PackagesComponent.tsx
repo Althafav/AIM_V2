@@ -31,6 +31,7 @@ const addonsList: AddOn[] = [
     { name: 'Dessert Safari', price: 150, quantity: 1 },
     { name: 'Gala Dinner', price: 499, quantity: 1 },
     { name: 'Startup Conveyor', price: 499 },
+    { name: 'Additional Startup Pass', price: 500 },
     { name: 'Pitch Demo', price: 799 },
 ];
 
@@ -39,7 +40,7 @@ const addonsList: AddOn[] = [
 export default function PackagesComponent() {
 
     const [loading, setLoading] = useState({ standard: false, deluxe: false, premium: false });
-    const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [selectedAddons, setSelectedAddons] = useState<{ name: string; quantity: number; price: number }[]>([]);
     const [selectedPackage, setSelectedPackage] = useState<PackageType | null>(null);
     const [basePrice, setBasePrice] = useState<number>(0);
@@ -227,9 +228,9 @@ export default function PackagesComponent() {
 
                                 <tr>
                                     <td>UAE Visa (if required)</td>
-                                    <td className='text-center'><TiTick /></td>
-                                    <td className='text-center'><TiTick /></td>
-                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'>2</td>
+                                    <td className='text-center'>3</td>
+                                    <td className='text-center'>5</td>
                                 </tr>
 
                                 <tr>
