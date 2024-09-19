@@ -39,6 +39,6 @@ static PROJECT_ID: string = "615577b9-4e2b-0074-b4f8-20f11d30f5ae";
 
     static BASE_URL: string =
         process.env.NODE_ENV === "production"
-            ? "https://aim-revamp-demo.vercel.app/"
+            ? "https://demo.aimcongress.com/"
             : "http://localhost:4000/";
 }

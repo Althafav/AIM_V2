@@ -154,7 +154,7 @@ export default class RegisterPage extends React.Component<
                                         <input
                                             type="hidden"
                                             name="field[38]"
-                                            value="AIM 2025-Register Your Interest"
+                                            value="AIM 2025-Startup-RYI"
                                         />
 
                                         <div className="_form-content">
@@ -494,6 +494,7 @@ export default class RegisterPage extends React.Component<
                                                         <option value="" selected>
                                                             Select Country*
                                                         </option>
+                                                      
                                                         <option value="Afghanistan" >
                                                             Afghanistan
                                                         </option>
@@ -586,6 +587,9 @@ export default class RegisterPage extends React.Component<
                                                         </option>
                                                         <option value="British Indian Ocean Territory" >
                                                             British Indian Ocean Territory
+                                                        </option>
+                                                        <option value="British Virgin Islands" >
+                                                            British Virgin Islands
                                                         </option>
                                                         <option value="Brunei Darussalam" >
                                                             Brunei Darussalam
@@ -797,8 +801,8 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Indonesia" >
                                                             Indonesia
                                                         </option>
-                                                        <option value="Iran, Islamic Republic of" >
-                                                            Iran, Islamic Republic of
+                                                        <option value="Iran" >
+                                                            Iran
                                                         </option>
                                                         <option value="Iraq" >
                                                             Iraq
@@ -832,12 +836,6 @@ export default class RegisterPage extends React.Component<
                                                         </option>
                                                         <option value="Kiribati" >
                                                             Kiribati
-                                                        </option>
-                                                        <option value="Korea, Democratic People&#039;s Republic of" >
-                                                            Korea, Democratic People&#039;s Republic of
-                                                        </option>
-                                                        <option value="Korea, Republic of" >
-                                                            Korea, Republic of
                                                         </option>
                                                         <option value="Kosovo" >
                                                             Kosovo
@@ -914,11 +912,11 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Mexico" >
                                                             Mexico
                                                         </option>
-                                                        <option value="Micronesia, Federated States of" >
-                                                            Micronesia, Federated States of
+                                                        <option value="Micronesia" >
+                                                            Micronesia
                                                         </option>
-                                                        <option value="Moldova, Republic of" >
-                                                            Moldova, Republic of
+                                                        <option value="Moldova" >
+                                                            Moldova
                                                         </option>
                                                         <option value="Monaco" >
                                                             Monaco
@@ -977,6 +975,9 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Norfolk Island" >
                                                             Norfolk Island
                                                         </option>
+                                                        <option value="North Korea" >
+                                                            North Korea
+                                                        </option>
                                                         <option value="North Macedonia" >
                                                             North Macedonia
                                                         </option>
@@ -995,8 +996,8 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Palau" >
                                                             Palau
                                                         </option>
-                                                        <option value="Palestinian Territory, Occupied" >
-                                                            Palestinian Territory, Occupied
+                                                        <option value="Palestine" >
+                                                            Palestine
                                                         </option>
                                                         <option value="Panama" >
                                                             Panama
@@ -1103,6 +1104,9 @@ export default class RegisterPage extends React.Component<
                                                         <option value="South Georgia and the South Sandwich Islands" >
                                                             South Georgia and the South Sandwich Islands
                                                         </option>
+                                                        <option value="South Korea" >
+                                                            South Korea
+                                                        </option>
                                                         <option value="South Sudan" >
                                                             South Sudan
                                                         </option>
@@ -1130,14 +1134,14 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Syrian Arab Republic" >
                                                             Syrian Arab Republic
                                                         </option>
-                                                        <option value="Taiwan, Province of China" >
-                                                            Taiwan, Province of China
+                                                        <option value="Taiwan" >
+                                                            Taiwan
                                                         </option>
                                                         <option value="Tajikistan" >
                                                             Tajikistan
                                                         </option>
-                                                        <option value="Tanzania, United Republic of" >
-                                                            Tanzania, United Republic of
+                                                        <option value="Tanzania" >
+                                                            Tanzania
                                                         </option>
                                                         <option value="Thailand" >
                                                             Thailand
@@ -1172,6 +1176,9 @@ export default class RegisterPage extends React.Component<
                                                         <option value="Tuvalu" >
                                                             Tuvalu
                                                         </option>
+                                                        <option value="U.S. Virgin Islands" >
+                                                            U.S. Virgin Islands
+                                                        </option>
                                                         <option value="Uganda" >
                                                             Uganda
                                                         </option>
@@ -1204,12 +1211,6 @@ export default class RegisterPage extends React.Component<
                                                         </option>
                                                         <option value="Viet Nam" >
                                                             Viet Nam
-                                                        </option>
-                                                        <option value="Virgin Islands, British" >
-                                                            Virgin Islands, British
-                                                        </option>
-                                                        <option value="Virgin Islands, U.S." >
-                                                            Virgin Islands, U.S.
                                                         </option>
                                                         <option value="Wallis and Futuna" >
                                                             Wallis and Futuna
