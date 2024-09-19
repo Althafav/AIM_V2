@@ -41,12 +41,12 @@ const AddOnModal: React.FC<AddOnModalProps> = ({
                                 checked={selectedAddons.some(item => item.name === addon.name)}
                                 onChange={() => onAddonToggle(addon)}
                             />
-                            <label>{addon.name} - ${addon.price}</label>
+                            <label style={{color: "black" , fontWeight: "normal"}}>{addon.name} - ${addon.price}</label>
                         </div>
                     ))}
                 </div>
                 <div className="custom-modal-footer">
-                    <div>Total: <strong>${totalPrice}</strong></div>
+                    <div className='text-dark'>Total: <strong>${totalPrice}</strong></div>
                     <div className="mt-3">
                         <button className="custom-modal-confirm" onClick={onConfirm}>Confirm Add-ons</button>
                         <button className="custom-modal-skip" onClick={onSkip}>Skip Add-ons</button>
