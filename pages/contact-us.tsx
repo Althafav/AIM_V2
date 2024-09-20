@@ -1825,7 +1825,7 @@ export default class RegisterPage extends React.Component<
                                                             <input
                                                                 id="field_61Future Finance"
                                                                 type="radio"
-                                                                name="field[61]"
+                                                                name="field[61][]"
                                                                 value="Future Finance"
                                                             />
                                                             <span>

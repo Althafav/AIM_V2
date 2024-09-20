@@ -23,7 +23,7 @@ export default function MenuComponent() {
 
   const handleToggle = () => {
     setIsToggle(prevState => !prevState);
-  };
+  };  
 
   const handleScroll = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
