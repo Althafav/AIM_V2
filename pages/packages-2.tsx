@@ -42,7 +42,7 @@ const PackageTable = () => {
                                 <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
                                     {Packages[0].portfolio.map((portfolio: any) => (
                                         <option key={portfolio.id} value={portfolio.id}>
-                                            {portfolio.portfolioName} ({portfolio.price})
+                                            {portfolio.portfolioName}
                                         </option>
                                     ))}
                                 </select>
