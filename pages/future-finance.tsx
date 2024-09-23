@@ -39,11 +39,11 @@ const FutureFinance = () => {
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
+            
                   
 
                     <AccordionComponent pageData={pageData} />
-                </div>
+        
             </section>
         </motion.div>
     )

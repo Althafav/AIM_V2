@@ -8,6 +8,7 @@ import Globals from '@/modules/Globals';
 import { Postshowreport } from '@/models/postshowreport';
 import { Postshowreportyear } from '@/models/postshowreportyear';
 import { Reportitem } from '@/models/reportitem';
+import Head from 'next/head';
 
 const containerVariants = {
     hidden: {},
@@ -57,6 +58,12 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
 
     return (
         <div className='brochure-page-wrapper' >
+            <Head>
+                <title>AIM Congress | Brochure</title>
+                <meta name="title" content="Brochure" />
+
+                <meta name="description" content="checkout our Brochure" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
@@ -132,7 +139,7 @@ export default function Broucher({ brochureData }: { brochureData: any[] }) {
                                                 <div className="col-12 col-md-6 col-lg-3 m-b-30 report-wrapper" key={`brochure-${index}`}>
                                                     <a href={`/reports/download-brochure/${report.system.id}`}>
                                                         <div className="report-image" style={{ background: "url(" + report.image.value[0].url + ")" }}>
-                                                            
+
                                                         </div>
 
                                                         <div className="report-image-content">

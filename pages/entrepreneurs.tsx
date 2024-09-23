@@ -26,7 +26,7 @@ export default function ForiegnDirectInvestment() {
     if (!pageData) {
         return <SpinnerComponent />;
     }
-  
+
 
     return (
         <motion.div
@@ -35,17 +35,17 @@ export default function ForiegnDirectInvestment() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/entrepreneurs'} portfolioColorName="entrepreneurs"/>
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/entrepreneurs'} portfolioColorName="entrepreneurs" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid  pageData={pageData}/>
+            <CardGrid pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
-                   
 
-                    <AccordionComponent pageData={pageData} />
-                </div>
+
+
+                <AccordionComponent pageData={pageData} />
+
             </section>
         </motion.div>
     )

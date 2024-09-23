@@ -1,4 +1,5 @@
 const KontentDelivery = require("@kentico/kontent-delivery");
+import { Basiccontentpage } from "@/models/basiccontentpage";
 import { Blogitems } from "@/models/blogitems";
 import { Blogs } from "@/models/blogs";
 import { Postshowreport } from "@/models/postshowreport";
@@ -30,6 +31,8 @@ export const TypeResolver = [
   new KontentDelivery.TypeResolver("Sponsorspage", (rawData: any) => new Sponsorspage()),
   new KontentDelivery.TypeResolver("Pressrelease", (rawData: any) => new Pressrelease()),
   new KontentDelivery.TypeResolver("Pressrelaseitem", (rawData: any) => new Pressrelaseitem()),
+  new KontentDelivery.TypeResolver("Basiccontentpage", (rawData: any) => new Basiccontentpage()),
+
 
 
 

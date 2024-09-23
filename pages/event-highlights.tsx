@@ -7,7 +7,7 @@ import React from 'react'
 import Marquee from 'react-fast-marquee'
 
 export default function EventHighlights() {
-  
+
     const aboutAim = "The Annual Investment Meeting (AIM Congress) 2025 is dedicated to advancing the future of globalized investment and its industrial impact by charting the course for emerging investment trends. AIM Congress 2025 aims to create a more balanced global framework, identify opportunities within a dynamic economic environment, and unlock the potential of every business, country, and region. By fostering economic diversification and providing actionable insights into emerging trends, AIM Congress 2025 will empower investors to make strategic, informed decisions that align with their goals and requirements as well as equip participants to navigate a rapidly evolving landscape, ensuring that their investment choices are both prudent and aligned with long-term objectives."
     const aboutAbuDhabi = "As you prepare to attend AIM Congress 2025 in Abu Dhabi, get ready to immerse yourself in a city at the forefront of innovation and progress. From state-of-the-art developments to a dynamic business environment, Abu Dhabi offers an unparalleled setting for exploring new opportunities and forging valuable connections. Join us in Abu Dhabi for AIM Congress 2025, where you'll experience a city that embodies forward-thinking vision and sets the stage for transformative discussions and partnerships."
     return (

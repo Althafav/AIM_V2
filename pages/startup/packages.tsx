@@ -89,18 +89,18 @@ export default function packages() {
                                         <li>Official Networking App</li>
                                     </ul>
                                 </td>
-                                <td className='text-center'>2</td>
-                                <td className='text-center'>2</td>
-                                <td className='text-center'>3</td>
+                                <td className='text-center'>2 Passes</td>
+                                <td className='text-center'>2 Passes</td>
+                                <td className='text-center'>3 Passes</td>
 
                             </tr>
 
 
                             <tr>
                                 <td>Ticket for Desert Safari Experience</td>
-                                <td className='text-center'>1</td>
-                                <td className='text-center'>2</td>
-                                <td className='text-center'>3</td>
+                                <td className='text-center'>1 Ticket</td>
+                                <td className='text-center'>2 Tickets</td>
+                                <td className='text-center'>3 Tickets</td>
                             </tr>
 
                             <tr>
@@ -119,7 +119,7 @@ export default function packages() {
                                 <td>Gala Dinner</td>
                                 <td className='text-center'>-</td>
                                 <td className='text-center'>-</td>
-                                <td className='text-center'>2</td>
+                                <td className='text-center'>2 Passes</td>
                             </tr>
 
                             <tr>

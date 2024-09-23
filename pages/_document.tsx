@@ -34,6 +34,8 @@ export default function Document() {
           src={`/assets/js/main.js`}
           strategy="beforeInteractive"
         ></Script>
+        <Script src={`${Globals.BASE_URL}assets/js/gtag.js`} strategy="beforeInteractive"></Script>
+
 
       </body>
     </Html>

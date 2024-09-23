@@ -83,10 +83,10 @@ export default function ForiegnDirectInvestment() {
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="section-container">
 
-                    <AccordionComponent pageData={pageData} />
-                </div>
+
+                <AccordionComponent pageData={pageData} />
+
             </section>
         </motion.div>
     )

@@ -24,7 +24,7 @@ const FutureCities = () => {
         return <SpinnerComponent />;
     }
 
-    
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -34,15 +34,15 @@ const FutureCities = () => {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} dateVenu={pageData.dateandvenu.value} subHeading={pageData.bannersubheading.value} registerLink={'/register-interest/future-cities'} portfolioColorName="future-cities" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid  pageData={pageData}/>
+            <CardGrid pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
-                   
 
-                    <AccordionComponent pageData={pageData} />
-                </div>
+
+
+                <AccordionComponent pageData={pageData} />
+
             </section>
         </motion.div>
     )
