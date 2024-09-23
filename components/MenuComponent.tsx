@@ -124,8 +124,9 @@ export default function MenuComponent() {
 
 
 
+
   return (
-    <nav className={`menu-wrapper ${isStartupRoute ? 'portfolio-solid-menu' : ''}  ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`menu-wrapper  ${isStartupRoute ? 'portfolio-solid-menu' : ''}  ${!isVisible ? 'translate-y' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container ">
         <div className="row">
           <div className="col-12">
