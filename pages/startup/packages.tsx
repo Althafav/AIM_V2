@@ -34,6 +34,8 @@ export default function packages() {
                 </div>
 
                 <div className="row p-lg-5">
+                    <div className="table-responsive">
+
                     <table className='table'>
                         <thead>
                             <tr>
@@ -152,6 +154,7 @@ export default function packages() {
                             </tr>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </section>
 

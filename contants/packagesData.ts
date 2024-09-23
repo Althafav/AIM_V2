@@ -1,6 +1,20 @@
 
+interface Portfolio {
+    id: number;
+    portfolioName: string;
+    price: string;
+    features: string[]; // Array of strings
+}
 
-export const Packages = [
+interface Package {
+    id: number;
+    name: string;
+    price: string;
+    portfolio: Portfolio[]
+    features: string[]; // Array of strings
+}
+
+export const Packages: Package[] = [
     {
         id: 1,
         name: 'Standard Pass',
