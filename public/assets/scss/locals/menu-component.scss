@@ -16,6 +16,19 @@
         filter: grayscale(1);
     }
 
+    .nav-bar-portfoio-logo{
+        object-fit: contain;
+        width: 110px;
+
+        @media screen and (max-width: 1000px ) {
+            width: 80px;
+        }
+
+        @media screen and (max-width: 600px ) {
+            width: 60px;
+        }
+    }
+
     &:hover {
         background-color: black;
     }

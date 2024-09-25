@@ -221,8 +221,8 @@ export default class RegisterPage extends React.Component<
                     <section>
                         <div className="container">
                             <div className="row">
-                                <div className="col-12">
-                                    <h2 className='heading-startup section-heading'>Investor Register</h2>
+                                <div className="col-12 mt-4 mb-4">
+                                    <h2 className='heading-startup section-heading'>Investor Registration</h2>
                                 </div>
 
                             </div>
@@ -1465,7 +1465,7 @@ export default class RegisterPage extends React.Component<
                                                         onChange={this.handleSelectChange}
                                                         classNamePrefix="select"
                                                         placeholder="Select Focused Countries"
-                                                       
+
                                                     />
                                                     <input type="text" id="focusedCountriesInput" name="field[265][]" className="d-none" />
                                                 </div>
@@ -1677,8 +1677,24 @@ export default class RegisterPage extends React.Component<
 
                                         <div
                                             className="_form-thank-you success"
-                                            style={{ display: "none" }}></div>
+                                            style={{ display: "none" }}>
+                                            <div>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "24px" }}> Thank You for Your Registration!</p>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "18px" }}>
+
+
+                                                    Your submission has been received successfully. The AIM Congress team will review your information and reach out to you within the next 24 to 48 hours with further details.
+
+                                                    We appreciate your interest and look forward to connecting with you soon!
+
+
+                                                </p>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "18px" }}>  Best regards, <br />
+                                                    The AIM Congress Team</p>
+                                            </div>
+                                        </div>
                                     </form>
+
                                 </div>
                             </div>
                         </div>

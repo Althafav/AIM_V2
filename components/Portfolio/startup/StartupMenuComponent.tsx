@@ -13,10 +13,10 @@ export default function StartupMenuComponent() {
                                 <li>About Startup</li>
                             </Link>
 
-                            <Link href="/startup/unicorns">
+                            {/* <Link href="/startup/unicorns">
                                 <li>Aim Unicorns</li>
 
-                            </Link>
+                            </Link> */}
                             <Link href="/startup/pitch">
                                 <li>Pitch Competition</li>
 

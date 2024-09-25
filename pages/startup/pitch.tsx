@@ -34,19 +34,67 @@ export default function PitchPage() {
                 </div>
             </div>
 
-            <div className='about-pitch-section'>
+            <div className='criteria-pitch-section'>
 
-                <div className="container inner-text-container">
-                    <div className="row ">
+                <div className=" inner-text-container">
+                    <div className="row gx-5">
                         <div className="col-lg-6 mb-4 mb-lg-0">
-                            <img src="/assets/imgs/startup-pitch.jpg" alt="" className='about-pitch-bg-image' />
+                            <img src={pageData.aboutimage.value[0].url} alt="" className='about-pitch-bg-image ' />
                         </div>
                         <div className="col-lg-6">
-                            <h2 className='heading'>{pageData.aboutheading.value}</h2>
-                            <p className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutdescription.value }} />
+                            <div className="criteria-wrapper">
+                                <h2 className='heading'>Ready to Shine? <br />Here’s What You Need!</h2>
+                                <p className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.criteriacontent.value }} />
+
+                                <div className='d-flex justify-content-end'><Link href="/startup/startup-register">
+                                    <button className='startup-btn'>REGISTER NOW</button>
+                                </Link></div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+
+            <div className='startup-conveyor-cta-wrapper'
+
+            >
+
+
+
+
+                <div className="row gx-5">
+                    <div className="col-lg-6">
+                        <div className='converyor-content-wrapper'>
+                            <h2 className='heading'>Pitch to 5 Investors in 50 Minutes <br /> Exclusive for Exhibitors!</h2>
+                            <p className='' dangerouslySetInnerHTML={{ __html: pageData.genericsectionctacontent.value }} />
+                            <div>
+
+                                {pageData.genericsectionctabutton.value.map((m: any, index: number) => {
+                                    var item: Buttonitem = m;
+                                    return (
+                                        <Link href={item.link.value} key={`unicorn-cta-${index}`}>
+
+                                            <button className='cta-btn'>{item.name.value}</button>
+                                        </Link>
+                                    )
+                                })}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-6">
+                        <img src={pageData.genericsectionctabackgroundimage.value[0].url} alt="" className='startup-conveyor-bg-image ' />
+                    </div>
+
+
+
+
+                </div>
+
 
             </div>
 
@@ -84,51 +132,7 @@ export default function PitchPage() {
 
             </div >
 
-            <div className='startup-convey-cta-wrapper'
-                style={{
-                    backgroundImage: `url('${pageData.genericsectionctabackgroundimage.value[0].url}')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    height: "100vh",
-                    width: "100%",
-                    position: "relative",
-                }}
-            >
 
-
-
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-
-                            <h2>{pageData.genericsectionctaheading.value}</h2>
-                        </div>
-
-                        <div className="col-12">
-                            <p className=''>{pageData.genericsectionctasubheading.value}</p>
-
-                        </div>
-
-                        <div>
-
-                            {pageData.unicornsectionctabutton.value.map((m: any, index: number) => {
-                                var item: Buttonitem = m;
-                                return (
-                                    <Link href={item.link.value} key={`unicorn-cta-${index}`}>
-
-                                        <button className='cta-btn'>{item.name.value}</button>
-                                    </Link>
-                                )
-                            })}
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
 
 
             <div className='tailend-wrapper'

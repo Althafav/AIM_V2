@@ -150,7 +150,7 @@ const StartUp = () => {
 
                         <div className="col-12 mt-3">
                             <Link href="/startup/pitch">
-                                <button className='pitch-cta-btn'>Participate</button>
+                                <button className='pitch-cta-btn'>PITCH NOW</button>
 
                             </Link>
                         </div>

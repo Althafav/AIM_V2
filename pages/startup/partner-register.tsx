@@ -13,6 +13,7 @@ function closePopup() {
     $("#popupModel").addClass("d-none");
 }
 
+
 const preFixStyle: React.CSSProperties = {
     position: 'absolute',
     paddingTop: '18px',
@@ -21,7 +22,8 @@ const preFixStyle: React.CSSProperties = {
     height: '3.6875rem',
     borderTopLeftRadius: '.25rem',
     borderBottomLeftRadius: '.25rem',
-    top: '0',
+    top: '5px',
+    left: '18px',
     textAlign: 'center'
 };
 
@@ -109,8 +111,8 @@ export default class RegisterPage extends React.Component<
                     <section>
                         <div className="container">
                             <div className="row">
-                                <div className="col-12">
-                                    <h2 className='heading-startup section-heading'>Partner Register</h2>
+                                <div className="col-12 mt-5 mb-4">
+                                    <h2 className='heading-startup section-heading'>Partner Registration</h2>
                                 </div>
 
                             </div>
@@ -445,7 +447,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="col-8 col-md-8 p-l-0" style={{ position: "relative" }}>
                                                             <span className="pre-fix" style={preFixStyle}>971</span>
-                                                            <input type="number" id="field[12]" name="field[12]" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder=" Mobile Phone" required />
+                                                            <input type="number" id="phone" name="phone" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder=" Mobile Phone" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1397,7 +1399,22 @@ export default class RegisterPage extends React.Component<
 
                                         <div
                                             className="_form-thank-you success"
-                                            style={{ display: "none" }}></div>
+                                            style={{ display: "none" }}>
+                                            <div>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "24px" }}> Thank You for Your Registration!</p>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "18px" }}>
+
+
+                                                    Your submission has been received successfully. The AIM Congress team will review your information and reach out to you within the next 24 to 48 hours with further details.
+
+                                                    We appreciate your interest and look forward to connecting with you soon!
+
+
+                                                </p>
+                                                <p className="mt-4" style={{ color: "black", fontWeight: "bold", fontSize: "18px" }}>  Best regards, <br />
+                                                    The AIM Congress Team</p>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -254,13 +254,12 @@
 
     }
 
-    .about-pitch-section {
+    .criteria-pitch-section {
         position: relative;
-        padding: 60px 0;
+
         background-color: black;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
+        
+
 
 
 
@@ -273,11 +272,32 @@
             background: linear-gradient(to left, black, rgba(255, 255, 255, 0));
         }
 
+        .criteria-wrapper {
+            max-width: 600px;
+
+            @media screen and (max-width: 1000px) {
+                padding: 40px;
+            }
+
+            @media screen and (max-width: 600px) {
+                padding: 20px;
+            }
+
+
+
+        }
+
+
+
         .about-pitch-bg-image {
             width: 100%;
             object-fit: cover;
 
-            height: 450px;
+            height: 100vh;
+
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
 
 
         }
@@ -297,22 +317,37 @@
 
                 .heading {
                     color: $startup;
-                    font-size: 48px;
+                    font-size: 32px;
                     font-weight: bold;
-                    margin-bottom: 10px;
+                    margin-bottom: 40px;
+                    max-width: 550px;
 
                     @media screen and (max-width: 1000px) {
-                        font-size: 32px;
+                        font-size: 28px;
                     }
 
                     @media screen and (max-width: 600px) {
-                        font-size: 24px;
+                        font-size: 20px;
+                        margin-bottom: 20px;
                     }
                 }
 
                 .paragraph {
                     color: rgba(255, 255, 255, 0.918);
                     font-size: 20px;
+                }
+
+                ul {
+                    margin-left: 40px;
+                    text-align: justify;
+                    max-width: 700px;
+
+                    li {
+                        font-size: 18px;
+                        padding: 10px;
+                        list-style: disc;
+                        text-align: justify;
+                    }
                 }
             }
         }
@@ -405,6 +440,7 @@
                 background: #222222;
                 color: white;
                 border-radius: 40px;
+                text-transform: uppercase;
             }
 
             @media screen and (max-width: 1000px) {}
@@ -436,17 +472,60 @@
 
     }
 
-    .startup-convey-cta-wrapper {
-        height: 100vh;
+    .startup-conveyor-cta-wrapper {
+        
         width: 100%;
         position: relative;
         display: flex;
         align-items: center;
 
-        img {
+
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .converyor-content-wrapper {
+            max-width: 600px;
+            margin: auto;
+
+            @media screen and (max-width: 1000px) {
+                padding: 40px;
+            }
+
+            @media screen and (max-width: 600px) {
+                padding: 20px;
+            }
+
+            .heading {
+                color: $primary-color-varient;
+                font-size: 32px;
+                font-weight: bold;
+                margin-bottom: 40px;
+                max-width: 550px;
+    
+                @media screen and (max-width: 1000px) {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+    
+                @media screen and (max-width: 600px) {
+                    font-size: 20px;
+                }
+            }
+          
+
+
+        }
+
+        .startup-conveyor-bg-image {
             width: 100%;
             height: 100vh;
             object-fit: cover;
+
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
         }
 
         .cta-btn {
@@ -455,23 +534,20 @@
             color: white;
             border-radius: 50px;
             margin-top: 10px;
+            text-transform: uppercase;
         }
 
-        h2 {
-            font-size: 62px;
-            color: black;
 
-            @media screen and (max-width: 800px) {
-                font-size: 48px;
-            }
-        }
+        
 
         p {
-            padding-left: 5px;
-            font-size: 24px;
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: justify;
 
             @media screen and (max-width: 800px) {
                 font-size: 18px;
+                text-align: left;
             }
         }
 
@@ -544,7 +620,7 @@
 
     @media screen and (max-width: 800px) {
         margin-top: 244px;
-        
+
     }
 }
 
@@ -640,7 +716,7 @@
 
                 @media screen and (max-width: 600px) {
                     font-size: 20px;
-                    
+
                 }
             }
 
@@ -678,6 +754,9 @@
 
                 .action-tag {
                     display: block;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    padding: 8px;
                 }
             }
 
@@ -703,7 +782,7 @@
     }
 
     .startup-register-form {
- 
+
 
         .startup-submit-btn {
             background: $startup;

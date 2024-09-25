@@ -2,7 +2,7 @@ window.cfields = { "253": "aim_startup_investor_type", "254": "aim_startup_logo"
 window._show_thank_you = function (id, message, trackcmp_url, email) {
     var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
     form.querySelector('._form-content').style.display = 'none';
-    thank_you.innerHTML = message;
+    // thank_you.innerHTML = message;
     thank_you.style.display = 'block';
     const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
     var visitorObject = window[vgoAlias];

@@ -31,14 +31,14 @@ export default function ThankYouPage() {
 
     return (
         <>
-            <Head>
+            {/* <Head>
 
                 <title>{pageData.page_title.value}</title>
                 <meta name="description" content={pageData.metaDescription?.value} />
                 <meta name="keywords" content={pageData.metaDescription?.value} />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://www.aimcongress.com/thank-you" />
-            </Head>
+            </Head> */}
 
             <div className='thankyou-page-wrapper'>
                 <div className="content-container">

@@ -26,7 +26,7 @@ const AdvancedManufacturing = () => {
         return <SpinnerComponent />;
     }
 
-   
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -36,15 +36,15 @@ const AdvancedManufacturing = () => {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/global-manufacturing'} portfolioColorName={"advancedManufacturing"} />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid  pageData={pageData}/>
+            <CardGrid pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>
-                <div className="container">
-                   
 
-                    <AccordionComponent pageData={pageData} />
-                </div>
+
+
+                <AccordionComponent pageData={pageData} />
+
             </section>
         </motion.div>
     )

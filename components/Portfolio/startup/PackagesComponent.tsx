@@ -130,7 +130,7 @@ export default function PackagesComponent() {
             <section className=" packages-table-wrapper">
                 <div className="row">
                     <div className="col-12">
-                        <h2 className='heading'>Packages Designed for Your Need</h2>
+                        <h2 className='heading' style={{textTransform: "uppercase"}}>Packages Designed for Your Need</h2>
                     </div>
                     <div className="col-12 mt-2">
                         {/* <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2> */}
@@ -282,8 +282,8 @@ export default function PackagesComponent() {
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
-                                <tr style={{fontWeight: "bold"}}>
-                                    <td>Gala Dinner</td>
+                                <tr >
+                                    <td style={{fontWeight: "bold"}}>Gala Dinner</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>2 Passes</td>
@@ -291,15 +291,15 @@ export default function PackagesComponent() {
 
 
 
-                                <tr style={{fontWeight: "bold"}}>
-                                    <td>Ticket for Desert Safari Experience</td>
+                                <tr >
+                                    <td style={{fontWeight: "bold"}}>Ticket for Desert Safari Experience</td>
                                     <td className='text-center'>1 Ticket</td>
                                     <td className='text-center'>2 Tickets</td>
                                     <td className='text-center'>3 Tickets</td>
                                 </tr>
 
-                                <tr style={{fontWeight: "bold"}}>
-                                    <td>UAE Visa (if required)</td>
+                                <tr >
+                                    <td style={{fontWeight: "bold"}}>UAE Visa (if required)</td>
                                     <td className='text-center'>2 Visas</td>
                                     <td className='text-center'>3 Visas</td>
                                     <td className='text-center'>5 Visas</td>
@@ -308,7 +308,7 @@ export default function PackagesComponent() {
                                 <tr>
                                     <td></td>
                                     <td className='text-center'>
-                                        <button className='startup-package-btn' style={{ background: "#6B6B6B", borderRadius: "50px", color: "white" }}
+                                        <button className='startup-package-btn' style={{ background: "#324476", borderRadius: "50px", color: "white" }}
                                             onClick={() => handleBuyNow(1599, 'Standard')}
                                             disabled={loading.standard}
                                         >
@@ -317,13 +317,13 @@ export default function PackagesComponent() {
                                             ) : (
                                                 <>
                                                     <span className='price' id='standardPrice'>$1,599</span>
-                                                    <span className='action-tag'>Buy Now</span>
+                                                    <span className='action-tag'>Register Now</span>
                                                 </>
                                             )}
                                         </button>
                                     </td>
                                     <td className='text-center'>
-                                        <button className='startup-package-btn' style={{ background: "#000000", borderRadius: "50px", color: "white" }}
+                                        <button className='startup-package-btn' style={{ background: "#202c4c", borderRadius: "50px", color: "white" }}
                                             onClick={() => handleBuyNow(5999, 'Deluxe')}
                                             disabled={loading.deluxe}
                                         >
@@ -332,7 +332,7 @@ export default function PackagesComponent() {
                                             ) : (
                                                 <>
                                                     <span className='price' id='deluxePrice'>$5,999</span>
-                                                    <span className='action-tag'>Buy Now</span>
+                                                    <span className='action-tag'>Register Now</span>
                                                 </>
                                             )}
                                         </button>
@@ -347,7 +347,7 @@ export default function PackagesComponent() {
                                             ) : (
                                                 <>
                                                     <span className='price' id='premiumPrice'>$6,499</span>
-                                                    <span className='action-tag'>Buy Now</span>
+                                                    <span className='action-tag'>Register Now</span>
                                                 </>
                                             )}
                                         </button>
