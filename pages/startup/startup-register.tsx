@@ -1121,16 +1121,18 @@ export default class RegisterPage extends React.Component<
                                             className="_form-thank-you success"
                                             style={{ display: "none", padding: "0", margin: "0" }}
                                         >
-                                            <p style={{ color: "black", fontWeight: "bold" }}>
-                                                Thank you for registering for the AIM Startup 2025!
+                                            <p className="mt-5" style={{ color: "black", fontWeight: "bold", textAlign: "center", fontSize: "28px" }}>
+                                                Thank you for submitting your startup details! <br />Next, please choose your preferred participation package to finalize your registration.
                                             </p>
 
 
                                             <PackagesComponent />
-
                                         </div>
 
                                     </form>
+
+
+
 
 
 

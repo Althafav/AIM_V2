@@ -35,17 +35,25 @@ const PackageTable = () => {
                     <div className="package-card-wrapper">
                         {/* Selected Portfolio (Card 1) */}
                         <div className="package-card standard-card">
-                            <div className="package-name mb-1">Standard Pass</div>
-                            <div className="d-flex align-items-center gap-4">
-                                <div className="package-price">{selectedPortfolio.price}</div>
+                            <div className='d-flex flex-column justify-content-start align-items-start'>
+                                <div className="package-name mb-1">Standard Pass</div>
+                                <div className="d-flex align-items-start gap-4">
+                                    <div className="package-price">{selectedPortfolio.price}</div>
 
-                                <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
-                                    {Packages[0].portfolio.map((portfolio: any) => (
-                                        <option key={portfolio.id} value={portfolio.id}>
-                                            {portfolio.portfolioName}
-                                        </option>
-                                    ))}
-                                </select>
+                                    <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
+                                        {Packages[0].portfolio.map((portfolio: any) => (
+                                            <option key={portfolio.id} value={portfolio.id}>
+                                                {portfolio.portfolioName}
+                                            </option>
+                                        ))}
+                                    </select>
+
+                                </div>
+
+
+                                <div>
+                                    <button className='package-btn'>Register Now</button>
+                                </div>
                             </div>
 
                             <ul className="feature-list">

@@ -27,7 +27,12 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             
-        
+            .package-btn{
+                background: $primary-color;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 30px;
+            }
             .standard-pass-price-wrapper {
                 display: flex;
                 gap: 10px;

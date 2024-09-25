@@ -132,7 +132,7 @@ export default function PackagesComponent() {
                         <h2 className='heading'>Packages Designed for Your Need</h2>
                     </div>
                     <div className="col-12 mt-2">
-                        <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2>
+                        {/* <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2> */}
                     </div>
                 </div>
 
@@ -141,23 +141,23 @@ export default function PackagesComponent() {
                         <table className='table'>
                             <thead>
                                 <tr>
-                                    <th className='table-heading'>Features</th>
+                                    <th className='table-heading' style={{ textTransform: "uppercase", color: "#202c4c" }}>Features</th>
                                     <th>
                                         <div className='d-flex flex-column align-items-center'>
-                                            <span className='table-heading' style={{ color: "#949494", textTransform: "uppercase", fontWeight: "normal" }}>Standard</span>
+                                            <span className='table-heading' style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>Standard</span>
                                             <span>2 sqm booth</span>
 
                                         </div>
                                     </th>
                                     <th>
                                         <div className='d-flex flex-column align-items-center'>
-                                            <span className='table-heading' style={{ color: "#6B6B6B", textTransform: "uppercase", fontWeight: "normal" }}>Deluxe</span>
+                                            <span className='table-heading' style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Deluxe</span>
                                             <span>6 Sqm Booth</span>
                                         </div>
                                     </th>
                                     <th>
                                         <div className='d-flex flex-column align-items-center'>
-                                            <span className='table-heading' style={{ color: "#F28E3E", textTransform: "uppercase", fontWeight: "bold" }}>Premium</span>
+                                            <span className='table-heading' style={{ color: "#F28E3E", textTransform: "uppercase", fontWeight: "normal" }}>Premium</span>
                                             <span>9 Sqm Booth</span>
                                         </div>
                                     </th>
@@ -184,40 +184,98 @@ export default function PackagesComponent() {
 
                                 <tr>
                                     <td>Pitch Competition Slot (if applicable)
-                                        <ul>
-                                            <li>Preliminary rounds: Online Pitching</li>
-                                            <li>Final rounds: AIM Congress 2025 Startup Stage</li>
-                                        </ul>
+
                                     </td>
-                                    <td className='text-center'>2 Slotes</td>
-                                    <td className='text-center'>2 Slotes</td>
-                                    <td className='text-center'>3 Slotes</td>
+                                    <td className='text-center'>Eligible Startups Only</td>
+                                    <td className='text-center'>Eligible Startups Only</td>
+                                    <td className='text-center'>Eligible Startups Only</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Preliminary rounds: Online Pitching</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Final rounds: AIM Congress 2025 Startup Stage</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
                                     <td>Startup Passes with Access to:
-                                        <ul>
-                                            <li>Opening Ceremony</li>
-                                            <li>Startup Conferences</li>
-                                            <li>Exhibition Hall</li>
-                                            <li>Workshops</li>
-                                            <li>Investor Hub</li>
-                                            <li>Official Networking App</li>
-                                        </ul>
+
                                     </td>
                                     <td className='text-center'>2 Passes</td>
-                                    <td className='text-center'>2 Passes</td>
                                     <td className='text-center'>3 Passes</td>
+                                    <td className='text-center'>5 Passes</td>
 
                                 </tr>
 
                                 <tr>
+                                    <td>Opening Ceremony</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Startup Conferences</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>Exhibition Hall</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Workshops</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Investor Hub</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Official Networking App</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
                                     <td>Marketing Promotion
-                                        <ul>
-                                            <li>Social media post</li>
-                                            <li>Website Promotion</li>
-                                        </ul>
+                                      
                                     </td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Social media post</td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                    <td className='text-center'><TiTick /></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Website Promotion</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
@@ -241,9 +299,9 @@ export default function PackagesComponent() {
 
                                 <tr>
                                     <td>UAE Visa (if required)</td>
-                                    <td className='text-center'>2 Visa</td>
-                                    <td className='text-center'>3 Visa</td>
-                                    <td className='text-center'>5 Visa</td>
+                                    <td className='text-center'>2 Visas</td>
+                                    <td className='text-center'>3 Visas</td>
+                                    <td className='text-center'>5 Visas</td>
                                 </tr>
 
                                 <tr>
