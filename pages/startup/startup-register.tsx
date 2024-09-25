@@ -221,7 +221,7 @@ export default class RegisterPage extends React.Component<
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 mt-5">
-                                    <h2 className=' heading-startup section-heading ' id="registerHeading">Startup Register</h2>
+                                    <h2 className=' heading-startup section-heading ' id="registerHeading">Startup Registration</h2>
                                 </div>
                                 {/* <div className="col-12">
                                     <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2>
@@ -1092,9 +1092,9 @@ export default class RegisterPage extends React.Component<
                                             <div className="row">
                                                 <div className="form-group col-12">
                                                     <label htmlFor="startuplogo" className="form-label">
-                                                        Short Description:
+                                                        Short Description: <span className="danger">*</span>
                                                     </label>
-                                                    <textarea id="field[261]" name="field[261]" placeholder="Short Description" className="description form-control" style={{ height: "120px" }} ></textarea>
+                                                    <textarea id="field[261]" name="field[261]" placeholder="Short Description" className="description form-control" style={{ height: "120px" }} required></textarea>
                                                 </div>
                                             </div>
 
@@ -1130,6 +1130,8 @@ export default class RegisterPage extends React.Component<
                                         </div>
 
                                     </form>
+
+
 
 
 

@@ -5,6 +5,7 @@ import axios from 'axios';
 import Globals from '@/modules/Globals';
 
 import AddOnModal from './UI/AddOnModal';
+import { GoDotFill } from 'react-icons/go';
 
 
 type AddOn = {
@@ -165,7 +166,7 @@ export default function PackagesComponent() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
+                                    <td  style={{fontWeight: "bold"}}>
                                         Branded Booth
                                     </td>
 
@@ -176,14 +177,14 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td>LED Screen + USB</td>
+                                    <td style={{fontWeight: "bold"}}>LED Screen + USB</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Pitch Competition Slot (if applicable)
+                                    <td style={{fontWeight: "bold"}}>Pitch Competition Slot (if applicable)
 
                                     </td>
                                     <td className='text-center'>Eligible Startups Only</td>
@@ -192,21 +193,21 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td>Preliminary rounds: Online Pitching</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/><span >Preliminary rounds: Online Pitching</span></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Final rounds: AIM Congress 2025 Startup Stage</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/><span>Final rounds: AIM Congress 2025 Startup Stage (Top 15 Finalists)</span></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Startup Passes with Access to:
+                                    <td style={{fontWeight: "bold"}}>Startup Passes with Access to:
 
                                     </td>
                                     <td className='text-center'>2 Passes</td>
@@ -216,14 +217,14 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td>Opening Ceremony</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Opening Ceremony</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Startup Conferences</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Startup Conferences</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
@@ -231,36 +232,36 @@ export default function PackagesComponent() {
 
 
                                 <tr>
-                                    <td>Exhibition Hall</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Exhibition Hall</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Workshops</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Workshops</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Investor Hub</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Investor Hub</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Official Networking App</td>
+                                    <td style={{fontWeight: "bold"}}>Official Networking App</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Marketing Promotion
-                                      
+                                    <td style={{fontWeight: "bold"}}>Marketing Promotion
+
                                     </td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
@@ -268,20 +269,20 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td>Social media post</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Social media post</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td>Website Promotion</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Website Promotion</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
-                                <tr>
+                                <tr style={{fontWeight: "bold"}}>
                                     <td>Gala Dinner</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>-</td>
@@ -290,14 +291,14 @@ export default function PackagesComponent() {
 
 
 
-                                <tr>
+                                <tr style={{fontWeight: "bold"}}>
                                     <td>Ticket for Desert Safari Experience</td>
                                     <td className='text-center'>1 Ticket</td>
                                     <td className='text-center'>2 Tickets</td>
                                     <td className='text-center'>3 Tickets</td>
                                 </tr>
 
-                                <tr>
+                                <tr style={{fontWeight: "bold"}}>
                                     <td>UAE Visa (if required)</td>
                                     <td className='text-center'>2 Visas</td>
                                     <td className='text-center'>3 Visas</td>
