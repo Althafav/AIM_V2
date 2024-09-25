@@ -252,7 +252,7 @@ export default class RegisterPage extends React.Component<
                                                         itemID="firstname"
                                                         id="firstname"
                                                         name="firstname"
-                                                        placeholder="First Name "
+                                                        placeholder=""
                                                         className="form-control"
                                                         required
 
@@ -267,7 +267,7 @@ export default class RegisterPage extends React.Component<
                                                         itemID="lastname"
                                                         id="lastname"
                                                         name="lastname"
-                                                        placeholder="Last Name "
+                                                        placeholder=""
                                                         className="form-control"
                                                         required
 
@@ -302,7 +302,7 @@ export default class RegisterPage extends React.Component<
                                                         type="text"
                                                         itemID="field[23]"
                                                         name="field[23]"
-                                                        placeholder="Job Title "
+                                                        placeholder=" "
                                                         className="jobtitle form-control"
                                                         required
                                                     />
@@ -573,7 +573,7 @@ export default class RegisterPage extends React.Component<
                                                         </div>
                                                         <div className="col-8 col-md-8 p-l-0" style={{ position: "relative" }}>
                                                             <span className="pre-fix" style={preFixStyle}>971</span>
-                                                            <input type="number" id="field[12]" name="field[12]" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder=" Mobile Phone" required />
+                                                            <input type="number" id="field[12]" name="field[12]" style={{ paddingLeft: "55px" }} className="form-control field_12 p-l-55" placeholder="561234567" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -600,7 +600,7 @@ export default class RegisterPage extends React.Component<
                                                         type="text"
                                                         id="customer_account" name="customer_account"
                                                         className="form-control"
-                                                        placeholder="Startup Name "
+                                                        placeholder=""
                                                         required
                                                     />
                                                 </div>
@@ -613,7 +613,7 @@ export default class RegisterPage extends React.Component<
                                                         type="date"
                                                         id="field[258]" name="field[258]"
                                                         className="form-control estDate"
-                                                        placeholder="Date Of Establishment *"
+                                                        placeholder=""
                                                         required
                                                     />
                                                 </div>
@@ -1079,7 +1079,7 @@ export default class RegisterPage extends React.Component<
                                                         className="form-control"
                                                         accept="image/png, image/gif, image/jpeg"
                                                         itemID="startuplogo"
-                                                        placeholder="Logo"
+                                                        placeholder=""
                                                         id="startuplogo"
                                                         onChange={(e) => {
                                                             this.uploadImage("startuplogo");
@@ -1094,7 +1094,7 @@ export default class RegisterPage extends React.Component<
                                                     <label htmlFor="startuplogo" className="form-label">
                                                         Short Description: <span className="danger">*</span>
                                                     </label>
-                                                    <textarea id="field[261]" name="field[261]" placeholder="Short Description" className="description form-control" style={{ height: "120px" }} required></textarea>
+                                                    <textarea id="field[261]" name="field[261]" placeholder="" className="description form-control" style={{ height: "120px" }} required></textarea>
                                                 </div>
                                             </div>
 
