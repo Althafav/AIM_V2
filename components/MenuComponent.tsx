@@ -221,7 +221,7 @@ export default function MenuComponent() {
                     </li>
 
                     <li className="dropdown-item">
-                      <Link href="https://startup.aimcongress.com/" target='_blank' className='d-flex gap-3 align-items-center'>
+                      <Link href="https://startup.aimcongress.com/startup" target='_blank' className='d-flex gap-3 align-items-center'>
                         <img src="/assets/logos/startup-logo.png" alt="startups-unicorns" style={{ width: "20px", objectFit: "contain" }} className='portfolio-menu-logo' />
                         Startups & Unicorns
                       </Link>

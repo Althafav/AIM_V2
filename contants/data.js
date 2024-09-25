@@ -55,7 +55,7 @@ export const PortfolioCards = [
         image: "/assets/imgs/startup-unicorn.png",
         mainHead: "Startups & Unicorns",
         btnName: "startup",
-        link: "https://startup.aimcongress.com/",
+        link: "https://startup.aimcongress.com/startup",
         kicker: "Catalyzing growth with innovative ideas and agile solutions"
     },
 
