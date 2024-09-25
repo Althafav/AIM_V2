@@ -221,7 +221,7 @@ export default class RegisterPage extends React.Component<
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 mt-5">
-                                    <h2 className='heading-startup section-heading'>Startup Register</h2>
+                                    <h2 className=' heading-startup section-heading ' id="registerHeading">Startup Register</h2>
                                 </div>
                                 {/* <div className="col-12">
                                     <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2>

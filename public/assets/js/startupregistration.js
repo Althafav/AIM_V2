@@ -2,6 +2,8 @@ window.cfields = { "23": "job_title", "12": "mobile_phone", "80": "website", "25
 window._show_thank_you = function (id, message, trackcmp_url, email) {
     var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');
     form.querySelector('._form-content').style.display = 'none';
+    var registerHeading = document.getElementById('registerHeading')
+    registerHeading.style.display = 'none'
     // thank_you.innerHTML = message;
     thank_you.style.display = 'block';
     const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;
