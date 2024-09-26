@@ -1,0 +1,134 @@
+.packagesPage3-wrapper {
+
+    .deligate-packages {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        gap: 5px;
+        overflow-x: auto;
+
+        @media screen and (max-width: 600px) {
+            overflow-x: scroll;
+            
+        }
+      
+    }
+    .deligate-package-card {
+
+        width: 390px;
+        min-width: 390px;
+       
+        border-radius: 30px;
+        border: 1px solid rgba(145, 145, 145, 0.432);
+        position: relative;
+
+        .card-head--deligate {
+            width: 100%;
+            height: 170px;
+
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &::after {
+                content: "";
+                background: rgba(0, 0, 0, 0.705);
+                position: absolute;
+                z-index: 0;
+                inset: 0;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+            }
+
+            .pass-gradient-image {
+                width: 100%;
+
+                height: 170px;
+                position: absolute;
+                z-index: -1;
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+                object-fit: cover;
+
+
+            }
+
+            .content-wrap {
+                display: flex;
+                position: relative;
+                z-index: 2;
+            }
+
+
+            .left-wrap {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+
+                .price {
+                    color: white;
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+
+                .pass-name {
+                    color: white;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .right-wrap {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 20px;
+
+                .label {
+                    text-align: center;
+                    font-size: 10px;
+                    width: 100%;
+                    color: rgb(197, 197, 197);
+                }
+
+
+            }
+        }
+
+        .card-body-deligate {
+            padding: 20px;
+
+            
+
+            .feature-items {
+               
+
+                .feature-name-wrap {
+                    color: black;
+                    padding: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+    
+                   
+                }
+
+                .feature-name {
+                    max-width: 220px;
+                }
+            }
+
+            .deligate-package-btn {
+                width: 200px;
+                padding: 10px;
+                background-color: $primary-color;
+                border-radius: 50px;
+                color: white;
+            }
+
+            
+        }
+    }
+}
