@@ -23,7 +23,7 @@ export const Packages: Package[] = [
             {
                 id: 1,
                 portfolioName: 'FDI',
-                price: '$1999',
+                price: '$1,999',
                 features: ['Grand Opening Ceremony', 'FDI Conference Track', 'Exhibition', 'Investment Destination', 'AIM Networking App', 'Delegates Lunch', 'B2B Lounge', 'Side Events', 'Closing Ceremony',]
             },
 

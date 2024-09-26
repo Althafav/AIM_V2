@@ -51,7 +51,7 @@ const PackageTable = () => {
                                             <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
                                                 {Packages[0].portfolio.map((portfolio: any) => (
                                                     <option key={portfolio.id} value={portfolio.id}>
-                                                        {portfolio.portfolioName} ({portfolio.price})
+                                                        {portfolio.portfolioName} 
                                                     </option>
                                                 ))}
                                             </select>
@@ -80,6 +80,31 @@ const PackageTable = () => {
                                         <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
                                     </tr>
                                 ))}
+
+                                <tr>
+                                    <td></td>
+                                    <td className='text-center'>
+                                        <button className='aim-package-btn' style={{ background: "#324476", borderRadius: "50px", color: "white" }}
+
+                                        >
+                                            <span className="">{selectedPortfolio.price}</span>
+                                        </button>
+                                    </td>
+                                    <td className='text-center'>
+                                        <button className='aim-package-btn' style={{ background: "#202c4c", borderRadius: "50px", color: "white" }}
+
+                                        >
+                                            <span>{Packages[1].price}</span>
+                                        </button>
+                                    </td>
+                                    <td className='text-center'>
+                                        <button className='aim-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
+
+                                        >
+                                            <span>{Packages[2].price}</span>
+                                        </button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
