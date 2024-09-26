@@ -67,7 +67,7 @@ export default function PackagesPage() {
                             <ul className='feature-items'>
                                 {selectedPortfolio.features.map((feature: any, index: number) => {
                                     return (
-                                        <li className='feature-name-wrap'><FaCheckCircle color={selectedPortfolio.colorCode} /><span className='feature-name'>{feature}</span></li>
+                                        <li className='feature-name-wrap' key={`feature-name-${index}`}><FaCheckCircle color={selectedPortfolio.colorCode} /><span className='feature-name'>{feature}</span></li>
                                     )
                                 })}
                             </ul>
@@ -103,7 +103,7 @@ export default function PackagesPage() {
                             <ul className='feature-items'>
                                 {Packages[1].features.map((feature: any, index: number) => {
                                     return (
-                                        <li className='feature-name-wrap'><FaCheckCircle color="#202C4C" /><span className='feature-name'>{feature}</span></li>
+                                        <li className='feature-name-wrap' key={`featurees-${index}`}><FaCheckCircle color="#202C4C" /><span className='feature-name' >{feature}</span></li>
                                     )
                                 })}
                             </ul>
@@ -134,7 +134,7 @@ export default function PackagesPage() {
                             <ul className='feature-items'>
                                 {Packages[2].features.map((feature: any, index: number) => {
                                     return (
-                                        <li className='feature-name-wrap'><FaCheckCircle color="#D4AF37" /><span className='feature-name'>{feature}</span></li>
+                                        <li className='feature-name-wrap' key={`featuree3-${index}`}><FaCheckCircle color="#D4AF37" /><span className='feature-name'>{feature}</span></li>
                                     )
                                 })}
                             </ul>
