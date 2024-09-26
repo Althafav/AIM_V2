@@ -217,8 +217,6 @@ export default class RegisterPage extends React.Component<
                                                 </div>
 
                                                 <div className="form-group col-12 col-lg-6 col-xl-6">
-
-
                                                     <div className="row">
                                                         <div className="col-4 col-md-4">
                                                             <select id="phoneCode" onChange={(e) => $(".pre-fix").html(e.target.value)} className="form-control" required name="phoneCode">

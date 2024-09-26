@@ -43,12 +43,15 @@ export default function PitchPage() {
                         </div>
                         <div className="col-lg-6">
                             <div className="criteria-wrapper">
-                                <h2 className='heading'>Ready to Shine? <br />Here’s What You Need!</h2>
-                                <p className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.criteriacontent.value }} />
+                                <div className="p-3">
+                                    <h2 className='heading'>Ready to Shine? <br />Here’s What You Need!</h2>
+                                    <p className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.criteriacontent.value }} />
 
-                                <div className='d-flex justify-content-end'><Link href="/startup/startup-register">
-                                    <button className='startup-btn'>REGISTER NOW</button>
-                                </Link></div>
+                                    <div className='d-flex justify-content-end'><Link href="/startup/startup-register">
+                                        <button className='startup-btn'>REGISTER NOW</button>
+                                    </Link></div>
+
+                                </div>
                             </div>
 
                         </div>
@@ -98,39 +101,51 @@ export default function PitchPage() {
 
             </div>
 
-            <div className='unicorn-cta-wrapper'>
+            {/* <div className='unicorn-cta-wrapper'>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <h2 className='big-heading'>In Search of <br />Billion Dollar Idea!</h2>
 
+                            <div className='d-block d-md-none'>
+                                <h3 className='secondary-heading-md'>{pageData.unicornsectionctasubheading.value}</h3>
+
+                                {pageData.unicornsectionctabutton.value.map((m: any, index: number) => {
+                                    var item: Buttonitem = m;
+                                    return (
+                                        <Link href={item.link.value} key={`unicorn-section-cta-${index}`}>
+
+                                            <button className='cta-btn'>{item.name.value}</button>
+                                        </Link>
+                                    )
+                                })}
+                            </div>
+
                         </div>
 
                     </div>
                 </div>
-                <img src="/assets/imgs/Unicorn Back.jpg" alt="" className='back-unicorn' />
 
-                <img src="/assets/imgs/Unicorn Front.png" alt="" />
 
-                <div className="container d-flex justify-content-lg-end">
-                    <div className="text-container-wrapper">
-                        <h3>{pageData.unicornsectionctasubheading.value}</h3>
+                <img src="/assets/imgs/startup/Unicorn Front-croped.png" alt="" className='unicorn-image' />
 
-                        {pageData.unicornsectionctabutton.value.map((m: any, index: number) => {
-                            var item: Buttonitem = m;
-                            return (
-                                <Link href={item.link.value} key={`unicorn-section-cta-${index}`}>
+                <div className="text-container-wrapper--unicorn">
+                    <h3 className='second-heading-xl'>{pageData.unicornsectionctasubheading.value}</h3>
 
-                                    <button className='cta-btn'>{item.name.value}</button>
-                                </Link>
-                            )
-                        })}
+                    {pageData.unicornsectionctabutton.value.map((m: any, index: number) => {
+                        var item: Buttonitem = m;
+                        return (
+                            <Link href={item.link.value} key={`unicorn-section-cta-${index}`}>
 
-                    </div>
+                                <button className='cta-btn'>{item.name.value}</button>
+                            </Link>
+                        )
+                    })}
 
                 </div>
 
-            </div >
+
+            </div > */}
 
 
 

@@ -3,6 +3,7 @@ import { useState, ChangeEvent } from 'react';
 import { FiCheckCircle } from 'react-icons/fi';
 import { IoMdCheckboxOutline } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
+import { TiTick } from 'react-icons/ti';
 
 
 // Define types for the packages data
@@ -16,7 +17,7 @@ interface Portfolio {
 
 
 const PackageTable = () => {
-   
+
     const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio>(Packages[0].portfolio[0]);
 
     const handlePortfolioChange = (e: any) => {
@@ -41,11 +42,11 @@ const PackageTable = () => {
                         <table className="table ">
                             <thead>
                                 <tr>
-                                    <th className="features-heading">Features</th>
+                                    <th className="features-heading" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Features</th>
                                     <th>
-                                        <div className="package-name mb-2">Standard Pass</div>
+                                        <div className="package-name mb-2" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>Standard Pass</div>
                                         <div className="standard-pass-price-wrapper">
-                                            <div className="package-price">{selectedPortfolio.price}</div>
+                                            {/* <div className="package-price">{selectedPortfolio.price}</div> */}
 
                                             <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
                                                 {Packages[0].portfolio.map((portfolio: any) => (
@@ -57,12 +58,15 @@ const PackageTable = () => {
                                         </div>
                                     </th>
                                     <th>
-                                        <div className="package-name mb-2">{Packages[1].name}</div>
-                                        <div className="package-price">{Packages[1].price}</div>
+                                        <div>
+                                            <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[1].name}</div>
+                                        </div>
+
+                                        {/* <div className="package-price">{Packages[1].price}</div> */}
                                     </th>
                                     <th>
-                                        <div className="package-name mb-2">{Packages[2].name}</div>
-                                        <div className="package-price">{Packages[2].price}</div>
+                                        <div className="package-name mb-2" style={{ color: "#F28E3E", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[2].name}</div>
+                                        {/* <div className="package-price">{Packages[2].price}</div> */}
                                     </th>
                                 </tr>
                             </thead>
@@ -71,9 +75,9 @@ const PackageTable = () => {
                                 {featureSet.map((feature: string, index: number) => (
                                     <tr key={index}>
                                         <td className='feature-item'>{feature}</td>
-                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<FiCheckCircle size={32} color='green' />) : (<IoClose size={32} color='red' />)}</td>
-                                        <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<FiCheckCircle size={32} color='green' />) : (<IoClose size={32} color='red'/>)}</td>
-                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<FiCheckCircle size={32} color='green' />) : (<IoClose size={32} color='red'/>)}</td>
+                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
                                     </tr>
                                 ))}
                             </tbody>
