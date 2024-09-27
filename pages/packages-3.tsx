@@ -1,4 +1,5 @@
-import { Packages } from '@/contants/packagesData';
+
+import { Packages3 } from '@/contants/packagesData';
 import React, { useState } from 'react'
 import { FaCheckCircle } from 'react-icons/fa';
 
@@ -12,11 +13,11 @@ interface Portfolio {
 }
 
 export default function PackagesPage() {
-    const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio>(Packages[0].portfolio[0]);
+    const [selectedPortfolio, setSelectedPortfolio] = useState<Portfolio>(Packages3[0].portfolio[0]);
 
     const handlePortfolioChange = (e: any) => {
         const selectedId = parseInt(e.target.value, 10);
-        const portfolio = Packages[0].portfolio.find((p) => p.id === selectedId);
+        const portfolio = Packages3[0].portfolio.find((p) => p.id === selectedId);
         if (portfolio) setSelectedPortfolio(portfolio);
     };
 
@@ -41,8 +42,8 @@ export default function PackagesPage() {
                             <div className="content-wrap">
 
                                 <div className='left-wrap'>
-                                    <span className='price'>{Packages[2].price}</span>
-                                    <span className='pass-name mt-3'>{Packages[2].name}</span>
+                                    <span className='price'>{Packages3[2].price}</span>
+                                    <span className='pass-name mt-3'>{Packages3[2].name}</span>
 
                                 </div>
                             </div>
@@ -51,7 +52,7 @@ export default function PackagesPage() {
 
                         <div className="card-body-deligate">
                             <ul className='feature-items'>
-                                {Packages[2].features.map((feature: any, index: number) => {
+                                {Packages3[2].features.map((feature: any, index: number) => {
                                     return (
                                         <li className='feature-name-wrap' key={`featuree3-${index}`}><FaCheckCircle color="#D4AF37" /><span className='feature-name'>{feature}</span></li>
                                     )
@@ -79,8 +80,8 @@ export default function PackagesPage() {
                             <div className="content-wrap">
 
                                 <div className='left-wrap'>
-                                    <span className='price'>{Packages[1].price}</span>
-                                    <span className='pass-name mt-3'>{Packages[1].name}</span>
+                                    <span className='price'>{Packages3[1].price}</span>
+                                    <span className='pass-name mt-3'>{Packages3[1].name}</span>
 
                                 </div>
 
@@ -90,7 +91,7 @@ export default function PackagesPage() {
 
                         <div className="card-body-deligate">
                             <ul className='feature-items'>
-                                {Packages[1].features.map((feature: any, index: number) => {
+                                {Packages3[1].features.map((feature: any, index: number) => {
                                     return (
                                         <li className='feature-name-wrap' key={`featurees-${index}`}><FaCheckCircle color="#202C4C" /><span className='feature-name' >{feature}</span></li>
                                     )
@@ -120,7 +121,7 @@ export default function PackagesPage() {
                                     <div className="right-wrap">
                                         <span className='label'>Select your preferred portfolio</span>
                                         <select className="form-select " value={selectedPortfolio.id} onChange={handlePortfolioChange}>
-                                            {Packages[0].portfolio.map((portfolio: any) => (
+                                            {Packages3[0].portfolio.map((portfolio: any) => (
                                                 <option key={portfolio.id} value={portfolio.id}>
                                                     {portfolio.portfolioName}
                                                 </option>

@@ -67,7 +67,7 @@ const PackageTable = () => {
                                         {/* <div className="package-price">{Packages[1].price}</div> */}
                                     </th>
                                     <th>
-                                        <div className="package-name mb-2" style={{ color: "#F28E3E", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[2].name}</div>
+                                        <div className="package-name mb-2" style={{ color: "#D4AF37", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[2].name}</div>
                                         {/* <div className="package-price">{Packages[2].price}</div> */}
                                     </th>
                                 </tr>
@@ -79,7 +79,7 @@ const PackageTable = () => {
                                         <td className='feature-item'>{feature}</td>
                                         <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} color={selectedPortfolio.colorCode}/>) : (<IoClose size={24} color='#595959' />)}</td>
                                         <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
-                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} color='#D4AF37'/>) : (<IoClose size={24} color='#595959' />)}</td>
                                     </tr>
                                 ))}
 
@@ -100,7 +100,7 @@ const PackageTable = () => {
                                         </button>
                                     </td>
                                     <td className='text-center'>
-                                        <button className='aim-package-btn' style={{ background: "#F28E3E", borderRadius: "50px", color: "white" }}
+                                        <button className='aim-package-btn' style={{ background: "#D4AF37", borderRadius: "50px", color: "white" }}
 
                                         >
                                             <span>{Packages[2].price}</span>
