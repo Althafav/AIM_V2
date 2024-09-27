@@ -43,12 +43,22 @@ const PackageTable = () => {
                         <table className="table ">
                             <thead>
                                 <tr>
+
+
+                                    <th className='pass-head'>
+                                        <div style={{ height: "100%" }} className='d-flex align-items-end'>
+                                            <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>#</div>
+                                        </div>
+
+                                      
+                                    </th>
+
                                     <th className='pass-head'>
                                         <div style={{ height: "100%" }} className='d-flex align-items-end'>
                                             <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Features</div>
                                         </div>
 
-                                        {/* <div className="package-price">{Packages[1].price}</div> */}
+                                      
                                     </th>
                                     <th className='pass-head'>
                                         <div className="standard-pass-price-wrapper">
@@ -70,7 +80,7 @@ const PackageTable = () => {
                                             <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[1].name}</div>
                                         </div>
 
-                                        {/* <div className="package-price">{Packages[1].price}</div> */}
+                                      
                                     </th>
                                     <th className='pass-head'>
                                         <div style={{ height: "100%" }} className='d-flex align-items-end'>
@@ -79,12 +89,14 @@ const PackageTable = () => {
                                         </div>
                                         {/* <div className="package-price">{Packages[2].price}</div> */}
                                     </th>
+
                                 </tr>
                             </thead>
 
                             <tbody>
                                 {featureSet.map((feature: string, index: number) => (
                                     <tr key={index}>
+                                        <td>{index + 1}</td>
                                         <td className='feature-item'>{feature}</td>
                                         <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} color={selectedPortfolio.colorCode} />) : (<IoClose size={24} color='#595959' />)}</td>
                                         <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
@@ -93,6 +105,7 @@ const PackageTable = () => {
                                 ))}
 
                                 <tr>
+                                    <td></td>
                                     <td></td>
                                     <td className='text-center'>
                                         <button className='aim-package-btn' style={{ background: selectedPortfolio.colorCode, borderRadius: "50px", color: "white" }}
