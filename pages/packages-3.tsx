@@ -36,7 +36,7 @@ export default function PackagesPage() {
             <section>
                 <div className="deligate-packages">
 
-                <div className="deligate-package-card">
+                    <div className="deligate-package-card">
                         <div className="card-head--deligate">
                             <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
                             <div className="content-wrap">
@@ -59,15 +59,17 @@ export default function PackagesPage() {
                                 })}
                             </ul>
 
-                            <div className='d-flex justify-content-center mt-5'>
-                                <button className='deligate-package-btn' style={{ background: '#D4AF37' }}>Register Now</button>
-                            </div>
 
                         </div>
+
+                        <div className=' deligate-btn-wrapper'>
+                            <button className='deligate-package-btn' style={{ background: '#D4AF37' }}>Register Now</button>
+                        </div>
+
                     </div>
 
 
-                    
+
 
 
 
@@ -98,7 +100,7 @@ export default function PackagesPage() {
                                 })}
                             </ul>
 
-                            <div className='d-flex justify-content-center mt-5'>
+                            <div className=' deligate-btn-wrapper'>
                                 <button className='deligate-package-btn' style={{ background: '#202C4C' }}>Register Now</button>
                             </div>
 
@@ -140,7 +142,7 @@ export default function PackagesPage() {
 
                         </div>
 
-                        <div className="portfolio-name-container" style={{background: selectedPortfolio.colorCode}}>
+                        <div className="portfolio-name-container" style={{ background: selectedPortfolio.colorCode }}>
                             <span className='portfolio-name'>{selectedPortfolio.portfolioName}</span>
                         </div>
 
@@ -153,15 +155,17 @@ export default function PackagesPage() {
                                 })}
                             </ul>
 
-                            <div className='d-flex justify-content-center mt-5'>
-                                <button className='deligate-package-btn' style={{ background: selectedPortfolio.colorCode }}>Register Now</button>
-                            </div>
 
+
+                        </div>
+
+                        <div className=' deligate-btn-wrapper'>
+                            <button className='deligate-package-btn' style={{ background: selectedPortfolio.colorCode }}>Register Now</button>
                         </div>
                     </div>
 
 
-                   
+
 
 
                 </div>
