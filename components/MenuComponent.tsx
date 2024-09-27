@@ -38,7 +38,7 @@ export default function MenuComponent() {
 
     setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
 
-    if (scrollTop > 100) {
+    if (scrollTop > 0) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);

@@ -40,6 +40,13 @@
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(9px);
 
+        .top-items-container {
+            display: none;
+
+            .ministry-logo {
+                display: none;
+            }
+        }
 
         .black-logo {
             display: block;
