@@ -35,6 +35,75 @@ export default function PackagesPage() {
             <section>
                 <div className="deligate-packages">
 
+                <div className="deligate-package-card">
+                        <div className="card-head--deligate">
+                            <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
+                            <div className="content-wrap">
+
+                                <div className='left-wrap'>
+                                    <span className='price'>{Packages[2].price}</span>
+                                    <span className='pass-name mt-3'>{Packages[2].name}</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="card-body-deligate">
+                            <ul className='feature-items'>
+                                {Packages[2].features.map((feature: any, index: number) => {
+                                    return (
+                                        <li className='feature-name-wrap' key={`featuree3-${index}`}><FaCheckCircle color="#D4AF37" /><span className='feature-name'>{feature}</span></li>
+                                    )
+                                })}
+                            </ul>
+
+                            <div className='d-flex justify-content-center mt-5'>
+                                <button className='deligate-package-btn' style={{ background: '#D4AF37' }}>Register Now</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+
+
+
+                    <div className="deligate-package-card">
+                        <div className="card-head--deligate">
+                            <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
+                            <div className="content-wrap">
+
+                                <div className='left-wrap'>
+                                    <span className='price'>{Packages[1].price}</span>
+                                    <span className='pass-name mt-3'>{Packages[1].name}</span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div className="card-body-deligate">
+                            <ul className='feature-items'>
+                                {Packages[1].features.map((feature: any, index: number) => {
+                                    return (
+                                        <li className='feature-name-wrap' key={`featurees-${index}`}><FaCheckCircle color="#202C4C" /><span className='feature-name' >{feature}</span></li>
+                                    )
+                                })}
+                            </ul>
+
+                            <div className='d-flex justify-content-center mt-5'>
+                                <button className='deligate-package-btn' style={{ background: '#202C4C' }}>Register Now</button>
+                            </div>
+
+                        </div>
+                    </div>
+
 
                     <div className="deligate-package-card">
                         <div className="card-head--deligate">
@@ -91,71 +160,7 @@ export default function PackagesPage() {
                     </div>
 
 
-
-
-
-
-                    <div className="deligate-package-card">
-                        <div className="card-head--deligate">
-                            <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
-                            <div className="content-wrap">
-
-                                <div className='left-wrap'>
-                                    <span className='price'>{Packages[1].price}</span>
-                                    <span className='pass-name mt-3'>{Packages[1].name}</span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div className="card-body-deligate">
-                            <ul className='feature-items'>
-                                {Packages[1].features.map((feature: any, index: number) => {
-                                    return (
-                                        <li className='feature-name-wrap' key={`featurees-${index}`}><FaCheckCircle color="#202C4C" /><span className='feature-name' >{feature}</span></li>
-                                    )
-                                })}
-                            </ul>
-
-                            <div className='d-flex justify-content-center mt-5'>
-                                <button className='deligate-package-btn' style={{ background: '#202C4C' }}>Register Now</button>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div className="deligate-package-card">
-                        <div className="card-head--deligate">
-                            <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
-                            <div className="content-wrap">
-
-                                <div className='left-wrap'>
-                                    <span className='price'>{Packages[2].price}</span>
-                                    <span className='pass-name mt-3'>{Packages[2].name}</span>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div className="card-body-deligate">
-                            <ul className='feature-items'>
-                                {Packages[2].features.map((feature: any, index: number) => {
-                                    return (
-                                        <li className='feature-name-wrap' key={`featuree3-${index}`}><FaCheckCircle color="#D4AF37" /><span className='feature-name'>{feature}</span></li>
-                                    )
-                                })}
-                            </ul>
-
-                            <div className='d-flex justify-content-center mt-5'>
-                                <button className='deligate-package-btn' style={{ background: '#D4AF37' }}>Register Now</button>
-                            </div>
-
-                        </div>
-                    </div>
+                   
 
 
                 </div>

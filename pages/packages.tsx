@@ -11,6 +11,7 @@ interface Portfolio {
     id: number;
     portfolioName: string;
     price: string;
+    colorCode: string;
     features: string[];
 }
 
@@ -43,19 +44,20 @@ const PackageTable = () => {
                             <thead>
                                 <tr>
                                     <th className="features-heading" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Features</th>
-                                    <th>
-                                        <div className="package-name mb-2" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>Standard Pass</div>
+                                    <th className='d-flex align-items-center gap-2'>
                                         <div className="standard-pass-price-wrapper">
                                             {/* <div className="package-price">{selectedPortfolio.price}</div> */}
 
                                             <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
                                                 {Packages[0].portfolio.map((portfolio: any) => (
                                                     <option key={portfolio.id} value={portfolio.id}>
-                                                        {portfolio.portfolioName} 
+                                                        {portfolio.portfolioName}
                                                     </option>
                                                 ))}
                                             </select>
                                         </div>
+                                        <div className="package-name" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>Standard Pass</div>
+
                                     </th>
                                     <th>
                                         <div>
@@ -75,7 +77,7 @@ const PackageTable = () => {
                                 {featureSet.map((feature: string, index: number) => (
                                     <tr key={index}>
                                         <td className='feature-item'>{feature}</td>
-                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} color={selectedPortfolio.colorCode}/>) : (<IoClose size={24} color='#595959' />)}</td>
                                         <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
                                         <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
                                     </tr>
@@ -84,7 +86,7 @@ const PackageTable = () => {
                                 <tr>
                                     <td></td>
                                     <td className='text-center'>
-                                        <button className='aim-package-btn' style={{ background: "#324476", borderRadius: "50px", color: "white" }}
+                                        <button className='aim-package-btn' style={{ background: selectedPortfolio.colorCode, borderRadius: "50px", color: "white" }}
 
                                         >
                                             <span className="">{selectedPortfolio.price}</span>
