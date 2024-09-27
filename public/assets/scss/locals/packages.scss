@@ -23,6 +23,22 @@
             font-weight: 600;
         }
 
+        .pass-head {
+            height: 128px;
+        }
+
+        .standard-pass-price-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .label-portfolio-select{
+                font-size: 10px;
+            }
+        }
+
         .package-name {
             font-size: 24px;
             font-weight: 600;

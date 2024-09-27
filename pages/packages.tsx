@@ -43,11 +43,11 @@ const PackageTable = () => {
                         <table className="table ">
                             <thead>
                                 <tr>
-                                    <th className="features-heading" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Features</th>
-                                    <th className='d-flex align-items-center gap-2'>
+                                    <th className="" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal", fontSize: "24px" }}>Features</th>
+                                    <th className='pass-head'>
                                         <div className="standard-pass-price-wrapper">
                                             {/* <div className="package-price">{selectedPortfolio.price}</div> */}
-
+                                            {/* <span className='label-portfolio-select' style={{fontSize: "10px"}}>Select your preferred portfolio</span> */}
                                             <select className="form-select" value={selectedPortfolio.id} onChange={handlePortfolioChange}>
                                                 {Packages[0].portfolio.map((portfolio: any) => (
                                                     <option key={portfolio.id} value={portfolio.id}>
@@ -55,19 +55,22 @@ const PackageTable = () => {
                                                     </option>
                                                 ))}
                                             </select>
+                                            <div className="package-name" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[0].name}</div>
                                         </div>
-                                        <div className="package-name" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[0].name}</div>
 
                                     </th>
-                                    <th>
-                                        <div>
+                                    <th className='pass-head'>
+                                        <div style={{ height: "100%" }} className='d-flex align-items-end'>
                                             <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[1].name}</div>
                                         </div>
 
                                         {/* <div className="package-price">{Packages[1].price}</div> */}
                                     </th>
-                                    <th>
-                                        <div className="package-name mb-2" style={{ color: "#D4AF37", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[2].name}</div>
+                                    <th className='pass-head'>
+                                        <div style={{ height: "100%" }} className='d-flex align-items-end'>
+
+                                            <div className="package-name mb-2" style={{ color: "#D4AF37", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[2].name}</div>
+                                        </div>
                                         {/* <div className="package-price">{Packages[2].price}</div> */}
                                     </th>
                                 </tr>
@@ -77,9 +80,9 @@ const PackageTable = () => {
                                 {featureSet.map((feature: string, index: number) => (
                                     <tr key={index}>
                                         <td className='feature-item'>{feature}</td>
-                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} color={selectedPortfolio.colorCode}/>) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{selectedPortfolio.features.includes(feature) ? (<TiTick size={24} color={selectedPortfolio.colorCode} />) : (<IoClose size={24} color='#595959' />)}</td>
                                         <td style={{ textAlign: "center" }}>{Packages[1].features.includes(feature) ? (<TiTick size={24} />) : (<IoClose size={24} color='#595959' />)}</td>
-                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} color='#D4AF37'/>) : (<IoClose size={24} color='#595959' />)}</td>
+                                        <td style={{ textAlign: "center" }}>{Packages[2].features.includes(feature) ? (<TiTick size={24} color='#D4AF37' />) : (<IoClose size={24} color='#595959' />)}</td>
                                     </tr>
                                 ))}
 
