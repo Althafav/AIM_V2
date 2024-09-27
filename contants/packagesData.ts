@@ -23,7 +23,7 @@ export const Packages: Package[] = [
         portfolio: [
             {
                 id: 1,
-                portfolioName: 'FDI',
+                portfolioName: 'Foreign Direct Investment',
                 price: '$1,999',
                 colorCode: '#FF2C28',
                 features: ['Grand Opening Ceremony', 'FDI Conference Track', 'Exhibition', 'Investment Destination', 'AIM Networking App', 'Delegates Lunch', 'B2B Lounge', 'Side Events', 'Closing Ceremony',]

@@ -70,6 +70,10 @@ export default function PackagesPage() {
 
                         </div>
 
+                        <div className="portfolio-name-container" style={{background: selectedPortfolio.colorCode}}>
+                            <span className='portfolio-name'>{selectedPortfolio.portfolioName}</span>
+                        </div>
+
                         <div className="card-body-deligate">
                             <ul className='feature-items'>
                                 {selectedPortfolio.features.map((feature: any, index: number) => {

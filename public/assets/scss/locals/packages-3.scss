@@ -16,12 +16,19 @@
     }
     .deligate-package-card {
 
-        width: 370px;
-        min-width: 370px;
+        width: 390px;
+        min-width: 390px;
        
         border-radius: 30px;
         border: 1px solid rgba(145, 145, 145, 0.432);
         position: relative;
+
+
+        @media screen and (max-width: 600px) {
+            width: 370px;
+            min-width: 370px;
+            
+        }
 
         .card-head--deligate {
             width: 100%;
@@ -97,6 +104,19 @@
 
 
             }
+        }
+
+        .portfolio-name-container {
+            width: 100%;
+            height: 40px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+
+            .portfolio-name {
+                color: white;
+            }
+            
         }
 
         .card-body-deligate {
