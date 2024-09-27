@@ -120,7 +120,7 @@ const StartUp = () => {
                                 <div className="col-12 ">
                                     <div className='youtube-section'>
 
-                                        <video autoPlay loop muted controls={false} preload="auto">
+                                        <video autoPlay playsInline loop muted controls={false} preload="auto">
                                             <source src='https://d2g6bqkf4g3jqe.cloudfront.net/videos/startup-bg.mp4' />
                                         </video>
                                     </div>

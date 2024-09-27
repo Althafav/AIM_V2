@@ -245,18 +245,18 @@ ul {
 .inner-banner-section-wrapper {
     position: relative;
     background-color: black;
-    height: 550px;
+    height: 430px;
 
     .banner-image {
         width: 100%;
         object-fit: cover;
-        height: 550px;
+        height: 430px;
     }
 
     video {
         width: 100%;
         object-fit: cover;
-        height: 550px;
+        height: 430px;
     }
 
     .inner-text-container {
@@ -275,7 +275,7 @@ ul {
             font-weight: bold;
             position: relative;
             text-align: center;
-            font-size: 68px;
+            font-size: 64px;
             letter-spacing: -3px;
 
             @media screen and (max-width: 800px) {

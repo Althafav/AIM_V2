@@ -56,7 +56,7 @@ const PackageTable = () => {
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="package-name" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>Standard Pass</div>
+                                        <div className="package-name" style={{ color: "#324476", textTransform: "uppercase", fontWeight: "normal" }}>{Packages[0].name}</div>
 
                                     </th>
                                     <th>

@@ -7,6 +7,11 @@ interface Portfolio {
     features: string[]; // Array of strings
 }
 
+interface Features {
+    name: string;
+    logo: string;
+}
+
 interface Package {
     id: number;
     name: string;
@@ -18,7 +23,7 @@ interface Package {
 export const Packages: Package[] = [
     {
         id: 1,
-        name: 'Single Pass',
+        name: 'Single Portfolio',
         price: '',
         portfolio: [
             {
@@ -121,7 +126,7 @@ export const featureSet = [
 export const Packages3: Package[] = [
     {
         id: 1,
-        name: 'Standard Pass',
+        name: 'Single Portfolio',
         price: '',
         portfolio: [
             {

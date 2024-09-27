@@ -42,7 +42,7 @@ export default function PressRelease() {
                                     var report: Pressrelaseitem = r;
                                     return (
 
-                                        <div className="col-12 col-md-6 col-lg-4 m-b-30 report-wrapper" key={`press-release-${index}`}>
+                                        <div className="col-12 col-md-6 col-lg-4 mb-4 report-wrapper" key={`press-release-${index}`}>
                                             <a href={`/press-release/${Helper.formatUrlParameter(
                                                 report.name.value
                                             )}`}>
