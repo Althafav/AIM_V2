@@ -98,7 +98,7 @@ export default function PackagesPage() {
 
                                 <div className='left-wrap'>
                                     <span className='price'>{Packages[1].price}</span>
-                                    <span className='pass-name'>{Packages[1].name}</span>
+                                    <span className='pass-name mt-3'>{Packages[1].name}</span>
 
                                 </div>
 
@@ -130,7 +130,7 @@ export default function PackagesPage() {
 
                                 <div className='left-wrap'>
                                     <span className='price'>{Packages[2].price}</span>
-                                    <span className='pass-name'>{Packages[2].name}</span>
+                                    <span className='pass-name mt-3'>{Packages[2].name}</span>
 
                                 </div>
                             </div>
