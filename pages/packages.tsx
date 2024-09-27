@@ -43,7 +43,13 @@ const PackageTable = () => {
                         <table className="table ">
                             <thead>
                                 <tr>
-                                    <th className="pass-head d-flex align-items-end" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal", fontSize: "24px" }}>Features</th>
+                                    <th className='pass-head'>
+                                        <div style={{ height: "100%" }} className='d-flex align-items-end'>
+                                            <div className="package-name mb-2" style={{ color: "#202c4c", textTransform: "uppercase", fontWeight: "normal" }}>Features</div>
+                                        </div>
+
+                                        {/* <div className="package-price">{Packages[1].price}</div> */}
+                                    </th>
                                     <th className='pass-head'>
                                         <div className="standard-pass-price-wrapper">
                                             {/* <div className="package-price">{selectedPortfolio.price}</div> */}
