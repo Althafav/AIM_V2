@@ -41,25 +41,32 @@ export default function PackagesPage() {
                             <img src="/assets/imgs/Gradient.png" alt="standard-pass" className='pass-gradient-image' />
                             <div className="content-wrap">
 
-                                <div className='left-wrap'>
-                                    <span className='price'>{selectedPortfolio.price}</span>
-                                    <span className='pass-name'>STANDARD</span>
+                                <div className='d-flex'>
+                                    <div className='left-wrap'>
+                                        <span className='price'>{selectedPortfolio.price}</span>
 
+
+                                    </div>
+
+                                    <div className="right-wrap">
+                                        <span className='label'>Select your preferred portfolio</span>
+                                        <select className="form-select " value={selectedPortfolio.id} onChange={handlePortfolioChange}>
+                                            {Packages[0].portfolio.map((portfolio: any) => (
+                                                <option key={portfolio.id} value={portfolio.id}>
+                                                    {portfolio.portfolioName}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </div>
                                 </div>
 
-                                <div className="right-wrap">
-                                    <span className='label'>Select your preferred portfolio</span>
-                                    <select className="form-select " value={selectedPortfolio.id} onChange={handlePortfolioChange}>
-                                        {Packages[0].portfolio.map((portfolio: any) => (
-                                            <option key={portfolio.id} value={portfolio.id}>
-                                                {portfolio.portfolioName}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
+                                <p className='pass-name mt-3'>Single Portfolio</p>
+
 
 
                             </div>
+
+
 
                         </div>
 
