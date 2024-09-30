@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
-import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
+
 import AboutComponent from '@/components/Portfolio/AboutComponent';
 import AccordionComponent from '@/components/UI/AccordinComponent';
-import CardGrid from '@/components/UI/CardGrid';
-import { fdiFAQ } from '@/contants/data';
+
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
-import { startupFeaturesAndActivities } from '@/contants/startupData';
-import BenefitsComponent from '@/components/Portfolio/BenefitsComponent';
+
 import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
 import { Buttonitem } from '@/models/buttonitem';
 import { ImageButton } from '@/models/image_button';
-import TestimonialCarousel from '@/components/Portfolio/startup/UI/TestimonialCarousel';
+
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -222,9 +220,7 @@ const StartUp = () => {
                 </div>
             </section>
 
-            <section>
-                <TestimonialCarousel/>
-            </section>
+          
 
 
 

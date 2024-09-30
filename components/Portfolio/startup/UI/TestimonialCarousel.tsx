@@ -25,7 +25,7 @@ export default function TestimonialCarousel() {
 
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-12 ">
                         <div className="single-testimonial-carousel owl-carousel">
                             <div className="card">
                                 <img src="/assets/imgs/startup/testimonial.jpg" alt="" className='testimonial-img' />

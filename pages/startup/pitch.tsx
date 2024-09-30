@@ -101,6 +101,10 @@ export default function PitchPage() {
 
             </div>
 
+            <section>
+                <TestimonialCarousel/>
+            </section>
+
             {/* <div className='unicorn-cta-wrapper'>
                 <div className="container">
                     <div className="row">
