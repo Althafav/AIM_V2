@@ -14,6 +14,7 @@ import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
 import { Buttonitem } from '@/models/buttonitem';
 import { ImageButton } from '@/models/image_button';
+import TestimonialCarousel from '@/components/Portfolio/startup/UI/TestimonialCarousel';
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
 
@@ -219,6 +220,10 @@ const StartUp = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <TestimonialCarousel/>
             </section>
 
 

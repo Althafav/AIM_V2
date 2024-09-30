@@ -139,7 +139,7 @@ hr {
     color: white;
     padding: 8px 24px;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.2s ease-in-out;
     font-weight: bold;
 
@@ -487,4 +487,5 @@ img {
 @import "./locals/packages.scss";
 @import "./locals/packages-2.scss";
 @import "./locals/packages-3.scss";
+@import "./locals/portfolio/startup/UI/testimonialCarousel.scss";
 

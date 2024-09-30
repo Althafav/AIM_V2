@@ -4,6 +4,11 @@
   
     .accordion-item {
       border: none; 
+
+      a {
+        color: black;
+        text-decoration: underline;
+      }
   
       .accordion-header {
         .accordion-button {
@@ -30,7 +35,7 @@
         background-color: white;
         color: black;
         border-bottom: 1px solid rgba(131, 131, 131, 0.5); 
-        padding: 30px 0;
+        padding: 20px;
       }
     }
   }

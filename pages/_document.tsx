@@ -15,6 +15,8 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
         <HeaderComponent />
         <link rel="preconnect" href="https://deliver.kontent.ai" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.min.css" />
         <Script
           src={`${Globals.BASE_URL}assets/js/bootstrap.bundle.min.js`}
           strategy="afterInteractive"
