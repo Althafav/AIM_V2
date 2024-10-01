@@ -1,6 +1,7 @@
 import { Sponsorspage } from "@/models/sponsorspage";
 import Globals from "@/modules/Globals";
 import Services from "@/modules/Services";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -66,21 +67,21 @@ export default class HomeSponsorsComponent extends React.Component<
                     (formatName = i.system.id),
                     (
                       <div className="home-sponsor" key={index}>
-                        <a href={`#`} rel="noopener noreferrer">
+                        
                           <div className="image-wrapper">
-                            <img
+                            <Image
                               src={i.logo.value[0].url}
                               title={i.name.value}
                               alt={i.logo.value[0].name}
-                              width={157}
-                              height={157}
+                              width={290}
+                              height={160}
                             />
                           </div>
                           <div className="sponsor-detail">
                             <p className="name">{i.name.value}</p>
                             <p className="type">{i.sponsorType?.value}</p>
                           </div>
-                        </a>
+                      
                       </div>
                     )
                   )

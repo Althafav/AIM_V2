@@ -3,6 +3,7 @@ import { Blogs } from '@/models/blogs';
 import Globals from '@/modules/Globals';
 import Helper from "@/modules/Helper";
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react';
 
@@ -78,7 +79,7 @@ export default function ArticlesComponent() {
                                         <div className="article-badge">
                                             News Article
                                         </div>
-                                        <img src={item.image.value[0].url} alt="" />
+                                        <Image width={450} height={250} src={item.image.value[0].url} alt="" />
                                         <div className="content">
                                             <p className='heading'>{item.heading.value}</p>
                                             <div className='timestamp'>

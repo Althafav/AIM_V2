@@ -4,6 +4,7 @@ import Services from "@/modules/Services";
 import conferenceSpeakerModel from "@/sysmodels/conferenceSpeakerModel";
 import conferenceSpeakersModel from "@/sysmodels/conferenceSpeakersModel";
 import axios from "axios";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -150,7 +151,7 @@ export default class HomeSpeakersComponent extends React.Component<
                     <div className="card-speaker-item">
                       <div className="speaker-image-wrapper">
 
-                        <img src={speaker.image} alt={speaker.name}
+                        <Image width={290} height={280}   src={speaker.image} alt={speaker.name}
                           className="speaker-image" />
                       </div>
                       <div className="card-body-speaker">

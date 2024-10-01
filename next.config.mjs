@@ -26,6 +26,12 @@ const nextConfig = {
         hostname: 'assets-us-01.kc-usercontent.com',
         pathname: '/**',
       },
+
+      {
+        protocol: 'https',
+        hostname: 'api.strategic.ae',
+        pathname: '/**',
+      },
     ],
   },
 };

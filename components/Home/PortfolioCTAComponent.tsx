@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { PortfolioCards } from "@/contants/data.js"
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const containerVariants = {
     hidden: {},
@@ -75,7 +76,7 @@ const PortfolioCTAComponent: React.FC = () => {
                                     >
                                         <Link href={item.link ? item.link : '#'} >
                                             <div className="cta-card-item">
-                                                <img src={item.image} alt="" />
+                                                <Image width={220} height={450}  src={item.image} alt="" />
                                                 <div className="text-container">
                                                     <div className='d-flex flex-column'>
                                                         <span className='main-head--card'>{item.mainHead}</span>

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const AudientsCTAComponent: React.FC = () => {
     const ref = useRef(null);
@@ -44,7 +45,7 @@ const AudientsCTAComponent: React.FC = () => {
                         <div className="cta-card-item">
                             <Link href="/register-interest">
 
-                                <img src="/assets/imgs/Delegate Card.png" alt="" />
+                                <Image width={340} height={200} layout='responsive' src="/assets/imgs/Delegate Card.png" alt="" />
                             </Link>
                         </div>
                     </motion.div>

@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 const ThemeSectionComponent: React.FC = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
     return (
-        <section ref={ref} className='theme-section-wrapper section-wrapper' style={{overflowX: "hidden"}}>
+        <section ref={ref} className='theme-section-wrapper section-wrapper' style={{ overflowX: "hidden" }}>
             <div className="section-container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
@@ -41,7 +42,10 @@ const ThemeSectionComponent: React.FC = () => {
                 <motion.div className="col-12 mt-4" initial={{ y: 100, opacity: 0 }}
                     animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                     transition={{ duration: 1, delay: 1.1 }}>
-                    <img src="/assets/imgs/AIM Web  banner 00   -05 (1).jpg" alt="" style={{width: "100%", objectFit: "cover"}}/>
+                    <Image layout="responsive"
+                        width={700}
+                        height={475}
+                        src="/assets/imgs/AIM Web  banner 00   -05 (1).jpg" alt="" priority={false} />
                 </motion.div>
             </div>
 

@@ -10,11 +10,12 @@
 
 html {
     scroll-behavior: smooth;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
     background: white;
+    color: black;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
 }
@@ -78,8 +79,12 @@ a {
         color: white;
         line-height: 1.1;
 
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1000px) {
             font-size: 32px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 28px;
         }
     }
 
@@ -443,7 +448,9 @@ img {
 
 
 
-
+input[readonly] {
+    background-color: #efecec !important;
+}
 
 
 
@@ -488,4 +495,5 @@ img {
 @import "./locals/packages-2.scss";
 @import "./locals/packages-3.scss";
 @import "./locals/portfolio/startup/UI/testimonialCarousel.scss";
-
+@import "./locals/portfolio/future-finance/future-finance.scss";
+@import "./locals/portfolio/future-finance/UI/participateCarousel.scss";

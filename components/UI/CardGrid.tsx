@@ -32,33 +32,35 @@ const CardGrid: React.FC<CardGridProps> = ({ pageData }) => {
                     <div className="col-12 mb-3">
                         <p className='sub-heading' style={{ textTransform: "capitalize" }}>{pageData.featuresubheading.value}</p>
                     </div>
-                    <div className="masonry-container">
+                    <div className="row g-4 d-flex justify-content-center">
                         {pageData.features.value.map((m: any, index) => {
                             const item: Serviceitem = m;
-
-
-                            const sizePattern = ['large', 'large', 'small', 'small'];
-                            const sizeClass = sizePattern[index % sizePattern.length];
 
                             return (
                                 <div
                                     key={index}
-                                    className={`masonry-item feature-card-item card-${sizeClass}`}
+                                    className={`col-lg-4 col-md-6`}
                                 >
-
-                                    <img
-                                        src={item.image?.value[0]?.url}
-                                        alt={`feature-${index + 1}`}
-                                        className="benefit-card-bg"
-                                    />
-                                    {/* <div className='feature-hovered-item'>
+                                    <div className='activities-card'>
+                                        <img
+                                            src={item.image?.value[0]?.url}
+                                            alt={`feature-${index + 1}`}
+                                            className="activities-image-bg"
+                                        />
+                                        {/* <div className='feature-hovered-item'>
                                         <p className="fw-bold">{item.name.value}</p>
                                         <p
                                             className="desc"
                                             dangerouslySetInnerHTML={{ __html: truncateText(item.content.value, 30) }}
                                         />
                                     </div> */}
-                                    <p className="features-name">{item.name.value}</p>
+                                        <div className='content-wrapper'>
+
+                                            <p className="features-name">{item.name.value}</p>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             );
                         })}

@@ -1,0 +1,35 @@
+.future-finance-page-wrapper {
+    .future-finance-cta-btn {
+        background-color: $future-finance;
+        padding: 8px 24px;
+        color: white;
+        text-transform: capitalize;
+        border-radius: 40px;
+    }
+    .about-section-wrapper {
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1000px) {
+            height: auto;
+            padding: 40px 0;
+        }
+        .heading {
+            font-size: 48px;
+            max-width: 550px;
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 1000px) {
+               font-size: 32px;
+            }
+        }
+
+        .paragraph {
+            color: rgb(236, 236, 236);
+            font-size: 16px;
+        }
+    }
+}
