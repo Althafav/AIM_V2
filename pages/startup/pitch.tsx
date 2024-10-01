@@ -1,3 +1,4 @@
+import TestimonialCarousel from '@/components/Portfolio/startup/UI/TestimonialCarousel';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { Buttonitem } from '@/models/buttonitem';
 import { Startuppitchpage } from '@/models/startuppitchpage';
@@ -89,7 +90,7 @@ export default function PitchPage() {
                         </div>
                     </div>
 
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 p-0">
                         <img src={pageData.genericsectionctabackgroundimage.value[0].url} alt="" className='startup-conveyor-bg-image ' />
                     </div>
 

@@ -21,7 +21,10 @@ type Payload = {
     first_name: string | undefined;
     last_name: string | undefined;
     email: string | undefined;
+    organization: string;
+    promocode: string;
     aed_amount: number;
+    package: string;
     source: string;
     order_description: string;
     source_link: string;
@@ -97,8 +100,11 @@ export default function PackagesComponent() {
             first_name: firstname,
             last_name: lastname,
             email: email,
+            organization: "Strategic",
+            promocode: "",
             aed_amount: totalPriceAED,
-            source: selectedPackage,
+            package: selectedPackage,
+            source: "AIM Startup 2025 Packages",
             order_description: orderDescription,
             source_link: Globals.BASE_URL + window.location.pathname,
         };
@@ -130,7 +136,7 @@ export default function PackagesComponent() {
             <section className=" packages-table-wrapper">
                 <div className="row">
                     <div className="col-12">
-                        <h2 className='heading' style={{textTransform: "uppercase"}}>Packages Designed for Your Need</h2>
+                        <h2 className='heading' style={{ textTransform: "uppercase" }}>Packages Designed for Your Need</h2>
                     </div>
                     <div className="col-12 mt-2">
                         {/* <h2 className='subHeading'>Dynamic features and activities fueling startup evolution and success</h2> */}
@@ -166,7 +172,7 @@ export default function PackagesComponent() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td  style={{fontWeight: "bold"}}>
+                                    <td style={{ fontWeight: "bold" }}>
                                         Branded Booth
                                     </td>
 
@@ -177,14 +183,14 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td style={{fontWeight: "bold"}}>LED Screen + USB</td>
+                                    <td style={{ fontWeight: "bold" }}>LED Screen + USB</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td style={{fontWeight: "bold"}}>Pitch Competition Slot (if applicable)
+                                    <td style={{ fontWeight: "bold" }}>Pitch Competition Slot (if applicable)
 
                                     </td>
                                     <td className='text-center'>Eligible Startups Only</td>
@@ -193,21 +199,21 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/><span >Preliminary rounds: Online Pitching</span></td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} /><span >Preliminary rounds: Online Pitching</span></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/><span>Final rounds: AIM Congress 2025 Startup Stage (Top 15 Finalists)</span></td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} /><span>Final rounds: AIM Congress 2025 Startup Stage (Top 15 Finalists)</span></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td style={{fontWeight: "bold"}}>Startup Passes with Access to:
+                                    <td style={{ fontWeight: "bold" }}>Startup Passes with Access to:
 
                                     </td>
                                     <td className='text-center'>2 Passes</td>
@@ -217,14 +223,14 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Opening Ceremony</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Opening Ceremony</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Startup Conferences</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Startup Conferences</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
@@ -232,35 +238,35 @@ export default function PackagesComponent() {
 
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Exhibition Hall</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Exhibition Hall</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Workshops</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Workshops</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Investor Hub</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Investor Hub</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td style={{fontWeight: "bold"}}>Official Networking App</td>
+                                    <td style={{ fontWeight: "bold" }}>Official Networking App</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td style={{fontWeight: "bold"}}>Marketing Promotion
+                                    <td style={{ fontWeight: "bold" }}>Marketing Promotion
 
                                     </td>
                                     <td className='text-center'><TiTick /></td>
@@ -269,21 +275,21 @@ export default function PackagesComponent() {
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Social media post</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Social media post</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr>
-                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{marginLeft: "12px"}}/>Website Promotion</td>
+                                    <td className='d-flex align-items-center gap-1 '><GoDotFill size={14} style={{ marginLeft: "12px" }} />Website Promotion</td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                     <td className='text-center'><TiTick /></td>
                                 </tr>
 
                                 <tr >
-                                    <td style={{fontWeight: "bold"}}>Gala Dinner</td>
+                                    <td style={{ fontWeight: "bold" }}>Gala Dinner</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>-</td>
                                     <td className='text-center'>2 Passes</td>
@@ -292,14 +298,14 @@ export default function PackagesComponent() {
 
 
                                 <tr >
-                                    <td style={{fontWeight: "bold"}}>Ticket for Desert Safari Experience</td>
+                                    <td style={{ fontWeight: "bold" }}>Ticket for Desert Safari Experience</td>
                                     <td className='text-center'>1 Ticket</td>
                                     <td className='text-center'>2 Tickets</td>
                                     <td className='text-center'>3 Tickets</td>
                                 </tr>
 
                                 <tr >
-                                    <td style={{fontWeight: "bold"}}>UAE Visa (if required)</td>
+                                    <td style={{ fontWeight: "bold" }}>UAE Visa (if required)</td>
                                     <td className='text-center'>2 Visas</td>
                                     <td className='text-center'>3 Visas</td>
                                     <td className='text-center'>5 Visas</td>

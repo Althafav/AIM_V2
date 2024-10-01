@@ -17,7 +17,8 @@ const preFixStyle: React.CSSProperties = {
     height: '3.6875rem',
     borderTopLeftRadius: '.25rem',
     borderBottomLeftRadius: '.25rem',
-    top: '0',
+    top: '5px',
+    left: '18px',
     textAlign: 'center'
 };
 

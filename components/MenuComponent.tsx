@@ -5,7 +5,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CiGlobe } from "react-icons/ci";
+import { CiGlobe, CiSearch } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
@@ -23,7 +23,7 @@ export default function MenuComponent() {
 
   const handleToggle = () => {
     setIsToggle(prevState => !prevState);
-  };  
+  };
 
   const handleScroll = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -133,7 +133,7 @@ export default function MenuComponent() {
             <div className="top-items-container d-flex justify-content-end align-items-center mb-1">
               <div className="d-flex gap-5 align-items-center  top-items">
                 <div className='top-item'>
-                  <img src="/assets/imgs/Ministry logos .png" alt="" className='ministry-logo' />
+                  <img src="/assets/imgs/Ministry logos .png" alt="aimcongress 2025" className='ministry-logo' />
                 </div>
                 {/* <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div> */}
                 {/* <div className='top-item'><CiGlobe size={20} /> <span>EN</span></div> */}
@@ -307,12 +307,18 @@ export default function MenuComponent() {
             </ul>
           </div>
 
-          <div className='d-lg-block d-none'>
+          <div className='d-lg-flex gap-2 align-items-center d-none'>
+
+            {/* <div>
+              <CiSearch color="white" size={32} cursor="pointer" />
+            </div> */}
             <Link href="/contact-us" className='menu-cta-wrapper'>
 
               <button className='register-interest-cta'>Contact Us</button>
             </Link>
+
           </div>
+
           <motion.div
             className="menu-icon-wrapper d-lg-none d-block"
             onClick={handleToggle}
@@ -359,14 +365,16 @@ export default function MenuComponent() {
             transition={{ duration: 0.3 }}
           >
             <ul className='mobile-menu-items'>
-              <div className='d-flex justify-content-between px-4 py-3'>
-                <Link href="https://aimcongress.com/" className="logo-wrapper">
-                  <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
-                    className='menu-logo white-logo' />
+              <li>
+                <div className='d-flex justify-content-between px-4 py-3'>
+                  <Link href="https://aimcongress.com/" className="logo-wrapper">
+                    <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
+                      className='menu-logo white-logo' />
 
-                </Link>
-                <IoMdClose size={32} className='menu-icon' cursor="pointer" onClick={handleToggle} />
-              </div>
+                  </Link>
+                  <IoMdClose size={32} className='menu-icon' cursor="pointer" onClick={handleToggle} />
+                </div>
+              </li>
 
               <li className='mobile-menu-item'>
                 <Link href="/about" onClick={handleToggle}>

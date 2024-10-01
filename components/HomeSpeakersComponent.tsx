@@ -169,7 +169,7 @@ export default class HomeSpeakersComponent extends React.Component<
 
 
           <div className="row">
-            <div className="col-12 d-flex align-items-center justify-content-center">
+            <div className="col-12 d-flex align-items-center justify-content-lg-center">
               <Link href="/speakers">
 
                 <button className="aim-btn">View More</button>

@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 export default function TestimonialCarousel() {
 
     useEffect(() => {
-        // Load external JS scripts only once
+       
 
         JsLoader.loadFile(`${Globals.BASE_URL}assets/js/owl.carousel.min.js`, () => {
             JsLoader.loadFile(`${Globals.BASE_URL}assets/js/singleTestimonialCarousel.js`, () => {
