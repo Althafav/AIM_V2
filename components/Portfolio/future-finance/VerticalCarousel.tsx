@@ -62,11 +62,11 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
       });
 
       if (isMobile()) {
-        // For mobile touch scroll
-        sliderDiv.addEventListener("touchstart", handleTouchStart, {
+        // Cast as EventListener to resolve TypeScript error
+        sliderDiv.addEventListener("touchstart", handleTouchStart as EventListener, {
           passive: false,
         });
-        sliderDiv.addEventListener("touchmove", handleTouchMove, {
+        sliderDiv.addEventListener("touchmove", handleTouchMove as EventListener, {
           passive: false,
         });
       }
@@ -75,8 +75,8 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
     return () => {
       if (sliderDiv) {
         sliderDiv.removeEventListener("wheel", handleWheel as EventListener);
-        sliderDiv.removeEventListener("touchstart", handleTouchStart);
-        sliderDiv.removeEventListener("touchmove", handleTouchMove);
+        sliderDiv.removeEventListener("touchstart", handleTouchStart as EventListener);
+        sliderDiv.removeEventListener("touchmove", handleTouchMove as EventListener);
       }
     };
   }, []);
