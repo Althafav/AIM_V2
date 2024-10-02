@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { motion } from "framer-motion"
+import { motion, useInView } from "framer-motion";
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
-import AboutComponent from '@/components/Portfolio/AboutComponent';
+
 import AccordionComponent from '@/components/UI/AccordinComponent';
-import CardGrid from '@/components/UI/CardGrid';
-import { fdiFAQ } from '@/contants/data';
+
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import ParticipateSection from '@/components/Portfolio/future-finance/ParticipateSection';
+
 
 const FutureFinance = () => {
 
@@ -45,15 +45,26 @@ const FutureFinance = () => {
             }}>
 
                 <div className="container">
-                    <div className="row">
+                    <motion.div
+                        initial={{ y: 30, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: false, amount: 0.1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+
+                        className="row">
                         <div className="col-lg-8">
-                            <h2 className='heading'>{pageData.aboutheading.value}</h2>
-                            <p className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutparagraph.value }} />
+                            <motion.h2
+
+
+                                className='heading'>{pageData.aboutheading.value}</motion.h2>
+                            <motion.p
+
+                                className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutparagraph.value }} />
                             <div className='mt-4'>
                                 <button className='future-finance-cta-btn'>Register Now</button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
                 </div>
 
@@ -61,73 +72,48 @@ const FutureFinance = () => {
 
             <ParticipateSection />
 
-            <div className='key-agenda-section-wrapper' style={{
-                backgroundImage: "url('/assets/imgs/future-finance/ff-key-agnda-bg.png')",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}>
+            <motion.div
+                className='key-agenda-section-wrapper'
+                style={{
+                    backgroundImage: "url('/assets/imgs/future-finance/ff-key-agnda-bg.png')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                }}
+
+            >
                 <div className="container">
-                    <h2 className='text-center section-heading text-white fw-normal'>Key Agenda</h2>
-                   
+                    <motion.h2
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className='text-center section-heading text-white fw-normal'>Key Agenda</motion.h2>
 
                     <div className="row mt-5 g-3 justify-content-center">
-                        <div className="col-lg-2 col-md-4 col-6">
-                            <div className="key-agenda-card">
-                                <h4 className="name">
-                                    Fintech & Digital Adoption
-                                </h4>
-                            </div>
-                        </div>
+                        {[
+                            "Fintech & Digital Adoption",
+                            "Banking & Payments",
+                            "Sustainable Finance & Global Economics",
+                            "Risk Management & Regulatory Compliance",
+                            "Stock Exchange Market"
+                        ].map((agenda, index) => (
+                            <motion.div
+                                className="col-lg-2 col-md-4 col-6"
+                                key={index}
 
-                        <div className="col-lg-2 col-md-4 col-6">
-                            <div className="key-agenda-card">
-                                <h4 className="name">
-                                    Banking
-                                    &
-                                    Payments
-                                </h4>
-                            </div>
-                        </div>
-
-
-                        <div className="col-lg-2 col-md-4 col-6">
-                            <div className="key-agenda-card">
-                                <h4 className="name">
-                                    Sustainable
-                                    Finance &
-                                    Global
-                                    Economics
-                                </h4>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-2 col-md-4 col-6">
-                            <div className="key-agenda-card">
-                                <h4 className="name">
-                                    Risk
-                                    Management
-                                    & Regulatory
-                                    Compliance
-                                </h4>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-2 col-md-4 col-6">
-                            <div className="key-agenda-card">
-                                <h4 className="name">
-                                    Stock
-                                    Exchange
-                                    Market
-                                </h4>
-                            </div>
-                        </div>
+                            >
+                                <motion.div className="key-agenda-card" initial={{ y: 100, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
+                                    viewport={{ once: true, amount: 0.1 }}>
+                                    <h4 className="name">{agenda}</h4>
+                                </motion.div>
+                            </motion.div>
+                        ))}
                     </div>
-
-
                 </div>
-
-            </div>
+            </motion.div>
 
 
 
