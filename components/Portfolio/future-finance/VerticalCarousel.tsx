@@ -8,23 +8,20 @@ interface VerticalCarouselProps {
 const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const sliderRef = useRef<Slider | null>(null);
-  const isMobile = () => {
-    return window.innerWidth <= 768; // Consider screen width <= 768px as mobile
-  };
-  
+  const isMobile = () => window.innerWidth <= 768; // Consider screen width <= 768px as mobile
+
   const settings = {
     dots: false,
     infinite: true,
     vertical: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    
     verticalSwiping: true,
     swipeToSlide: true,
     arrows: false,
     autoplay: false,
-    centerMode: true, // Ensure middle slide is active
-    centerPadding: isMobile() ? "0px" : "0px",
+    centerMode: true,
+    centerPadding: "0px",
     beforeChange: (current: number, next: number) => setActiveIndex(next), // Update active slide index
   };
 
@@ -40,18 +37,46 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
       }
     };
 
+    const handleTouchStart = (e: TouchEvent) => {
+      // Prevent default scroll on touch
+      e.preventDefault();
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault(); // Disable default swipe to scroll page
+      const touch = e.touches[0];
+      const deltaY = touch.clientY - touch.screenY;
+      if (deltaY > 0) {
+        slider?.slickNext(); // Scroll down
+      } else {
+        slider?.slickPrev(); // Scroll up
+      }
+    };
+
     const sliderDiv = document.querySelector(".vertical-carousel-container");
 
     if (sliderDiv) {
-      // Adding the event listener with proper type casting
+      // For desktop wheel scroll
       sliderDiv.addEventListener("wheel", handleWheel as EventListener, {
         passive: false,
       });
+
+      if (isMobile()) {
+        // For mobile touch scroll
+        sliderDiv.addEventListener("touchstart", handleTouchStart, {
+          passive: false,
+        });
+        sliderDiv.addEventListener("touchmove", handleTouchMove, {
+          passive: false,
+        });
+      }
     }
 
     return () => {
       if (sliderDiv) {
         sliderDiv.removeEventListener("wheel", handleWheel as EventListener);
+        sliderDiv.removeEventListener("touchstart", handleTouchStart);
+        sliderDiv.removeEventListener("touchmove", handleTouchMove);
       }
     };
   }, []);
