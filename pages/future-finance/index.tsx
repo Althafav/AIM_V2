@@ -48,7 +48,7 @@ const FutureFinance = () => {
         >
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/future-finance'} portfolioColorName="future-finance" />
             <div className="about-section-wrapper" style={{
-                backgroundImage: "url('/assets/imgs/future-finance/ff-about-bg.png')",
+                backgroundImage: `url(${pageData.aboutbackgroundimage.value[0].url})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -131,7 +131,7 @@ const FutureFinance = () => {
             <motion.div
                 className='key-agenda-section-wrapper'
                 style={{
-                    backgroundImage: "url('/assets/imgs/future-finance/ff-key-agnda-bg.png')",
+                    backgroundImage: `url(${pageData.keyagendabackgroundimage.value[0].url})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
