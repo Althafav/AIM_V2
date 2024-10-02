@@ -103,9 +103,9 @@ const FutureFinance = () => {
                                             transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
                                             viewport={{ once: true, amount: 0.1 }}>
                                             <Image
-                                            width={310}
-                                            height={270}
-                                           
+                                                width={310}
+                                                height={270}
+
                                                 src={item.image?.value[0]?.url}
                                                 alt={`feature-${index + 1}`}
                                                 className="activities-image-bg"
@@ -124,7 +124,9 @@ const FutureFinance = () => {
                 </div>
             </section>
 
-            <ParticipateSection />
+            <ParticipateSection pageData={pageData} />
+
+
 
             <motion.div
                 className='key-agenda-section-wrapper'
@@ -142,29 +144,26 @@ const FutureFinance = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className='text-center section-heading text-white fw-normal'>Key Agenda</motion.h2>
+                        className='text-center section-heading text-white fw-normal'>{pageData.keyagendaheading.value}</motion.h2>
 
                     <div className="row mt-5 g-3 justify-content-center">
-                        {[
-                            "Sustainable Finance & Global Economics",
-                            "Banking & Payments",
-                            "Fintech & Digital Adoption",
-                            "Risk Management & Regulatory Compliance",
-                            "Stock Exchange Market"
-                        ].map((agenda, index) => (
-                            <motion.div
-                                className="col-lg-2 col-md-4 col-6"
-                                key={index}
+                        {pageData.keyagendaitems.value.map((m: any, index) => {
+                            var item: Serviceitem = m;
+                            return (
+                                <motion.div
+                                    className="col-lg-2 col-md-4 col-6"
+                                    key={index}
 
-                            >
-                                <motion.div className="key-agenda-card" initial={{ y: 100, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
-                                    viewport={{ once: true, amount: 0.1 }}>
-                                    <h4 className="name">{agenda}</h4>
+                                >
+                                    <motion.div className="key-agenda-card" initial={{ y: 100, opacity: 0 }}
+                                        whileInView={{ y: 0, opacity: 1 }}
+                                        transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
+                                        viewport={{ once: true, amount: 0.1 }}>
+                                        <h4 className="name">{item.name.value}</h4>
+                                    </motion.div>
                                 </motion.div>
-                            </motion.div>
-                        ))}
+                            )
+                        })}
                     </div>
                 </div>
             </motion.div>

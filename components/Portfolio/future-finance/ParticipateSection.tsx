@@ -2,47 +2,104 @@ import Globals from '@/modules/Globals';
 import JsLoader from '@/modules/JsLoader';
 import React from 'react';
 import VerticalCarousel from './VerticalCarousel';
+import { FaCheck } from 'react-icons/fa';
+import { Serviceitem } from '@/models/serviceitem';
+import { Portfoliopage } from '@/models/portfoliopage';
 
-export default function ParticipateSection() {
-    const items = [
-        "Ministries of Finance & Central Banks",
-        "Digital Assets, Blockchain & Brokerage Firms",
-        "Cybersecurity & Blockchain technology companies",
-        "Ministries of Finance & Central Banks",
-        "Digital Assets, Blockchain & Brokerage Firms",
-        "Cybersecurity & Blockchain technology companies",
-        "Ministries of Finance & Central Banks",
-        "Digital Assets, Blockchain & Brokerage Firms",
-        "Cybersecurity & Blockchain technology companies",
-        // Add more items as needed
-    ];
+
+interface PageDataProps {
+    pageData: Portfoliopage | null;
+}
+
+const ParticipateSection: React.FC<PageDataProps> = ({ pageData }) => {
+
+
+    if (!pageData) {
+        return <></>;
+    }
+
 
     return (
-        <div className='participate-carousel-wrapper'>
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 d-flex justify-content-lg-center justify-content-md-start justify-content-center">
+        <>
+            <div className='participate-section-wrapper'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12 d-flex justify-content-lg-center justify-content-md-start justify-content-center">
 
-                        <div>
+                            <div>
 
-                            <h2 className='mb-4 heading'>Who can
-                                participate?</h2>
+                                <h2 className='mb-4 heading'>{pageData.whoparticipateheading.value}</h2>
 
-                            <div className="mt-5 d-none d-lg-block">
-                                <button className='future-finance-cta-btn'>Participate Now</button>
                             </div>
+
                         </div>
 
                     </div>
-                    <div className="col-lg-6 mt-5 mt-lg-0">
-                        <VerticalCarousel items={items} />
 
-                        <div className="mt-5 d-flex justify-content-center justify-content-md-start d-lg-none">
+                    <div className="whocanparticipate-item-wrapper mt-4">
+
+                        <div className='row g-3'>
+                            {pageData.whoparticipateitems.value.map((m: any, index: number) => {
+                                var item: Serviceitem = m;
+                                return (
+                                    <div className="col-lg-6">
+                                        <div className='whocanparticipate-card '>
+                                            <h5 className='name d-flex gap-4 '><FaCheck />{item.name.value}</h5>
+                                        </div>
+                                    </div>
+
+                                )
+
+                            })}
+                        </div>
+
+
+                        <div className="d-flex justify-content-lg-center mt-5">
                             <button className='future-finance-cta-btn'>Participate Now</button>
                         </div>
+
+                        {/* <div className="mt-5 d-flex justify-content-center justify-content-md-start d-lg-none">
+                            <button className='future-finance-cta-btn'>Participate Now</button>
+                        </div> */}
                     </div>
                 </div>
             </div>
-        </div>
+
+            <section>
+                <div className="why-participate-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className='section-heading'>
+                                    {pageData.whyparticipateheading.value}
+                                </h2>
+                            </div>
+
+                        </div>
+
+                        <div className="row mt-4 g-3">
+                            {pageData.whyparticipateitems.value.map((m: any, index: number) => {
+                                var item: Serviceitem = m;
+                                return (
+                                    <div className='col-lg-3 col-md-6' key={`whyparticipate-${index}`}>
+                                        <div className="why-participate-card">
+                                            <img src={item.image.value[0].url} alt={item.name.value} className='why-participate-img' />
+                                            <div className="name mt-3">{item.name.value}</div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </>
+
     );
 }
+
+
+export default ParticipateSection;
