@@ -5,4 +5,105 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+
+    @media screen and (max-width: 1000px) {
+        padding: 40px 0;
+        align-items: start;
+        height: 80vh;
+    }
+
+    .heading {
+        font-size: 48px;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 28px;
+        }
+    }
+
+    .future-finance-cta-btn {
+        font-size: 18px;
+    }
+
+
+    .vertical-carousel-container {
+        position: relative;
+        width: 100%;
+        margin: auto;
+
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     width: 4px;
+        //     height: 100%;
+        //     z-index: 100;
+        //     opacity: 1;
+        //     background-color: #ffffff49; 
+           
+        // }
+
+
+
+        .carousel-item {
+            text-align: start;
+            padding: 1.5rem;
+            transition: all 0.5s ease; // Smooth transition between states
+            color: white;
+            opacity: 0.4; // Default lower opacity for inactive items
+            filter: blur(2px); // Default blur for inactive items
+
+
+
+            display: flex;
+            align-items: center;
+
+
+            .name {
+                font-size: 22px;
+                padding-left: 20px;
+                @media screen and (max-width: 1000px) {
+                    font-size: 18px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 16px;
+                }
+            }
+
+
+            &.active {
+                opacity: 1; // Full opacity for active item
+                filter: blur(0); // No blur on active item
+                font-size: 1.5rem; // Increase size of the active item for emphasis
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -6px;
+                    top: 0;
+                    width: 10px;
+                    height: 100%;
+                    z-index: 5;
+                    opacity: 1;
+                    background-color: #7428F4; // Purple line next to active item
+                    box-shadow: 0 0 10px rgba(116, 40, 244, 0.75), 0 0 20px rgba(116, 40, 244, 0.5), 0 0 30px rgba(116, 40, 244, 0.25); // Glowing effect
+                }
+            }
+        }
+    }
+
+
+
+
 }

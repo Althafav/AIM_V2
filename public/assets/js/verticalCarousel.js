@@ -4,7 +4,7 @@ $(".ParticipateCarouselFF").owlCarousel({
     slideSpeed: 500,
     paginationSpeed: 400,
     margin: 20,
-    autoplay: true,
+    autoplay: false,
     items: 1,
     loop: true,
     dots: false,
