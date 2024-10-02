@@ -21,11 +21,11 @@ export default function ParticipateSection() {
         <div className='participate-carousel-wrapper'>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6 d-flex justify-content-lg-center">
+                    <div className="col-lg-6 d-flex justify-content-lg-center justify-content-md-start justify-content-center">
 
                         <div>
 
-                            <h2 className='mb-4 heading'>Who can <br />
+                            <h2 className='mb-4 heading'>Who can
                                 participate?</h2>
 
                             <div className="mt-5 d-none d-lg-block">
@@ -37,7 +37,7 @@ export default function ParticipateSection() {
                     <div className="col-lg-6 mt-5 mt-lg-0">
                         <VerticalCarousel items={items} />
 
-                        <div className="mt-5 d-block d-lg-none">
+                        <div className="mt-5 d-flex justify-content-center justify-content-md-start d-lg-none">
                             <button className='future-finance-cta-btn'>Participate Now</button>
                         </div>
                     </div>
