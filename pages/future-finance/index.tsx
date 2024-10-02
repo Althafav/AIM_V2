@@ -60,9 +60,9 @@ const FutureFinance = () => {
                             <motion.p
 
                                 className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutparagraph.value }} />
-                            <div className='mt-4'>
+                            {/* <div className='mt-4'>
                                 <button className='future-finance-cta-btn'>Register Now</button>
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
 
