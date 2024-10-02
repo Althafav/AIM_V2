@@ -28,6 +28,7 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
   useEffect(() => {
     const slider = sliderRef.current;
 
+    // Mouse wheel handler for desktop
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault(); // Prevent scrolling of parent
       if (e.deltaY < 0) {
@@ -37,46 +38,18 @@ const VerticalCarousel: React.FC<VerticalCarouselProps> = ({ items }) => {
       }
     };
 
-    const handleTouchStart = (e: TouchEvent) => {
-      // Prevent default scroll on touch
-      e.preventDefault();
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault(); // Disable default swipe to scroll page
-      const touch = e.touches[0];
-      const deltaY = touch.clientY - touch.screenY;
-      if (deltaY > 0) {
-        slider?.slickNext(); // Scroll down
-      } else {
-        slider?.slickPrev(); // Scroll up
-      }
-    };
-
     const sliderDiv = document.querySelector(".vertical-carousel-container");
 
-    if (sliderDiv) {
-      // For desktop wheel scroll
+    if (sliderDiv && !isMobile()) {
+      // Add mouse wheel scroll for desktop only
       sliderDiv.addEventListener("wheel", handleWheel as EventListener, {
         passive: false,
       });
-
-      if (isMobile()) {
-        // Cast as EventListener to resolve TypeScript error
-        sliderDiv.addEventListener("touchstart", handleTouchStart as EventListener, {
-          passive: false,
-        });
-        sliderDiv.addEventListener("touchmove", handleTouchMove as EventListener, {
-          passive: false,
-        });
-      }
     }
 
     return () => {
       if (sliderDiv) {
         sliderDiv.removeEventListener("wheel", handleWheel as EventListener);
-        sliderDiv.removeEventListener("touchstart", handleTouchStart as EventListener);
-        sliderDiv.removeEventListener("touchmove", handleTouchMove as EventListener);
       }
     };
   }, []);
