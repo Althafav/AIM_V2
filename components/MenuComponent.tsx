@@ -101,13 +101,13 @@ export default function MenuComponent() {
     {
       id: 6,
       route: '/future-finance',
-      logo: '/assets/logos/futurefinance-logo.png',
+      logo: '/assets/imgs/future-finance/logo/Future Finance.png',
     },
 
     {
       id: 7,
       route: '/startup',
-      logo: '/assets/logos/Startups & Unicorns.png',
+      logo: '/assets/imgs/startup/logo/Startups & Unicorns.png',
     },
 
     {
