@@ -8,6 +8,9 @@ import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import ParticipateSection from '@/components/Portfolio/future-finance/ParticipateSection';
+import { Serviceitem } from '@/models/serviceitem';
+import { RiArrowRightDownLine } from 'react-icons/ri';
+import Image from 'next/image';
 
 
 const FutureFinance = () => {
@@ -26,6 +29,13 @@ const FutureFinance = () => {
     if (!pageData) {
         return <SpinnerComponent />;
     }
+
+    const TargetCta = [
+        { name: "Become a Delegate", bgColor: "#212121" },
+        { name: "Become an Exhibitor", bgColor: "#7440F2" },
+        { name: "Become a Partner", bgColor: "#212121" }
+    ];
+
 
 
     return (
@@ -50,13 +60,10 @@ const FutureFinance = () => {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: false, amount: 0.1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-
-                        className="row">
+                        className="row"
+                    >
                         <div className="col-lg-8">
-                            <motion.h2
-
-
-                                className='heading'>{pageData.aboutheading.value}</motion.h2>
+                            <motion.h2 className='heading'>{pageData.aboutheading.value}</motion.h2>
                             <motion.p
 
                                 className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutparagraph.value }} />
@@ -69,6 +76,53 @@ const FutureFinance = () => {
                 </div>
 
             </div>
+            <section>
+                <div className="features-activities-section-wrapper">
+                    <div className="container">
+                        <div className="row">
+
+                            <div className="col-12">
+                                <h2 className="section-heading">
+                                    {pageData.featureheading.value}
+                                </h2>
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <div className="row g-4 mt-3 justify-content-center">
+                            {pageData.features.value.map((m: any, index: number) => {
+                                var item: Serviceitem = m;
+                                return (
+                                    <motion.div className="col-lg-3 col-md-6" key={`features-${index}`}>
+                                        <motion.div className="features-card" initial={{ y: 100, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
+                                            viewport={{ once: true, amount: 0.1 }}>
+                                            <Image
+                                            width={310}
+                                            height={270}
+                                           
+                                                src={item.image?.value[0]?.url}
+                                                alt={`feature-${index + 1}`}
+                                                className="activities-image-bg"
+                                            />
+
+                                            <div className='content-wrapper'>
+
+                                                <p className="features-name">{item.name.value}</p>
+                                            </div>
+                                        </motion.div>
+                                    </motion.div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <ParticipateSection />
 
@@ -92,9 +146,9 @@ const FutureFinance = () => {
 
                     <div className="row mt-5 g-3 justify-content-center">
                         {[
-                            "Fintech & Digital Adoption",
-                            "Banking & Payments",
                             "Sustainable Finance & Global Economics",
+                            "Banking & Payments",
+                            "Fintech & Digital Adoption",
                             "Risk Management & Regulatory Compliance",
                             "Stock Exchange Market"
                         ].map((agenda, index) => (
@@ -116,6 +170,69 @@ const FutureFinance = () => {
             </motion.div>
 
 
+            <div className="target-audients-cta-larger_screen">
+
+                <div className="cta-sub-head-wrapper">
+                    <div className="container">
+                        <div className="target-cta-cards ">
+
+                            {TargetCta.map((item: any, index: number) => {
+                                return (
+                                    <div className="target-cta-card" style={{ background: item.bgColor }}>
+                                        <div className="content-wrap">
+                                            <h3 className="name">{item.name}</h3>
+                                            <div className='d-flex justify-content-end'>
+
+                                                <RiArrowRightDownLine size={96} color='white' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+
+                        </div>
+
+                        <div>
+                            <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!"</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div className="target-audients-cta-small_screen mt-4">
+
+                <div className="container">
+                    <div className="row g-3">
+
+                        {TargetCta.map((item: any, index: number) => {
+                            return (
+                                <div className="col-md-4 col-12" style={{ background: item.bgColor }}>
+                                    <div className="target-cta-card">
+
+                                        <h3 className="name">{item.name}</h3>
+                                        <div className='d-flex justify-content-end'>
+
+                                            <RiArrowRightDownLine size={96} color='white' />
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
+
+                    </div>
+
+                    <div>
+                        <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!"</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
 
             <section className='frequently-asked-questions-wrapper'>
 

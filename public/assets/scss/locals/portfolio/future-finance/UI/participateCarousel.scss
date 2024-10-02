@@ -8,10 +8,10 @@
 
 
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1024px) {
         padding: 40px 0;
         align-items: start;
-        height: 80vh;
+        height: auto;
     }
 
     .heading {
@@ -34,7 +34,7 @@
     .vertical-carousel-container {
         position: relative;
         width: 100%;
-        margin: auto;
+    
 
 
         // &::after {
@@ -54,16 +54,11 @@
 
         .carousel-item {
             text-align: start;
-            padding: 10px 0;
+            padding: 1rem;
             transition: all 0.5s ease; // Smooth transition between states
             color: white;
             opacity: 0.4; // Default lower opacity for inactive items
             filter: blur(2px); // Default blur for inactive items
-
-
-
-            display: flex;
-            align-items: center;
 
 
             .name {
