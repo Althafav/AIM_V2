@@ -3,7 +3,7 @@ import JsLoader from '@/modules/JsLoader';
 import React from 'react';
 import VerticalCarousel from './VerticalCarousel';
 
-export default function ParticipateCarousel() {
+export default function ParticipateSection() {
     const items = [
         "Ministries of Finance & Central Banks",
         "Digital Assets, Blockchain & Brokerage Firms",
