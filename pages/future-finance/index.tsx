@@ -13,6 +13,7 @@ import { RiArrowRightDownLine } from 'react-icons/ri';
 import Image from 'next/image';
 import { Aimstatistics } from '@/models/aimstatistics';
 import { Statsitem } from '@/models/statsitem';
+import Marquee from 'react-fast-marquee';
 
 
 const FutureFinance = () => {
@@ -179,24 +180,30 @@ const FutureFinance = () => {
 
 
             <div className="stats-section-wrapper">
-                <div className="container">
-                    <div className="row g-3 justify-content-center">
+
+                <Marquee gradient={false} pauseOnHover={true} >
+                    <div className="d-flex gap-3">
                         {stats.items.value.map((m: any, index: number) => {
                             var item: Statsitem = m;
                             return (
-                                <div className='col-lg-2' key={`stats-${index}`}>
-                                    <div className='stats-card'>
-                                        <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
-                                        <div className="content-wrapper">
-                                            <h4 className='count'>{item.count.value}</h4>
-                                            <h6 className='name'>{item.name.value}</h6>
-                                        </div>
+
+                                <div className='stats-card'>
+                                    <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
+                                    <div className="content-wrapper">
+                                        <h4 className='count'>{item.count.value}</h4>
+                                        <h6 className='name'>{item.name.value}</h6>
                                     </div>
                                 </div>
+
                             )
                         })}
                     </div>
-                </div>
+
+
+
+                </Marquee>
+
+
             </div>
 
             <div className="target-audients-cta-larger_screen">
