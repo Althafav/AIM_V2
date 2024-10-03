@@ -17,6 +17,7 @@ import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 import Link from 'next/link';
+import SpeakersCarouselComponent from '@/components/Portfolio/FDI/SpeakersCarouselComponent';
 
 export default function ForiegnDirectInvestment() {
 
@@ -89,7 +90,7 @@ export default function ForiegnDirectInvestment() {
             {/* <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/fdi'} portfolioColorName="fdi" /> */}
             {/* <AboutComponentRevamp pageData={pageData} /> */}
             <FeaturesActivities pageData={pageData} />
-            <ParticipateSection pageData={pageData} />
+
             {/* <KeyAgenda pageData={pageData} /> */}
             <motion.div
                 className='key-agenda-section-wrapper'
@@ -139,9 +140,13 @@ export default function ForiegnDirectInvestment() {
                 </div>
             </motion.div>
 
-            <section className='frequently-asked-questions-wrapper'>
+
+            <SpeakersCarouselComponent />
+
+
+            <div className='frequently-asked-questions-wrapper'>
                 <AccordionComponent pageData={pageData} />
-            </section>
+            </div>
         </motion.div>
     )
 }

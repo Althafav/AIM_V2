@@ -32,6 +32,12 @@ const nextConfig = {
         hostname: 'api.strategic.ae',
         pathname: '/**',
       },
+
+      {
+        protocol: 'https',
+        hostname: 'payment.aimcongress.com',
+        pathname: '/**',
+      },
     ],
   },
 };
