@@ -184,7 +184,7 @@ const FutureFinance = () => {
                         {stats.items.value.map((m: any, index: number) => {
                             var item: Statsitem = m;
                             return (
-                                <div className='col-lg-2'>
+                                <div className='col-lg-2' key={`stats-${index}`}>
                                     <div className='stats-card'>
                                         <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
                                         <div className="content-wrapper">
