@@ -80,7 +80,7 @@ const FutureFinance = () => {
                             var item: Statsitem = m;
                             return (
 
-                                <div className='stats-card'>
+                                <div className='stats-card' key={`stats-${index}`}>
                                     <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
                                     <div className="content-wrapper">
                                         <h4 className='count'>{item.count.value}</h4>
