@@ -36,7 +36,7 @@ export default function ForiegnDirectInvestment() {
         return <SpinnerComponent />
     }
 
-    const about1 = `Join us at AIM Congress 2025 for our session, "Navigating the Future of FDI: Overcoming Challenges, Seizing New Global Opportunities."FDI transforms due to technological advancements, geopolitical shifts, and evolving economic trends, this session will provide essential insights into key topics like digital economies, green investments, and regional trade agreements.`
+    const about1 = `Join us at AIM Congress 2025 for our session, Navigating the Future of FDI: Overcoming Challenges, Seizing New Global Opportunities. Foreign Direct Investment transforms due to technological advancements, geopolitical shifts, and evolving economic trends, this session will provide essential insights into key topics like digital economies, green investments, and regional trade agreements.`
     const about2 = `Gain strategies to navigate challenges and seize opportunities in this dynamic landscape. Whether expanding into new markets or aligning with sustainable practices, you'll leave equipped to confidently shape your investment future. Don’t miss this chance to lead in the evolution of FDI!`
 
     return (
