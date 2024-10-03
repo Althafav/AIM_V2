@@ -452,6 +452,11 @@ input[readonly] {
     background-color: #efecec !important;
 }
 
+.cta-btn {
+    padding: 8px 24px;
+    border-radius: 40px
+}
+
 
 
 @import "./locals/menu-component.scss";

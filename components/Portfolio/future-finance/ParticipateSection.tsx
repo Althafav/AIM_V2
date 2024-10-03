@@ -55,16 +55,14 @@ const ParticipateSection: React.FC<PageDataProps> = ({ pageData }) => {
                         </div>
 
 
-                        <div className="d-flex justify-content-lg-center mt-5">
+                        {/* <div className="d-flex justify-content-lg-center mt-5">
                             <Link href="/register-interest/future-finance">
-                                <button className='future-finance-cta-btn'>Participate Now</button>
+                                <button className='cta-btn text-white' >Participate Now</button>
 
                             </Link>
-                        </div>
-
-                        {/* <div className="mt-5 d-flex justify-content-center justify-content-md-start d-lg-none">
-                            <button className='future-finance-cta-btn'>Participate Now</button>
                         </div> */}
+
+
                     </div>
                 </div>
             </div>
