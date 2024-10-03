@@ -16,6 +16,7 @@ import ParticipateSection from '@/components/Portfolio/future-finance/Participat
 import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
+import Link from 'next/link';
 
 export default function ForiegnDirectInvestment() {
 
@@ -61,7 +62,10 @@ export default function ForiegnDirectInvestment() {
                             <h4 className='subheading'>Navigating the Future of Foreign Direct Investment (FDI)</h4>
 
                             <div>
-                                <button className='cta-btn fdi text-white'>Register Now</button>
+                                <Link href="/register-interest/fdi">
+                                
+                                </Link>
+                                <button className='cta-btn fdi text-white'>Register your interest</button>
                             </div>
                             <p className='date-venue text-white'>{pageData.dateandvenu.value}</p>
                         </div>
