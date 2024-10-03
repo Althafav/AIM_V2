@@ -11,6 +11,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
 import { useRouter } from 'next/router';
 import StartupMenuComponent from './Portfolio/startup/StartupMenuComponent';
+import FDIMenuComponent from './Portfolio/FDI/FDIMenuComponent';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -73,7 +74,7 @@ export default function MenuComponent() {
     {
       id: 1,
       route: '/foreign-direct-investment',
-      logo: '/assets/logos/fdi-logo.png',
+      logo: '/assets/imgs/fdi/ForeignDirectInvestment.png',
     },
     {
       id: 2,
@@ -121,6 +122,7 @@ export default function MenuComponent() {
   const currentRouteData = RoutesData.find((data) => router.pathname.startsWith(data.route));
 
   const isStartupRoute = router.pathname.startsWith('/startup');
+  const isFdiRoute = router.pathname.startsWith('/foreign-direct-investment')
 
 
 
@@ -132,7 +134,7 @@ export default function MenuComponent() {
           <div className="col-12">
             <div className="top-items-container d-flex justify-content-end align-items-center mb-1">
               <div className="d-flex gap-5 align-items-center  top-items">
-                <div className='top-item'>
+                <div className='top-item pt-3'>
                   <img src="/assets/imgs/Ministry logos .png" alt="aimcongress 2025" className='ministry-logo' />
                 </div>
                 {/* <div className='top-item'><span style={{ textDecoration: "underline" }}>LOGIN</span></div> */}
@@ -143,7 +145,7 @@ export default function MenuComponent() {
           </div>
         </div>
 
-        <div className="d-flex align-items-end justify-content-between">
+        <div className="d-flex align-items-end justify-content-between pb-3">
           <div className='d-flex align-items-end gap-4'>
             <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
               <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
@@ -354,6 +356,10 @@ export default function MenuComponent() {
       {isStartupRoute && (
         <StartupMenuComponent />
       )}
+
+      {/* {isFdiRoute && (
+        <FDIMenuComponent />
+      )} */}
 
       <AnimatePresence>
         {isToggle && (

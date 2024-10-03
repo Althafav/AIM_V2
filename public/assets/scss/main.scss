@@ -24,11 +24,12 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
     color: white;
     line-height: 1.1;
     margin-bottom: 5px;
-
+    letter-spacing: -2px;
     @media screen and (max-width: 800px) {
         text-align: start;
     }
@@ -502,3 +503,4 @@ input[readonly] {
 @import "./locals/portfolio/startup/UI/testimonialCarousel.scss";
 @import "./locals/portfolio/future-finance/future-finance.scss";
 @import "./locals/portfolio/future-finance/UI/participateSection.scss";
+@import "./locals/fdi/fdi-menu-compoenent.scss";

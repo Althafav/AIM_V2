@@ -18,7 +18,7 @@ import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 
 export default function ForiegnDirectInvestment() {
-    const [isExpanded, setIsExpanded] = useState(false);
+
 
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
@@ -36,10 +36,8 @@ export default function ForiegnDirectInvestment() {
         return <SpinnerComponent />
     }
 
-    const handleToggle = () => {
-        setIsExpanded(!isExpanded);
-    };
-
+    const about1 = `Join us at AIM Congress 2025 for our session, "Navigating the Future of FDI: Overcoming Challenges, Seizing New Global Opportunities." As FDI transforms due to technological advancements, geopolitical shifts, and evolving economic trends, this session will provide essential insights into key topics like digital economies, green investments, and regional trade agreements.`
+    const about2 = `Gain strategies to navigate challenges and seize opportunities in this dynamic landscape. Whether expanding into new markets or aligning with sustainable practices, you'll leave equipped to confidently shape your investment future. Don’t miss this chance to lead in the evolution of FDI!`
 
     return (
         <motion.div
@@ -49,52 +47,48 @@ export default function ForiegnDirectInvestment() {
             transition={{ duration: 0.5 }}
             className='future-finance-page-wrapper'
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/fdi'} portfolioColorName="fdi" />
-            <AboutComponentRevamp pageData={pageData} />
-            <FeaturesActivities pageData={pageData} />
-            <ParticipateSection pageData={pageData} />
-            {/* <section className='benefits-section-wrapper'>
+            <div className="fdi-hero-section-wrapper">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-4">
-                            <h1 className='mainheading text-fdi '>Benefits of Foriegn Direct Investment</h1>
+                    <img src="/assets/imgs/fdi/fdi-hero-top.png" alt="" />
+                    <div className="row g-lg-5 g-3 mt-2">
+                        <div className="col-lg-6 ">
+                            <h3 className='heading'>Foreign
+                                Direct
+                                Investment</h3>
                         </div>
-                        <div className="col-lg-7 d-flex justify-content-center flex-column gap-3">
-                            <img src="/assets/imgs/benefits-fdi.png" alt="" />
-                            <div className={`benefit-items ${isExpanded ? 'expanded' : 'faded'}`}>
-                                {fdiBenefits.map((item: any, index: number) => {
-                                    return (
 
-                                        <div className='benefit-item mb-3' key={`benefit-item-${index}`}>
-                                            <p className='benefit-name'>{item.name}</p>
-                                            <p className='benefit-desc'>{item.content}</p>
+                        <div className="col-lg-6 d-flex flex-column gap-2">
+                            <h4 className='subheading'>Navigating the Future of Foreign Direct Investment (FDI)</h4>
 
-                                        </div>
-
-
-                                    )
-                                })}
-
-
+                            <div>
+                                <button className='cta-btn fdi text-white'>Register Now</button>
                             </div>
+                            <p className='date-venue text-white'>{pageData.dateandvenu.value}</p>
+                        </div>
+                    </div>
 
-
-                            <div className="col-12 d-flex justify-content-left align-items-center mt-3" onClick={handleToggle}>
-                                <button className='read-more-btn '>{isExpanded ? 'Read Less' : 'Read More'}</button>
-                            </div>
+                    <div className="row about-section ">
+                        <div className="col-lg-4 mb-2">
+                            <p className='description'>{about1}</p>
+                        </div>
+                        <div className="col-lg-4 mb-2">
+                            <p className='description'>{about2}</p>
+                        </div>
+                        <div className="col-lg-4 mb-2">
+                            <h3 className='subheading'>
+                                Overcoming Challenges, Seizing New Global Opportunities
+                            </h3>
                         </div>
                     </div>
                 </div>
-
-            </section> */}
-
+            </div>
+            {/* <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/fdi'} portfolioColorName="fdi" /> */}
+            {/* <AboutComponentRevamp pageData={pageData} /> */}
+            <FeaturesActivities pageData={pageData} />
+            <ParticipateSection pageData={pageData} />
             <KeyAgenda pageData={pageData} />
-
             <section className='frequently-asked-questions-wrapper'>
-
-
                 <AccordionComponent pageData={pageData} />
-
             </section>
         </motion.div>
     )
