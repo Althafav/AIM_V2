@@ -53,7 +53,7 @@ export default function ForiegnDirectInvestment() {
             <AboutComponentRevamp pageData={pageData} />
             <FeaturesActivities pageData={pageData} />
             <ParticipateSection pageData={pageData} />
-            <section className='benefits-section-wrapper'>
+            {/* <section className='benefits-section-wrapper'>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4">
@@ -86,7 +86,7 @@ export default function ForiegnDirectInvestment() {
                     </div>
                 </div>
 
-            </section>
+            </section> */}
 
             <KeyAgenda pageData={pageData} />
 

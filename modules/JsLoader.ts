@@ -1,5 +1,8 @@
 export default class JsLoader {
-    static loadFile(url: string, callBack?: () => any) {
+  static loadFile(url: string, callBack?: () => any) {
+    const existingScript = document.querySelector(`script[src="${url}"]`);
+ 
+    if (existingScript == null) {
       const script = document.createElement("script");
       script.src = url;
       script.async = false;
@@ -7,5 +10,6 @@ export default class JsLoader {
       if (callBack && typeof callBack !== "undefined") {
         callBack();
       }
-    } 
+    }
   }
+}
