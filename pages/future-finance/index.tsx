@@ -46,7 +46,7 @@ const FutureFinance = () => {
             transition={{ duration: 0.5 }}
             className='future-finance-page-wrapper'
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/future-finance'} portfolioColorName="future-finance" />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/future-finance'} portfolioColorName="future-finance" />
             <div className="about-section-wrapper" style={{
                 backgroundImage: `url(${pageData.aboutbackgroundimage.value[0].url})`,
                 backgroundRepeat: "no-repeat",
@@ -67,9 +67,7 @@ const FutureFinance = () => {
                             <motion.p
 
                                 className='paragraph' dangerouslySetInnerHTML={{ __html: pageData.aboutparagraph.value }} />
-                            {/* <div className='mt-4'>
-                                <button className='future-finance-cta-btn'>Register Now</button>
-                            </div> */}
+
                         </div>
                     </motion.div>
 
@@ -126,8 +124,6 @@ const FutureFinance = () => {
 
             <ParticipateSection pageData={pageData} />
 
-
-
             <motion.div
                 className='key-agenda-section-wrapper'
                 style={{
@@ -177,7 +173,7 @@ const FutureFinance = () => {
 
                             {TargetCta.map((item: any, index: number) => {
                                 return (
-                                    <div className="target-cta-card" style={{ background: item.bgColor }}>
+                                    <div className="target-cta-card" style={{ background: item.bgColor }} key={`target-cta-${index}`}>
                                         <div className="content-wrap">
                                             <h3 className="name">{item.name}</h3>
                                             <div className='d-flex justify-content-end'>
@@ -192,7 +188,7 @@ const FutureFinance = () => {
                         </div>
 
                         <div>
-                            <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!"</p>
+                            <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!</p>
                         </div>
 
                     </div>
@@ -208,7 +204,7 @@ const FutureFinance = () => {
 
                         {TargetCta.map((item: any, index: number) => {
                             return (
-                                <div className="col-md-4 col-12" style={{ background: item.bgColor }}>
+                                <div className="col-md-4 col-12" style={{ background: item.bgColor }} key={`target-cta-${index}`}>
                                     <div className="target-cta-card">
 
                                         <h3 className="name">{item.name}</h3>
@@ -224,7 +220,7 @@ const FutureFinance = () => {
                     </div>
 
                     <div>
-                        <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!"</p>
+                        <p className='text-center text-white '>Empowering Financial Journeys: Unlocking Every Possibility!</p>
                     </div>
 
                 </div>

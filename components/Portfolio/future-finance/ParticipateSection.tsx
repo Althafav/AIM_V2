@@ -5,6 +5,7 @@ import VerticalCarousel from './VerticalCarousel';
 import { FaCheck } from 'react-icons/fa';
 import { Serviceitem } from '@/models/serviceitem';
 import { Portfoliopage } from '@/models/portfoliopage';
+import Link from 'next/link';
 
 
 interface PageDataProps {
@@ -42,7 +43,7 @@ const ParticipateSection: React.FC<PageDataProps> = ({ pageData }) => {
                             {pageData.whoparticipateitems.value.map((m: any, index: number) => {
                                 var item: Serviceitem = m;
                                 return (
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6" key={`whocan-${index}`}>
                                         <div className='whocanparticipate-card '>
                                             <h5 className='name d-flex gap-4 '><FaCheck />{item.name.value}</h5>
                                         </div>
@@ -55,7 +56,10 @@ const ParticipateSection: React.FC<PageDataProps> = ({ pageData }) => {
 
 
                         <div className="d-flex justify-content-lg-center mt-5">
-                            <button className='future-finance-cta-btn'>Participate Now</button>
+                            <Link href="/register-interest/future-finance">
+                                <button className='future-finance-cta-btn'>Participate Now</button>
+
+                            </Link>
                         </div>
 
                         {/* <div className="mt-5 d-flex justify-content-center justify-content-md-start d-lg-none">
