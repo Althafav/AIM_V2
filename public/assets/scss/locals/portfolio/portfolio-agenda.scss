@@ -1,35 +1,60 @@
 .portfolio-agenda-wrapper {
-    .portfolio-agenda-content-wrapper {
-        .date-items {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
+    .search-form-wrapper {
+        width: 382px;
+        background-color: #3F3F3F;
+        display: flex;
+        align-items: center;
+        border-radius: 50px;
+        padding: 0 20px;
 
-            .date-item {
-                padding: 8px 16px;
-                color: white;
-                background-color: #3F3F3F;
-                border-radius: 50px;
-                cursor: pointer;
+        .search-form {
+            background-color: #3F3F3F;
+            width: 100%;
+            height: 42px;
+            border-radius: 50px;
+            border: none;
+            color: white;
+        }
 
-                &.active {
-                    background-color: $primary-color;
-                }
+        .form-control {
+            min-height: unset;
+        }
+    }
+
+    .date-items {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+        .date-item {
+            padding: 8px 16px;
+            color: white;
+            background-color: #3F3F3F;
+            border-radius: 50px;
+            cursor: pointer;
+
+            &.active {
+                background-color: $primary-color;
             }
         }
+    }
+
+    .portfolio-agenda-content-wrapper {
+
 
         .session-item-card {
             width: 100%;
-            max-width: 956px;
+            max-width: 1000px;
             margin: auto;
             background-color: hsl(0, 0%, 25%);
             height: 356px;
             padding: 20px;
-            
+
             .name {
                 font-size: 36px;
                 font-weight: normal;
-         
+                max-width: 736px
+
             }
 
             .time {
@@ -43,6 +68,26 @@
                 padding: 8px 16px;
                 border-radius: 50px;
                 border: 2px dotted $fdi-primary;
+            }
+
+            .speakers-wrapper {
+                display: flex;
+                gap: 10px;
+
+                .speaker-card {
+                    .speaker-image {
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                    }
+
+                    .speaker-name {
+
+                        font-size: 10px;
+                        color: white;
+                        max-width: 90px;
+                    }
+                }
             }
         }
     }
