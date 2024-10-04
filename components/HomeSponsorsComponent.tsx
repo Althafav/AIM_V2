@@ -54,9 +54,9 @@ export default class HomeSponsorsComponent extends React.Component<
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1 className="section-heading mb-4">
+              <h2 className="section-heading mb-4">
                 {sectionData.homePageTitle.value}
-              </h1>
+              </h2>
             </div>
           </div>
           <div className="row">

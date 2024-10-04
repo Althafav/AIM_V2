@@ -103,8 +103,6 @@ export default function ForiegnDirectInvestment() {
 
             >
                 <div className="container">
-
-
                     <div className="row mt-5 g-3 justify-content-center">
                         <div className="col-lg-4 d-flex justify-content-center align-items-center">
                             <motion.h2
@@ -141,7 +139,7 @@ export default function ForiegnDirectInvestment() {
             </motion.div>
 
 
-            <SpeakersCarouselComponent />
+            <SpeakersCarouselComponent colorCode="#FF2C28"/>
 
 
             <div className='frequently-asked-questions-wrapper'>

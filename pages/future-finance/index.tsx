@@ -17,6 +17,10 @@ import Marquee from 'react-fast-marquee';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
+import SpeakersCarouselComponent from '@/components/Portfolio/FDI/SpeakersCarouselComponent';
+import Link from 'next/link';
+import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
+import JsLoader from '@/modules/JsLoader';
 
 
 const FutureFinance = () => {
@@ -37,6 +41,7 @@ const FutureFinance = () => {
             .subscribe((response: any) => {
 
                 setStats(response.item);
+
             });
     }, []);
 
@@ -45,10 +50,12 @@ const FutureFinance = () => {
     }
 
     const TargetCta = [
-        { name: "Become a Delegate", bgColor: "#212121" },
-        { name: "Become an Exhibitor", bgColor: "#7440F2" },
-        { name: "Become a Partner", bgColor: "#212121" }
+        { name: "Become a Delegate", bgColor: "#212121", link: "/future-finance" },
+        { name: "Become an Exhibitor", bgColor: "#7440F2", link: "/register-interest/exhibitor" },
+        { name: "Become a Partner", bgColor: "#212121", link: "/register-interest" }
     ];
+
+
 
 
 
@@ -74,27 +81,27 @@ const FutureFinance = () => {
 
             <div className="stats-section-wrapper">
 
-                <Marquee gradient={false} pauseOnHover={true} >
-                    <div className="d-flex gap-3">
-                        {stats.items.value.map((m: any, index: number) => {
-                            var item: Statsitem = m;
-                            return (
 
-                                <div className='stats-card' key={`stats-${index}`}>
-                                    <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
-                                    <div className="content-wrapper">
-                                        <h4 className='count'>{item.count.value}</h4>
-                                        <h6 className='name'>{item.name.value}</h6>
-                                    </div>
+                <div className="portfolio-speaker-carousel owl-carousel">
+                    {stats.items.value.map((m: any, index: number) => {
+                        var item: Statsitem = m;
+                        return (
+
+                            <div className='stats-card' key={`stats-${index}`}>
+                                <img src={item.image.value[0].url} alt={item.name.value} className='stats-image' />
+                                <div className="content-wrapper">
+                                    <h4 className='count'>{item.count.value}</h4>
+                                    <h6 className='name'>{item.name.value}</h6>
                                 </div>
+                            </div>
 
-                            )
-                        })}
-                    </div>
+                        )
+                    })}
+                </div>
 
 
 
-                </Marquee>
+
 
 
             </div>
@@ -108,13 +115,16 @@ const FutureFinance = () => {
                             {TargetCta.map((item: any, index: number) => {
                                 return (
                                     <div className="target-cta-card" style={{ background: item.bgColor }} key={`target-cta-${index}`}>
-                                        <div className="content-wrap">
-                                            <h3 className="name">{item.name}</h3>
-                                            <div className='d-flex justify-content-end'>
+                                        <Link href={item.link}>
+                                            <div className="target-cta-card">
 
-                                                <RiArrowRightDownLine size={96} color='white' />
+                                                <h3 className="name">{item.name}</h3>
+                                                <div className='d-flex justify-content-end'>
+
+                                                    <RiArrowRightDownLine size={96} color='white' />
+                                                </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     </div>
                                 )
                             })}
@@ -139,14 +149,17 @@ const FutureFinance = () => {
                         {TargetCta.map((item: any, index: number) => {
                             return (
                                 <div className="col-md-4 col-12" style={{ background: item.bgColor }} key={`target-cta-${index}`}>
-                                    <div className="target-cta-card">
+                                    <Link href={item.link}>
+                                        <div className="target-cta-card">
 
-                                        <h3 className="name">{item.name}</h3>
-                                        <div className='d-flex justify-content-end'>
+                                            <h3 className="name">{item.name}</h3>
+                                            <div className='d-flex justify-content-end'>
 
-                                            <RiArrowRightDownLine size={96} color='white' />
+                                                <RiArrowRightDownLine size={96} color='white' />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Link>
+
                                 </div>
                             )
                         })}
@@ -162,14 +175,22 @@ const FutureFinance = () => {
 
 
             </div>
+            <div className='mt-5 '>
+                <h2 className='section-heading mb-4'>Key Players</h2>
+                <SpeakersCarouselComponent colorCode="#7428F4" />
 
-            <section className='frequently-asked-questions-wrapper'>
+            </div>
+
+            <div>
+                <HomeSponsorsComponent />
+            </div>
+            <div className='frequently-asked-questions-wrapper'>
 
 
 
                 <AccordionComponent pageData={pageData} />
 
-            </section>
+            </div>
         </motion.div>
     )
 }

@@ -9,9 +9,12 @@ import Link from "next/link";
 import React from "react";
 import Marquee from "react-fast-marquee";
 
+interface SpeakersCarouselProps {
+    colorCode: string;
+}
 
 export default class SpeakersCarouselComponent extends React.Component<
-    {},
+    SpeakersCarouselProps,
     {
         HighLevelSpeakers: Array<conferenceSpeakersModel>;
         isLoaded: Boolean;
@@ -91,6 +94,7 @@ export default class SpeakersCarouselComponent extends React.Component<
 
     render(): React.ReactNode {
         const { HighLevelSpeakers, isLoaded } = this.state;
+        const { colorCode } = this.props
 
         if (!isLoaded) {
             return <React.Fragment />;
@@ -101,63 +105,63 @@ export default class SpeakersCarouselComponent extends React.Component<
                 <div className="container">
 
 
-                    <Marquee gradient={false} pauseOnHover={true}>
-                        <div className="d-flex gap-3">
-                            {HighLevelSpeakers.sort((a: any, b: any) => {
-                                // Compare item_order first
-                                if (a.item_order !== null && b.item_order !== null) {
-                                    // Both have non-null item_order, sort by item_order
-                                    if (a.item_order < b.item_order) {
-                                        return -1;
-                                    } else if (a.item_order > b.item_order) {
-                                        return 1;
-                                    } else {
-                                        return 0;
-                                    }
-                                }
 
-                                // If only one of them has null item_order, the one with non-null comes first
-                                if (a.item_order === null && b.item_order !== null) {
-                                    return 1;
-                                }
-                                if (b.item_order === null && a.item_order !== null) {
+                    <div className="portfolio-speaker-carousel owl-carousel">
+                        {HighLevelSpeakers.sort((a: any, b: any) => {
+                            // Compare item_order first
+                            if (a.item_order !== null && b.item_order !== null) {
+                                // Both have non-null item_order, sort by item_order
+                                if (a.item_order < b.item_order) {
                                     return -1;
-                                }
-
-                                // If both have null item_order, compare by name
-                                const nameA = a.name.toUpperCase();
-                                const nameB = b.name.toUpperCase();
-                                if (nameA < nameB) {
-                                    return -1;
-                                } else if (nameA > nameB) {
+                                } else if (a.item_order > b.item_order) {
                                     return 1;
                                 } else {
                                     return 0;
                                 }
-                            }).map((m: any, index: number) => {
-                                var speaker: conferenceSpeakersModel = m;
-                                if (speaker.image) {
-                                    return (
+                            }
 
-                                        <div className="card-speaker-item" key={`speakers-${index}`}>
+                            // If only one of them has null item_order, the one with non-null comes first
+                            if (a.item_order === null && b.item_order !== null) {
+                                return 1;
+                            }
+                            if (b.item_order === null && a.item_order !== null) {
+                                return -1;
+                            }
+
+                            // If both have null item_order, compare by name
+                            const nameA = a.name.toUpperCase();
+                            const nameB = b.name.toUpperCase();
+                            if (nameA < nameB) {
+                                return -1;
+                            } else if (nameA > nameB) {
+                                return 1;
+                            } else {
+                                return 0;
+                            }
+                        }).slice(0, 10).map((m: any, index: number) => {
+                            var speaker: conferenceSpeakersModel = m;
+                            if (speaker.image) {
+                                return (
+
+                                    <div className="card-speaker-item" key={`speakers-${index}`}>
 
 
-                                            <Image width={175} height={175} src={speaker.image} alt={speaker.name}
-                                                className="speaker-image" />
+                                        <Image width={175} height={175} src={speaker.image} alt={speaker.name}
+                                            className="speaker-image" />
 
-                                            <div className="card-body-speaker">
-                                                <p className="name">{speaker.name}</p>
+                                        <div className="card-body-speaker">
+                                            <p className="name" style={{ color: colorCode }}>{speaker.name}</p>
 
-                                            </div>
                                         </div>
+                                    </div>
 
-                                    );
-                                }
-                            })}
+                                );
+                            }
+                        })}
 
 
-                        </div>
-                    </Marquee>
+                    </div>
+
 
 
 

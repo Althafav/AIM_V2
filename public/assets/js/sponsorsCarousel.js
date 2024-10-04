@@ -5,7 +5,7 @@ $(".home-sponsors-carousel").owlCarousel({
   autoplay: true,
   items: 4,
   loop: true,
-  dots: true,
+  dots: false,
   nav: false,
   navText: [
     "<i class='fa fa-angle-left' aria-hidden='true'></i>",
