@@ -86,20 +86,20 @@
     }
 
 
-    
+
     .whocanparticipate-item-wrapper {
-        .whocanparticipate-card  {
+        .whocanparticipate-card {
             height: 80px;
             display: flex;
             align-items: center;
             padding: 0 20px;
             background-color: rgba(255, 255, 255, 0.137);
-         
-            
+
+
         }
     }
 
-    
+
 
 
 
@@ -115,7 +115,7 @@
     }
 
     .name {
-        font-weight: 600;
+        font-weight: bold;
+        text-transform: capitalize;
     }
 }
-
