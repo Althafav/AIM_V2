@@ -7,6 +7,7 @@ import { Conferencedates } from '@/models/conferencedates';
 import { Sessionspeaker } from '@/models/sessionspeaker';
 import { Speaker } from '@/models/speaker';
 import { FaSearch } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function FDIAgenda() {
     const [pageData, setPageData] = useState<Conferencepage | null>(null);
@@ -65,11 +66,14 @@ export default function FDIAgenda() {
             </div>
 
             <div className="container">
-                <h2 className='section-heading mt-5'>AIM Congress 2025 FDI Agenda</h2>
+                <div className="row">
+                    <h2 className='section-heading mt-5'>AIM Congress 2025 FDI Agenda</h2>
+
+                </div>
             </div>
 
             <div className="container">
-                <div className="row mt-5">
+                <div className="row mt-lg-5 mt-3">
                     <div className="col-12 d-flex justify-content-center">
                         <div className='search-form-wrapper'>
                             <FaSearch color='#868686' size={24} />
@@ -86,7 +90,7 @@ export default function FDIAgenda() {
 
                 </div>
                 {!searchQuery && (
-                    <div className="row mt-3">
+                    <div className="row mt-3 ">
                         <ul className="date-items">
                             {pageData.items.value.map((m: any, index: number) => {
                                 const item: Conferencedates = m;
@@ -120,10 +124,13 @@ export default function FDIAgenda() {
                             return (
                                 <div key={sessionIndex}>
                                     <div className="session-item-card mb-3">
-                                        <h3 className='name line-clamp-3'>{sessionItem.name.value}</h3>
+                                        <h3 className='name line-clamp-2'>{sessionItem.name.value}</h3>
                                         <p className='time'>{sessionItem.time.value}</p>
                                         <div className='mt-3'>
-                                            <button className='view-btn'>See Details</button>
+                                            <Link href={`/foreign-direct-investment/agenda/${sessionItem.system.id}`}>
+                                                <button className='view-btn'>See Details</button>
+                                            </Link>
+
                                         </div>
                                         <div className="speakers-wrapper mt-4">
                                             {sessionItem.speakers.value.map((m: any, index: number) => {

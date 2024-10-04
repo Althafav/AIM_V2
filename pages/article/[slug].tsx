@@ -39,7 +39,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    debugger;
+
     const datasourceStr: string = await Globals.KontentClient.items()
         .type("blogitems")
         .toObservable()
