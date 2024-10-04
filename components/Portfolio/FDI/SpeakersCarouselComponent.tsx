@@ -138,7 +138,7 @@ export default class SpeakersCarouselComponent extends React.Component<
                             } else {
                                 return 0;
                             }
-                        }).slice(0, 10).map((m: any, index: number) => {
+                        }).slice(0, 15).map((m: any, index: number) => {
                             var speaker: conferenceSpeakersModel = m;
                             if (speaker.image) {
                                 return (
@@ -146,7 +146,7 @@ export default class SpeakersCarouselComponent extends React.Component<
                                     <div className="card-speaker-item" key={`speakers-${index}`}>
 
 
-                                        <Image width={175} height={175} src={speaker.image} alt={speaker.name}
+                                        <img width={175} height={175} src={speaker.image} alt={speaker.name}
                                             className="speaker-image" />
 
                                         <div className="card-body-speaker">

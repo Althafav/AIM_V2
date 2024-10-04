@@ -2,12 +2,15 @@ const KontentDelivery = require("@kentico/kontent-delivery");
 import { Basiccontentpage } from "@/models/basiccontentpage";
 import { Blogitems } from "@/models/blogitems";
 import { Blogs } from "@/models/blogs";
+import { Conferencedates } from "@/models/conferencedates";
+import { Conferencepage } from "@/models/conferencepage";
 import { Portfoliopage } from "@/models/portfoliopage";
 import { Postshowreport } from "@/models/postshowreport";
 import { Postshowreportyear } from "@/models/postshowreportyear";
 import { Pressrelaseitem } from "@/models/pressrelaseitem";
 import { Pressrelease } from "@/models/pressrelease";
 import { Reportitem } from "@/models/reportitem";
+import { Sessionspeaker } from "@/models/sessionspeaker";
 import { Speaker } from "@/models/speaker";
 import { Sponsorspage } from "@/models/sponsorspage";
 
@@ -35,6 +38,11 @@ export const TypeResolver = [
   new KontentDelivery.TypeResolver("Basiccontentpage", (rawData: any) => new Basiccontentpage()),
 
   new KontentDelivery.TypeResolver("Portfoliopage", (rawData: any) => new Portfoliopage()),
+  new KontentDelivery.TypeResolver("Conferencepage", (rawData: any) => new Conferencepage()),
+  new KontentDelivery.TypeResolver("Conferencedates", (rawData: any) => new Conferencedates()),
+
+  new KontentDelivery.TypeResolver("Sessionspeaker", (rawData: any) => new Sessionspeaker()),
+
 
 
 

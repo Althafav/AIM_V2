@@ -1,3 +1,49 @@
 .portfolio-agenda-wrapper {
-    
+    .portfolio-agenda-content-wrapper {
+        .date-items {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+
+            .date-item {
+                padding: 8px 16px;
+                color: white;
+                background-color: #3F3F3F;
+                border-radius: 50px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .session-item-card {
+            width: 100%;
+            max-width: 956px;
+            margin: auto;
+            background-color: hsl(0, 0%, 25%);
+            height: 356px;
+            padding: 20px;
+            
+            .name {
+                font-size: 36px;
+                font-weight: normal;
+         
+            }
+
+            .time {
+                color: #D1D1D1;
+                font-size: 13px;
+            }
+
+            .view-btn {
+                background: none;
+                color: $fdi-primary;
+                padding: 8px 16px;
+                border-radius: 50px;
+                border: 2px dotted $fdi-primary;
+            }
+        }
+    }
 }
