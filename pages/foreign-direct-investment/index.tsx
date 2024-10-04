@@ -138,8 +138,10 @@ export default function ForiegnDirectInvestment() {
                 </div>
             </motion.div>
 
+            <section>
+                <SpeakersCarouselComponent colorCode="#FF2C28" />
 
-            <SpeakersCarouselComponent colorCode="#FF2C28"/>
+            </section>
 
 
             <div className='frequently-asked-questions-wrapper'>
