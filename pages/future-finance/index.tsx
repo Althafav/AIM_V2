@@ -79,7 +79,7 @@ const FutureFinance = () => {
             <KeyAgenda pageData={pageData} />
 
 
-            <div className="stats-section-wrapper">
+            <div className="stats-section-wrapper container">
 
 
                 <div className="portfolio-speaker-carousel owl-carousel">
@@ -176,7 +176,14 @@ const FutureFinance = () => {
 
             </div>
             <div className='mt-5 '>
-                <h2 className='section-heading mb-4'>Key Players</h2>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <h2 className='section-heading mb-4 text-center'>Key Players</h2>
+
+                        </div>
+                    </div>
+                </div>
                 <SpeakersCarouselComponent colorCode="#7428F4" />
 
             </div>
