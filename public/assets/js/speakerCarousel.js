@@ -1,8 +1,7 @@
 $(".home-speaker-carousel").owlCarousel({
-  autoplayTimeout: 2000, // Set autoplay timeout to 5 seconds
-  slideSpeed: 50000, // Set slide speed to 5 seconds
-  speed: 5000, // Set animation speed to 5 seconds
-  paginationSpeed: 8000, // Adjust pagination speed as needed
+  autoplayTimeout: 5000, // 5 seconds autoplay timeout
+  smartSpeed: 1000, // Transition speed for smooth scrolling
+  autoplaySpeed: 1000,
   margin: 0,
   autoplay: true,
   items: 4,
@@ -33,10 +32,9 @@ $(".home-speaker-carousel").owlCarousel({
 
 
 $(".portfolio-speaker-carousel").owlCarousel({
-  autoplayTimeout: 2000, // Set autoplay timeout to 5 seconds
-  slideSpeed: 50000, // Set slide speed to 5 seconds
-  speed: 5000, // Set animation speed to 5 seconds
-  paginationSpeed: 8000, // Adjust pagination speed as needed
+  autoplayTimeout: 5000, // 5 seconds autoplay timeout
+  smartSpeed: 1000, // Transition speed for smooth scrolling
+  autoplaySpeed: 1000,
   margin: 0,
   autoplay: true,
   items: 4,
