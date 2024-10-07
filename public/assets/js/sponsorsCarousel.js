@@ -1,6 +1,7 @@
 $(".home-sponsors-carousel").owlCarousel({
-  slideSpeed: 500,
-  paginationSpeed: 400,
+  autoplayTimeout: 5000, // 5 seconds autoplay timeout
+  smartSpeed: 1000, // Transition speed for smooth scrolling
+  autoplaySpeed: 1000,
   margin: 20,
   autoplay: true,
   items: 4,
@@ -27,8 +28,9 @@ $(".home-sponsors-carousel").owlCarousel({
 
 
 $(".startup-exhibition-carousel").owlCarousel({
-  slideSpeed: 500,
-  paginationSpeed: 400,
+  autoplayTimeout: 5000, // 5 seconds autoplay timeout
+  smartSpeed: 1000, // Transition speed for smooth scrolling
+  autoplaySpeed: 1000,
   margin: 20,
   autoplay: true,
   items: 5,
@@ -55,8 +57,9 @@ $(".startup-exhibition-carousel").owlCarousel({
 
 
 $(".startup-sponsor-carousel").owlCarousel({
-  slideSpeed: 500,
-  paginationSpeed: 400,
+  autoplayTimeout: 5000, // 5 seconds autoplay timeout
+  smartSpeed: 1000, // Transition speed for smooth scrolling
+  autoplaySpeed: 1000,
   margin: 20,
   autoplay: true,
   items: 5,

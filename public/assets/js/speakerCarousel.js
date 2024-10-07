@@ -35,7 +35,7 @@ $(".portfolio-speaker-carousel").owlCarousel({
   autoplayTimeout: 5000, // 5 seconds autoplay timeout
   smartSpeed: 1000, // Transition speed for smooth scrolling
   autoplaySpeed: 1000,
-  margin: 0,
+  margin: 20,
   autoplay: true,
   items: 4,
   loop: true,
@@ -51,10 +51,10 @@ $(".portfolio-speaker-carousel").owlCarousel({
       items: 2,
     },
     600: {
-      items: 2,
+      items: 3,
     },
     1000: {
-      items: 3,
+      items: 4,
     },
     1200: {
       items: 6,

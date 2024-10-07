@@ -138,15 +138,13 @@
 }
 
 .speaker-carousel-wrapper {
-  
    
     display: flex;
     align-items: center;
     justify-content: center;
     .card-speaker-item {
-        width: 175px;
-
-        // background-color: beige;
+        max-width: 175px;
+        width: 100%;
         position: relative;
 
         &:hover {
