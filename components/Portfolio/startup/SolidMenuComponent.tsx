@@ -177,7 +177,11 @@ export default function SolidMenuComponent() {
                                 <span>RESOURCES</span>
                                 {isResourcesDropdownOpen && (
                                     <ul className="dropdown">
-                                       
+                                        {/* <li className="dropdown-item">
+                      <Link href="/travel-partner">
+                        Album
+                      </Link>
+                    </li> */}
                                         <li className="dropdown-item">
                                             <Link href="/brochure">
                                                 Brochure
