@@ -18,6 +18,7 @@ import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 import Link from 'next/link';
 import SpeakersCarouselComponent from '@/components/Portfolio/FDI/SpeakersCarouselComponent';
+import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
 
 export default function ForiegnDirectInvestment() {
 
@@ -38,8 +39,8 @@ export default function ForiegnDirectInvestment() {
         return <SpinnerComponent />
     }
 
-    const about1 = `Join us at AIM Congress 2025 for our session, Navigating the Future of FDI: Overcoming Challenges, Seizing New Global Opportunities. Foreign Direct Investment transforms due to technological advancements, geopolitical shifts, and evolving economic trends, this session will provide essential insights into key topics like digital economies, green investments, and regional trade agreements.`
-    const about2 = `Gain strategies to navigate challenges and seize opportunities in this dynamic landscape. Whether expanding into new markets or aligning with sustainable practices, you'll leave equipped to confidently shape your investment future. Don’t miss this chance to lead in the evolution of FDI!`
+    const about1 = `The Foreign Direct Investment (FDI) Portfolio at AIM Congress 2025 will focus on the theme "Navigating the Future of FDI: Overcoming Challenges, Seizing New Global Opportunities."As FDI undergoes significant transformations driven by technological advancements, geopolitical shifts, and evolving economic landscapes, this portfolio aims to provide valuable insights into digital economies, green investments, and regional trade agreements, which are pivotal for future growth. `
+    const about2 = `Through a strategic approach, the FDI Portfolio will empower participants to tackle emerging challenges while seizing new opportunities in global markets. By fostering collaboration and innovation, we will equip stakeholders with the tools needed to thrive and shape the future of investment. `
 
     return (
         <motion.div
@@ -103,14 +104,20 @@ export default function ForiegnDirectInvestment() {
 
             >
                 <div className="container">
-                    <div className="row mt-5 g-3 justify-content-center">
-                        <div className="col-lg-4 d-flex justify-content-center align-items-center">
+                    <div className="row mt-5 g-lg-5 justify-content-center">
+                        <div className="col-lg-4 d-flex justify-content-center flex-column align-items-left">
                             <motion.h2
                                 initial={{ y: 100, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true, amount: 0.1 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className='text-center section-heading text-white fw-normal'>{pageData.keyagendaheading.value}</motion.h2>
+                                className='text-start section-heading text-white fw-normal'>{pageData.keyagendaheading.value}</motion.h2>
+                            <motion.p
+                                initial={{ y: 100, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true, amount: 0.1 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className='text-left  text-white fw-normal'>Maximizing global investment success through strategic insights, opportunities, and collaboration </motion.p>
                         </div>
                         <div className="col-lg-8">
                             <div className="row g-3">
@@ -139,9 +146,13 @@ export default function ForiegnDirectInvestment() {
             </motion.div>
 
             <section>
-                <SpeakersCarouselComponent colorCode="#FF2C28" />
+                <SpeakersCarouselComponent colorCode="#000000" />
 
             </section>
+
+            <div>
+                <HomeSponsorsComponent />
+            </div>
 
 
             <div className='frequently-asked-questions-wrapper'>

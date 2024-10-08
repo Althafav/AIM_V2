@@ -184,7 +184,7 @@ const FutureFinance = () => {
                         </div>
                     </div>
                 </div>
-                <SpeakersCarouselComponent colorCode="#7428F4" />
+                <SpeakersCarouselComponent colorCode="#000000" />
 
             </div>
 

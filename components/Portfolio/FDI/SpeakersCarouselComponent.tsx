@@ -4,10 +4,9 @@ import Services from "@/modules/Services";
 import conferenceSpeakerModel from "@/sysmodels/conferenceSpeakerModel";
 import conferenceSpeakersModel from "@/sysmodels/conferenceSpeakersModel";
 import axios from "axios";
-import Image from "next/image";
-import Link from "next/link";
+
 import React from "react";
-import Marquee from "react-fast-marquee";
+
 
 interface SpeakersCarouselProps {
     colorCode: string;

@@ -1,11 +1,10 @@
-import Globals from '@/modules/Globals';
-import JsLoader from '@/modules/JsLoader';
+
 import React from 'react';
-import VerticalCarousel from './VerticalCarousel';
+
 import { FaCheck } from 'react-icons/fa';
 import { Serviceitem } from '@/models/serviceitem';
 import { Portfoliopage } from '@/models/portfoliopage';
-import Link from 'next/link';
+
 
 
 interface PageDataProps {
