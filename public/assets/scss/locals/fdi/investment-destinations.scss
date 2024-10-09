@@ -1,19 +1,20 @@
 .investment-destination-page {
     .map-section-wrapper {
-        height: 850px;
+      
         position: relative;
 
         .map-image {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
             max-width: 1300px;
-            height: 850px;
+            height: auto;
         }
 
         .map-heading {
-            font-size: 75px;
+            font-size: clamp(24px, 5vw, 75px); // Adjusts between 24px and 75px based on viewport width
             line-height: 1.5;
-            letter-spacing: 20px;
+            text-transform: uppercase;
+            letter-spacing: clamp(5px, 2vw, 20px); // Scales letter spacing
             position: absolute;
             z-index: 2;
             top: 50%;
@@ -24,7 +25,12 @@
             text-align: center;
             font-weight: 100;
 
+            @media screen and (max-width: 400px) {
+                font-size: 20px;
+                letter-spacing: 2px; // Tightens letter-spacing on very small screens
+            }
         }
+
     }
 
     .about-investment-destination {
@@ -34,10 +40,16 @@
             .heading {
                 position: absolute;
                 font-size: 64px;
+                max-width: 400px;
                 color: white;
+                line-height: 1.1;
                 top: 50%;
                 left: 20px;
                 transform: translate(0, -50%);
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 24px;
+                }
             }
         }
 
@@ -61,17 +73,52 @@
             }
         }
 
-       
+
 
 
 
     }
 
-    .presentation-guidelines-cta-wrap{
+    .presentation-guidelines-cta-wrap {
         .heading {
             color: black;
             font-size: 40px;
+
+            @media screen and (max-width: 600px) {
+                font-size: 20px;
+            }
         }
+
+        .cta-btn {
+            padding: 8px 48px;
+        }
+    }
+
+
+    .destination-carousel-section--detail-page {
+        position: relative;
+        .heading-presentation-carousel{
+            font-size: 75px;
+            color: black;   
+            
+            @media screen and (max-width: 1000px) {
+                font-size: 28px;
+            }
+        }
+
+        .investment-destination-card {
+            height: auto;
+            .investment-destination-image{
+                width: 100%;
+               
+                object-fit: cover;
+            }
+        }
+        
+    }
+
+    .bookspot-cta {
+        width: 100%;
     }
 
 

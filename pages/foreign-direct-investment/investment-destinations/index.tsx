@@ -9,6 +9,9 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 
 
 import Services from '@/modules/Services';
+import InvestmentDestinationCarousel from '@/components/Portfolio/FDI/InvestmentDestinationCarousel';
+import Image from 'next/image';
+import { Serviceitem } from '@/models/serviceitem';
 
 export default function InvestmentDestinations() {
 
@@ -56,7 +59,7 @@ export default function InvestmentDestinations() {
 
             </div>
             <div className="container">
-                <div className='map-section-wrapper  '>
+                <div className='map-section-wrapper mt-3 '>
                     <img src="/assets/imgs/fdi/World Map.png" alt="investmentdestinations" className='map-image' />
 
                     <h2 className='map-heading'>Explore Global Investment Opportunities</h2>
@@ -89,10 +92,68 @@ export default function InvestmentDestinations() {
                 </section>
 
                 <section className='row presentation-guidelines-cta-wrap'>
-                    <div className="col-lg-6"> <h2 className='heading'>Showcase Global Investment Opportunities, Drive Partnerships</h2></div>
-                    <div className="col-lg-6 d-flex justify-content-center">
+                    <div className="col-lg-8 mb-3 mb-lg-0"> <h2 className='heading'>Showcase Global Investment Opportunities, Drive Partnerships</h2></div>
+                    <div className="col-lg-4 ">
                         <div>
                             <button className='cta-btn fdi text-white'>Connect with Us</button>
+                        </div>
+                    </div>
+                </section>
+
+                <div className="destination-carousel-section--detail-page">
+                    <div className='investment-destination-carousel-wrapper'>
+
+
+
+                        <div className='singleCarousel mt-lg-5 mt-3 owl-carousel'>
+                            {pageData.fdiInvestmentDestinationItems.value.map((m: any, index: number) => {
+                                var item: Serviceitem = m;
+                                return (
+                                    <div className='investment-destination-card' key={`investment-destination-${index}`}>
+
+                                        <div className="row g-0">
+                                            <div className="col-lg-9">
+                                                <h2 className='heading-presentation-carousel'>AIM 2024
+                                                    Investment presentations</h2>
+                                            </div>
+                                            <div className="col-lg-3 mb-3">
+                                                <div className="card-body-investment-destination">
+
+
+                                                    <p className="name text-dark" >{item.name.value}</p>
+                                                    <p className='content' dangerouslySetInnerHTML={{ __html: item.content.value }}></p>
+                                                    {/* <div className='mt-4'>
+                                                <button className='cta-btn fdi text-white'>Learn More</button>
+                                            </div> */}
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div className="row mt-4">
+                                            <div className="col-12">
+                                                <img src={item.image.value[0]?.url} alt={item.name.value}
+                                                    className="investment-destination-image" />
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <section>
+                    <div className="container">
+                        <div className="bookspot-cta">
+
                         </div>
                     </div>
                 </section>

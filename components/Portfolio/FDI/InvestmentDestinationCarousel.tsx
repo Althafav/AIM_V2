@@ -4,6 +4,7 @@ import { Speaker } from '@/models/speaker';
 import Globals from '@/modules/Globals';
 import JsLoader from '@/modules/JsLoader';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect } from 'react'
 
 
@@ -12,7 +13,7 @@ interface PageDataProps {
 }
 
 const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) => {
-  
+
 
     if (!pageData) {
         return <></>;
@@ -38,13 +39,16 @@ const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) =>
                                 <div className="row g-0">
                                     <div className="col-lg-3">
                                         <div className="card-body-investment-destination">
-                                      
+
 
                                             <p className="name text-dark" >{item.name.value}</p>
                                             <p className='content' dangerouslySetInnerHTML={{ __html: item.content.value }}></p>
-                                            {/* <div className='mt-4'>
-                                                <button className='cta-btn fdi text-white'>Learn More</button>
-                                            </div> */}
+                                            <div className='mt-4'>
+                                                <Link href="/foreign-direct-investment/investment-destinations">
+                                                    <button className='cta-btn fdi text-white'>Learn More</button>
+
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
 
