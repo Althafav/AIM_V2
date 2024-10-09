@@ -118,7 +118,7 @@
         padding-top: 60px;
 
         .stats-card {
-            
+
             width: 100%;
             height: 172px;
             position: relative;
@@ -136,7 +136,7 @@
             }
 
             .stats-image {
-              
+
                 width: 100%;
                 height: 172px;
                 object-fit: cover;
@@ -251,5 +251,45 @@
 
     }
 
+
+    .keyplayers-carousel-wrapper {
+
+        .key-players-wrap {
+            .key-player-name {
+                padding: 20;
+                margin-top: 10px;
+                font-size: 14px;
+                
+                text-align: center;
+            }
+        }
+
+        .keyplayers-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            padding: 20px;
+            box-shadow: .3121rem .3121rem .621rem .1rem rgba(0, 0, 0, 0.24);
+
+            .key-player-image {
+                // background-color: $future-finance;
+                // border-radius: 30px;
+                width: 140px;
+
+                object-fit: contain;
+                // filter: grayscale(1);
+            }
+
+
+        }
+
+        .card-body-speakers {
+            padding: 20px;
+
+            .key-player-name {}
+        }
+    }
 
 }
