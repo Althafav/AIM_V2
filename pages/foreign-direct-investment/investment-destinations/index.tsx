@@ -61,6 +61,10 @@ export default function InvestmentDestinations() {
 
                     <h2 className='map-heading'>Explore Global Investment Opportunities</h2>
                 </div>
+
+                <div className="about-investment-destination">
+                    <span>Investment Destinations</span>
+                </div>
             </div>
 
         </motion.div>

@@ -19,7 +19,7 @@ const KeyPlayersCarousel: React.FC<PageDataProps> = ({ pageData }) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <h2 className='section-heading text-center'> {pageData.keyagendaheading.value}</h2>
+                        <h2 className='section-heading text-center'> {pageData.keyplayersheading.value}</h2>
                     </div>
                 </div>
             </div>
