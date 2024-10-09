@@ -12,6 +12,7 @@ import Services from '@/modules/Services';
 import InvestmentDestinationCarousel from '@/components/Portfolio/FDI/InvestmentDestinationCarousel';
 import Image from 'next/image';
 import { Serviceitem } from '@/models/serviceitem';
+import Link from 'next/link';
 
 export default function InvestmentDestinations() {
 
@@ -95,7 +96,10 @@ export default function InvestmentDestinations() {
                     <div className="col-lg-8 mb-3 mb-lg-0"> <h2 className='heading'>Showcase Global Investment Opportunities, Drive Partnerships</h2></div>
                     <div className="col-lg-4 ">
                         <div>
-                            <button className='cta-btn fdi text-white'>Connect with Us</button>
+                            <Link href="/register-interest/fdi">
+                                <button className='cta-btn fdi text-white'>Connect with Us</button>
+
+                            </Link>
                         </div>
                     </div>
                 </section>
@@ -151,11 +155,25 @@ export default function InvestmentDestinations() {
                 </div>
 
                 <section>
-                    <div className="container">
-                        <div className="bookspot-cta">
 
+                    <div className="bookspot-cta-wrap">
+
+                        <div className="row booksport-cta p-4 justify-content-center align-items-center h-100">
+                            <div className="col-lg-10">
+                                <h3>Present your country’s investment opportunities to the world</h3>
+                            </div>
+                            <div className="col-lg-2">
+                                <div>
+                                    <Link href="/register-interest/fdi">
+
+                                        <button className='cta-btn fdi text-white'>Book Your Spot</button>
+                                    </Link>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </section>
             </div>
 

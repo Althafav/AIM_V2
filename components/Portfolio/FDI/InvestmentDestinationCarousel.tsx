@@ -52,7 +52,7 @@ const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) =>
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-9">
+                                    <div className="col-lg-9 mt-lg-0 mt-3">
                                         <Image width={858} height={483} src={item.image.value[0]?.url} alt={item.name.value}
                                             className="investment-destination-image" />
                                     </div>

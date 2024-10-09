@@ -79,9 +79,9 @@ export default function ForiegnDirectInvestment() {
 
                             <div>
                                 <Link href="/register-interest/fdi">
+                                    <button className='cta-btn fdi text-white'>Register your interest</button>
 
                                 </Link>
-                                <button className='cta-btn fdi text-white'>Register your interest</button>
                             </div>
                             <p className='date-venue text-white'>{pageData.dateandvenu.value}</p>
                         </div>
