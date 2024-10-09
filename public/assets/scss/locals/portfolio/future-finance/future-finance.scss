@@ -256,7 +256,7 @@
 
         .key-players-wrap {
             .key-player-name {
-                padding: 20;
+                padding: 20px;
                 margin-top: 10px;
                 font-size: 14px;
                 
@@ -271,25 +271,20 @@
             flex-direction: column;
 
             padding: 20px;
-            box-shadow: .3121rem .3121rem .621rem .1rem rgba(0, 0, 0, 0.24);
+            box-shadow: .3125rem .3125rem .625rem .1rem rgba(0,0,0,.123);
 
             .key-player-image {
-                // background-color: $future-finance;
-                // border-radius: 30px;
+               
                 width: 140px;
 
                 object-fit: contain;
-                // filter: grayscale(1);
+              
             }
 
 
         }
 
-        .card-body-speakers {
-            padding: 20px;
-
-            .key-player-name {}
-        }
+       
     }
 
 }

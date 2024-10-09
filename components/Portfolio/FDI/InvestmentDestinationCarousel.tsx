@@ -35,9 +35,11 @@ const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) =>
                         return (
                             <div className='investment-destination-card' key={`investment-destination-${index}`}>
 
-                                <div className="row">
+                                <div className="row g-0">
                                     <div className="col-4">
                                         <div className="card-body-investment-destination">
+                                        <p className="name text-dark" >🇴🇲</p>
+
                                             <p className="name text-dark" >{item.name.value}</p>
                                             <p className='content' dangerouslySetInnerHTML={{ __html: item.content.value }}></p>
                                             <div className='mt-4'>
