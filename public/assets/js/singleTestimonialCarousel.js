@@ -24,4 +24,7 @@ $(".single-testimonial-carousel").owlCarousel({
       items: 1,
     },
   },
+
+  autoplayHoverPause: true,
 });
+

@@ -17,10 +17,12 @@ import Marquee from 'react-fast-marquee';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
-import SpeakersCarouselComponent from '@/components/Portfolio/FDI/SpeakersCarouselComponent';
+import SpeakersCarouselComponent from '@/components/Portfolio/SpeakersCarouselComponent';
 import Link from 'next/link';
 import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
 import JsLoader from '@/modules/JsLoader';
+import Services from '@/modules/Services';
+import KeyPlayersCarousel from '@/components/Portfolio/future-finance/KeyPlayersCarousel';
 
 
 const FutureFinance = () => {
@@ -41,6 +43,18 @@ const FutureFinance = () => {
             .subscribe((response: any) => {
 
                 setStats(response.item);
+
+                Services.loadFile(
+                    `${Globals.BASE_URL}assets/js/owl.carousel.min.js`,
+                    () => {
+                        Services.loadFile(
+                            `${Globals.BASE_URL}assets/js/singleCarousel.js`
+                        );
+                        Services.loadFile(
+                            `${Globals.BASE_URL}assets/js/speakerCarousel.js`
+                        );
+                    }
+                );
 
             });
     }, []);
@@ -175,18 +189,17 @@ const FutureFinance = () => {
 
 
             </div>
-            <div className='mt-5 '>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h2 className='section-heading mb-4 text-center'>Key Players</h2>
+            <section>
 
-                        </div>
-                    </div>
-                </div>
-                <SpeakersCarouselComponent colorCode="#000000" />
+                <SpeakersCarouselComponent pageData={pageData} />
 
-            </div>
+            </section>
+
+            <section>
+
+                <KeyPlayersCarousel pageData={pageData} />
+
+            </section>
 
             <div>
                 <HomeSponsorsComponent />

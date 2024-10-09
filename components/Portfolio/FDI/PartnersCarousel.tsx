@@ -19,11 +19,11 @@ const PartnersCarousel: React.FC<PageDataProps> = ({ pageData }) => {
                 {pageData.keyagendaitems.value.map((m: any, index: number) => {
                     var item: Serviceitem = m;
                     return (
-                        <div className='key-players-card'>
-                            <div className="card-speaker-item" key={`keyplayers-${index}`}>
+                        <div className='key-players-card' key={`keyplayers-${index}`}>
+                            <div className="card-speaker-item" >
 
 
-                                <img width={175} height={175} src={item.image.value[0].url} alt={item.name.value}
+                                <img width={175} height={175} src={item.image?.value[0]?.url} alt={item.name.value}
                                     className="speaker-image" />
 
                                 <div className="card-body-speaker">

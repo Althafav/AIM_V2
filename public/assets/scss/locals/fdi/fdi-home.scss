@@ -119,6 +119,7 @@
 
 .frequently-asked-questions-wrapper {
     padding-bottom: 120px;
+
     .main-heaiding {
         font-size: 48px;
         font-weight: 600;
@@ -138,11 +139,36 @@
     position: -webkit-sticky;
 }
 
+
+.investment-destination-carousel-wrapper {
+
+    .investment-destination-card {
+        width: 100%;
+        height: 483px;
+
+        .investment-destination-image {
+            width: 100%;
+            height: 483px;
+        }
+
+        .name {
+            font-size: 36px;
+        }
+
+        .content {
+            color: #B4B4B4;
+            max-width: 270px;
+        }
+    }
+
+}
+
 .speaker-carousel-wrapper {
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     .card-speaker-item {
         max-width: 175px;
         width: 100%;

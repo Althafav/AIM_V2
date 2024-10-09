@@ -17,8 +17,10 @@ import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { KeyAgenda } from '@/components/Portfolio/KeyAgenda';
 import { AboutComponentRevamp } from '@/components/Portfolio/AboutComponentRevamp';
 import Link from 'next/link';
-import SpeakersCarouselComponent from '@/components/Portfolio/FDI/SpeakersCarouselComponent';
+import SpeakersCarouselComponent from '@/components/Portfolio/SpeakersCarouselComponent';
 import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
+import InvestmentDestinationCarousel from '@/components/Portfolio/FDI/InvestmentDestinationCarousel';
+import Services from '@/modules/Services';
 
 export default function ForiegnDirectInvestment() {
 
@@ -32,6 +34,18 @@ export default function ForiegnDirectInvestment() {
             .subscribe((response: any) => {
                 console.log('API Response:', response);
                 setPageData(response.item);
+
+                Services.loadFile(
+                    `${Globals.BASE_URL}assets/js/owl.carousel.min.js`,
+                    () => {
+                        Services.loadFile(
+                            `${Globals.BASE_URL}assets/js/singleCarousel.js`
+                        );
+                        Services.loadFile(
+                            `${Globals.BASE_URL}assets/js/speakerCarousel.js`
+                        );
+                    }
+                );
             });
     }, []);
 
@@ -145,8 +159,12 @@ export default function ForiegnDirectInvestment() {
                 </div>
             </motion.div>
 
+            <section className='investmentdestinationCarousel'>
+                <InvestmentDestinationCarousel pageData={pageData} />
+            </section>
+
             <section>
-                <SpeakersCarouselComponent colorCode="#000000" />
+                <SpeakersCarouselComponent pageData={pageData} />
 
             </section>
 
