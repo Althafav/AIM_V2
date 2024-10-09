@@ -471,6 +471,23 @@ input[readonly] {
     overflow: hidden;
 }
 
+.portfolio-speaker-carousel{
+    .key-players-card{
+
+        .card-speaker-item{
+            .speaker-image{
+                height: 300px;
+            }
+            .name {
+                padding: 10px;
+                text-align: left;
+                font-size: 14px;
+                max-width: 200px;
+            }
+        }
+    }
+}
+
 
 
 @import "./locals/menu-component.scss";

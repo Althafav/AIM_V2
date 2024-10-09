@@ -2,27 +2,77 @@
     .map-section-wrapper {
         height: 850px;
         position: relative;
+
         .map-image {
             width: 100%;
             object-fit: cover;
             max-width: 1300px;
             height: 850px;
         }
+
+        .map-heading {
+            font-size: 75px;
+            line-height: 1.5;
+            letter-spacing: 20px;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            max-width: 1041px;
+            text-align: center;
+            font-weight: 100;
+
+        }
     }
 
-    .map-heading {
-        font-size: 75px;
-        line-height: 1.5;
-        letter-spacing: 20px;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: black;
-        max-width: 1041px;
-        text-align: center;
-        font-weight: 100;
+    .about-investment-destination {
+        .banner-wrap {
+            position: relative;
+
+            .heading {
+                position: absolute;
+                font-size: 64px;
+                color: white;
+                top: 50%;
+                left: 20px;
+                transform: translate(0, -50%);
+            }
+        }
+
+        .presentation-guidelines-contents {
+            color: #B4B4B4;
+
+
+
+            .guide-head {
+                font-weight: 600;
+                color: black;
+            }
+
+            .presentation-guidelines {
+
+                li {
+                    margin-left: 40px;
+                    padding: 10px;
+                    list-style: disc;
+                }
+            }
+        }
+
+       
+
+
 
     }
+
+    .presentation-guidelines-cta-wrap{
+        .heading {
+            color: black;
+            font-size: 40px;
+        }
+    }
+
+
 }
