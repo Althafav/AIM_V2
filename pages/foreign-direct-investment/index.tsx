@@ -21,6 +21,7 @@ import SpeakersCarouselComponent from '@/components/Portfolio/SpeakersCarouselCo
 import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
 import InvestmentDestinationCarousel from '@/components/Portfolio/FDI/InvestmentDestinationCarousel';
 import Services from '@/modules/Services';
+import Head from 'next/head';
 
 export default function ForiegnDirectInvestment() {
 
@@ -64,6 +65,12 @@ export default function ForiegnDirectInvestment() {
             transition={{ duration: 0.5 }}
             className='future-finance-page-wrapper'
         >
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
+
             <div className="fdi-hero-section-wrapper">
                 <div className="container">
                     <img src="/assets/imgs/fdi/fdi-hero-top.png" alt="" />
@@ -118,7 +125,7 @@ export default function ForiegnDirectInvestment() {
 
             >
                 <div className="container">
-                    <div className="row mt-5 g-lg-5 justify-content-center">
+                    <div className="row  g-lg-5 justify-content-center">
                         <div className="col-lg-4 d-flex justify-content-center flex-column align-items-left">
                             <motion.h2
                                 initial={{ y: 100, opacity: 0 }}

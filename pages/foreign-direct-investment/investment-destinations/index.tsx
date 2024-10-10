@@ -3,25 +3,21 @@ import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 
 import Globals from '@/modules/Globals';
-import { Portfoliopage } from '@/models/portfoliopage';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
-
-
-
 import Services from '@/modules/Services';
-import InvestmentDestinationCarousel from '@/components/Portfolio/FDI/InvestmentDestinationCarousel';
-import Image from 'next/image';
+
 import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
+import { Investmentdestinationpagefdi } from '@/models/investmentdestinationpagefdi';
+import Head from 'next/head';
+import { Buttonitem } from '@/models/buttonitem';
 
 export default function InvestmentDestinations() {
 
-
-
-    const [pageData, setPageData] = useState<Portfoliopage | null>(null);
+    const [pageData, setPageData] = useState<Investmentdestinationpagefdi | null>(null);
 
     useEffect(() => {
-        Globals.KontentClient.item("fdi_portfolio")
+        Globals.KontentClient.item("investment_destination_2025")
             .toObservable()
             .subscribe((response: any) => {
                 console.log('API Response:', response);
@@ -56,50 +52,56 @@ export default function InvestmentDestinations() {
             transition={{ duration: 0.5 }}
             className='investment-destination-page'
         >
+            <Head>
+                <title>{pageData.pageTitle.value}</title>
+                <meta name="title" content={pageData.pageTitle.value} />
+                <meta name="description" content={pageData.metaDescription.value} />
+            </Head>
             <div className="black-replacer-nav">
 
             </div>
             <div className="container">
                 <div className='map-section-wrapper mt-3 '>
-                    <img src="/assets/imgs/fdi/World Map.png" alt="investmentdestinations" className='map-image' />
+                    <img src={pageData.bannerimage.value[0].url} alt="investmentdestinations" className='map-image' />
 
-                    <h2 className='map-heading'>Explore Global Investment Opportunities</h2>
+                    <h2 className='map-heading'>{pageData.bannerheading.value}</h2>
                 </div>
 
                 <section className="about-investment-destination">
                     <div className="banner-wrap">
                         <img src="/assets/imgs/fdi/fdi-hero-top.png" alt="" />
 
-                        <span className='heading'>Investment Destinations</span>
+                        <span className='heading'>{pageData.aboutHeading.value}</span>
                     </div>
 
                     <div className="row presentation-guidelines-contents  mt-3">
                         <div className="col-lg-4">
-                            <p className='light-text'>The AIM Investment Destination Presentation is a highly anticipated and prominent feature of the event, serving as a dedicated platform for countries, cities, and local government units from around the globe to showcase their unique investment opportunities and key projects to a diverse audience of potential investors and business partners. This integral component of the event allows participants to effectively communicate their strategic advantages, fostering international collaboration and investment</p>
+                            <p className='light-text' dangerouslySetInnerHTML={{ __html: pageData.aboutDescription1.value }}></p>
                         </div>
                         <div className="col-lg-4">
-                            <p className='light-text'>During these presentations, representatives from the participating entities have the invaluable opportunity to highlight essential economic features and compelling details about their investment environment. They showcase the unique advantages of investing in their regions, presenting them as attractive and lucrative destinations for trade and investment</p>
+                            <p className='light-text' dangerouslySetInnerHTML={{ __html: pageData.aboutDescription2.value }}></p>
                         </div>
                         <div className="col-lg-4">
-                            <p className='guide-head'>Presentation Guidelines</p>
-                            <ul className='presentation-guidelines'>
-                                <li>Each presentation will run for a duration of 60 minutes.  </li>
-                                <li>Presenters have the flexibility to create their own program topics, speakers, format, etc.  </li>
-                                <li>Promotion and Invitations will be done based on the target audience (to be agreed with the presenter).  </li>
-                                <li>A recorded video of the presentation will be available on the AIM website throughout the year. </li>
-                            </ul>
+
+                            <span className='presentation-guidelines' dangerouslySetInnerHTML={{ __html: pageData.presentationGuidelines.value }} />
                         </div>
                     </div>
                 </section>
 
                 <section className='row presentation-guidelines-cta-wrap'>
-                    <div className="col-lg-8 mb-3 mb-lg-0"> <h2 className='heading'>Showcase Global Investment Opportunities, Drive Partnerships</h2></div>
+                    <div className="col-lg-8 mb-3 mb-lg-0"> <h2 className='heading'>{pageData.connectWithUsCtaHeading.value}</h2></div>
                     <div className="col-lg-4 ">
                         <div>
-                            <Link href="/register-interest/fdi">
-                                <button className='cta-btn fdi text-white'>Connect with Us</button>
+                            {pageData.connectWithUsButton.value.map((m: any, index: number) => {
+                                var item: Buttonitem = m;
+                                return (
+                                    <Link href={item.link.value} key={`connect-btn-${index}`}>
+                                        <button className='cta-btn fdi text-white'>{item.name.value}</button>
 
-                            </Link>
+                                    </Link>
+                                )
+                            })}
+
                         </div>
                     </div>
                 </section>
@@ -110,15 +112,14 @@ export default function InvestmentDestinations() {
 
 
                         <div className='singleCarousel mt-lg-5 mt-3 owl-carousel'>
-                            {pageData.fdiInvestmentDestinationItems.value.map((m: any, index: number) => {
+                            {pageData.investmentPresentationItems.value.map((m: any, index: number) => {
                                 var item: Serviceitem = m;
                                 return (
                                     <div className='investment-destination-card' key={`investment-destination-${index}`}>
 
                                         <div className="row g-0">
                                             <div className="col-lg-9">
-                                                <h2 className='heading-presentation-carousel'>AIM 2024
-                                                    Investment presentations</h2>
+                                                <h2 className='heading-presentation-carousel'>{pageData.investmentPresentationHeading.value}</h2>
                                             </div>
                                             <div className="col-lg-3 mb-3">
                                                 <div className="card-body-investment-destination">
@@ -154,27 +155,33 @@ export default function InvestmentDestinations() {
 
                 </div>
 
-                <section>
+                <div>
 
-                    <div className="bookspot-cta-wrap">
+                    <div className="bookspot-cta-wrap mb-5">
 
                         <div className="row booksport-cta p-4 justify-content-center align-items-center h-100">
                             <div className="col-lg-10">
-                                <h3>Present your country’s investment opportunities to the world</h3>
+                                <h3>{pageData.bookYourSpotCtaHeading.value}</h3>
                             </div>
                             <div className="col-lg-2">
                                 <div>
-                                    <Link href="/register-interest/fdi">
+                                    {pageData.bookYourSpotButton.value.map((m: any, index: number) => {
+                                        var item: Buttonitem = m;
+                                        return (
+                                            <Link href={item.link.value} key={`bookspot-${index}`}>
 
-                                        <button className='cta-btn fdi text-white'>Book Your Spot</button>
-                                    </Link>
+                                                <button className='cta-btn fdi text-white'>{item.name.value}</button>
+                                            </Link>
+                                        )
+                                    })}
+
 
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </section>
+                </div>
             </div>
 
         </motion.div>

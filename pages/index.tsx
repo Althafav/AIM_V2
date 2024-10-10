@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 import BannerComponent from "@/components/BannerComponent";
 import { useInView } from 'react-intersection-observer';
 import CtaComponent from "@/components/CtaComponent";
+import Services from "@/modules/Services";
+import Globals from "@/modules/Globals";
+import { useEffect, useState } from "react";
+import { Speakers2024 } from "@/models/speakers2024";
+import SpinnerComponent from "@/components/UI/SpinnerComponent";
+import HomeSpeakerComponentRevamp from "@/components/HomeSpeakersComponentRevamp";
 
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
@@ -70,7 +76,9 @@ export default function Home() {
         {inViewCtaBanner && <CtaComponent />}
       </div>
       <div ref={speakersRef}>
-        {inViewSpeakers && <HomeSpeakersComponent />}
+        {/* {inViewSpeakers && <HomeSpeakersComponent />} */}
+        {inViewSpeakers && <HomeSpeakerComponentRevamp />}
+
       </div>
 
       <div ref={sponsorsRef}>

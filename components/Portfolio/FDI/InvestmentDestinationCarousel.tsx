@@ -1,8 +1,5 @@
 import { Portfoliopage } from '@/models/portfoliopage';
 import { Serviceitem } from '@/models/serviceitem';
-import { Speaker } from '@/models/speaker';
-import Globals from '@/modules/Globals';
-import JsLoader from '@/modules/JsLoader';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react'
@@ -18,8 +15,6 @@ const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) =>
     if (!pageData) {
         return <></>;
     }
-
-    console.log("investor des", pageData)
 
     return (
         <div className='investment-destination-carousel-wrapper'>
@@ -57,10 +52,6 @@ const InvestmentDestinationCarousel: React.FC<PageDataProps> = ({ pageData }) =>
                                             className="investment-destination-image" />
                                     </div>
                                 </div>
-
-
-
-
                             </div>
                         )
                     })}

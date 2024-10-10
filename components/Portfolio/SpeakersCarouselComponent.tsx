@@ -36,7 +36,7 @@ const SpeakersCarouselComponent: React.FC<PageDataProps> = ({ pageData }) => {
                                 <div className="card-speaker-item">
 
                                     <img width={175} height={175} src={item.image.value[0]?.url} alt={item.name.value}
-                                        className="speaker-image" />
+                                        className="speaker-image"  />
 
                                     <div className="card-body-speaker">
                                         <p className="name text-dark" >{item.name.value}</p>

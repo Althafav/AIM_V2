@@ -4,6 +4,8 @@ import { Blogitems } from "@/models/blogitems";
 import { Blogs } from "@/models/blogs";
 import { Conferencedates } from "@/models/conferencedates";
 import { Conferencepage } from "@/models/conferencepage";
+import { Fdiawardpage } from "@/models/fdiawardpage";
+import { Investmentdestinationpagefdi } from "@/models/investmentdestinationpagefdi";
 import { Partnerspageitem } from "@/models/partnerspageitem";
 import { Portfoliopage } from "@/models/portfoliopage";
 import { Postshowreport } from "@/models/postshowreport";
@@ -47,7 +49,9 @@ export const TypeResolver = [
 
   new KontentDelivery.TypeResolver("Partnerspageitem", (rawData: any) => new Partnerspageitem()),
 
+  new KontentDelivery.TypeResolver("Fdiawardpage", (rawData: any) => new Fdiawardpage()),
 
+  new KontentDelivery.TypeResolver("Investmentdestinationpagefdi", (rawData: any) => new Investmentdestinationpagefdi()),
 
 
 

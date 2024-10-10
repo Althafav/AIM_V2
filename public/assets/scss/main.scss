@@ -6,7 +6,8 @@
 @import "_partials/_animations";
 @import "bootstrap-5.2.3/bootstrap.scss";
 @import "_partials/_controls";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 html {
     scroll-behavior: smooth;
@@ -163,7 +164,7 @@ hr {
 .section-heading {
     font-size: 48px;
     font-weight: normal !important;
-    color: $primary-color-varient;
+    color: black;
     letter-spacing: -3px;
     text-align: center;
     margin-bottom: 10px;
@@ -471,11 +472,11 @@ input[readonly] {
     overflow: hidden;
 }
 
-.portfolio-speaker-carousel{
-    .key-players-card{
+.portfolio-speaker-carousel {
+    .key-players-card {
 
-        .card-speaker-item{
-           
+        .card-speaker-item {
+
             .name {
                 padding: 10px;
                 text-align: left;
@@ -534,3 +535,4 @@ input[readonly] {
 @import "./locals/fdi/fdi-menu-compoenent.scss";
 @import "./locals/portfolio/portfolio-agenda.scss";
 @import "./locals/fdi/investment-destinations.scss";
+@import "./locals/fdi/fdi-award.scss";

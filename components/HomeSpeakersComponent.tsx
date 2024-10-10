@@ -151,7 +151,7 @@ export default class HomeSpeakersComponent extends React.Component<
                     <div className="card-speaker-item">
                       <div className="speaker-image-wrapper">
 
-                        <Image width={290} height={280}   src={speaker.image} alt={speaker.name}
+                        <img width={290} height={280}   src={speaker.image} alt={speaker.name}
                           className="speaker-image" />
                       </div>
                       <div className="card-body-speaker">
