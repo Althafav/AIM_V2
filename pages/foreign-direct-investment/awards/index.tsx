@@ -60,7 +60,7 @@ export default function AwardPage() {
                     <div className="col-12">
                         <h2 className='section-heading text-white'>{pageData.awardCeremonyHeading.value}</h2>
                         <p className='content' dangerouslySetInnerHTML={{ __html: pageData.awardCeremonyContent.value }}></p>
-                        <div className='d-flex justify-content-center mt-3'>
+                        <div className='d-flex justify-content-lg-center mt-3'>
                             {pageData.awardCeremonyCtaButton.value.map((m: any, index: number) => {
                                 var item: Buttonitem = m;
                                 return (
@@ -80,9 +80,9 @@ export default function AwardPage() {
                     <div className="guide-line-wrap row">
 
                         {pageData.guidelinesitems.value.map((m: any, index: number) => {
-                            var item: Serviceitem = m;
+                            var item: Serviceitem = m;  
                             return (
-                                <div className="guidelineitem col-lg-4" key={`guidelines-${index}`}>
+                                <div className="guidelineitem col-lg-4 pb-3" key={`guidelines-${index}`}>
                                     <p className='count'>0{index + 1}</p>
                                     <h4 className='name'>{item.name.value}</h4>
                                     <p className='content' dangerouslySetInnerHTML={{ __html: item.content.value }}></p>
@@ -129,7 +129,7 @@ export default function AwardPage() {
                 <div className="container">
                     <h2 className="section-heading text-white">{pageData.bookspotctaHeading.value}</h2>
 
-                    <div className='d-flex justify-content-center mt-4'>
+                    <div className='d-flex justify-content-lg-center mt-4'>
                         {pageData.bookspotcta.value.map((m: any, index: number) => {
                             var item: Buttonitem = m;
                             return (
