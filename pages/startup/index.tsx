@@ -31,7 +31,7 @@ const StartUp = () => {
         return <SpinnerComponent />;
     }
 
-    
+
 
     return (
         <motion.div
@@ -45,14 +45,18 @@ const StartUp = () => {
             <div className="portfolio-banner-wrapper startup-banner portfolio-margin-top" >
 
 
-                <motion.img
+                {/* <motion.img
                     src={pageData.bannerimage.value[0].url}
                     alt=""
                     className="banner-bg"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2 }}
-                />
+                /> */}
+
+                <video className='banner-bg' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
+                    <source src="https://media.aimcongress.com/documents/aimstartupsunicornsherovideo.mp4" type="video/mp4" className='banner-video' width="100%" />
+                </video>
 
                 <div className="text-container container">
                     <h1 className='banner-heading'>
@@ -178,7 +182,7 @@ const StartUp = () => {
                             )
                         })}
 
-                     
+
 
                     </div>
                 </div>
@@ -220,7 +224,7 @@ const StartUp = () => {
                 </div>
             </section>
 
-          
+
 
 
 

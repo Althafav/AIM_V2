@@ -36,11 +36,14 @@ export default function AwardPage() {
             </div>
 
             <div className="fdi-award-banner" >
-                <img src={pageData.bannerImageOrGif.value[0]?.url} alt="" className='fdi-award-image' />
+                <video className='fdi-award-image' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
+                    <source src='/assets/videos/FDI Award Background fhd.mp4' />
+                </video>
+                {/* <img src={pageData.bannerImageOrGif.value[0]?.url} alt="" className='fdi-award-image' /> */}
                 <div className="container">
                     <div className='fdi-award-banner'>
-                        <div className="fdi-award-banner-content pt-3">
-                            <h2 className='banner-headingMain'>Explore <br /> Global <br /> Investm <br /> ent <br /> Opportunit <br />ies</h2>
+                        <div className="fdi-award-banner-content">
+                            <h2 className='banner-headingMain'>Celebrating <br /> Global <br /> Investment <br /> Excellence</h2>
                             <p className='banner-content' dangerouslySetInnerHTML={{ __html: pageData.bannerContent.value }}></p>
                         </div>
 
