@@ -55,7 +55,7 @@ const StartUp = () => {
                 /> */}
 
                 <video className='banner-bg' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
-                    <source src="https://media.aimcongress.com/documents/aimstartupsunicornsherovideo.mp4" type="video/mp4" className='banner-video' width="100%" />
+                    <source src="https://media.aimcongress.com/documents/startup-landing-page-hero-section.mp4" type="video/mp4" className='banner-video' width="100%" />
                 </video>
 
                 <div className="text-container container">

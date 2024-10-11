@@ -37,7 +37,7 @@ export default function AwardPage() {
 
             <div className="fdi-award-banner" >
                 <video className='fdi-award-image' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
-                    <source src='/assets/videos/FDI Award Background fhd.mp4' />
+                    <source src='https://media.aimcongress.com/documents/fdi-award-hero-section.mp4' />
                 </video>
                 {/* <img src={pageData.bannerImageOrGif.value[0]?.url} alt="" className='fdi-award-image' /> */}
                 <div className="container">
