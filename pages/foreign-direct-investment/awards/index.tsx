@@ -39,7 +39,7 @@ export default function AwardPage() {
                 <video className='fdi-award-image' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
                     <source src='https://media.aimcongress.com/documents/fdi-award-hero-section.mp4' />
                 </video>
-                {/* <img src={pageData.bannerImageOrGif.value[0]?.url} alt="" className='fdi-award-image' /> */}
+
                 <div className="container">
                     <div className='fdi-award-banner'>
                         <div className="fdi-award-banner-content">
@@ -80,7 +80,7 @@ export default function AwardPage() {
                     <div className="guide-line-wrap row">
 
                         {pageData.guidelinesitems.value.map((m: any, index: number) => {
-                            var item: Serviceitem = m;  
+                            var item: Serviceitem = m;
                             return (
                                 <div className="guidelineitem col-lg-4 pb-3" key={`guidelines-${index}`}>
                                     <p className='count'>0{index + 1}</p>
