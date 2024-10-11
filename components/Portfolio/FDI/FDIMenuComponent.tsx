@@ -8,9 +8,25 @@ export default function FDIMenuComponent() {
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center align-items-center">
                         <ul className='menu-items'>
-                            <Link href="/fdi-agenda">
+
+                            <Link href="/foreign-direct-investment">
+
+                                <li>Home</li>
+                            </Link>
+
+                            <Link href="/foreign-direct-investment/investment-destinations">
+
+                                <li>Investment Destinations</li>
+                            </Link>
+
+                            {/* <Link href="/foreign-direct-investment/agenda">
 
                                 <li>Agenda</li>
+                            </Link> */}
+
+                            <Link href="/foreign-direct-investment/awards">
+
+                                <li>Awards</li>
                             </Link>
 
 

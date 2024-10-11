@@ -1,3 +1,82 @@
+
+.features-activities-section-wrapper {
+    .features-card {
+        width: 100%;
+        height: 270px;
+        position: relative;
+
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 270px;
+            z-index: 1;
+            background: rgba(247, 247, 247, 0);
+            background: radial-gradient(circle, rgba(247, 247, 247, 0) 0%, rgba(0, 0, 0, 0.7310573887758228) 100%);
+
+        }
+
+        .activities-image-bg {
+            width: 100%;
+            height: 270px;
+
+        }
+
+        .content-wrapper {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: 3;
+
+            .features-name {
+                color: white;
+                font-weight: 600;
+                font-size: 24px;
+                max-width: 200px;
+                line-height: 1.2;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+
+    }
+}
+
+.key-agenda-section-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+
+    @media screen and (max-width: 1024px) {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .key-agenda-card {
+        width: 100%;
+        height: 175px;
+        padding: 20px;
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 30px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(11px);
+        -webkit-backdrop-filter: blur(11px);
+        border: 1px solid rgba(255, 255, 255, 0.47);
+
+    }
+}
+
 .about-portfolio-section-wrapper {
 
     .about-content {

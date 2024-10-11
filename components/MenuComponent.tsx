@@ -1,17 +1,14 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { BiMenuAltRight } from "react-icons/bi";
 import { HiOutlineMenuAlt2 } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CiGlobe, CiSearch } from "react-icons/ci";
-import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 import Globals from '@/modules/Globals';
 import { useRouter } from 'next/router';
 import StartupMenuComponent from './Portfolio/startup/StartupMenuComponent';
 import FDIMenuComponent from './Portfolio/FDI/FDIMenuComponent';
+import { RoutesData } from '@/contants/menuRoutesData';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -70,54 +67,7 @@ export default function MenuComponent() {
 
 
 
-  const RoutesData = [
-    {
-      id: 1,
-      route: '/foreign-direct-investment',
-      logo: '/assets/imgs/fdi/ForeignDirectInvestment.png',
-    },
-    {
-      id: 2,
-      route: '/global-trade',
-      logo: '/assets/logos/global-trade-logo.png',
-    },
-    {
-      id: 3,
-      route: '/global-manufacturing',
-      logo: '/assets/logos/global-manufacturing.png',
-    },
 
-    {
-      id: 4,
-      route: '/future-cities',
-      logo: '/assets/logos/future-cities-logo.png',
-    },
-
-    {
-      id: 5,
-      route: '/digital-economy',
-      logo: '/assets/logos/digital-economy-logo.png',
-    },
-
-    {
-      id: 6,
-      route: '/future-finance',
-      logo: '/assets/imgs/future-finance/logo/Future Finance.png',
-    },
-
-    {
-      id: 7,
-      route: '/startup',
-      logo: '/assets/imgs/startup/logo/Startups & Unicorns.png',
-    },
-
-    {
-      id: 8,
-      route: '/entrepreneurs',
-      logo: '/assets/logos/entrepreneurs-logo.png',
-    }
-
-  ]
 
   const currentRouteData = RoutesData.find((data) => router.pathname.startsWith(data.route));
 
@@ -316,7 +266,7 @@ export default function MenuComponent() {
             </div> */}
             <Link href="/contact-us" className='menu-cta-wrapper'>
 
-              <button className='register-interest-cta'>Contact Us</button>
+              <button className={`register-interest-cta `} style={{background: `${currentRouteData? currentRouteData.colorCode: ''}`}}>Contact Us</button>
             </Link>
 
           </div>
@@ -357,9 +307,9 @@ export default function MenuComponent() {
         <StartupMenuComponent />
       )}
 
-      {/* {isFdiRoute && (
+      {isFdiRoute && (
         <FDIMenuComponent />
-      )} */}
+      )}
 
       <AnimatePresence>
         {isToggle && (

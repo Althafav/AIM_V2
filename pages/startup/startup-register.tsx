@@ -158,34 +158,50 @@ export default class RegisterPage extends React.Component<
         $("#grandTotal").val((dicountedAmount + taxAmount).toFixed(0));
     }
 
-    uploadImage(id: string) {
-        var image = document.getElementById(id);
-        // var filename = File.uploadfile(image, "startup");
-        $("." + id).val('');
-        if ($("#" + id).val()) {
-            var file = Helpers.getUploadFile(image);
-            const reader = new FileReader();
-            reader.onloadend = () => {
+    
 
-                var dataType = reader.result?.toString().substring(0, reader.result?.toString().indexOf(";")).replace("data:", "");
 
-                var base64String = reader.result?.toString()
-                    .replace('data:', '')
-                    .replace(/^.+,/, '');
+    GetAlphaNumeric(orignalString: string) {
+        const alphanumericOnly = orignalString.replace(/[^a-zA-Z0-9]/g, '');
+        return alphanumericOnly;
+    }
 
-                var FinalImage = base64String?.toString();
+    UploadAsset(e: any, id: string) {
+        const files = e.target.files;
 
-                axios.post(`${Globals.API_URL}RegisterAPI/UploadImage`, {
-                    "ImageBase64": FinalImage,
-                    "dataType": dataType
-                })
-                    .then((data) => {
-                        if (data) {
-                            $("." + id).val(data.data);
+        // Check if there are files
+        if (files.length > 0) {
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                var status_id = this.GetAlphaNumeric(file.name);
+                $(`#uploaded-label-${id}`).removeClass("d-none");
+                $(`#uploaded-status-${id}`).append(`<tr id='counter_${id}_${i}' class='text-danger ${status_id}'><td><i class="fa fa-caret-right m-r-5" aria-hidden="true"></i>${file.name}</td><td class='text-center' id='counter_counter_${id}_${i}'>0%</td></tr>`);
+                const formData = new FormData();
+                formData.append('file', file);
+
+                axios.post(`https://media.aimcongress.com/api/Upload/Asset`, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
+                    onUploadProgress: (progressEvent: any) => {
+                        const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+                        $(`#counter_counter_${id}_${i}`).html(`${percentCompleted.toString()}%`);
+                        if (percentCompleted >= 100) {
+                            $(`#counter_${id}_${i}`).removeClass("text-danger");
+                            $(`#counter_${id}_${i}`).addClass("text-success");
                         }
-                    })
-            };
-            reader.readAsDataURL(file);
+                    }
+                }).then((data) => {
+                    if (data) {
+                        
+                        var response = data.data;
+                        debugger
+                        if (response.Code == 200) {
+                            $("." + id).val(response.FileUrl);
+                        }
+                    }
+                })
+            }
         }
     }
 
@@ -755,7 +771,7 @@ export default class RegisterPage extends React.Component<
                                                         placeholder=""
                                                         id="startuplogo"
                                                         onChange={(e) => {
-                                                            this.uploadImage("startuplogo");
+                                                            this.UploadAsset(e, "startuplogo");
                                                         }}
                                                     />
                                                     <input type="text" hidden className="startuplogo form-control" id="field[254]" name="field[254]" placeholder="" required />
@@ -819,7 +835,7 @@ export default class RegisterPage extends React.Component<
                 </div>
 
 
-                <div className="global-pop-up-wrapper d-none" id="popupModel">
+                {/* <div className="global-pop-up-wrapper d-none" id="popupModel">
                     <div className="pop-up-content">
                         <a href="javascript:0"
                             onClick={(e) => {
@@ -837,7 +853,7 @@ export default class RegisterPage extends React.Component<
                             <i className="fa fa-times" aria-hidden="true"></i>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </React.Fragment>
         );
     }

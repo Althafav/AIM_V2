@@ -6,6 +6,7 @@ import Services from '@/modules/Services';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { Buttonitem } from '@/models/buttonitem';
 import { Serviceitem } from '@/models/serviceitem';
+import Link from 'next/link';
 
 export default function AwardPage() {
     const [pageData, setPageData] = useState<Fdiawardpage | null>(null)
@@ -37,7 +38,7 @@ export default function AwardPage() {
 
             <div className="fdi-award-banner" >
                 <video className='fdi-award-image' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
-                    <source src='https://media.aimcongress.com/documents/fdi-award-hero-section.mp4' />
+                    <source src={pageData.bannerBackgroundUrl.value} />
                 </video>
 
                 <div className="container">
@@ -64,7 +65,9 @@ export default function AwardPage() {
                             {pageData.awardCeremonyCtaButton.value.map((m: any, index: number) => {
                                 var item: Buttonitem = m;
                                 return (
-                                    <button className='cta-btn fdi text-white' key={`btn-${index}`}>{item.name.value}</button>
+                                    <Link href={item.link.value} target={item.target.value === 1 ? "_blank" : "_self"} key={`btn-${index}`}>
+                                        <button className='cta-btn fdi text-white' >{item.name.value}</button>
+                                    </Link>
                                 )
                             })}
                         </div>
@@ -133,7 +136,10 @@ export default function AwardPage() {
                         {pageData.bookspotcta.value.map((m: any, index: number) => {
                             var item: Buttonitem = m;
                             return (
-                                <button className='cta-btn fdi text-white' key={`bookspot-${index}`}>{item.name.value}</button>
+                                <Link href={item.link.value} target={item.target.value === 1 ? "_blank" : "_self"} key={`bookspot-${index}`}>
+                                    <button className='cta-btn fdi text-white' >{item.name.value}</button>
+
+                                </Link>
                             )
                         })}
                     </div>

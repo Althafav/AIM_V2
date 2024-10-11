@@ -63,7 +63,7 @@ export default function ForiegnDirectInvestment() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className='future-finance-page-wrapper'
+            className='fdi-page-wrapper'
         >
             <Head>
                 <title>{pageData.pagetitle.value}</title>

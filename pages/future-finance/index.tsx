@@ -23,6 +23,7 @@ import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
 import JsLoader from '@/modules/JsLoader';
 import Services from '@/modules/Services';
 import KeyPlayersCarousel from '@/components/Portfolio/future-finance/KeyPlayersCarousel';
+import { Buttonitem } from '@/models/buttonitem';
 
 
 const FutureFinance = () => {
@@ -81,7 +82,41 @@ const FutureFinance = () => {
             transition={{ duration: 0.5 }}
             className='future-finance-page-wrapper'
         >
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/future-finance'} portfolioColorName="future-finance" />
+
+            <div className=" future-finance-banner" >
+
+                <video className='fdi-banner-bg' width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
+                    <source src="https://media.aimcongress.com/documents/future-finance-landing-hero-section.mp4
+ " type="video/mp4" width="100%" />
+                </video>
+
+                <div className="text-container container">
+                    <h1 className='banner-heading'>
+                        {pageData.bannerheading.value}
+                    </h1>
+                    <h2 className='banner-heading-2'>{pageData.bannersubheading.value}</h2>
+
+
+                    <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
+
+                        {pageData.bannercta.value.map((m: any, index: number) => {
+                            var item: Buttonitem = m;
+                            return (
+
+                                <Link href={item.link.value} key={`bannercta-${index}`}>
+                                    <button className={`register-interest-cta future-finance`}>{item.name.value}</button>
+                                </Link>
+                            )
+                        })}
+                        <p className='date-venue'>{pageData.dateandvenu.value}</p>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
             <AboutComponentRevamp pageData={pageData} />
             <FeaturesActivities pageData={pageData} />
 
