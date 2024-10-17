@@ -12,6 +12,7 @@ import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
 import { Buttonitem } from '@/models/buttonitem';
 import { ImageButton } from '@/models/image_button';
+import Head from 'next/head';
 
 const StartUp = () => {
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
@@ -41,6 +42,11 @@ const StartUp = () => {
             transition={{ duration: 0.5 }}
             className=''
         >
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
 
             <div className="portfolio-banner-wrapper startup-banner portfolio-margin-top" >
 

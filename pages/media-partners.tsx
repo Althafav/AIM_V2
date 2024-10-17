@@ -14,7 +14,11 @@ function ListPage({ data }: { data: Partnerspage }) {
     }
     return (
         <div className='media-partners-page'>
-
+            <Head>
+                <title>AIM Congress | Media Partners</title>
+                <meta name="title" content="AIM Congress | Media Partners" />
+                <meta name="description" content="AIM Congress | Media Partners" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}

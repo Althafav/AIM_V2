@@ -7,6 +7,7 @@ import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { Buttonitem } from '@/models/buttonitem';
 import { Serviceitem } from '@/models/serviceitem';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function AwardPage() {
     const [pageData, setPageData] = useState<Fdiawardpage | null>(null)
@@ -32,6 +33,12 @@ export default function AwardPage() {
             transition={{ duration: 0.5 }}
             className='fdi-award-page'
         >
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
+
             <div className="black-replacer-nav">
 
             </div>

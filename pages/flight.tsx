@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function StandBuilder() {
     const text1 = "Etihad Airways is the National Airline of the United Arab Emirates. From their home in Abu Dhabi, Etihad fly to Passenger and Cargo Destinations in the Middle East, Africa, Europe, Asia, Australia and North America. Together with their codeshare partners, Etihad’s network offers access to hundreds of International Destinations. Etihad Airways offers exclusive discounts to AIM Delegates. "
@@ -8,6 +9,11 @@ export default function StandBuilder() {
     const text2 = "AIM Delegates can also avail of special rates from partner hotels which are accessible to the venue, to Regional and International Airports, and to most Locations frequented by Tourists."
     return (
         <div className='stand-builder-page-wrapper' >
+            <Head>
+                <title>AIM Congress Flights</title>
+                <meta name="title" content=" AIM Congress Flights" />
+                <meta name="description" content="checkout AIM Congress Flights" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}

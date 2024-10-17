@@ -6,6 +6,7 @@ import { Postshowreportyear } from '@/models/postshowreportyear';
 import { Reportitem } from '@/models/reportitem';
 import Link from 'next/link';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
+import Head from 'next/head';
 
 export default function PostshowReport() {
     const [pageData, setPageData] = useState<Postshowreport | null>(null);
@@ -27,7 +28,7 @@ export default function PostshowReport() {
     }, []);
 
     if (!pageData) {
-        return <SpinnerComponent/>;
+        return <SpinnerComponent />;
     }
 
     const handleCategoryClick = (categoryId: string) => {
@@ -37,6 +38,11 @@ export default function PostshowReport() {
 
     return (
         <div className='postshow-report-page-wrapper'>
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}

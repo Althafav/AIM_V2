@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import Head from 'next/head';
 
 export default function StandBuilder() {
     const text1 = "Established in 2014 in the United Arab Emirates (UAE) as part of Strategic Holding, Creation House is an exhibition stand fitting and production company. From the time of our existence till to date, we pride ourselves as an excellent enterprise with a proven track record of successfully completing projects on a turnkey basis ranging from fabrication to graphics, signage, furniture, and AV"
@@ -8,6 +9,11 @@ export default function StandBuilder() {
     const text2 = "We have been selected as the official contractor for several exhibitions as we assist the exhibitors from pre-show planning, and during show assistance to post-show close-out."
     return (
         <div className='stand-builder-page-wrapper' >
+            <Head>
+                <title>AIM Congress Stand Builders</title>
+                <meta name="title" content=" AIM Congress Stand Builders" />
+                <meta name="description" content="checkout AIM Congress Stand Builders" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 {/* <motion.img
                     initial={{ opacity: 0 }}

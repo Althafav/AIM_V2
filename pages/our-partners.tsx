@@ -11,10 +11,14 @@ function ListPage({ data }: { data: Partnerspage }) {
     if (!data) {
         return <SpinnerComponent />;
     }
-    return (  
+    return (
 
         <React.Fragment>
-
+            <Head>
+                <title>AIM Congress Partners</title>
+                <meta name="title" content=" AIM Congress Partners" />
+                <meta name="description" content="checkout AIM Congress Partners" />
+            </Head>
             <div className='our-partners-page'>
 
                 <div className="inner-banner-section-wrapper">

@@ -8,6 +8,8 @@ import { fdiFAQ } from '@/contants/data';
 import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
+import Head from 'next/head';
+import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 const DigitalEconomy = () => {
 
     const [pageData, setPageData] = useState<Portfoliopage | null>(null);
@@ -32,14 +34,19 @@ const DigitalEconomy = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/digital-economy'} portfolioColorName="digital-economy" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid pageData={pageData} />
+            <FeaturesActivities pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>
                 <div className="container">
-                  
+
 
                     <AccordionComponent pageData={pageData} />
                 </div>

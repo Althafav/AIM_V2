@@ -4,6 +4,7 @@ import { Pressrelease } from '@/models/pressrelease';
 import Globals from '@/modules/Globals';
 import React, { useEffect, useState } from 'react'
 import Helper from "@/modules/Helper";
+import Head from 'next/head';
 
 export default function PressRelease() {
     const [pageData, setPageData] = useState<Pressrelease | null>(null);
@@ -23,6 +24,11 @@ export default function PressRelease() {
 
     return (
         <div>
+            <Head>
+                <title>AIM Congress | Press Release</title>
+                <meta name="title" content="AIM Congress | Press Release" />
+                <meta name="description" content="AIM Congress | Press Release. Checkout our Press Release" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <img
 

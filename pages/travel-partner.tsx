@@ -3,10 +3,16 @@ import React from 'react'
 import { FaGlobe, FaPhoneAlt } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
 import { motion } from "framer-motion";
+import Head from 'next/head';
 
 export default function TravelPartner() {
     return (
         <div className='travel-partner-page-wrapper'>
+            <Head>
+                <title>AIM Congress Travel Partners</title>
+                <meta name="title" content=" AIM Congress Travel Partners" />
+                <meta name="description" content="checkout AIM Congress Travel Partners" />
+            </Head>
             <div className="inner-banner-section-wrapper">
                 <motion.img
                     initial={{ opacity: 0 }}
