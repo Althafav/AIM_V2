@@ -8,7 +8,7 @@ export const RoutesData = [
     {
         id: 2,
         route: '/global-trade',
-        logo: '/assets/logos/global-trade-logo.png',
+        logo: '/assets/imgs/global-trade/Global Trade.png',
         colorCode: "#FFC42C",
     },
     {

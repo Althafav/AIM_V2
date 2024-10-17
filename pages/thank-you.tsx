@@ -40,6 +40,10 @@ export default function ThankYouPage() {
                 <link rel="canonical" href="https://www.aimcongress.com/thank-you" />
             </Head> */}
 
+            <div className="black-replacer-nav">
+
+            </div>
+
             <div className='thankyou-page-wrapper'>
                 <div className="content-container">
                     <h1>{pageData.heading.value}</h1>

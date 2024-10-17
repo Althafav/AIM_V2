@@ -118,17 +118,17 @@ function DetailPage({ data }: { data: Array<Blogitems> }) {
 
                         </div>
 
-                        <section>
+                        <section className="article-body">
                             <div className="section-container">
                                 <div className="row article-banner">
-                                    <div className="col-12 col-lg-6 col-xl-6 align-self-center">
+                                    <div className="col-12 col-lg-10">
                                         <h1 className="article-title color-blue">
                                             {searchData.heading.value}
                                         </h1>
                                     </div>
 
                                 </div>
-                                <div className="row article-body">
+                                <div className="row ">
                                     <div
                                         dangerouslySetInnerHTML={{
                                             __html: searchData.content.value,

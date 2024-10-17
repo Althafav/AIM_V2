@@ -65,9 +65,9 @@ const FutureFinance = () => {
     }
 
     const TargetCta = [
-        { name: "Become a Delegate", bgColor: "#212121", link: "/future-finance" },
+        { name: "Become a Delegate", bgColor: "#212121", link: "/register-interest/future-finance" },
         { name: "Become an Exhibitor", bgColor: "#7440F2", link: "/register-interest/exhibitor" },
-        { name: "Become a Partner", bgColor: "#212121", link: "/register-interest" }
+        { name: "Become a Partner", bgColor: "#212121", link: "/register-interest/future-finance" }
     ];
 
 

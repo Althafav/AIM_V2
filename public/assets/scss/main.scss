@@ -487,6 +487,13 @@ input[readonly] {
     }
 }
 
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 
 
 @import "./locals/menu-component.scss";
@@ -536,3 +543,5 @@ input[readonly] {
 @import "./locals/portfolio/portfolio-agenda.scss";
 @import "./locals/fdi/investment-destinations.scss";
 @import "./locals/fdi/fdi-award.scss";
+@import "./locals/portfolio/global-trade/home-global-trade.scss";
+@import "./locals/search-page.scss";

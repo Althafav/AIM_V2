@@ -9,6 +9,8 @@ import { useRouter } from 'next/router';
 import StartupMenuComponent from './Portfolio/startup/StartupMenuComponent';
 import FDIMenuComponent from './Portfolio/FDI/FDIMenuComponent';
 import { RoutesData } from '@/contants/menuRoutesData';
+import { CiSearch } from 'react-icons/ci';
+import SearchBarComponent from './UI/SearchBarComponent';
 
 export default function MenuComponent() {
   const [isToggle, setIsToggle] = useState(false);
@@ -73,7 +75,6 @@ export default function MenuComponent() {
 
   const isStartupRoute = router.pathname.startsWith('/startup');
   const isFdiRoute = router.pathname.startsWith('/foreign-direct-investment')
-
 
 
 
@@ -261,30 +262,35 @@ export default function MenuComponent() {
 
           <div className='d-lg-flex gap-2 align-items-center d-none'>
 
-            {/* <div>
-              <CiSearch color="white" size={32} cursor="pointer" />
-            </div> */}
+            <div>
+              <SearchBarComponent />
+            </div>
             <Link href="/contact-us" className='menu-cta-wrapper'>
 
-              <button className={`register-interest-cta `} style={{background: `${currentRouteData? currentRouteData.colorCode: ''}`}}>Contact Us</button>
+              <button className={`register-interest-cta `} style={{ background: `${currentRouteData ? currentRouteData.colorCode : ''}` }}>Contact Us</button>
             </Link>
 
           </div>
 
           <motion.div
-            className="menu-icon-wrapper d-lg-none d-block"
-            onClick={handleToggle}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="menu-icon-wrapper d-lg-none d-flex gap-4"
+            
+           
           >
+
+            <div>
+              <SearchBarComponent />
+            </div>
             {isToggle ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <IoMdClose size={32} className='menu-icon' cursor="pointer" />
+                <IoMdClose size={32} className='menu-icon' cursor="pointer"  onClick={handleToggle}/>
               </motion.div>
             ) : (
               <motion.div
@@ -292,8 +298,10 @@ export default function MenuComponent() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <HiOutlineMenuAlt2 size={32} className='menu-icon' cursor="pointer" />
+                <HiOutlineMenuAlt2 size={32} className='menu-icon' cursor="pointer" onClick={handleToggle}/>
               </motion.div>
             )}
           </motion.div>

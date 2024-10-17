@@ -1675,6 +1675,18 @@ export default class RegisterPage extends React.Component<
                                                             name="field[228][]"
                                                             value="~|"
                                                         />
+
+                                                        <div className="_row _checkbox-radio">
+                                                            <input
+                                                                id="field_228Sponsor"
+                                                                type="checkbox"
+                                                                name="field[228][]"
+                                                                value="Sponsor"
+                                                            />
+                                                            <span>
+                                                                <label>Sponsor</label>
+                                                            </span>
+                                                        </div>
                                                         <div className="_row _checkbox-radio">
                                                             <input
                                                                 id="field_228Exhibitor"
@@ -1689,50 +1701,19 @@ export default class RegisterPage extends React.Component<
                                                                 <label>Exhibitor</label>
                                                             </span>
                                                         </div>
+
                                                         <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Sponsor"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Sponsor"
-                                                            />
+                                                            <input id="field_228Investment Destination" type="checkbox" name="field[228][]" value="Investment Destination" />
                                                             <span>
-                                                                <label>Sponsor</label>
+                                                                <span>
+                                                                    Investment Destination
+                                                                </span>
                                                             </span>
                                                         </div>
-                                                        <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Supporting Partner"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Supporting Partner"
-                                                            />
-                                                            <span>
-                                                                <label>Supporting Partner</label>
-                                                            </span>
-                                                        </div>
-                                                        <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Media Partner"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Media Partner"
-                                                            />
-                                                            <span>
-                                                                <label>Media Partner</label>
-                                                            </span>
-                                                        </div>
-                                                        <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Startups"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Startups"
-                                                            />
-                                                            <span>
-                                                                <label>Startups</label>
-                                                            </span>
-                                                        </div>
+
+
+
+
                                                         <div className="_row _checkbox-radio">
                                                             <input
                                                                 id="field_228Conference / Workshop Attendee"
@@ -1744,28 +1725,20 @@ export default class RegisterPage extends React.Component<
                                                                 <label>Conference / Workshop Attendee</label>
                                                             </span>
                                                         </div>
+
                                                         <div className="_row _checkbox-radio">
                                                             <input
-                                                                id="field_228Awards"
+                                                                id="field_228Media Partner"
                                                                 type="checkbox"
                                                                 name="field[228][]"
-                                                                value="Awards"
+                                                                value="Media Partner"
                                                             />
                                                             <span>
-                                                                <label>Awards</label>
+                                                                <label>Media Partner</label>
                                                             </span>
                                                         </div>
-                                                        <div className="_row _checkbox-radio">
-                                                            <input
-                                                                id="field_228Visitor"
-                                                                type="checkbox"
-                                                                name="field[228][]"
-                                                                value="Visitor"
-                                                            />
-                                                            <span>
-                                                                <label>Visitor</label>
-                                                            </span>
-                                                        </div>
+
+
                                                     </fieldset>
                                                 </div>
 
@@ -2005,11 +1978,11 @@ export default class RegisterPage extends React.Component<
                                             </div>
 
                                             <div className="row">
-                                                <div className="col-12 text-center">
+                                                <div className="col-12 text mt-4">
                                                     <button
                                                         id="_form_394_submit"
                                                         type="submit"
-                                                        className="aim-link register-interest-submit-btn blue-link m-t-30"
+                                                        className="cta-btn fdi text-white mt-3"
                                                     >
                                                         <span>Submit</span>
                                                     </button>
