@@ -120,7 +120,7 @@ const FutureCities = () => {
                                                 <div>
                                                     <Link href={item.link.value}>
 
-                                                        <button className='cta-btn text-white' style={{ background: '#12BCD4' }}>Know More</button>
+                                                        <button className='cta-btn text-white' style={{ background: pageData.brandcolorcode.value }}>Know More</button>
                                                     </Link>
                                                 </div>
                                             </div>
