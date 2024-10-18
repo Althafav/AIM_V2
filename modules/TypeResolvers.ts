@@ -4,6 +4,7 @@ import { Blogitems } from "@/models/blogitems";
 import { Blogs } from "@/models/blogs";
 import { Conferencedates } from "@/models/conferencedates";
 import { Conferencepage } from "@/models/conferencepage";
+import { EntrepreneurPortfolio } from "@/models/entrepreneur_portfolio";
 import { Fdiawardpage } from "@/models/fdiawardpage";
 import { Homepage } from "@/models/homepage";
 import { Investmentdestinationpagefdi } from "@/models/investmentdestinationpagefdi";
@@ -54,6 +55,8 @@ export const TypeResolver = [
 
   new KontentDelivery.TypeResolver("Investmentdestinationpagefdi", (rawData: any) => new Investmentdestinationpagefdi()),
   new KontentDelivery.TypeResolver("HomePage", (rawData: any) => new Homepage()),
+  new KontentDelivery.TypeResolver("EntrepreneurPortfolio", (rawData: any) => new EntrepreneurPortfolio()),
+
 
 
 

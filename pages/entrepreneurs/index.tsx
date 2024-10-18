@@ -1,11 +1,10 @@
+
+import AccordionComponent from '@/components/UI/AccordinComponent';
+
 import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import PortfolioBanner from '@/components/Portfolio/PortfolioBanner';
-import AboutComponent from '@/components/Portfolio/AboutComponent';
-import AccordionComponent from '@/components/UI/AccordinComponent';
-import CardGrid from '@/components/UI/CardGrid';
-import { fdiFAQ } from '@/contants/data';
-import { Portfoliopage } from '@/models/portfoliopage';
+
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import Head from 'next/head';
@@ -15,11 +14,16 @@ import Link from 'next/link';
 import { Serviceitem } from '@/models/serviceitem';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import { ImageButton } from '@/models/image_button';
-const FutureCities = () => {
-    const [pageData, setPageData] = useState<Portfoliopage | null>(null);
+import { EntrepreneurPortfolio } from '@/models/entrepreneur_portfolio';
+import Image from 'next/image';
+import { Faqitem } from '@/models/faqitem';
+
+export default function ForiegnDirectInvestment() {
+
+    const [pageData, setPageData] = useState<EntrepreneurPortfolio | null>(null);
 
     useEffect(() => {
-        Globals.KontentClient.item("future_cities_c00560c")
+        Globals.KontentClient.item("entrepreneur_portfolio")
             .toObservable()
             .subscribe((response: any) => {
                 console.log('API Response:', response);
@@ -38,14 +42,14 @@ const FutureCities = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className='future-cities-page'
+            className='entrepreneurs-page'
         >
             <Head>
                 <title>{pageData.pagetitle.value}</title>
                 <meta name="title" content={pageData.pagetitle.value} />
                 <meta name="description" content={pageData.metadescription.value} />
             </Head>
-            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} dateVenu={pageData.dateandvenu.value} subHeading={pageData.bannersubheading.value} registerLink={'/register-interest/future-cities'} portfolioColorName="future-cities" />
+            <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenue.value} registerLink={'/register-interest/entrepreneurs'} portfolioColorName="entrepreneurs" />
             <div className="about-component-wrapper" style={{
                 backgroundImage: `url(${pageData.aboutbackgroundimage.value[0]?.url})`,
                 backgroundRepeat: "no-repeat",
@@ -60,88 +64,65 @@ const FutureCities = () => {
                     </div>
                 </div>
             </div>
-            <FeaturesActivities pageData={pageData} />
-
-
-            <div className="attributes-section-1">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h2 className='section-heading text-start'>{pageData.attributesHeading1.value}</h2>
-                        </div>
-                    </div>
-
-                    <div className="row mt-4">
-
-                        {pageData.attributesItems1.value.map((m: any, index: number) => {
-                            var item: Serviceitem = m;
-                            return (
-                                <div className="col-lg-6 mb-4" key={`attributes-1-${index}`}>
-                                    <div className="attributes-card-1">
-                                        <div>
-                                            <FaRegCheckCircle color={pageData.brandcolorcode.value} size={25} />
-                                        </div>
-                                        <div>
-
-                                            <div className="card-head">{item.name.value}</div>
-                                            <p className='description' dangerouslySetInnerHTML={{ __html: item.content.value }} />
-                                        </div>
-                                    </div>
-
-                                </div>
-                            )
-                        })}
-
-
-                    </div>
-
-                </div>
-            </div>
             <section>
-
-                <div className="target-cta-section ">
+                <div className="features-activities-section-wrapper">
                     <div className="container">
                         <div className="row">
+
                             <div className="col-12">
-                                <h2 className='section-heading text-start'>{pageData.ctacardsheading.value}</h2>
+                                <h2 className="section-heading">
+                                    {pageData.featureheading.value}
+                                </h2>
                             </div>
+
+
+
+
+
                         </div>
 
-                        <div className="row mt-4">
-                            <div className="cta-card-items">
-                                {pageData.ctacarditems.value.map((m: any, index: number) => {
-                                    var item: ImageButton = m;
+                        <div className="row g-4 mt-3 justify-content-center">
+                            {pageData.features.value.map((m: any, index: number) => {
+                                var item: Serviceitem = m;
+                                return (
+                                    <motion.div className="col-lg-3 col-md-6" key={`features-${index}`}>
+                                        <motion.div className="features-card" initial={{ y: 100, opacity: 0 }}
+                                            whileInView={{ y: 0, opacity: 1 }}
+                                            transition={{ duration: 0.8, delay: 0.2 * index, ease: 'easeInOut' }}
+                                            viewport={{ once: true, amount: 0.1 }}>
+                                            <Image
+                                                width={310}
+                                                height={270}
 
-                                    return (
-                                        <div className='cta-card-item' key={`cta-${index}`}>
-                                            <img src={item.image.value[0].url} alt={`AIM Congress | Global Manufacturing ${item.name.value}`} className='cta-card-image' />
-                                            <div className="overlay-wrap">
-                                                <h4 className='heading'>{item.name.value}</h4>
-                                                <div>
-                                                    <Link href={item.link.value}>
+                                                src={item.image?.value[0]?.url}
+                                                alt={`feature-${index + 1}`}
+                                                className="activities-image-bg"
+                                            />
 
-                                                        <button className='cta-btn text-white' style={{ background: pageData.brandcolorcode.value }}>Know More</button>
-                                                    </Link>
-                                                </div>
+                                            <div className='content-wrapper'>
+
+                                                <p className="features-name">{item.name.value}</p>
                                             </div>
-                                        </div>
-                                    )
-                                })}
-
-                            </div>
+                                        </motion.div>
+                                    </motion.div>
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
             </section>
 
+
+
+
             <div className='categories-section'>
                 <div className="container">
-                    <h2 className='section-heading  text-start'>{pageData.attributesHeading1.value}</h2>
+                    <h2 className='section-heading  text-start'>{pageData.benefitsheading.value}</h2>
 
                 </div>
 
                 <div className='categories-grid mt-4'>
-                    {pageData.attributesItems1?.value.map((m: any, index: number) => {
+                    {pageData.benefits?.value.map((m: any, index: number) => {
                         var item: Serviceitem = m;
                         return (
 
@@ -162,7 +143,7 @@ const FutureCities = () => {
             <div className="bottom-section">
 
 
-                <img src="/assets/imgs/future-cities/future-cities-element.png" alt={pageData.pagetitle.value} className='element-2' />
+                <img src="/assets/imgs/entrepreneurs/smes.png" alt={pageData.pagetitle.value} className='element-2' />
 
                 <div className="container attribute-2-content">
                     <div className="row">
@@ -171,13 +152,13 @@ const FutureCities = () => {
 
                             <div className="row">
                                 <div className="col-12">
-                                    <h2 className='section-heading text-white text-start'>{pageData.attributesHeading2.value}</h2>
+                                    <h2 className='section-heading text-white text-start'>{pageData.focus_sectors_heading.value}</h2>
                                 </div>
                             </div>
 
                             <div className='mt-4'>
                                 <div className="row g-4">
-                                    {pageData.attributesItems2.value.map((m: any, index: number) => {
+                                    {pageData.focus_sectors_items.value.map((m: any, index: number) => {
                                         var item: Serviceitem = m;
                                         return (
                                             <div className='col-lg-6 ' key={`attributes-2-${index}`}>
@@ -239,7 +220,7 @@ const FutureCities = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 ">
-                                <h2 className='section-heading text-white text-start'>{pageData.tailendctaheading.value}</h2>
+                                <h2 className='section-heading  text-start'>{pageData.tailendctaheading.value}</h2>
                             </div>
 
                             <div className="col-12">
@@ -264,11 +245,53 @@ const FutureCities = () => {
 
 
 
-                <AccordionComponent pageData={pageData} />
+                <div className='container'>
+                    <div className="row">
+                        <div className="col-12">
+                            <h1 className='main-heaiding'>FAQs</h1>
+                        </div>
+                    </div>
+
+                    <div className="accordion" id="accordionExample">
+                        {pageData?.faq.value.map((m: any, index: number) => {
+                            var item: Faqitem = m;
+                            return (
+                                <div className="accordion-item" key={item.system.id}>
+                                    <h2 className="accordion-header" id={`heading${item.system.id}`}>
+                                        <button
+                                            className={`accordion-button fs-5 ${index === 0 ? '' : 'collapsed'}`}
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target={`#collapse${item.system.id}`}
+                                            aria-expanded={index === 0 ? 'true' : 'false'}
+                                            aria-controls={`collapse${item.system.id}`}
+                                        >
+                                            {item.title.value}
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id={`collapse${item.system.id}`}
+                                        className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+                                        aria-labelledby={`heading${item.system.id}`}
+                                        data-bs-parent="#accordionExample"
+                                    >
+                                        <div className="accordion-body">
+                                            <div
+                                                dangerouslySetInnerHTML={{
+                                                    __html: item.content.value,
+                                                }}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+
+                        )}
+                    </div>
+                </div>
 
             </section>
         </motion.div>
     )
 }
-
-export default FutureCities;
