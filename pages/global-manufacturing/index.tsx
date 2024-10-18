@@ -137,12 +137,12 @@ const GlobalManufacturePage = () => {
 
             <div className='categories-section'>
                 <div className="container">
-                    <h2 className='section-heading  text-start'>{pageData.benefitsheading.value}</h2>
+                    <h2 className='section-heading  text-start'>{pageData.attributesHeading2.value}</h2>
 
                 </div>
 
                 <div className='categories-grid mt-4'>
-                    {pageData.benefits?.value.map((m: any, index: number) => {
+                    {pageData.attributesItems2?.value.map((m: any, index: number) => {
                         var item: Serviceitem = m;
                         return (
 
@@ -172,13 +172,13 @@ const GlobalManufacturePage = () => {
 
                             <div className="row">
                                 <div className="col-12">
-                                    <h2 className='section-heading text-white text-start'>{pageData.attributesHeading2.value}</h2>
+                                    <h2 className='section-heading text-white text-start'>{pageData.benefitsheading.value}</h2>
                                 </div>
                             </div>
 
                             <div className='mt-4'>
                                 <div className="row g-4">
-                                    {pageData.attributesItems2.value.map((m: any, index: number) => {
+                                    {pageData.benefits.value.map((m: any, index: number) => {
                                         var item: Serviceitem = m;
                                         return (
                                             <div className='col-lg-6 ' key={`attributes-2-${index}`}>
