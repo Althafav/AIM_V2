@@ -7,8 +7,10 @@ import { ContentItem, Elements } from '@kentico/kontent-delivery';
  *
  * Tip: You can replace 'ContentItem' with another generated class to fully leverage strong typing.
  */
-export class Statsitem extends ContentItem {
+export class Portfoliocard extends ContentItem {
     public name!: Elements.TextElement;
-    public count!: Elements.TextElement;
+    public content!: Elements.RichTextElement;
     public image!: Elements.AssetsElement;
+    public link!: Elements.TextElement;
+    public brandcolorcode!: Elements.TextElement;
 }

@@ -23,7 +23,7 @@ export default function AboutComponent(props: any) {
                                 __html: isExpanded ? props.aboutParagraph : limitedText,
                             }}
                         />
-                       
+
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center mt-3" onClick={handleToggle}>
                         <button className='read-more-btn'>{isExpanded ? 'Read Less' : 'Read More'}</button>

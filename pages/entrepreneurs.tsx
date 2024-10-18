@@ -10,6 +10,7 @@ import { Portfoliopage } from '@/models/portfoliopage';
 import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import Head from 'next/head';
+import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 
 export default function ForiegnDirectInvestment() {
 
@@ -43,7 +44,7 @@ export default function ForiegnDirectInvestment() {
             </Head>
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0]?.url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/entrepreneurs'} portfolioColorName="entrepreneurs" />
             <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} />
-            <CardGrid pageData={pageData} />
+            <FeaturesActivities pageData={pageData} />
 
 
             <section className='frequently-asked-questions-wrapper'>

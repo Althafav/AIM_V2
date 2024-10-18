@@ -97,7 +97,7 @@ export default function MenuComponent() {
         </div>
 
         <div className="d-flex align-items-end justify-content-between pb-3">
-          <div className='d-flex align-items-end gap-4'>
+          <div className='d-flex align-items-end gap-3'>
             <Link href={`${Globals.BASE_URL}`} className="logo-wrapper">
               <img src={`/assets/imgs/AIM-logo.png`} alt="Logo"
                 className='menu-logo white-logo' />
@@ -105,8 +105,9 @@ export default function MenuComponent() {
             </Link>
 
             {currentRouteData && (
-              <Link href={currentRouteData.route} className="logo-wrapper">
+              <Link href={currentRouteData.route} className="logo-wrapper d-flex flex-column align-items-center gap-3">
                 <img src={currentRouteData.logo} alt="Logo" className='nav-bar-portfoio-logo' />
+                <span className='portfolio-logo-name'>{currentRouteData.name}</span>
               </Link>
             )}
           </div>

@@ -2,8 +2,16 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Homepage } from '@/models/homepage';
+import { ImageButton } from '@/models/image_button';
 
-const AudientsCTAComponent: React.FC = () => {
+
+interface PageDataProps {
+    pageData: Homepage | null
+}
+
+
+const AudientsCTAComponent: React.FC<PageDataProps> = ({ pageData }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -19,7 +27,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span className='' style={{ textTransform: "capitalize" }}>Be a Part of AIM 2025</span>
+                            <span className='' style={{ textTransform: "capitalize" }}>{pageData?.targetaudientsheading.value}</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -30,7 +38,7 @@ const AudientsCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            Join us in Shaping Tomorrow, Today
+                            {pageData?.targetaudientssubheading.value}
                         </motion.p>
                     </div>
 
@@ -38,58 +46,21 @@ const AudientsCTAComponent: React.FC = () => {
                 </div>
 
                 <div className="row">
+                    {pageData?.targetaudientscta.value.map((m: any, index: number) => {
+                        var item: ImageButton = m;
+                        return (
+                            <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
+                                animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
+                                transition={{ duration: 0.5, delay: 0.5 }} key={`audients-cta-${index}`}>
+                                <div className="cta-card-item">
+                                    <Link href="/register-interest">
 
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
-                        transition={{ duration: 0.5, delay: 0.5 }}>
-                        <div className="cta-card-item">
-                            <Link href="/register-interest">
-
-                                <Image width={340} height={200} layout='responsive' src="/assets/imgs/Delegate Card.png" alt="" />
-                            </Link>
-                        </div>
-                    </motion.div>
-
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
-                        transition={{ duration: 0.5, delay: 0.9 }}>
-                        <div className="cta-card-item">
-
-                            <Link href="/register-interest">
-
-                                <img src="/assets/imgs/Partner Card.png" alt="" />
-                            </Link>
-
-
-                        </div>
-                    </motion.div>
-
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-4 mb-lg-0" initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
-                        transition={{ duration: 0.5, delay: 0.7 }}>
-                        <div className="cta-card-item">
-                            <Link href="/register-interest/exhibitor">
-                                <img src="/assets/imgs/Exhibitor Card.png" alt="" />
-
-                            </Link>
-
-                        </div>
-                    </motion.div>
-
-                    <motion.div className="col-lg-3  col-md-6 col-12 mb-3 mb-lg-0" initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
-                        transition={{ duration: 0.5, delay: 0.9 }}>
-                        <div className="cta-card-item">
-
-                            <Link href="/register-interest/sponsor">
-
-                                <img src="/assets/imgs/Sponsor Card.png" alt="" />
-                            </Link>
-
-
-                        </div>
-                    </motion.div>
-
+                                        <Image width={340} height={200} layout='responsive' src={item.image.value[0].url} alt="" />
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        )
+                    })}
 
                 </div>
 

@@ -5,6 +5,8 @@ import { PortfolioCards } from "@/contants/data.js"
 import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Homepage } from '@/models/homepage';
+import { Portfoliocard } from '@/models/portfoliocard';
 
 const containerVariants = {
     hidden: {},
@@ -20,7 +22,13 @@ const cardVariants = {
     visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
 };
 
-const PortfolioCTAComponent: React.FC = () => {
+
+interface PageDataProps {
+    pageData: Homepage | null
+}
+
+
+const PortfolioCTAComponent: React.FC<PageDataProps> = ({ pageData }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -38,7 +46,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span>Portfolios Strategically Designed for your Needs</span>
+                            <span>{pageData?.portfolioctaheading.value}</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -49,7 +57,7 @@ const PortfolioCTAComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            Discover. Explore. Refine. Transform. Succeed.
+                            {pageData?.portfolioctasubheading.value}
                         </motion.p>
                     </div>
 
@@ -58,14 +66,14 @@ const PortfolioCTAComponent: React.FC = () => {
 
 
                 <div className="mt-4">
-
-
                     <motion.div className="row"
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
                     >
-                        {PortfolioCards.map((item: any, index: number) => {
+                        {pageData?.portfolioctacards.value.map((m: any, index: number) => {
+
+                            var item: Portfoliocard = m;
                             return (
                                 <motion.div className="col-lg-3 col-md-6 col-12 mb-4" key={`portfoliocard-${index}`}
                                     variants={cardVariants}
@@ -74,18 +82,18 @@ const PortfolioCTAComponent: React.FC = () => {
 
                                     <motion.div className="portfolio-card"
                                     >
-                                        <Link href={item.link ? item.link : '#'} >
+                                        <Link href={item.link ? item.link.value : '#'} >
                                             <div className="cta-card-item">
-                                                <Image width={220} height={450}  src={item.image} alt="" />
+                                                <Image width={220} height={450} src={item.image.value[0].url} alt="" />
                                                 <div className="text-container">
                                                     <div className='d-flex flex-column'>
-                                                        <span className='main-head--card'>{item.mainHead}</span>
-                                                        <span className='sub-head--card mt-1'>{item.kicker}</span>
+                                                        <span className='main-head--card'>{item.name.value}</span>
+                                                        <span className='sub-head--card mt-1' dangerouslySetInnerHTML={{ __html: item.content.value }} />
                                                     </div>
 
                                                     <div>
 
-                                                        <button className={`know-more-btn ${item.btnName}`}>Know More <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button className={`know-more-btn `} style={{ background: item.brandcolorcode.value }}>Know More <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M17.4657 4.21318C17.5965 3.39515 17.0395 2.62593 16.2214 2.49507L2.89092 0.362647C2.07289 0.231791 1.30367 0.788853 1.17281 1.60688C1.04196 2.42491 1.59902 3.19413 2.41704 3.32498L14.2664 5.22047L12.3709 17.0698C12.24 17.8879 12.7971 18.6571 13.6151 18.7879C14.4332 18.9188 15.2024 18.3617 15.3332 17.5437L17.4657 4.21318ZM1.8798 16.0427L16.8643 5.19113L15.1047 2.76136L0.120192 13.613L1.8798 16.0427Z" fill="white" />
                                                         </svg>
                                                         </button>
@@ -104,47 +112,7 @@ const PortfolioCTAComponent: React.FC = () => {
                     </motion.div>
 
 
-                    {/* <div className="embla" ref={emblaRef}>
-                        <motion.div className="embla__container"
-                            variants={containerVariants}
-                            initial="hidden"
-                            animate={isInView ? "visible" : "hidden"}
-                        >
-                            {PortfolioCards.map((item: any, index: number) => {
-                                return (
-                                    <motion.div className="embla__slide" key={`portfoliocard-${index}`}
-                                        variants={cardVariants}
 
-                                    >
-
-                                        <motion.div className="portfolio-card"
-                                        >
-                                            <div className="cta-card-item">
-
-                                                <img src={item.image} alt="" />
-                                                <div className="text-container">
-                                                    <div className='d-flex flex-column'>
-                                                        <span className='main-head--card'>{item.mainHead}</span>
-                                                        <span className='sub-head--card'>kicker Line here</span>
-                                                    </div>
-                                                    <div>
-
-                                                        <button className={`know-more-btn ${item.btnName}`}>Know More <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M17.4657 4.21318C17.5965 3.39515 17.0395 2.62593 16.2214 2.49507L2.89092 0.362647C2.07289 0.231791 1.30367 0.788853 1.17281 1.60688C1.04196 2.42491 1.59902 3.19413 2.41704 3.32498L14.2664 5.22047L12.3709 17.0698C12.24 17.8879 12.7971 18.6571 13.6151 18.7879C14.4332 18.9188 15.2024 18.3617 15.3332 17.5437L17.4657 4.21318ZM1.8798 16.0427L16.8643 5.19113L15.1047 2.76136L0.120192 13.613L1.8798 16.0427Z" fill="white" />
-                                                        </svg>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </motion.div>
-                                    </motion.div>
-                                )
-                            })}
-
-
-
-                        </motion.div>
-                    </div> */}
 
 
 
@@ -153,18 +121,7 @@ const PortfolioCTAComponent: React.FC = () => {
 
                 </div>
 
-                {/* <div className="row mt-4">
-                    <div className='d-flex justify-content-end'>
-                        <button className="embla__prev bg-none" onClick={scrollPrev}>
 
-                            <FaCircleChevronLeft size={32} color='lightgray' />
-                        </button>
-                        <button className="embla__next bg-none" onClick={scrollNext}>
-                            <FaCircleChevronRight color='gray' size={32} />
-                        </button>
-                    </div>
-
-                </div> */}
 
             </div>
 

@@ -11,6 +11,7 @@ import Globals from '@/modules/Globals';
 import SpinnerComponent from '@/components/UI/SpinnerComponent';
 import { FeaturesActivities } from '@/components/Portfolio/FeaturesActivities';
 import { Serviceitem } from '@/models/serviceitem';
+import Head from 'next/head';
 
 export default function TradeInnovation() {
 
@@ -38,6 +39,11 @@ export default function TradeInnovation() {
             transition={{ duration: 0.5 }}
             className='global-trade-page'
         >
+            <Head>
+                <title>{pageData.pagetitle.value}</title>
+                <meta name="title" content={pageData.pagetitle.value} />
+                <meta name="description" content={pageData.metadescription.value} />
+            </Head>
             <PortfolioBanner bannerImageSrc={pageData.bannerimage.value[0].url} Heading={pageData.bannerheading.value} subHeading={pageData.bannersubheading.value} dateVenu={pageData.dateandvenu.value} registerLink={'/register-interest/global-trade'} portfolioColorName="global-trade" />
 
             {/* <AboutComponent aboutHeading={pageData.aboutheading.value} aboutParagraph={pageData.aboutparagraph.value} /> */}
@@ -61,7 +67,7 @@ export default function TradeInnovation() {
 
             <div className='categories-section'>
                 <div className="container">
-                    <h2 className='section-heading  text-center'>Key Benefits of Global Trade Portfolio</h2>
+                    <h2 className='section-heading  text-start'>Key Benefits of Global Trade Portfolio</h2>
                     <p>The Global Trade Portfolio at AIM Congress 2025 plays a crucial role in fostering international commerce and economic cooperation. Here are some of the key points highlighting its importance: </p>
                 </div>
 

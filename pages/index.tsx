@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { Speakers2024 } from "@/models/speakers2024";
 import SpinnerComponent from "@/components/UI/SpinnerComponent";
 import HomeSpeakerComponentRevamp from "@/components/HomeSpeakersComponentRevamp";
+import { Homepage } from "@/models/homepage";
 
 
 const ThemeSectionComponent = dynamic(() => import("@/components/Home/ThemeSectionComponent"));
@@ -35,6 +36,21 @@ export default function Home() {
   const [speakersRef, inViewSpeakers] = useInView({ triggerOnce: true });
   const [sponsorsRef, inViewSponsors] = useInView({ triggerOnce: true });
 
+  const [pageData, setPageData] = useState<Homepage | null>(null);
+
+  useEffect(() => {
+    Globals.KontentClient.item("home_page_2025")
+      .toObservable()
+      .subscribe((response: any) => {
+        console.log('API Response:', response);
+        setPageData(response.item);
+      });
+  }, []);
+
+  if (!pageData) {
+    return <SpinnerComponent />;
+  }
+
 
   return (
     <motion.div
@@ -44,27 +60,27 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       <Head>
-        <title>AIM Congress | 2025</title>
-        <meta name="title" content="AIM Congress | 2025" />
-        <meta name="description" content="To create and enhance collaborative partnerships across various sectors for positive social, environmental, and economic impacts." />
+        <title>{pageData.pagetitle.value}</title>
+        <meta name="title" content={pageData.metatitle.value} />
+        <meta name="description" content={pageData.metadescription.value} />
       </Head>
 
-      <BannerComponent />
+      <BannerComponent pageData={pageData} />
 
       <div ref={themeRef}>
-        {inViewTheme && <ThemeSectionComponent />}
+        {inViewTheme && <ThemeSectionComponent pageData={pageData} />}
       </div>
       <div ref={audientsRef}>
-        {inViewAudients && <AudientsCTAComponent />}
+        {inViewAudients && <AudientsCTAComponent pageData={pageData} />}
       </div>
       <div ref={portfolioRef}>
-        {inViewPortfolio && <PortfolioCTAComponent />}
+        {inViewPortfolio && <PortfolioCTAComponent pageData={pageData} />}
       </div>
       <div ref={sustainbleRef}>
-        {inViewSustainble && <SustainbleSecComponent />}
+        {inViewSustainble && <SustainbleSecComponent pageData={pageData} />}
       </div>
       <div ref={testimonialsRef}>
-        {inViewTestimonials && <TestimonialsComponent />}
+        {inViewTestimonials && <TestimonialsComponent  />}
       </div>
       <div ref={articlesRef}>
         {inViewArticles && <ArticlesComponent />}
@@ -73,11 +89,11 @@ export default function Home() {
         {inViewYoutube && <YoutubeSectionComponent />}
       </div> */}
       <div ref={ctaBannerRef}>
-        {inViewCtaBanner && <CtaComponent />}
+        {inViewCtaBanner && <CtaComponent pageData={pageData} />}
       </div>
       <div ref={speakersRef}>
-        {/* {inViewSpeakers && <HomeSpeakersComponent />} */}
-        {inViewSpeakers && <HomeSpeakerComponentRevamp />}
+        {inViewSpeakers && <HomeSpeakersComponent />}
+        {/* {inViewSpeakers && <HomeSpeakerComponentRevamp />} */}
 
       </div>
 

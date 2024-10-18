@@ -1,8 +1,12 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import { Homepage } from '@/models/homepage';
 
-const ThemeSectionComponent: React.FC = () => {
+interface PageDataProps {
+    pageData: Homepage | null
+}
+const ThemeSectionComponent: React.FC<PageDataProps> = ({ pageData }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -18,7 +22,7 @@ const ThemeSectionComponent: React.FC = () => {
                             animate={{ x: isInView ? 0 : -100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                         >
-                            <span className='small-head'>Mapping the Future of</span><span> Global Investment</span>
+                            <span className='small-head'>{pageData?.themesubheading.value}</span>
                         </motion.div>
                     </div>
                     <div className="col-12 d-flex justify-content-center">
@@ -29,7 +33,7 @@ const ThemeSectionComponent: React.FC = () => {
                             animate={{ y: isInView ? 0 : 100, opacity: isInView ? 1 : 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                         >
-                            The New Wave of a Globalized Investment Landscape: Towards a New Balanced World Structure
+                            {pageData?.themeheading.value}
                         </motion.p>
                     </div>
 
@@ -45,7 +49,7 @@ const ThemeSectionComponent: React.FC = () => {
                     <Image layout="responsive"
                         width={700}
                         height={475}
-                        src="/assets/imgs/AIM Web  banner 00   -05 (1).jpg" alt="" priority={false} />
+                        src={pageData ? pageData.themeimage.value[0].url : ''} alt="AIM Congress" priority={false} />
                 </motion.div>
             </div>
 

@@ -46,7 +46,7 @@ TOWARDS A NEW BALANCED WORLD STRUCTURE" />
 
 
                         <div className="col-12">
-                            <p className='section-tag text-center'>THEME OF THE YEAR</p>
+                            <p className='section-tag text-center'>AIM CONGRESS 2025 THEME</p>
                             <p className='section-head sub-1 text-center'>MAPPING THE FUTURE OF GLOBAL INVESTMENT </p>
                             <p className='section-head main-text text-center'>THE NEW WAVE OF A GLOBALIZED INVESTMENT LANDSCAPE: <br /> TOWARDS A NEW BALANCED WORLD STRUCTURE </p>
                         </div>

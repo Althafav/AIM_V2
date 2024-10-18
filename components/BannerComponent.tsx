@@ -3,11 +3,16 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { MdLocationPin } from 'react-icons/md';
 import { SlCalender } from 'react-icons/sl';
+import { Homepage } from '@/models/homepage';
+import { Buttonitem } from '@/models/buttonitem';
+import { Statsitem } from '@/models/statsitem';
 
-export default function BannerComponent() {
+interface PageDataProps {
+    pageData: Homepage | null;
+}
 
-    // const customHeading = "Annual Investment Meeting"
-    const customHeading = "The World’s Leading Investment Platform"
+const BannerComponent: React.FC<PageDataProps> = ({ pageData }) => {
+
     return (
         <>
 
@@ -15,23 +20,29 @@ export default function BannerComponent() {
                 <div className="video-section">
 
                     <video width="100%" autoPlay loop playsInline muted controls={false} preload="auto">
-                        <source src="https://d2g6bqkf4g3jqe.cloudfront.net/videos/AIM Landing Page Background.mp4" type="video/mp4" className='banner-video' width="100%" />
+                        <source src={pageData?.backgroundvideolink.value} type="video/mp4" className='banner-video' width="100%" />
                     </video>
                 </div>
 
                 <div className="text-container container">
                     <h1 className='banner-heading'>
-                        {customHeading}
+                        {pageData?.bannerheading.value}
                     </h1>
                     {/* <h2 className='banner-heading-2'>{subHeading}</h2> */}
 
 
                     <div className='mt-3 d-flex align-items-lg-center align-items-start gap-3 flex-lg-row flex-column-reverse'>
-                        <Link href="/register-interest">
-                        
-                        <button className='register-interest-cta mb-4 mb-lg-0'>Register your interest</button>
-                        </Link>
-                        <p className='date-venue'>7 - 9 April 2025 | Abu Dhabi, United Arab Emirates</p>
+                        {pageData?.bannerctabutton.value.map((m: any, index: number) => {
+                            var item: Buttonitem = m;
+                            return (
+                                <Link href={item.link.value} key={`banner-cta-${index}`}>
+
+                                    <button className='register-interest-cta mb-4 mb-lg-0'>{item.name.value}</button>
+                                </Link>
+                            )
+                        })}
+
+                        <p className='date-venue'>{pageData?.datevenue.value}</p>
                     </div>
 
                 </div>
@@ -43,30 +54,19 @@ export default function BannerComponent() {
             <div className="stats-content ">
                 <div className="container ">
                     <ul className="row g-4">
-                        <li className="col-lg-3 col-6 ">
-                            <div className="d-flex flex-column align-items-lg-center">
-                                <span className="count">179</span>
-                                <span>Countries</span>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-6 ">
-                            <div className="d-flex flex-column align-items-lg-center">
-                                <span className="count">12,427</span>
-                                <span>Participants</span>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-6 ">
-                            <div className="d-flex flex-column align-items-lg-center">
-                                <span className="count">412</span>
-                                <span>Sessions</span>
-                            </div>
-                        </li>
-                        <li className="col-lg-3 col-6 ">
-                            <div className="d-flex flex-column align-items-lg-center">
-                                <span className="count">927</span>
-                                <span>Speakers</span>
-                            </div>
-                        </li>
+                        {pageData?.statistics.value.map((m: any, index: number) => {
+                            var item: Statsitem = m;
+                            return (
+                                <li className="col-lg-3 col-6 " key={`statistics-${index}`}>
+                                    <div className="d-flex flex-column align-items-lg-center">
+                                        <span className="count">{item.count.value}</span>
+                                        <span>{item.name.value}</span>
+                                    </div>
+                                </li>
+                            )
+                        })}
+
+
                     </ul>
                 </div>
             </div>
@@ -75,3 +75,5 @@ export default function BannerComponent() {
         </>
     )
 }
+
+export default BannerComponent;
