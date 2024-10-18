@@ -27,13 +27,18 @@ export default class HomeSponsorsComponent extends React.Component<
       .subscribe((response: any) => {
         this.setState({
           sectionData: response.item,
-          isLoaded: true,
+
         });
         Services.loadFile(
           `${Globals.BASE_URL}assets/js/owl.carousel.min.js`,
           () => {
             Services.loadFile(
-              `${Globals.BASE_URL}assets/js/sponsorsCarousel.js`
+              `${Globals.BASE_URL}assets/js/sponsorsCarousel.js`, () => {
+                this.setState({
+                  isLoaded: true
+
+                });
+              }
             );
           }
         );
@@ -67,21 +72,21 @@ export default class HomeSponsorsComponent extends React.Component<
                     (formatName = i.system.id),
                     (
                       <div className="home-sponsor" key={index}>
-                        
-                          <div className="image-wrapper">
-                            <Image
-                              src={i.logo.value[0].url}
-                              title={i.name.value}
-                              alt={i.logo.value[0].name}
-                              width={290}
-                              height={160}
-                            />
-                          </div>
-                          <div className="sponsor-detail">
-                            <p className="name">{i.name.value}</p>
-                            <p className="type">{i.sponsorType?.value}</p>
-                          </div>
-                      
+
+                        <div className="image-wrapper">
+                          <Image
+                            src={i.logo.value[0].url}
+                            title={i.name.value}
+                            alt={i.logo.value[0].name}
+                            width={290}
+                            height={160}
+                          />
+                        </div>
+                        <div className="sponsor-detail">
+                          <p className="name">{i.name.value}</p>
+                          <p className="type">{i.sponsorType?.value}</p>
+                        </div>
+
                       </div>
                     )
                   )

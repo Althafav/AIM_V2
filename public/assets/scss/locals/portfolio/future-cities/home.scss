@@ -1,8 +1,8 @@
 .future-cities-page {
     .about-component-wrapper {
-        padding: 60px 0;
-        display: flex;
-        align-items: center;
+        
+        height: 100vh;
+        padding-top: 40px;
 
         .section-heading {
             color: rgb(0, 0, 0);
@@ -290,8 +290,12 @@
         .tailend-section {
             width: 100%;
             height: 120vh;
-            display: flex;
-            align-items: center;
+            padding-top: 60px;
+
+            .section-heading {
+                font-size: 68px;
+                max-width: 600px;
+            }
 
         }
     }

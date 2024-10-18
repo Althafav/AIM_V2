@@ -248,7 +248,7 @@ const FutureCities = () => {
                                     return (
                                         <div className='mt-3' key={`btn-${index}`}>
                                             <Link href={item.link.value}>
-                                                <button className='cta-btn text-white advancedManufacturing'>{item.name.value}</button>
+                                                <button className='cta-btn text-white ' style={{background: pageData.brandcolorcode.value}}>{item.name.value}</button>
                                             </Link>
                                         </div>
                                     )
