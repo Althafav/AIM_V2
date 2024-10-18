@@ -146,7 +146,7 @@ const GlobalManufacturePage = () => {
                         var item: Serviceitem = m;
                         return (
 
-                            <div className={`categories-card ${index % 2 === 0 ? 'card-black' : 'card-gradient'}`} key={`categories-card-${index}`}>
+                            <div className={`categories-card ${index % 2 === 0 ? '' : 'card-gradient'}`} key={`categories-card-${index}`}>
                                 <h4 className='heading'>{item.name.value}</h4>
                                 <div className="overlay-content">
 
