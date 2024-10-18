@@ -42,12 +42,12 @@ export default function HomeSpeakersComponentRevamp() {
             <div className="container">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
-                        <h2 className='section-heading text-center' style={{maxWidth: "800px"}}> {speakerData.heading.value}</h2>
+                        <h2 className='section-heading text-center' style={{ maxWidth: "800px" }}> {speakerData.heading.value}</h2>
                     </div>
                 </div>
 
                 <div className='home-speaker-carousel mt-lg-5 mt-3 owl-carousel'>
-                    {speakerData.items.value.map((m: any, index: number) => {
+                    {speakerData.items.value.slice(0, speakerData.displaycount?.value || 10).map((m: any, index: number) => {
                         var item: Speaker = m;
                         return (
                             <a
@@ -63,7 +63,7 @@ export default function HomeSpeakersComponentRevamp() {
                                     </div>
                                     <div className="card-body-speaker">
                                         <p className="name">{item.name.value}</p>
-                                        <p className="designation">{item.designation.value}</p>    
+                                        <p className="designation">{item.designation.value}</p>
                                     </div>
                                 </div>
                             </a>

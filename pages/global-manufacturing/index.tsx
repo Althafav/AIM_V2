@@ -181,7 +181,7 @@ const GlobalManufacturePage = () => {
                                     {pageData.benefits.value.map((m: any, index: number) => {
                                         var item: Serviceitem = m;
                                         return (
-                                            <div className='col-lg-6 col-6' key={`attributes-2-${index}`}>
+                                            <div className=' col-6' key={`attributes-2-${index}`}>
                                                 <div className="attributes-card-2">
                                                     <h4 className='heading'> {item.name.value}</h4>
 

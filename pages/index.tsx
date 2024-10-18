@@ -92,8 +92,8 @@ export default function Home() {
         {inViewCtaBanner && <CtaComponent pageData={pageData} />}
       </div>
       <div ref={speakersRef}>
-        {/* {inViewSpeakers && <HomeSpeakersComponent />} */}
-        {inViewSpeakers && <HomeSpeakerComponentRevamp />}
+        {inViewSpeakers && <HomeSpeakersComponent />}
+        {/* {inViewSpeakers && <HomeSpeakerComponentRevamp />} */}
 
       </div>
 

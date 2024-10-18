@@ -160,9 +160,9 @@ const DigitalEconomy = () => {
             </div>
 
             <div className="bottom-section">
-                <img src="/assets/imgs/global-manufacturing/09.png" alt={pageData.pagetitle.value} className='element-1' />
+              
 
-                <img src="/assets/imgs/global-manufacturing/08.png" alt={pageData.pagetitle.value} className='element-2' />
+                <img src="/assets/imgs/digital-economy/digital economy.png" alt={pageData.pagetitle.value} className='element-2' />
 
                 <div className="container attribute-2-content">
                     <div className="row">
@@ -180,7 +180,7 @@ const DigitalEconomy = () => {
                                     {pageData.benefits.value.map((m: any, index: number) => {
                                         var item: Serviceitem = m;
                                         return (
-                                            <div className='col-lg-6 col-6' key={`attributes-2-${index}`}>
+                                            <div className=' col-6' key={`attributes-2-${index}`}>
                                                 <div className="attributes-card-2">
                                                     <h4 className='heading'> {item.name.value}</h4>
 

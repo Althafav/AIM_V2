@@ -4,6 +4,11 @@
         height: 100vh;
         padding-top: 40px;
 
+        @media screen and (max-width: 1000px) {
+            height: unset;
+            padding: 40px 0;
+        }
+
         .section-heading {
             color: rgb(0, 0, 0);
             text-align: start;
@@ -295,6 +300,10 @@
             .section-heading {
                 font-size: 68px;
                 max-width: 600px;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 28px;
+                }
             }
 
         }

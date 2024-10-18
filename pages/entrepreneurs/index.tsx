@@ -17,6 +17,8 @@ import { ImageButton } from '@/models/image_button';
 import { EntrepreneurPortfolio } from '@/models/entrepreneur_portfolio';
 import Image from 'next/image';
 import { Faqitem } from '@/models/faqitem';
+import KeyPlayersSME from '@/components/Portfolio/entrepreneurs/KeyPlayersSME';
+import HomeSponsorsComponent from '@/components/HomeSponsorsComponent';
 
 export default function ForiegnDirectInvestment() {
 
@@ -161,7 +163,7 @@ export default function ForiegnDirectInvestment() {
                                     {pageData.focus_sectors_items.value.map((m: any, index: number) => {
                                         var item: Serviceitem = m;
                                         return (
-                                            <div className='col-lg-6 ' key={`attributes-2-${index}`}>
+                                            <div className='col-6' key={`attributes-2-${index}`}>
                                                 <div className="attributes-card-2">
                                                     <h4 className='heading'> {item.name.value}</h4>
 
@@ -208,6 +210,7 @@ export default function ForiegnDirectInvestment() {
                 </div>
 
 
+                {/* tailend  */}
                 <div className="tailend-section"
                     style={{
                         backgroundImage: `url(${pageData.tailendctaimage.value[0]?.url})`,
@@ -240,6 +243,20 @@ export default function ForiegnDirectInvestment() {
 
                 </div>
             </div>
+
+            {/* speakers */}
+            <section>
+                {pageData.keyagendaitems.value.length > 1 && (
+                    <KeyPlayersSME pageData={pageData} />
+
+                )}
+
+            </section>
+
+            <div>
+                <HomeSponsorsComponent />
+            </div>
+
 
             <section className='frequently-asked-questions-wrapper'>
 

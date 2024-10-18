@@ -1,8 +1,8 @@
 .entrepreneurs-page {
     .about-component-wrapper {
 
-        height: 100vh;
-        padding-top: 40px;
+
+        padding: 40px 0;
 
         .section-heading {
             max-width: 1000px;
@@ -17,7 +17,7 @@
     }
 
 
-    
+
 
 
     .categories-section {
@@ -176,9 +176,9 @@
             }
 
             &:hover {
-                box-shadow: -3px 13px 12px 0px rgba(0,213,186,0.75);
-                -webkit-box-shadow: -3px 13px 12px 0px rgba(0,213,186,0.75);
-                -moz-box-shadow: -3px 13px 12px 0px rgba(0,213,186,0.75);
+                box-shadow: -3px 13px 12px 0px rgba(0, 213, 186, 0.75);
+                -webkit-box-shadow: -3px 13px 12px 0px rgba(0, 213, 186, 0.75);
+                -moz-box-shadow: -3px 13px 12px 0px rgba(0, 213, 186, 0.75);
             }
         }
 
@@ -208,10 +208,19 @@
             height: 120vh;
             padding-top: 60px;
 
+            @media screen and (max-width: 1000px) {
+                height: 400px;
+            }
+
             .section-heading {
-                font-size: 68px;
-                max-width: 600px;
+                font-size: 48px;
+                max-width: 700px;
                 color: black;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 28px;
+                    max-width: 350px;
+                }
             }
 
         }
