@@ -44,12 +44,12 @@
 
 
         .cta-card-items {
-
+            width: 100%;
             display: flex;
             gap: 20px;
             justify-content: center;
             padding-bottom: 20px;
-            overflow-x: auto;
+            overflow-x: scroll;
             overflow-y: hidden;
             position: relative;
 
@@ -59,7 +59,7 @@
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: rgba(255, 255, 255, 0.3);
+                background-color: rgba(0, 0, 0, 0.3);
 
                 border-radius: 10px;
 
@@ -70,9 +70,14 @@
 
             }
 
+            @media screen and (max-width: 1000px) {
+                justify-content: start;
+            }
+
             .cta-card-item {
                 border-radius: 30px;
-                width: 270px;
+                min-width: 270px;
+                max-width: 270px;
                 height: 479px;
                 position: relative;
 
@@ -120,7 +125,7 @@
             }
 
             @media (max-width: 576px) {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -145,8 +150,8 @@
                 .heading {
                     opacity: 0;
                     visibility: hidden;
-                    transform: translateY(-5rem);
-                    transition: opacity 0.3s ease-in-out, transform 0.4s ease-in 0.1s;
+                    transform: translateY(-2rem);
+                    transition: opacity 0.3s ease-in-out 0.2s, transform 0.4s ease-in 0.1s;
                 }
             }
 
@@ -156,6 +161,10 @@
                 font-weight: normal;
                 max-width: 255px;
                 transition: transform 0.4s ease-in-out, opacity 0.3s ease;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 20px;
+                }
             }
 
             .overlay-content {
@@ -171,6 +180,11 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: transform 0.5s ease-in-out 0.1s, opacity 0.4s ease;
+
+                @media screen and (max-width: 800px) {
+                    font-size: 16px;
+                    text-align: left;
+                }
             }
         }
 
@@ -199,13 +213,15 @@
             position: absolute;
             left: 0;
             width: 100px;
+            height: 1000px;
+            z-index: 0;
           
         }
 
         .element-2 {
             position: absolute;
             right: 0;
-            width: 750px;
+            width: 640px;
 
 
         }
@@ -216,6 +232,7 @@
             background-color: rgba(255, 255, 255, 0.149);
             padding: 20px;
             border-radius: 30px;
+
 
             .heading {
                 font-size: 28px;

@@ -137,12 +137,12 @@ const GlobalManufacturePage = () => {
 
             <div className='categories-section'>
                 <div className="container">
-                    <h2 className='section-heading  text-start'>{pageData.attributesHeading1.value}</h2>
+                    <h2 className='section-heading  text-start'>{pageData.benefitsheading.value}</h2>
 
                 </div>
 
                 <div className='categories-grid mt-4'>
-                    {pageData.attributesItems2?.value.map((m: any, index: number) => {
+                    {pageData.benefits?.value.map((m: any, index: number) => {
                         var item: Serviceitem = m;
                         return (
 
