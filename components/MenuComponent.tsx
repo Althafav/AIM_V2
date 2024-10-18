@@ -274,7 +274,7 @@ export default function MenuComponent() {
           </div>
 
           <motion.div
-            className="menu-icon-wrapper d-lg-none d-flex gap-4"
+            className="menu-icon-wrapper d-lg-none d-flex gap-2"
             
            
           >

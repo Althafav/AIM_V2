@@ -20,7 +20,7 @@ export default function SearchBarComponent() {
                 {!isToggle ? (
                     <CiSearch
                         color="white"
-                        size={32}
+                        size={30}
                         cursor="pointer"
 
                     />
@@ -30,7 +30,7 @@ export default function SearchBarComponent() {
                             color="white"
                             size={20}
                             cursor="pointer" />
-                        <span className='close-tag'>close</span>
+                       
                     </div>
                 )}
 

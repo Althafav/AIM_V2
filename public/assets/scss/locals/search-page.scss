@@ -56,30 +56,22 @@
 
     .global-search-bar {
         position: absolute;
-        right: 60px;
+        right: 30px;
         top: 50%;
         transform: translate(0, -50%);
 
         @media screen and (max-width: 600px) {
-            right: 50px;
+            right: 20px;
 
         }
 
 
         .global-search-input {
-            width: 788px;
+            width: 215px;
             border-radius: 40px;
             padding: 0 20px;
 
-            @media screen and (max-width: 600px) {
-                width: 190px;
-
-            }
-
-            @media screen and (max-width: 600px) {
-                width: 190px;
-
-            }
+           
         }
 
 
