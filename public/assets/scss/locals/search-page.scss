@@ -67,9 +67,14 @@
 
 
         .global-search-input {
-            width: 300px;
+            width: 788px;
             border-radius: 40px;
             padding: 0 20px;
+
+            @media screen and (max-width: 600px) {
+                width: 190px;
+
+            }
 
             @media screen and (max-width: 600px) {
                 width: 190px;

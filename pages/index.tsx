@@ -80,7 +80,7 @@ export default function Home() {
         {inViewSustainble && <SustainbleSecComponent pageData={pageData} />}
       </div>
       <div ref={testimonialsRef}>
-        {inViewTestimonials && <TestimonialsComponent  />}
+        {inViewTestimonials && <TestimonialsComponent />}
       </div>
       <div ref={articlesRef}>
         {inViewArticles && <ArticlesComponent />}
@@ -92,8 +92,8 @@ export default function Home() {
         {inViewCtaBanner && <CtaComponent pageData={pageData} />}
       </div>
       <div ref={speakersRef}>
-        {inViewSpeakers && <HomeSpeakersComponent />}
-        {/* {inViewSpeakers && <HomeSpeakerComponentRevamp />} */}
+        {/* {inViewSpeakers && <HomeSpeakersComponent />} */}
+        {inViewSpeakers && <HomeSpeakerComponentRevamp />}
 
       </div>
 
