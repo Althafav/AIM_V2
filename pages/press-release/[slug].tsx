@@ -71,38 +71,11 @@ function DetailPage({ data }: { data: Array<Pressrelaseitem> }) {
         if (searchData) {
             return (
                 <React.Fragment>
-                    {/* <Head>
-                        <title>{`${Globals.SITE_NAME} | ${searchData.pageTitle.value}`}</title>
-                        <meta name="title" content={searchData.metaTitle.value} />
-                        <meta
-                            name="description"
-                            content={searchData.metaDescription.value}
-                        />
-                        <meta name="keywords" content={searchData.metaTitle.value} />
+                    <Head>
+                        <title>{`${Globals.SITE_NAME} | ${searchData.heading.value}`}</title>
+                        <meta name="title" content={searchData.heading.value} />
 
-                        <meta property="og:title" content={searchData.metaTitle.value} />
-                        <meta property="og:type" content="article" />
-                        <meta property="og:image" content={searchData.image.value[0].url} />
-                        <meta
-                            property="og:url"
-                            content={`${Globals.BASE_URL}articles/${slug}`}
-                        />
-                        <meta name="twitter:card" content={searchData.image.value[0].url} />
-
-                        <meta
-                            property="og:description"
-                            content={searchData.metaDescription.value}
-                        />
-                        <meta property="og:site_name" content={Globals.SITE_NAME} />
-                        <meta
-                            name="twitter:image:alt"
-                            content={searchData.metaTitle.value}
-                        />
-                        <link
-                            href={`${Globals.BASE_URL}articles/${slug}`}
-                            rel="canonical"
-                        />
-                    </Head> */}
+                    </Head>
                     <div className="article-detail-page-wrapper">
                         <div className="article-banner-wrapper">
                             <Image
@@ -119,7 +92,7 @@ function DetailPage({ data }: { data: Array<Pressrelaseitem> }) {
 
                         </div>
 
-                        <section>
+                        <section className="press-release-content">
                             <div className="section-container">
                                 <div className="row article-banner">
                                     <div className="col-12 col-lg-6 col-xl-6 align-self-center">

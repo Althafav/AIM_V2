@@ -21,7 +21,7 @@
 
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
 
 
             @media (max-width: 1200px) {
@@ -36,9 +36,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            @media (max-width: 576px) {
-                grid-template-columns: 1fr;
-            }
+          
         }
 
         .categories-card {
@@ -62,8 +60,8 @@
                 .heading {
                     opacity: 0;
                     visibility: hidden;
-                    transform: translateY(-10rem);
-                    transition: opacity 0.3s ease-in-out, transform 0.4s ease-in 0.1s;
+                    transform: translateY(-5rem);
+                    transition: opacity 0.3s ease-in-out 0.2s, transform 0.4s ease-in 0.1s;
                 }
             }
         
